@@ -10,6 +10,9 @@
 
 include <configuration.scad>
 
+// if true, cutout for bfb hotend is added
+bfb = true;
+
 union(){difference(){
 	union(){
 		//Base block
@@ -66,6 +69,7 @@ union(){difference(){
 
 		translate(v = [-25, 20, 2.5]) rotate(a=[0,90,0]) cylinder(h = 40, r=m4_diameter/2, $fn=10, center=true);
 
+if(bfb) cylinder(h = 40, r=21, $fn=20, center=true);
 }//
 %translate(v = [-45, -25, -2.5]) cube(size=[10,50,50]);
 translate(v = [-25, -35, 19]) cube(size=[50,10,3]);
