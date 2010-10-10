@@ -54,8 +54,8 @@ translate(v=[(outerDiameter/2)+1,(outerDiameter/2)+1,(lenght)/2]) cube(size = [o
 }
 
 union(){
-translate(v=[9,9,0]) bushing();
-translate(v=[-9,9,0]) bushing();
-translate(v=[9,-9,0]) mirror([ 0, 1, 0 ]) bushing();
-translate(v=[-9,-9,0]) mirror([ 0, 1, 0 ]) bushing();
+translate(v=[(rodsize+1),(rodsize+1),0]) bushing();
+translate(v=[-(rodsize+1),(rodsize+1),0]) bushing();
+translate(v=[(rodsize+1),-(rodsize+1),0]) mirror([ 0, 1, 0 ]) bushing();
+translate(v=[-(rodsize+1),-(rodsize+1),0]) mirror([ 0, 1, 0 ]) bushing();
 }
