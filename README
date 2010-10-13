@@ -1,3 +1,24 @@
 Prusa Mendel
 
 Frame vertexes are based on Viks and Tonokips ones
+
+Prusa Mendel part list:
+
+To print:
+
+6x frame-vertex
+2x coupling
+3x endstop-holder
+1x x-carriage
+1x x-end-idler
+1x x-end-motor
+2x z-motor-mount
+4x belt-clamp
+8x bar-clamp
+2x rod-clamp
+1x y-motor-bracket
+2x pulley
+
+3x pla-bushing
+
+The Mendel build plate contains all the parts except the pla bushings
