@@ -298,63 +298,108 @@ for(i = [0:x]){
 module interface(){
 intersection(){
 translate([0,0,0]) rotate([0,0,0]) import_stl("frame-vertex-foot.stl");
-translate([0,0,0]) grid(20,80);
+translate([0,0,0]) grid(10,80);
 }
 }
 
+module mbplate1(){
+translate([0,0,0]) rotate([0,0,0]) union(){
 
-translate([0,198,0]) rotate([0,0,-90]) union(){
+//translate([39,35,0]) xcarriage();
+//translate([38,128,0]) xendmotor();
+//translate([17,163,0]) rotate(90,0,0) xendidler();
+//translate([87,103,30]) rotate([0,90,0]) zmotormount();
+//translate([105,75,30]) rotate([0,90,0]) zmotormount();
+//translate([87,35,0]) rotate([0,0,90]) import_stl("coupling.stl");
+translate([90,82,0]) rotate([0,0,0]) import_stl("coupling.stl");
+//translate([168,92,0]) rotate([0,-90,0]) import_stl("y-motor-bracket_1off.stl");
+translate([16,3,0]) rotate([0,0,90]) import_stl("bar-clamp.stl");
+translate([16,50,0]) rotate([0,0,90]) import_stl("bar-clamp.stl");
+translate([1.5,78,0]) rotate([0,0,0]) import_stl("bar-clamp.stl");
+translate([27,81,0]) rotate([0,0,0]) import_stl("bar-clamp.stl");
+translate([53,81,0]) rotate([0,0,0]) import_stl("bar-clamp.stl"); 
+//translate([173,114,0]) rotate([0,0,0]) import_stl("bar-clamp.stl");
+//translate([173,97,0]) rotate([0,0,0]) import_stl("bar-clamp.stl");
+//translate([173,80,0]) rotate([0,0,0]) import_stl("bar-clamp.stl");
+//translate([197,31,10]) rotate([0,90,90]) shortclamp();
+//translate([95,32,10]) rotate([0,90,90]) shortclamp();
+//translate([3,72,0]) rotate([0,0,0]) import_stl("belt-clamp.stl");
+//translate([30,16,0]) rotate([0,0,0]) import_stl("belt-clamp.stl");
+//translate([50,72,0]) rotate([0,0,0]) import_stl("belt-clamp.stl");
+//translate([75,170,0]) rotate([0,0,0]) import_stl("belt-clamp.stl");
+translate([58,19,0]) rotate([0,0,-90]) import_stl("frame-vertex-foot.stl");
+translate([58,60,0]) rotate([0,0,90]) import_stl("frame-vertex-foot.stl");
+translate([58,19,13.4]) rotate([0,0,-90]) import_stl("frame-vertex-foot.stl");
+translate([58,19,13]) rotate([0,0,-90]) interface();
+translate([58,60,13.4]) rotate([0,0,90]) import_stl("frame-vertex-foot.stl");
+translate([58,60,13]) rotate([0,0,90])  interface();
+translate([58,60,40.2]) rotate([0,0,90]) import_stl("frame-vertex-foot.stl");
+translate([58,60,39.8]) rotate([0,0,90])  interface();
+translate([58,60,26.8]) rotate([0,0,90]) import_stl("frame-vertex-foot.stl");
+translate([58,60,26.4]) rotate([0,0,90])  interface();
+//translate([95,2,0]) rotate([0,0,0]) import_stl("endstop-holder.stl");
+//translate([80,198,0]) rotate([0,0,180]) import_stl("endstop-holder.stl"); 
+//translate([99,182,0]) rotate([0,0,0]) import_stl("endstop-holder.stl");
+translate([48,30,0]) rotate([0,0,0]) import_stl("pulley.stl");
+translate([2,29,0]) rotate([0,0,0]) import_stl("pulley.stl");
+//translate([137,190,0.5]) rotate([0,0,90]) import_stl("prusalogo.stl");
+}
+}
 
-//translate([39,35,0]) import_stl("x-carriage.stl");
-translate([39,35,0]) xcarriage();
-//translate([40,125,0]) import_stl("x-end-motor.stl");
-translate([38,128,0]) xendmotor();
-//translate([17,163,0]) rotate(90,0,0) import_stl("x-end-idler.stl");
-translate([17,163,0]) rotate(90,0,0) xendidler();
-//translate([90,105,30]) rotate([0,90,0]) import_stl("z-motor-mount.stl");
-translate([87,103,30]) rotate([0,90,0]) zmotormount();
-//translate([85,188,30]) rotate([-90,90,180]) import_stl("z-motor-mount.stl");
-translate([105,75,30]) rotate([0,90,0]) zmotormount();
+module mbplate2(){
+translate([0,0,0]) rotate([0,0,0]) union(){
+
+translate([39,36,0]) xcarriage();
+//translate([38,128,0]) xendmotor();
+//translate([17,163,0]) rotate(90,0,0) xendidler();
+//translate([87,103,30]) rotate([0,90,90]) zmotormount();
+//translate([105,75,30]) rotate([0,90,0]) zmotormount();
 translate([87,35,0]) rotate([0,0,90]) import_stl("coupling.stl");
-translate([100,156,0]) rotate([0,0,0]) import_stl("coupling.stl");
-translate([168,92,0]) rotate([0,-90,0]) import_stl("y-motor-bracket_1off.stl");
-//translate([103,25,0]) rotate([0,0,0]) import_stl("y-idler-bracket_1off.stl");
-translate([27,28,0]) rotate([0,0,0]) import_stl("bar-clamp.stl");
-translate([90,143,0]) rotate([0,0,90]) import_stl("bar-clamp.stl");
-translate([153,183,0]) rotate([0,0,0]) import_stl("bar-clamp.stl");
-translate([198,172,0]) rotate([0,0,90]) import_stl("bar-clamp.stl");
-translate([120,68,0]) rotate([0,0,30]) import_stl("bar-clamp.stl"); //
-translate([173,114,0]) rotate([0,0,0]) import_stl("bar-clamp.stl");
-translate([173,97,0]) rotate([0,0,0]) import_stl("bar-clamp.stl");
-translate([173,80,0]) rotate([0,0,0]) import_stl("bar-clamp.stl");
-//translate([140,10,10]) rotate([0,90,0]) import_stl("z-bar-top-clamp_4off.stl");
-//translate([160,10,10]) rotate([0,90,0]) import_stl("z-bar-top-clamp_4off.stl");
-translate([197,31,10]) rotate([0,90,90]) shortclamp();
-translate([150,167,10]) rotate([0,90,90]) shortclamp();
-translate([3,72,0]) rotate([0,0,0]) import_stl("belt-clamp.stl");
-translate([30,16,0]) rotate([0,0,0]) import_stl("belt-clamp.stl");
-translate([50,72,0]) rotate([0,0,0]) import_stl("belt-clamp.stl");
-translate([75,170,0]) rotate([0,0,0]) import_stl("belt-clamp.stl");
-translate([158,19,0]) rotate([0,0,-90]) import_stl("frame-vertex-foot.stl");
-translate([158,60,0]) rotate([0,0,90]) import_stl("frame-vertex-foot.stl");
-translate([158,19,13.4]) rotate([0,0,-90]) import_stl("frame-vertex-foot.stl");
-translate([158,19,13]) rotate([0,0,-90]) interface();
-translate([158,60,13.4]) rotate([0,0,90]) import_stl("frame-vertex-foot.stl");
-translate([158,60,13]) rotate([0,0,90])  interface();
-translate([158,60,40.2]) rotate([0,0,90]) import_stl("frame-vertex-foot.stl");
-translate([158,60,39.8]) rotate([0,0,90])  interface();
-translate([158,60,26.8]) rotate([0,0,90]) import_stl("frame-vertex-foot.stl");
-translate([158,60,26.4]) rotate([0,0,90])  interface();
-translate([95,2,0]) rotate([0,0,0]) import_stl("endstop-holder.stl");
-translate([80,198,0]) rotate([0,0,180]) import_stl("endstop-holder.stl"); 
-translate([99,182,0]) rotate([0,0,0]) import_stl("endstop-holder.stl");
-translate([128,108,0]) rotate([0,0,0]) import_stl("pulley.stl");
-translate([152,82,0]) rotate([0,0,0]) import_stl("pulley.stl");
-//translate([96,47,0]) rotate([0,0,0]) import_stl("pulley.stl");
-translate([137,190,0.5]) rotate([0,0,90]) import_stl("prusalogo.stl");
-//translate([100,10,35]) cube([200,20,10],center=true);
-//translate([100,190,35]) cube([200,20,10],center=true);
+//translate([168,92,0]) rotate([0,-90,0]) import_stl("y-motor-bracket_1off.stl");
+translate([25,17,0]) rotate([0,0,0]) import_stl("bar-clamp.stl");
+//translate([25,71,0]) rotate([0,0,90]) import_stl("bar-clamp.stl");
+//translate([173,80,0]) rotate([0,0,0]) import_stl("bar-clamp.stl");
+translate([45,47,10]) rotate([0,90,0]) shortclamp();
+//translate([124,32,10]) rotate([0,90,90]) shortclamp();
+translate([83,74,0]) rotate([0,0,90]) import_stl("belt-clamp.stl");
+translate([95,64,0]) rotate([0,0,90]) import_stl("belt-clamp.stl");
+translate([28,34,0]) rotate([0,0,0]) import_stl("belt-clamp.stl");
+translate([71,74,0]) rotate([0,0,90]) import_stl("belt-clamp.stl");
+translate([23.5,73,0]) rotate([0,0,0]) import_stl("endstop-holder.stl");
+translate([24,95,0]) rotate([0,0,180]) import_stl("endstop-holder.stl"); 
+//translate([99,182,0]) rotate([0,0,0]) import_stl("endstop-holder.stl");
+//translate([137,190,0.5]) rotate([0,0,90]) import_stl("prusalogo.stl");
 }
-//rotate([0,0,-90]) difference() { #translate([0,0,-1]) cube(size=[200,200,1]);
-//translate([170,130,-10]) cube([30,40,20]);
-//}
+}
+module mbplate3(){
+translate([0,0,0]) rotate([0,0,0]) union(){
+
+//translate([38,128,0]) xendmotor();
+translate([36,20,0]) rotate([0,0,180]) xendidler();
+translate([40,67,30]) rotate([0,90,90]) zmotormount();
+translate([40,86,30]) rotate([0,90,90]) zmotormount();
+//translate([168,92,0]) rotate([0,-90,0]) import_stl("y-motor-bracket_1off.stl");
+translate([95,71,0]) rotate([0,0,90]) import_stl("bar-clamp.stl");
+translate([95,41,0]) rotate([0,0,90]) import_stl("bar-clamp.stl");
+translate([100,44,10]) rotate([0,90,90]) shortclamp();
+translate([75,28,0]) rotate([0,0,-90]) import_stl("endstop-holder.stl");
+//translate([137,190,0.5]) rotate([0,0,0]) import_stl("prusalogo.stl");
+}
+}
+module mbplate4(){
+translate([0,0,0]) rotate([0,0,0]) union(){
+
+translate([60,48,0]) xendmotor();
+//translate([68,2,0]) rotate([0,-90,0]) import_stl("y-motor-bracket_1off.stl");
+translate([15,70,0.5]) rotate([0,0,180]) import_stl("prusalogo.stl");
+}
+}
+module mbplate5(){
+translate([0,0,0]) rotate([0,0,0]) union(){
+
+translate([45,-5,0]) rotate([0,-90,-35]) import_stl("y-motor-bracket_1off.stl");
+}
+}
+
+//#translate([-49,-49,-1]) cube(size=[98,98,1]);
+translate([-49,-49,0]) mbplate1();
