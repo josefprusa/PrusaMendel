@@ -287,18 +287,21 @@ translate([0,36,-12]) cube([30,30,30],center=true);
 
 
 module grid(x,y){
+union(){
 for(i = [0:x]){
-	translate([2*i,0,0.3]) cube([1,y,1],center=true);
-	translate([-2*i,0,0.3]) cube([1,y,1],center=true);
-//	translate([0,-2*i,0.3]) cube([100,0.3,0.6],center=true);
+	translate([2*i,0,0.5]) cube([0.75,y,1],center=true);
+	translate([-2*i,0,0.5]) cube([0.75,y,1],center=true);
+	translate([0,3.5*i,1.5]) cube([y,0.75,1],center=true);
+	translate([0,-3.5*i,1.5]) cube([y,0.75,1],center=true);
 //	translate([2*i,0,0.9]) cube([0.6,100,0.3],center=true);
 //	translate([-2*i,0,0.9]) cube([0.6,100,0.3],center=true);
+}
 }
 }
 module interface(){
 intersection(){
 translate([0,0,0]) rotate([0,0,0]) import_stl("frame-vertex-foot.stl");
-translate([0,0,0]) grid(20,80);
+translate([0,0,0]) grid(12,80);
 }
 }
 
@@ -337,14 +340,14 @@ translate([50,72,0]) rotate([0,0,0]) import_stl("belt-clamp.stl");
 translate([75,170,0]) rotate([0,0,0]) import_stl("belt-clamp.stl");
 translate([158,19,0]) rotate([0,0,-90]) import_stl("frame-vertex-foot.stl");
 translate([158,60,0]) rotate([0,0,90]) import_stl("frame-vertex-foot.stl");
-translate([158,19,13.4]) rotate([0,0,-90]) import_stl("frame-vertex-foot.stl");
+translate([158,19,15]) rotate([0,0,-90]) import_stl("frame-vertex-foot.stl");
 translate([158,19,13]) rotate([0,0,-90]) interface();
-translate([158,60,13.4]) rotate([0,0,90]) import_stl("frame-vertex-foot.stl");
+translate([158,60,15]) rotate([0,0,90]) import_stl("frame-vertex-foot.stl");
 translate([158,60,13]) rotate([0,0,90])  interface();
-translate([158,60,40.2]) rotate([0,0,90]) import_stl("frame-vertex-foot.stl");
-translate([158,60,39.8]) rotate([0,0,90])  interface();
-translate([158,60,26.8]) rotate([0,0,90]) import_stl("frame-vertex-foot.stl");
-translate([158,60,26.4]) rotate([0,0,90])  interface();
+translate([158,60,45]) rotate([0,0,90]) import_stl("frame-vertex-foot.stl");
+translate([158,60,43]) rotate([0,0,90])  interface();
+translate([158,60,30]) rotate([0,0,90]) import_stl("frame-vertex-foot.stl");
+translate([158,60,28]) rotate([0,0,90])  interface();
 translate([95,2,0]) rotate([0,0,0]) import_stl("endstop-holder.stl");
 translate([80,198,0]) rotate([0,0,180]) import_stl("endstop-holder.stl"); 
 translate([99,182,0]) rotate([0,0,0]) import_stl("endstop-holder.stl");
