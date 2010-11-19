@@ -52,10 +52,20 @@ difference(){
 translate(v=[(outerDiameter/2)+1,(outerDiameter/2)+1,(lenght)/2]) cube(size = [outerDiameter,outerDiameter,lenght+2], center = true);
 }}
 }
-
+module bushingblob(){
 union(){
 translate(v=[(rodsize+1),(rodsize+1),0]) bushing();
 translate(v=[-(rodsize+1),(rodsize+1),0]) bushing();
 translate(v=[(rodsize+1),-(rodsize+1),0]) mirror([ 0, 1, 0 ]) bushing();
 translate(v=[-(rodsize+1),-(rodsize+1),0]) mirror([ 0, 1, 0 ]) bushing();
+translate(v=[2*(rodsize+6),(rodsize+1),0]) bushing();
+translate(v=[-2*(rodsize+6),(rodsize+1),0]) bushing();
+translate(v=[2*(rodsize+6),-(rodsize+1),0]) mirror([ 0, 1, 0 ]) bushing();
+translate(v=[-2*(rodsize+6),-(rodsize+1),0]) mirror([ 0, 1, 0 ]) bushing();
+translate(v=[(rodsize+1),3*(rodsize+1),0]) bushing();
+translate(v=[-(rodsize+1),3*(rodsize+1),0]) bushing();
+translate(v=[(rodsize+1),-3*(rodsize+1),0]) mirror([ 0, 1, 0 ]) bushing();
+translate(v=[-(rodsize+1),-3*(rodsize+1),0]) mirror([ 0, 1, 0 ]) bushing();
 }
+}
+bushingblob();

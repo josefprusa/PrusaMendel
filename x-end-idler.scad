@@ -8,7 +8,7 @@
 // http://github.com/prusajr/PrusaMendel
 
 include <configuration.scad>
-
+module xendidler(){
 translate(v = [0,35,24.5]) union(){ 
 
 difference(){
@@ -86,5 +86,7 @@ translate(v = [21, 13.5, 26.3]) cube(size = [24,3,2.4], center = true);
 translate(v = [33.5, -5, 12.5]) cube(size = [3,40,30], center = true);
 }
 
-translate(v = [32.5, -6, 28-3-4.7]) rotate(a=[0,90,0]) cylinder(h = 90, r=m4_diameter/2, $fn=9, center=true);}
+translate(v = [32.5, -6, 28-3-4.7]) rotate(a=[0,90,0]) cylinder(h = 90, r=m8_diameter/2, $fn=9, center=true);}
 }}
+}
+xendidler();

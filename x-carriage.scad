@@ -9,15 +9,15 @@
 // http://github.com/prusajr/PrusaMendel
 
 include <configuration.scad>
-
+module xcarriage(bfb=false,orientation=true){
 // if true, cutout for bfb hotend is added
 // bfb hotend support tested only with vertical mounting
-	bfb = false;
+//	bfb = false;
 
 // orientation of extruder
 // true - horizontal
 // false - vertical
-	orientation = true;
+//	orientation = true;
 
 translate(v = [0,0,2.5]) union(){difference(){
 	union(){
@@ -92,6 +92,7 @@ if(bfb) if(orientation) translate(v = [0, -5, 0]) cylinder(h = 40, r=21, $fn=20,
 %translate(v = [-45, -25, -2.5]) cube(size=[10,50,50]);
 //translate(v = [10, -25, 9]) %cube(size=[50,50,14]);
 }
-
+}
+xcarriage();
 
 

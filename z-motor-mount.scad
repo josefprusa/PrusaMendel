@@ -8,6 +8,7 @@
 // http://www.reprap.org/wiki/Prusa_Mendel
 // http://github.com/prusajr/PrusaMendel
 
+module zmotormount(){
 difference(){
 union(){
 translate(v=[2.5,0,0]) cube(size = [55,60,16], center = true);
@@ -32,3 +33,5 @@ translate(v=[0,7,0]) rotate(a=[0,90,0]) rotate(a=[0,0,30]) cylinder(h = 24, r=4,
 translate(v=[0,-7,0]) rotate(a=[0,90,0]) rotate(a=[0,0,30]) cylinder(h = 24, r=4, $fn=6);
 
 }
+}
+zmotormount();

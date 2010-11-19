@@ -8,7 +8,7 @@
 // http://github.com/prusajr/PrusaMendel
 
 include <configuration.scad>
-
+module xendmotor(){
 translate(v = [0,17,24.5]) union(){
 difference(){
 union(){
@@ -92,3 +92,5 @@ translate(v = [0, 0, -4.7]){
 	translate(v = [32.5, 7-15.5, 23.5-15.5+3]) cube(size = [20,3.5,8], center = true);
 }
 }}
+}
+xendmotor();
