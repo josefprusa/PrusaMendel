@@ -3,13 +3,13 @@ Prusa Mendel
 Please read http://reprap.org/wiki/Prusa_Mendel before attempting to build this.
 
 
-Frame vertexes are based on Viks and Tonokips ones
+Frame vertices are based on Viks and Tonokips ones
 
 Prusa Mendel part list:
 
 To print:
 
-6x frame-vertex
+6x frame-vertex-without-foot or 2x -without-foot and 4x -with-foot
 2x coupling
 3x endstop-holder
 1x x-carriage
@@ -22,6 +22,6 @@ To print:
 1x y-motor-bracket
 2x pulley
 
-3x pla-bushing
+1x pla-bushing
 
 The Mendel build plate contains all the parts except the pla bushings
