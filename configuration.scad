@@ -17,7 +17,7 @@ m8_nut_diameter = 16.4;
 // M4 rod/screw diameter
 m4_diameter = 5;
 
-// M4 nut diameter diameter
+// M4 nut diameter
 // Used for $fn nut trick -> cylinder(h = 5, r=4.5, $fn=6, center=true);
 m4_nut_diameter = 9;
 
@@ -31,3 +31,5 @@ m3_nut_diameter = 7;
 // Bushing holders diameter
 bushing_diameter = 11;
 
+//Motor shaft diameter
+motor_shaft=5;

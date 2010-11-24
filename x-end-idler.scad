@@ -13,12 +13,9 @@ translate(v = [0,35,24.5]) union(){
 
 difference(){
 union(){
-//translate(v = [0, -25, 0]) cube(size = [70,70,5], center = true);
-translate(v = [0, -25, 0])translate(v = [-25, 0, -16.6])cube(size = [20,70,15.8], center = true);
-translate(v = [0, -25, 0])translate(v = [25, 0, -16.6])cube(size = [20,70,15.8], center = true);
+translate(v = [-25, -40, -16.6])cube(size = [20,40,15.8], center = true);
+translate(v = [25, -40, -16.6])cube(size = [20,40,15.8], center = true);
 }
-translate(v = [0, 0, -15])cube(size = [80,40,50], center = true);
-
 //nut traps
 
 translate(v = [-25, -29, -19.7]) cylinder(h = 7, r=m3_nut_diameter/2, $fn=6, center=true);
@@ -33,12 +30,12 @@ translate(v = [25, -50, -20]) cylinder(h = 10, r=m3_diameter/2, $fn=9, center=tr
 
 //holes for axis
 translate(v = [-25, -18, -16.7]) rotate(a=[90,0,0]) {
-	cylinder(h = 120, r=4.5, $fn=20, center=true);
-	translate(v = [0, 2.60, 0]) rotate(a=[0,0,0]) cylinder(h = 120, r=3.65, $fn=6, center=true);
+	translate(v = [0, 0, 22]) cylinder(h = 42, r=4.5, $fn=20, center=true);
+	translate(v = [0, 2.60, 22]) rotate(a=[0,0,0]) cylinder(h = 42, r=3.65, $fn=6, center=true);
 }
 translate(v = [25, -18, -16.7]) rotate(a=[90,0,0]) {
-	cylinder(h = 120, r=4.5, $fn=20, center=true);
-	translate(v = [0, 2.60, 0]) rotate(a=[0,0,0]) cylinder(h = 120, r=3.65, $fn=6, center=true);
+	translate(v = [0, 0, 22]) cylinder(h = 42, r=4.5, $fn=20, center=true);
+	translate(v = [0, 2.60, 22]) rotate(a=[0,0,0]) cylinder(h = 42, r=3.65, $fn=6, center=true);
 }
 //slider cutouts
 translate(v = [0, -25, 15]) 
@@ -81,9 +78,9 @@ union(){
 mirror(){
 translate(v = [0, -35, -12]) difference(){
 union(){
-translate(v = [21, -23.5, 26.3]) cube(size = [24,3,2.4], center = true);
-translate(v = [21, 13.5, 26.3]) cube(size = [24,3,2.4], center = true);
-translate(v = [33.5, -5, 12.5]) cube(size = [3,40,30], center = true);
+translate(v = [21, -22.5, 25.3]) cube(size = [24,5,4.4], center = true);
+translate(v = [21, 12.5, 25.3]) cube(size = [24,5,4.4], center = true);
+#translate(v = [32.5, -5, 12.5]) cube(size = [5,40,30], center = true);
 }
 
 translate(v = [32.5, -6, 28-3-4.7]) rotate(a=[0,90,0]) cylinder(h = 90, r=m8_diameter/2, $fn=9, center=true);}

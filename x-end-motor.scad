@@ -13,10 +13,10 @@ translate(v = [0,17,24.5]) union(){
 difference(){
 union(){
 //translate(v = [0, -25, 0]) cube(size = [70,70,5], center = true);
-translate(v = [0, -25, 0])translate(v = [-25, 0, -16.6])cube(size = [20,70,15.8], center = true);
-translate(v = [0, -25, 0])translate(v = [25, 0, -16.6])cube(size = [20,70,15.8], center = true);
+translate(v = [-25, -40, -16.6])cube(size = [20,40,15.8], center = true);
+translate(v = [25, -40, -16.6])cube(size = [20,40,15.8], center = true);
 }
-translate(v = [0, 0, -15])cube(size = [80,40,50], center = true);
+
 
 //nut traps
 
@@ -31,13 +31,13 @@ translate(v = [25, -50, -19.7]) cylinder(h = 7, r=m3_nut_diameter/2, $fn=6, cent
 translate(v = [25, -50, -20]) cylinder(h = 10, r=m3_diameter/2, $fn=9, center=true);
 
 //holes for axis
-translate(v = [-25, -18, -16.7]) rotate(a=[90,0,0]) {
-	cylinder(h = 120, r=4.5, $fn=20, center=true);
-	translate(v = [0, 2.60, 0]) rotate(a=[0,0,0]) cylinder(h = 120, r=3.65, $fn=6, center=true);
+translate(v = [-25, -18-22, -16.7]) rotate(a=[90,0,0]) {
+	cylinder(h = 42, r=4.5, $fn=20, center=true);
+	translate(v = [0, 2.60, 0]) cylinder(h = 42, r=3.65, $fn=6, center=true);
 }
-translate(v = [25, -18, -16.7]) rotate(a=[90,0,0]) {
-	cylinder(h = 120, r=4.5, $fn=20, center=true);
-	translate(v = [0, 2.60, 0]) rotate(a=[0,0,0]) cylinder(h = 120, r=3.65, $fn=6, center=true);
+translate(v = [25, -18-22, -16.7]) rotate(a=[90,0,0]) {
+	cylinder(h = 42, r=4.5, $fn=20, center=true);
+	translate(v = [0, 2.60, 0]) cylinder(h = 42, r=3.65, $fn=6, center=true);
 }
 //slider cutouts
 translate(v = [0, -25, 15]) 
@@ -84,12 +84,12 @@ translate(v = [32.5, 2, 13.5]) cube(size = [5,54,52], center = true);
 translate(v = [22.5, 2, -11]) cube(size = [20,54,3], center = true);}
 
 translate(v = [0, 0, -4.7]){
-	translate(v = [32.5, 7, 23.5]) rotate(a=[0,90,0]) rotate(a=[0,0,30]) cylinder(h = 80, r=12, $fn=20, center=true);
+	translate(v = [32.5, 7, 23.5]) rotate(a=[0,90,0]) rotate(a=[0,0,30]) cylinder(h = 10, r=12, $fn=20, center=true);
 
-	translate(v = [32.5, 7+15.5, 23.5+15.5-3]) cube(size = [20,3.5,8], center = true);
-	translate(v = [32.5, 7-15.5, 23.5+15.5-3]) cube(size = [20,3.5,8], center = true);
-	translate(v = [32.5, 7+15.5, 23.5-15.5+3]) cube(size = [20,3.5,8], center = true);
-	translate(v = [32.5, 7-15.5, 23.5-15.5+3]) cube(size = [20,3.5,8], center = true);
+	translate(v = [32.5, 7+15.5, 23.5+15.5-3]) cube(size = [10,3.5,8], center = true);
+	translate(v = [32.5, 7-15.5, 23.5+15.5-3]) cube(size = [10,3.5,8], center = true);
+	translate(v = [32.5, 7+15.5, 23.5-15.5+3]) cube(size = [10,3.5,8], center = true);
+	translate(v = [32.5, 7-15.5, 23.5-15.5+3]) cube(size = [10,3.5,8], center = true);
 }
 }}
 }

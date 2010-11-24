@@ -33,15 +33,15 @@ translate ([0,0,vfvertex_height/2])difference()
 
 	translate([11.013,59.912]) zhole(vfM8); 
 	translate([40.274,9.249,0]) zhole(vfM8); 
-	translate([0,21,0]) 
-		xteardrop(vfM8,200);
+	translate([40,21,0]) 
+		xteardrop(vfM8,40);
 	translate([13.687,41.010,0]) rotate(a=60,v=[0,0,1])
-		xteardrop(vfM8,200);
+		xteardrop(vfM8,62);
 }
 }
 vertex(true);
 
-module zhole(diameter) cylinder(h=100,r=(diameter/2),center=true,$fn=vfFN); 
+module zhole(diameter) cylinder(h=18,r=(diameter/2),center=true,$fn=vfFN); 
 
 module xteardrop(diameter,length) rotate(a=-90,v=[0,1,0]) rotate(a=-90,v=[0,0,1]) zteardrop(diameter,length);
 

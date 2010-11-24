@@ -1,11 +1,12 @@
-module shortclamp(){ 
-translate([10,-30,-3]) difference(){
-import_stl("z-bar-top-clamp_4off.stl");
-translate([0,10,10]) cube([30,30,30],center=true);
-translate([0,65,10]) cube([30,30,30],center=true);
-translate([0,36,28]) cube([30,30,30],center=true);
-translate([0,36,-12]) cube([30,30,30],center=true);
-}
+include <configuration.scad>
+module rodclamp(){ 
+translate([0,0,5]) difference(){
+cube([10,25,10],center=true);
+translate([-5,0,0]) cylinder(r=4.1,h=20,center=true);
+translate([0,7,0]) rotate([0,90,0]) cylinder(r=m4_diameter/2,h=20,center=true);translate([0,-7,0]) rotate([0,90,0]) cylinder(r=2.2,h=20,center=true);}
 }
 
-shortclamp();
+rodclamp();
+//cube([100,100,0.01],center=true);
+
+

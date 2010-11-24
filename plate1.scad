@@ -242,7 +242,7 @@ translate(v = [21, 13.5, 26.3]) cube(size = [24,3,2.4], center = true);
 translate(v = [33.5, -5, 12.5]) cube(size = [3,40,30], center = true);
 }
 
-translate(v = [32.5, -6, 28-3-4.7]) rotate(a=[0,90,0]) cylinder(h = 90, r=m4_diameter/2, $fn=9, center=true);}
+translate(v = [32.5, -6, 28-3-4.7]) rotate(a=[0,90,0]) cylinder(h = 90, r=m8_diameter/2, $fn=9, center=true);}
 }}
 }
 
@@ -358,6 +358,4 @@ translate([137,190,0.5]) rotate([0,0,90]) import_stl("prusalogo.stl");
 //translate([100,10,35]) cube([200,20,10],center=true);
 //translate([100,190,35]) cube([200,20,10],center=true);
 }
-//rotate([0,0,-90]) difference() { #translate([0,0,-1]) cube(size=[200,200,1]);
-//translate([170,130,-10]) cube([30,40,20]);
-//}
+//#translate([0,0,-1]) cube(size=[200,200,1],center=true);
