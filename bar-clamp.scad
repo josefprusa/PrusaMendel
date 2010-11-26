@@ -15,7 +15,7 @@ outer_diameter = m8_diameter/2+3.3;
 difference(){
 	union(){
 		
-		translate([outer_diameter, outer_diameter, 0])#cylinder(h =outer_diameter*2, r = outer_diameter, $fn = 20);
+		translate([outer_diameter, outer_diameter, 0])cylinder(h =outer_diameter*2, r = outer_diameter, $fn = 20);
 		translate([outer_diameter, 0, 0])cube([17.5,outer_diameter*2,outer_diameter*2]);
 	}
 

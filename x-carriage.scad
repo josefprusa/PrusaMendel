@@ -24,8 +24,8 @@ translate(v = [0,0,2.5]) union(){difference(){
 		//Base block
 			cube(size = [70,70,5], center = true);
 		//Nut holder base - extruder
-			if(orientation) translate(v = [0, 0, 1]) cube(size = [12,70,7], center = true);
-			if(orientation == false) translate(v = [0, 0, 1]) cube(size = [70,12,7], center = true);
+			translate(v = [0, 0, 1]) cube(size = [12,70,7], center = true);
+			translate(v = [0, 0, 1]) cube(size = [70,12,7], center = true);
 
 		//Nut holder base - belt clamps
 		translate(v = [33, -18, 1]) cube(size = [45,15,7], center = true);

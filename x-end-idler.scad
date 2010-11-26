@@ -80,7 +80,7 @@ translate(v = [0, -35, -12]) difference(){
 union(){
 translate(v = [21, -22.5, 25.3]) cube(size = [24,5,4.4], center = true);
 translate(v = [21, 12.5, 25.3]) cube(size = [24,5,4.4], center = true);
-#translate(v = [32.5, -5, 12.5]) cube(size = [5,40,30], center = true);
+translate(v = [32.5, -5, 12.5]) cube(size = [5,40,30], center = true);
 }
 
 translate(v = [32.5, -6, 28-3-4.7]) rotate(a=[0,90,0]) cylinder(h = 90, r=m8_diameter/2, $fn=9, center=true);}
