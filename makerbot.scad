@@ -96,4 +96,4 @@ translate([75,16,0.5]) rotate([0,0,0]) import_stl("prusalogo.stl");
 }
 
 //#translate([-49,-49,-1]) cube(size=[85,98,1]);
-translate([-49,-49,0]) mbplate5();
+translate([-49,-49,0]) mbplate2();
