@@ -10,14 +10,7 @@
 
 include <configuration.scad>
 module xcarriage(){
-// if true, cutout for bfb hotend is added
-// bfb hotend support tested only with vertical mounting
-//	bfb = false;
 
-// orientation of extruder
-// true - horizontal
-// false - vertical
-//	orientation = true;
 
 translate(v = [0,0,2.5]) union(){difference(){
 	union(){
@@ -25,7 +18,7 @@ translate(v = [0,0,2.5]) union(){difference(){
 			cube(size = [70,70,5], center = true);
 		//Nut holder base - extruder
 			translate(v = [0, 0, 1]) cube(size = [12,70,7], center = true);
-			translate(v = [0, 0, 1]) cube(size = [70,12,7], center = true);
+			translate(v = [0, -6, 1]) cube(size = [70,12,7], center = true);
 
 		//Nut holder base - belt clamps
 		translate(v = [33, -18, 1]) cube(size = [45,15,7], center = true);
@@ -56,14 +49,24 @@ translate(v = [0,0,2.5]) union(){difference(){
 
 	// holes for connecting extruder
 		translate(v = [0, 0, 0]) {
-		translate(v = [0, -25, 2]) cylinder(h = 10, r=m4_diameter/2, $fn=9, center=true);
-		translate(v = [0, -25, 5]) cylinder(h = 9, r=m4_nut_diameter/2, $fn=6, center=true);
-		translate(v = [0, 25, ]) cylinder(h = 20, r=m4_diameter/2, $fn=9, center=true);
-		translate(v = [0, 25, 5]) cylinder(h = 9, r=4.5, $fn=6, center=true);
-#		translate(v = [-25, 0, 2]) cylinder(h = 10, r=m4_diameter/2, $fn=9, center=true);
-		translate(v = [-25, 0, 5]) cylinder(h = 9, r=m4_nut_diameter/2, $fn=6, center=true);
-		translate(v = [25, 0, ]) cylinder(h = 20, r=m4_diameter/2, $fn=9, center=true);
-		translate(v = [25, 0, 5]) cylinder(h = 9, r=4.5, $fn=6, center=true);
+		
+		translate(v = [0, -31, 2]) cylinder(h = 10, r=m4_diameter/2, $fn=9, center=true);
+		translate(v = [0, -31, 5]) cylinder(h = 9, r=m4_nut_diameter/2, $fn=6, center=true);
+		translate(v = [0, 19, ]) cylinder(h = 20, r=m4_diameter/2, $fn=9, center=true);
+		translate(v = [0, 19, 5]) cylinder(h = 9, r=4.5, $fn=6, center=true);
+		
+		// Hotend hole
+		translate(v = [0, -6, 0]) cylinder(h = 20, r=21, $fn=20, center=true);
+
+		
+
+#		translate(v = [-25, -6, 2]) cylinder(h = 10, r=m4_diameter/2, $fn=9, center=true);
+		translate(v = [-25, -6, 5]) cylinder(h = 9, r=m4_nut_diameter/2, $fn=6, center=true);
+		translate(v = [25, -6, ]) cylinder(h = 20, r=m4_diameter/2, $fn=9, center=true);
+		translate(v = [25, -6, 5]) cylinder(h = 9, r=4.5, $fn=6, center=true);
+		
+		
+		
 		}
 //belt clamp holes
 	translate(v = [30, -18, 2]) cylinder(h = 10, r=m4_diameter/2, $fn=9, center=true);
@@ -81,7 +84,7 @@ translate(v = [0,0,2.5]) union(){difference(){
 
 		translate(v = [-25, 20, 2.5]) rotate(a=[0,90,0]) cylinder(h = 30, r=m4_diameter/2, $fn=10, center=true);
 
-translate(v = [0, , 0]) cylinder(h = 10, r=21, $fn=20, center=true);
+
 }}
 }
 xcarriage();
