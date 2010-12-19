@@ -56,7 +56,7 @@ translate(v = [0, -25, 15])
 union(){
 	translate(v = [0, -3.5, -7])cube(size = [24,17,65], center = true);
 
-	translate(v = [0, -3.5, -31.65]) cube(size = [35,17,15.8], center = true);}
+	translate(v = [0, -3.5, -31.6]) cube(size = [35,17,15.8], center = true);}
 	translate(v = [0, -0, -7])cube(size = [17,17,70], center = true);}
 
 //nut trap
@@ -65,7 +65,7 @@ difference(){
 	union(){difference(){
 union(){
 	translate(v = [0, -0, -19.5])cylinder(h = 40, r=12, $fn=6, center=true);
-	translate(v = [0, 0, -31.65]) cube(size = [35,10,15.8], center = true);}
+	translate(v = [0, 0, -31.6]) cube(size = [35,10,15.8], center = true);}
 	cylinder(h = 90, r=m8_nut_diameter/2, $fn=6, center=true);
 	}
 	translate(v = [0, 0, -31]) cylinder(h = 4, r=11, $fn=6, center=true);}

@@ -35,8 +35,9 @@ translate(v = [0,0,2.5]) union(){difference(){
 		translate(v = [-25, -20, 2]) cube(size = [20,10,9], center = true);
 
 	}
+	translate([0,42])cylinder(r=14,h=10,center=true,$fn=6);
 	//main cutout
-	translate(v = [-12.5,0,0]) #cube(size = [5,50,10], center = true);
+	translate(v = [-12.5,0,0]) cube(size = [5,50,10], center = true);
 
 	translate(v = [25, 30.4, 12]) rotate(a=[90,0,0]) cylinder(h = 11, r=18/2, $fn=12, center=true);
 	translate(v = [25, 30.4, 7.5])cube(size = [18,11,9], center = true);

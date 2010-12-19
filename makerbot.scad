@@ -94,6 +94,16 @@ translate([35,52,0]) rotate([0,0,-90]) ybrac();
 translate([75,16,0.5]) rotate([0,0,0]) import_stl("prusalogo.stl");
 }
 }
+platenum=2;
+%cube(size=[85,98,0.01],center=true);
+if(platenum==1)
+	translate([-49,-49,0]) mbplate1();
+if(platenum==2)
+	translate([-49,-49,0]) mbplate2();
+if(platenum==3)
+	translate([-49,-49,0]) mbplate3();
+if(platenum==4)
+	translate([-49,-49,0]) mbplate4();
+if(platenum==5)
+	translate([-49,-49,0]) mbplate5();
 
-//#translate([-49,-49,-1]) cube(size=[85,98,1]);
-translate([-49,-49,0]) mbplate2();

@@ -17,7 +17,8 @@ vfM8=m8_diameter+0.9;
 vfvertex_height=vfM8+4;
 
 vfFN=8;
-module vertex(with_foot=true){
+basefoot=true;
+module vertex(with_foot=basefoot){
 //with_foot=1;		// Comment out for no foot.
 
 
@@ -39,7 +40,7 @@ translate ([0,0,vfvertex_height/2])difference()
 		xteardrop(vfM8,62);
 }
 }
-vertex(true);
+vertex(basefoot);
 
 module zhole(diameter) cylinder(h=18,r=(diameter/2),center=true,$fn=vfFN); 
 
