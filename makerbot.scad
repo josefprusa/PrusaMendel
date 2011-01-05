@@ -65,12 +65,12 @@ translate([30,36+3,0]) rotate([0,0,0])  barclamp();//5 to go
 }
 module mbplate3(){
 translate([0,0,0]) rotate([0,0,0]) union(){
-translate([25.5,83-1.8,0]) rotate([0,0,0])mirror()  endstop();
-translate([55.5,98-1.8,0]) rotate([0,0,180])mirror()  endstop();
+translate([25.5,83-1,0]) rotate([0,0,0])mirror()  endstop();
+translate([55.5,98-1,0]) rotate([0,0,180])mirror()  endstop();
 
-translate([42.5,16.5,0]) rotate([0,0,180]) xendidler();
-translate([42,52.5,30]) rotate([0,90,90]) zmotormount();
-translate([47,71,30]) rotate([0,90,90]) zmotormount();
+translate([42.5,15,0]) rotate([0,0,180]) xendidler();
+translate([42,55,30]) rotate([0,90,90]) zmotormount();
+translate([47,72.5,30]) rotate([0,90,90]) zmotormount();
 }
 }
 module mbplate4(){
@@ -94,7 +94,7 @@ translate([35,52,0]) rotate([0,0,-90]) ybract();
 translate([36,16,0.5]) rotate([0,0,0]) import_stl("prusalogo.stl");
 }
 }
-platenum=5;
+platenum=3;
 %cube(size=[85,98,0.01],center=true);
 if(platenum==1)
 	translate([-43,-49,0]) mbplate1();
