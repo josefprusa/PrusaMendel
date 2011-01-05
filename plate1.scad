@@ -8,7 +8,9 @@ use <rod-clamp.scad>
 use <x-carriage.scad>
 use <x-end-idler.scad>
 use <x-end-motor.scad>
-use <ybrac.scad>
+use <ybrac-t.scad>
+use <wade.scad>
+use <wadebits.scad>
 use <z-motor-mount.scad>
 use <endstop-holder.scad>
 
@@ -31,43 +33,60 @@ grid(16,100);
 }
 }
 }
-translate([0,0,0]) rotate([0,0,-90]) union(){
+module bcinterface(){
+translate([12,10,0])union(){
+translate([-12,-10,2]) barclamp();
+intersection(){
+translate([-12,-10,0]) barclamp();
+grid(6,30);
+}
+}
+}
+
+*translate([0,0,15])bcinterface();
+translate([1,-2.5,0]) rotate([0,0,-90]) union(){
 translate([39,43,0]) xcarriage();
 translate([39,128-4,0]) xendmotor();
 translate([19,162-4,0]) rotate(90,0,0) xendidler();
-translate([87,110,30]) rotate([0,90,180]) zmotormount();
-translate([105,75,30]) rotate([0,90,0]) zmotormount();
-translate([87+2.5,35+8,0]) rotate([0,0,90]) coupling();
-translate([138.7,147,0]) rotate([0,0,90]) coupling();
-translate([146,138,0]) rotate([0,0,-90]) ybrac();
-translate([146,114,0]) rotate([0,0,0]) pulley();
-translate([124,88,0]) rotate([0,0,0]) pulley();
-translate([27,19+8,0]) rotate([0,0,0]) barclamp();
-translate([27,36+8,0]) rotate([0,0,0])  barclamp();
-translate([70,193,0]) rotate([0,0,180]) endstop();
-translate([97,180,0]) rotate([0,0,0]) endstop();
-translate([118,26.5,0]) rotate([0,0,90]) mirror() endstop();
-
-translate([152,180,0]) rotate([0,0,0])  barclamp();
-translate([114,142,0]) rotate([0,0,90])  barclamp();
-translate([114,114,0]) rotate([0,0,90])  barclamp();
-translate([193,170,0]) rotate([0,0,90])  barclamp();
-translate([163.5,179,0]) rotate([0,0,-90])  barclamp();
-translate([186,142,0]) rotate([0,0,-90])  beltclamp();
-translate([170,5,0]) rotate([0,0,0])  beltclamp();
-translate([195,143,0]) rotate([0,0,90])  barclamp();
-translate([90,6,5]) rotate([0,90,90]) rodclamp();
-translate([150,167,5]) rotate([0,90,90]) rodclamp();
-translate([86,152,0]) rotate([0,0,90]) beltclamp();
-translate([98,152,0]) rotate([0,0,90]) beltclamp();
-translate([150,117.5,0]) rotate([0,0,145]) mirror() vertex(true);
-translate([160,80,0]) rotate([0,0,140]) mirror() vertex(false);
-translate([150,117.5,13]) rotate([0,0,145]) mirror() interface(true);
-translate([150,117.5,13+15]) rotate([0,0,145]) mirror() interface(true);
-translate([150,117.5,13+30]) rotate([0,0,145]) mirror() interface(true);
-translate([160,80,13]) rotate([0,0,140]) mirror() interface(false);
-translate([137,187,0.5]) rotate([0,0,90]) import_stl("prusalogo.stl");
+translate([86,107,30]) rotate([0,90,180]) zmotormount();
+translate([103,78.5,30]) rotate([0,90,0]) zmotormount();
+translate([87+0.5,35+8,0]) rotate([0,0,90]) coupling();
+translate([102,28.3,0]) rotate([0,0,0]) coupling();
+translate([141.5,69,0]) rotate([0,0,-88]) mirror()ybract();
+translate([120,19,0]) rotate([0,0,0]) pulley();
+translate([157.5,165,0]) rotate([0,0,0]) pulley();
+translate([25,19+2.5,0]) rotate([0,0,0]) barclamp();
+translate([25,19+2.5,15]) rotate([0,0,0]) bcinterface();
+translate([25,36+2.5,0]) rotate([0,0,0])  barclamp();
+translate([25,36+2.5,15]) rotate([0,0,0])  bcinterface();
+translate([68.5,191,0]) rotate([0,0,180]) endstop();
+translate([72.5,171,0]) rotate([0,0,0]) endstop();
+translate([102,2,0]) rotate([0,0,0]) mirror() endstop();
+translate([191,196.5,0]) rotate([0,0,180])  wadeblock();
+translate([162.5,33,0])WadesL();
+translate([142,97,0])WadesS();
+translate([181,155,0])rotate([0,0,90])wadeidler();
+translate([107,145,0]) rotate([0,0,90])  barclamp();
+translate([90,145,0]) rotate([0,0,90])  barclamp();
+translate([107,145,15]) rotate([0,0,90])  bcinterface();
+translate([90,145,15]) rotate([0,0,90])  bcinterface();
+translate([132,55,0]) rotate([90,0,40])  beltclamp();
+translate([26,102.5,0]) rotate([90,0,0])  beltclamp();
+translate([50,7,0]) rotate([90,0,0])  beltclamp();
+translate([22,7,0]) rotate([90,0,0])  beltclamp();
+translate([187,74,0]) rotate([0,0,0]) rodclamp();
+translate([187,124,0]) rotate([0,0,12]) rodclamp();
+translate([114,87])rotate([0,0,-88])mirror(){
+vertex(true);
+translate(){translate([0,0,13]) interface(true);
+translate([0,0,13+15]) interface(true);
+translate([0,0,13+30]) interface(true);
+translate([0,0,13+45]) interface(false);
+translate([0,0,13+60]) interface(false);
+}
+}
+translate([25,183,14.5]) rotate([0,0,90]) import_stl("prusalogo.stl");
 //%translate([100,10,35]) cube([200,20,10],center=true);
 //%translate([100,190,35]) cube([200,20,10],center=true);
 }
-//#translate([100,-100,0]) cube(size=[200,200,0.01],center=true);
+%translate([100,-100,0]) cube(size=[195,193,0.01],center=true);
