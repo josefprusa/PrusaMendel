@@ -94,7 +94,7 @@ translate([35,52,0]) rotate([0,0,-90]) ybract();
 translate([36,16,0.5]) rotate([0,0,0]) import_stl("prusalogo.stl");
 }
 }
-platenum=2;
+platenum=5;
 %cube(size=[85,98,0.01],center=true);
 if(platenum==1)
 	translate([-43,-49,0]) mbplate1();

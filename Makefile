@@ -24,7 +24,7 @@ all: parts mbplates mendelplate extruder
 extruder: $(TARGET)/wade.stl $(TARGET)/wadebits.stl
 mendelplate: parts extruder
 	$(OPENSCAD) -s $(TARGET)/mendelplate.stl plate1.scad
-mbplates: $(TARGET)/mbotplate1.stl $(TARGET)/mbotplate2.stl $(TARGET)/mbotplate3.stl $(TARGET)/mbotplate4.stl $(TARGET)/mbotplate5.stl
+mbplates: makerbot.scad parts $(TARGET)/mbotplate1.stl $(TARGET)/mbotplate2.stl $(TARGET)/mbotplate3.stl $(TARGET)/mbotplate4.stl $(TARGET)/mbotplate5.stl
 $(TARGET)/mbotplate1.stl: $(TARGET)/frame-vertex-with-foot.stl $(TARGET)/frame-vertex-without-foot.stl $(TARGET)/bar-clamp.stl $(TARGET)/belt-clamp.stl 
 	$(OPENSCAD) -D platenum=1 -s $(TARGET)/mbotplate1.stl makerbot.scad
 $(TARGET)/mbotplate2.stl: $(TARGET)/x-carriage.stl $(TARGET)/coupling.stl $(TARGET)/rod-clamp.stl $(TARGET)/belt-clamp.stl $(TARGET)/bar-clamp.stl
