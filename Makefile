@@ -22,7 +22,8 @@ help:
 	@echo SAE parts get saved in ./stl-sae, metric parts in ./stl
 all: parts mbplates mendelplate extruder
 extruder: $(TARGET)/wade.stl $(TARGET)/wadebits.stl
-mendelplate: parts extruder
+mendelplate: parts extruder $(TARGET)/mendelplate.stl
+$(TARGET)/mendelplate.stl:
 	$(OPENSCAD) -s $(TARGET)/mendelplate.stl plate1.scad
 mbplates: makerbot.scad parts $(TARGET)/mbotplate1.stl $(TARGET)/mbotplate2.stl $(TARGET)/mbotplate3.stl $(TARGET)/mbotplate4.stl $(TARGET)/mbotplate5.stl
 $(TARGET)/mbotplate1.stl: $(TARGET)/frame-vertex-with-foot.stl $(TARGET)/frame-vertex-without-foot.stl $(TARGET)/bar-clamp.stl $(TARGET)/belt-clamp.stl 
