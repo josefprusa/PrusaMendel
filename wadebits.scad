@@ -45,8 +45,8 @@ translate(v=[mounting_dist_long/2,-mounting_dist_short/2,0]) cylinder(h = height
 translate(v=[-mounting_dist_long/2,-mounting_dist_short/2,0]) cylinder(h = height*2.1, r=mounting_dia, center=true,$fn = corn_fn);
 }
 }
-use <mendel_misc.inc>
-use <parametric_involute_gear_v5.0.scad>
+use <inc/mendel_misc.inc>
+use <inc/parametric_involute_gear_v5.0.scad>
 
 
 module WadesL(){

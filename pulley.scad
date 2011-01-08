@@ -1,3 +1,6 @@
+Belt pulley is http://www.thingiverse.com/thing:3104 by GilesBathgate
+GPLV3
+
 include <configuration.scad>
 
 module pulley()
