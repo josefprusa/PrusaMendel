@@ -27,10 +27,10 @@ translate(v=[-26,29.25,0]) rotate(a=[0,90,0]) cylinder(h = 58, r=m8_diameter/2);
 translate(v=[-26,-29.25,0]) rotate(a=[0,90,0]) cylinder(h = 58, r=m8_diameter/2);
 
 
-translate(v=[16,7,0]) rotate(a=[0,90,0]) cylinder(h = 15, r=2.2);
-translate(v=[16,-7,0]) rotate(a=[0,90,0]) cylinder(h = 15, r=2.2);
-translate(v=[0,7,0]) rotate(a=[0,90,0]) rotate(a=[0,0,30]) cylinder(h = 24, r=4,$fn =6);
-translate(v=[0,-7,0]) rotate(a=[0,90,0]) rotate(a=[0,0,30]) cylinder(h = 24, r=4, $fn=6);
+translate(v=[16,7,0]) rotate(a=[0,90,0]) cylinder(h = 15, r=m3_diameter/2);
+translate(v=[16,-7,0]) rotate(a=[0,90,0]) cylinder(h = 15, r=m3_diameter/2);
+translate(v=[0,7,0]) rotate(a=[0,90,0]) rotate(a=[0,0,30]) cylinder(h = 24, r=m3_nut_diameter/2,$fn =6);
+translate(v=[0,-7,0]) rotate(a=[0,90,0]) rotate(a=[0,0,30]) cylinder(h = 24, r=m3_nut_diameter/2, $fn=6);
 
 }
 }
