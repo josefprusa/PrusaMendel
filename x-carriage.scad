@@ -70,15 +70,15 @@ translate(v = [0,0,2.5]) union(){difference(){
 		
 		}
 //belt clamp holes
-	translate(v = [30, -18, 2]) cylinder(h = 10, r=m4_diameter/2, $fn=9, center=true);
-	translate(v = [30, -18, 5]) cylinder(h = 9, r=m4_nut_diameter/2, $fn=6, center=true);
-	translate(v = [48, -18, 2]) cylinder(h = 10, r=m4_diameter/2, $fn=9, center=true);
-	translate(v = [48, -18, 5]) cylinder(h = 9, r=m4_nut_diameter/2, $fn=6, center=true);
+	translate(v = [30, -18, 2]) cylinder(h = 10, r=m3_diameter/2, $fn=9, center=true);
+	translate(v = [30, -18, 5]) cylinder(h = 9, r=m3_nut_diameter/2, $fn=6, center=true);
+	translate(v = [48, -18, 2]) cylinder(h = 10, r=m3_diameter/2, $fn=9, center=true);
+	translate(v = [48, -18, 5]) cylinder(h = 9, r=m3_nut_diameter/2, $fn=6, center=true);
 
-	translate(v = [30, 18, 2]) cylinder(h = 10, r=m4_diameter/2, $fn=9, center=true);
-	translate(v = [30, 18, 5]) cylinder(h = 9, r=m4_nut_diameter/2, $fn=6, center=true);
-	translate(v = [48, 18, 2]) cylinder(h = 10, r=m4_diameter/2, $fn=9, center=true);
-	translate(v = [48, 18, 5]) cylinder(h = 9, r=m4_nut_diameter/2, $fn=6, center=true);
+	translate(v = [30, 18, 2]) cylinder(h = 10, r=m3_diameter/2, $fn=9, center=true);
+	translate(v = [30, 18, 5]) cylinder(h = 9, r=m3_nut_diameter/2, $fn=6, center=true);
+	translate(v = [48, 18, 2]) cylinder(h = 10, r=m3_diameter/2, $fn=9, center=true);
+	translate(v = [48, 18, 5]) cylinder(h = 9, r=m3_nut_diameter/2, $fn=6, center=true);
 
 
 		translate(v = [-25, -20, 2.5]) rotate(a=[0,90,0]) cylinder(h = 30, r=m4_diameter/2, $fn=10, center=true);
