@@ -8,6 +8,16 @@
 // http://github.com/prusajr/PrusaMendel
 
 include <configuration.scad>
+
+/**
+ *@name X end motor
+ *@using 2 bushing
+ *@using 8 m3x10
+ *@using 4 m3xnut
+ *@using 4 m3xwasher
+ *@using 1 m8spring
+ *@using 2 m8nut
+ */
 module xendmotor(){
 translate(v = [0,17,24.5]) union(){
 difference(){
@@ -83,13 +93,19 @@ translate(v = [21, -22.5, 36.5]) cube(size = [24,5,6], center = true);
 translate(v = [32.5, 2, 13.5]) cube(size = [5,54,52], center = true);
 translate(v = [22.5, 2, -11]) cube(size = [20,54,3], center = true);}
 
+// some reduction of bottom part 
+translate(v = [15, 15, -11]) rotate ([0,0,-17]) cube(size = [20,70,25], center = true);
+
 translate(v = [0, 0, -4.7]){
 	translate(v = [32.5, 7, 23.5]) rotate(a=[0,90,0]) rotate(a=[0,0,30]) cylinder(h = 10, r=12, $fn=20, center=true);
 
-	translate(v = [32.5, 7+15.5, 23.5+15.5-3]) cube(size = [10,3.5,8], center = true);
-	translate(v = [32.5, 7-15.5, 23.5+15.5-3]) cube(size = [10,3.5,8], center = true);
-	translate(v = [32.5, 7+15.5, 23.5-15.5+3]) cube(size = [10,3.5,8], center = true);
-	translate(v = [32.5, 7-15.5, 23.5-15.5+3]) cube(size = [10,3.5,8], center = true);
+translate(v = [30, 7, 23]) rotate(a=[0,90,0]){rotate ([0,0,45]) translate([20,0,0]) cube(size = [9,3.2,25], center = true);
+rotate ([0,0,-45]) translate([20,0,0]) cube(size = [9,3.2,25], center = true);
+rotate ([0,0,135]) translate([20,0,0]) cube(size = [9,3.2,25], center = true);
+rotate ([0,0,-135]) translate([20,0,0]) cube(size = [9,3.2,25], center = true);
+
+rotate ([0,0,135]) translate([32,0,0]) cube(size = [9,20,25], center = true);
+}
 }
 }}
 }
