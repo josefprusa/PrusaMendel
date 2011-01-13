@@ -13,6 +13,7 @@ TARGETS=$(PARTS)
 help: 
 	@echo Options:
 	@echo make all: makes the parts, the makerbot plates, the mendel plate and the extruder
+	@echo make calibration: makes calibration part
 	@echo make parts: makes all the individual parts
 	@echo make extruder: makes all the extruder parts
 	@echo make mbplates: makes all the makerbot plates
@@ -21,6 +22,7 @@ help:
 	@echo adding VARIANT=1 to any of these commands generates SAE parts
 	@echo SAE parts get saved in ./stl-sae, metric parts in ./stl
 all: parts mbplates mendelplate extruder
+calibration: $(TARGET)/calibration.stl $(TARGET)/calibration.stl
 extruder: $(TARGET)/wade.stl $(TARGET)/wadebits.stl
 mendelplate: parts extruder $(TARGET)/mendelplate.stl
 $(TARGET)/mendelplate.stl: plate1.scad parts
