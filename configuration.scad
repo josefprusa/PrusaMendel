@@ -33,6 +33,19 @@ vars=[
 // 3 - holders for brass or any other bought bushings
 bushing_type = 2;
 
+//Round corner diameter
+round_corner_diameter = 8;
+
+//Thin wall size
+layer_height = 0.4;
+perimeter_width_over_thicknes = 1.6;
+infill_widht_over_thickness = 1.55;
+thin_wall = 2*(perimeter_width_over_thicknes*layer_height+infill_widht_over_thickness*layer_height);
+if(thin_wall<2){
+	echo("Check thin wall size, its below 2mm!");
+}
+echo(thin_wall);
+
 //DO NOT TOUCH THIS SECTION!
 m8_diameter = vars[variant][0];
 m8_nut_diameter = vars[variant][1];
@@ -52,3 +65,12 @@ bushing_lenght = vars[variant][10];
 
 // MEGA VERSION (TODO, just place holder)
 // include <configuration-mega.scad>
+
+
+// Some basic functions, probably should be somewhere else
+module roundcorner(diameter){
+	difference(){
+		cube(size = [diameter,diameter,99], center = false);
+		translate(v = [diameter, diameter, 0]) cylinder(h = 100, r=diameter, center=true);
+	}
+}
