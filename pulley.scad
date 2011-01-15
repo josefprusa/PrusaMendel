@@ -1,3 +1,6 @@
+// Belt pulley is http://www.thingiverse.com/thing:3104 by GilesBathgate
+// GPLV3
+
 include <configuration.scad>
 
 module pulley()
@@ -42,7 +45,7 @@ module pulley()
 		//nut
 		translate([0,0,13.6]) rotate([0,0,30])cylinder(r=3.12,h=2.4,$fn=6);
 		//grub hole
-		translate([0,0,9]) cylinder(r=1.6,h=10);
+		translate([0,0,9]) cylinder(r=2.1,h=10);
 	}
 
  }

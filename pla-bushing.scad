@@ -105,5 +105,13 @@ translate(v=[(rodsize+1),(rodsize+1),0]) bushing();
 translate(v=[-(rodsize+1),(rodsize+1),0]) bushing();
 translate(v=[(rodsize+1),-(rodsize+1),0]) mirror([ 0, 1, 0 ]) bushing();
 translate(v=[-(rodsize+1),-(rodsize+1),0]) mirror([ 0, 1, 0 ]) bushing();
+translate(v=[3*(rodsize+1),(rodsize+1),0]) bushing();
+translate(v=[-3*(rodsize+1),(rodsize+1),0]) bushing();
+translate(v=[3*(rodsize+1),-(rodsize+1),0]) mirror([ 0, 1, 0 ]) bushing();
+translate(v=[-3*(rodsize+1),-(rodsize+1),0]) mirror([ 0, 1, 0 ]) bushing();
+translate(v=[(rodsize+1),3*(rodsize+1),0]) bushing();
+translate(v=[-(rodsize+1),3*(rodsize+1),0]) bushing();
+translate(v=[(rodsize+1),-3*(rodsize+1),0]) mirror([ 0, 1, 0 ]) bushing();
+translate(v=[-(rodsize+1),-3*(rodsize+1),0]) mirror([ 0, 1, 0 ]) bushing();
 }
-
+%cube([100,100,0.01],true);

@@ -9,9 +9,17 @@
 // http://github.com/prusajr/PrusaMendel
 
 include <configuration.scad>
+
+/**
+ *@name Endstop holder
+ *@using 1 m3x20
+ *@using 1 m3nut
+ *@using 2 m3washer
+ */
 module endstop(){
 outer_diameter = m8_diameter/2+3.3;
 screw_hole_spacing = 20;
+opening_size = m8_diameter-1.5; //openingsize
 
 difference(){
 	union(){
@@ -25,11 +33,12 @@ difference(){
 
 
 
-	translate([9, outer_diameter/2+1, 0]) cube([18,05,20]);
+	translate([9, outer_diameter-opening_size/2, 0]) cube([18,opening_size,20]);
 	translate([outer_diameter, outer_diameter, 0]) cylinder(h =20, r = m8_diameter/2, $fn = 18);
-	translate([17, 17, 5]) rotate([90, 0, 0]) cylinder(h =20, r = m4_diameter/2, $fn = 10);
+	translate([17, 17, 5]) rotate([90, 0, 0]) cylinder(h =20, r = m3_diameter/2, $fn = 10);
 	translate([-4, 17, 5]) rotate([90, 0, 0]) cylinder(h =20, r = m3_diameter/2, $fn = 10);
 	translate([-(4+screw_hole_spacing), 17, 5]) rotate([90, 0, 0]) cylinder(h =20, r = m3_diameter/2, $fn = 10);
 }
 }
 endstop();
+
