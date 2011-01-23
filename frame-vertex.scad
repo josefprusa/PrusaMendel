@@ -67,6 +67,8 @@ module vertex_foot() {
 		union () {
 			translate ([0.1,8,0]) cube([15,20,vfvertex_height],center=true);
 		}
-		//translate ([0,8,0]) xteardrop(7,200);
+		translate([-7.5,-2.1,-10]) roundcorner(round_corner_diameter/2);
+		translate([7.7,-2.2,-10]) rotate(a=90, v=[0,0,1]) roundcorner(round_corner_diameter/2);
 	}
 }
+
