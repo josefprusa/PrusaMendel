@@ -14,19 +14,21 @@ module wadeblock(bfb=false){
 difference(){
 union(){
 cube([81,51.5,5]);
-cube([109,5,28]);
+cube([109,6,28]);
 translate([57,0,0])cube([24,51.5,28]);
 translate([80,1,0])cube([10,10,28]);
 }
 translate([90,5,0]) rotate([0,0,45])cube([10,10,28]);
 
-translate([-21,0,30]) rotate([0,45,0])cube([30,5,30]);
-translate([95,0,28]) rotate([0,45,0])cube([20,5,20]);
-translate([95,0,0]) rotate([0,45,0])cube([20,5,20]);
-translate([106,0,4]) rotate([0,0,0])cube([20,5,20]);
+translate([-21,0,30]) rotate([0,45,0])cube([30,7.5,30]);
+translate([95,0,28]) rotate([0,45,0])cube([20,7.5,20]);
+translate([95,0,0]) rotate([0,45,0])cube([20,7.5,20]);
+translate([106,0,4]) rotate([0,0,0])cube([20,7.5,20]);
 translate([75,20,15]) rotate([90,0,0]) cylinder(h = 70, r=4/2, center=true);
 translate([75-25,2,15]) rotate([90,0,0]) cylinder(h = 10, r=m4_diameter/2, center=true);
+translate([75-25,5,15]) rotate([90,0,0]) cylinder(h = 2, r=m4_nut_diameter/2, center=true, $fn=6);
 translate([75+25,2,15]) rotate([90,0,0]) cylinder(h = 10, r=m4_diameter/2, center=true);
+translate([75+25,5,15]) rotate([90,0,0]) cylinder(h = 2, r=m4_nut_diameter/2, center=true, $fn=6);
 translate([70,18.5,8.5]) rotate([90,0,90])cylinder(h=40,r=(m4_diameter)/2, center=true);
 translate([70,18.5,21.5]) rotate([90,0,90])cylinder(h=40,r=(m4_diameter)/2, center=true);
 translate([70,44.5,8.5]) rotate([90,0,90])cylinder(h=40,r=(m4_diameter)/2, center=true);
@@ -63,9 +65,12 @@ rotate([0,-60,0]) translate([0,0,16.6]) rotate([90,0,0]) cylinder(r=2.6,h=25, ce
 }
 else{
 translate([75,-7,15]) rotate([90,0,0]) cylinder(h = 30, r=16/2, center=true);
-translate([79,5,25]) rotate([0,0,0]) cylinder(h = 20, r=3/2, center=true);
-translate([72,5,25]) rotate([0,0,0]) cylinder(h = 20, r=3/2, center=true);
-
+translate([79,5,14]) rotate([0,0,0]) cylinder(h = 30, r=3/2, center=true);
+translate([72,5,14]) rotate([0,0,0]) cylinder(h = 30, r=3/2, center=true);
+translate([75,-4,15]) rotate([0,-40,0])translate([-15,0,0])rotate([90,0,0]) cylinder(h = 30, r=2.4, center=true);
+translate([75,-4,15]) rotate([0,180-40,0])translate([-15,0,0])rotate([90,0,0]) cylinder(h = 30, r=2.4, center=true);
+translate([59.5,5,-1]) cube([9,5,12]);
+translate([81.5,5,20.5]) cube([9,7,12]);
 }
 
 }}
