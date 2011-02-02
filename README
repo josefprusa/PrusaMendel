@@ -1,9 +1,12 @@
 Prusa Mendel
 
-Please read http://reprap.org/wiki/Prusa_Mendel before attempting to build this.
+Please read http://reprap.org/wiki/Prusa_Mendel before attempting to build this. There is also PDF (manual-wiki) with backup documentation from reprap.org.  
 
-
+Imported stuff:
 Frame vertices are based on Viks and Tonokips ones
+Extruder by Wade
+Parametric Involute Bevel and Spur Gears by GregFrost
+Belt pulley is http://www.thingiverse.com/thing:3104 by GilesBathgate
 
 Prusa Mendel part list:
 
@@ -22,6 +25,6 @@ To print:
 1x y-motor-bracket
 2x pulley
 
-1x pla-bushing
+12x pla-bushing 
 
 The Mendel build plate contains all the parts except the pla bushings
