@@ -1,4 +1,19 @@
+// PRUSA Mendel  
+// Rod clamp
+// GNU GPL v2
+// Josef Průša
+// josefprusa@me.com
+// prusadjs.cz
+// http://www.reprap.org/wiki/Prusa_Mendel
+// http://github.com/prusajr/PrusaMendel
+
+
 include <configuration.scad>
+
+/**
+ *@name Rod clamp
+ */  
+
 module rodclamp(){ 
 translate([0,0,5]) difference(){
 cube([10,25,10],center=true);

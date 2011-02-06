@@ -20,6 +20,11 @@
 
 include <configuration.scad>
 
+/**
+ *@name Bushing
+ *@link bushing
+ */ 
+
 rodsize = bushing_rodsize;
 outerDiameter = bushing_outerDiameter;
 lenght = bushing_lenght;

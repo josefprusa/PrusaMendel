@@ -9,6 +9,13 @@
 // http://github.com/prusajr/PrusaMendel
 
 include <configuration.scad>
+
+/**
+ *@name Bar clamp
+ *@using 2 m8nut
+ *@using 2 m8washer
+ */ 
+
 module barclamp(){
 outer_diameter = m8_diameter/2+3.3;
 

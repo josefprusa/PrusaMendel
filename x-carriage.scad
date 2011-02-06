@@ -9,6 +9,15 @@
 // http://github.com/prusajr/PrusaMendel
 
 include <configuration.scad>
+
+/**
+ *@name X carriage
+ *@using 4 m3x10
+ *@using 4 m3washer
+ *@using 4 m3nut
+ *@using 4 bushing
+ */ 
+
 module xcarriage(){
 
 

@@ -15,10 +15,10 @@ corection = 1.17;
  *@using 2 bushing
  *@using 8 m3x10
  *@using 4 m3xnut
- *@using 4 m3xwasher
+ *@using 4 m3washer
  *@using 1 m8spring
  *@using 2 m8nut
- */
+ */  
 
 
 module xendmotor(){
