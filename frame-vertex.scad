@@ -20,6 +20,7 @@ basefoot=true;
 
 /**
  *@name Frame vertex
+ *@category Printed
  *@using 8 m8nut
  *@using 8 m8washer
  */

@@ -12,10 +12,11 @@ corection = 1.17;
 
 /**
  *@name X end idler
+ *@category Printed
  *@using 2 bushing
  *@using 1 m8spring
  *@using 2 m8nut
- */
+ */ 
 
 module xendidler(){
 difference(){

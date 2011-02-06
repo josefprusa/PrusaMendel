@@ -11,6 +11,7 @@ include <configuration.scad>
 
 /**
  *@name Coupling
+ *@category Printed
  *@using 1 m3x25
  *@using 1 m3nut
  *@using 2 m3washer

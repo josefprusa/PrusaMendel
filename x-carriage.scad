@@ -12,6 +12,7 @@ include <configuration.scad>
 
 /**
  *@name X carriage
+ *@category Printed
  *@using 4 m3x10
  *@using 4 m3washer
  *@using 4 m3nut

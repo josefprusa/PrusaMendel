@@ -12,6 +12,7 @@ include <configuration.scad>
 
 /**
  *@name Endstop holder
+ *@category Printed
  *@using 1 m3x20
  *@using 1 m3nut
  *@using 2 m3washer

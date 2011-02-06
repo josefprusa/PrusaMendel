@@ -22,6 +22,7 @@ include <configuration.scad>
 
 /**
  *@name Bushing
+ *@category Printed
  *@link bushing
  */ 
 

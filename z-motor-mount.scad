@@ -11,6 +11,7 @@ include <configuration.scad>
 
 /**
  *@name Z motor mount
+ *@category Printed
  *@using 2 m3x25
  *@using 2 m3nut
  *@using 2 m3washer
