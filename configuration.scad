@@ -24,7 +24,7 @@ echo("WARNING: INVALID CONFIGURATION");
 vars=[
 //[m8_dia, m8_nut, m4_dia, m4_nut, m3_dia, m3_nut, bush_dia, mot_shaft, bush_rod, bush_outerdia, bush_length]
 [9,16.4,5,9,4.4,7,11,5.3,8,16,11],//metric
-[9,15.2,5.5,11,5.5,11,11.5,5.3,7.9375,16,11]//SAE
+[9,15.7,5.5,10.6,5.5,10.6,11.5,5.3,7.9375,16,11]//SAE
 ];
 
 //BUSHING TYPE Can generate three versions
