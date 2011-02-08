@@ -19,10 +19,10 @@ basefoot=true;
 
 
 /**
- *@name Frame vertex
- *@category Printed
- *@using 8 m8nut
- *@using 8 m8washer
+ * @name Frame vertex
+ * @category Printed
+ * @using 8 m8nut
+ * @using 8 m8washer
  */
 module vertex(with_foot=basefoot){
 //with_foot=1;		// Comment out for no foot.

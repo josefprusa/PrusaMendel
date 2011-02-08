@@ -10,8 +10,8 @@
 include <configuration.scad>
 
 /**
- *@name Belt clamp
- *@category Printed
+ * @name Belt clamp
+ * @category Printed
  */ 
 
 module beltclamp(){

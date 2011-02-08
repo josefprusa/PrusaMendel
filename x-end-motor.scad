@@ -11,14 +11,14 @@ include <configuration.scad>
 corection = 1.17; 
 
 /**
- *@name X end motor
- *@category Printed
- *@using 2 bushing
- *@using 8 m3x10
- *@using 4 m3nut
- *@using 4 m3washer
- *@using 1 m8spring
- *@using 2 m8nut
+ * @name X end motor
+ * @category Printed
+ * @using 2 bushing
+ * @using 8 m3x10
+ * @using 4 m3nut
+ * @using 4 m3washer
+ * @using 1 m8spring
+ * @using 2 m8nut
  */  
 
 

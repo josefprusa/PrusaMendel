@@ -21,9 +21,9 @@
 include <configuration.scad>
 
 /**
- *@name Bushing
- *@category Printed
- *@link bushing
+ * @name Bushing
+ * @category Printed
+ * @link bushing
  */ 
 
 rodsize = bushing_rodsize;

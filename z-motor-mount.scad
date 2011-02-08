@@ -10,13 +10,13 @@
 include <configuration.scad>
 
 /**
- *@name Z motor mount
- *@category Printed
- *@using 2 m3x25
- *@using 2 m3nut
- *@using 2 m3washer
- *@using 2 m8nut
- *@using 2 m8washer
+ * @name Z motor mount
+ * @category Printed
+ * @using 2 m3x25
+ * @using 2 m3nut
+ * @using 2 m3washer
+ * @using 2 m8nut
+ * @using 2 m8washer
  */
  
 module zmotormount(){

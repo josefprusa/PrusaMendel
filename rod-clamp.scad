@@ -11,8 +11,8 @@
 include <configuration.scad>
 
 /**
- *@name Rod clamp
- *@category Printed
+ * @name Rod clamp
+ * @category Printed
  */  
 
 module rodclamp(){ 

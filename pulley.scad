@@ -5,10 +5,10 @@ include <configuration.scad>
 
 
 /**
- *@name Pulley
- *@category Printed
- *@using 1 m3nut
- *@using 1 m3x10
+ * @name Pulley
+ * @category Printed
+ * @using 1 m3nut
+ * @using 1 m3x10
  */
 module pulley()
 {

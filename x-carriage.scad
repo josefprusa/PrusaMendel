@@ -11,12 +11,13 @@
 include <configuration.scad>
 
 /**
- *@name X carriage
- *@category Printed
- *@using 4 m3x10
- *@using 4 m3washer
- *@using 4 m3nut
- *@using 4 bushing
+ * Slides on the x-axis with extruder.
+ * @name X carriage
+ * @category Printed
+ * @using 4 m3x10
+ * @using 4 m3washer
+ * @using 4 m3nut
+ * @using 4 bushing
  */ 
 
 module xcarriage(){

@@ -11,10 +11,10 @@
 include <configuration.scad>
 
 /**
- *@name Bar clamp
- *@category Printed
- *@using 2 m8nut
- *@using 2 m8washer
+ * @name Bar clamp
+ * @category Printed
+ * @using 2 m8nut
+ * @using 2 m8washer
  */ 
 
 module barclamp(){
