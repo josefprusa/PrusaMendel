@@ -32,8 +32,10 @@ translate(v = [0,0,2.5]) union(){difference(){
 			translate(v = [0, -6, 1]) cube(size = [70,12,7], center = true);
 
 		//Nut holder base - belt clamps
-		translate(v = [33, -18, 1]) cube(size = [45,15,7], center = true);
-		translate(v = [33, 18, 1]) cube(size = [45,15,7], center = true);
+		translate(v = [33-(7.5/2), -18, 1]) cube(size = [45-7.5,15,7], center = true);
+		translate(v = [33+45/2-7.5, -18, 1]) cylinder(h = 7, r=7.5, $fn=18, center=true);
+		translate(v = [33-(7.5/2), 18, 1]) cube(size = [45-7.5,15,7], center = true);
+		translate(v = [33+45/2-7.5, 18, 1]) cylinder(h = 7, r=7.5, $fn=18, center=true);
 
 		//Bushing holder
 		translate(v = [-25, 30, 5])cube(size = [26,10,15], center = true);
