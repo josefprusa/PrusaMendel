@@ -1,0 +1,33 @@
+Prusa Mendel bill of materials
+################################
+List of things you need to build the machine devided by categories
+
+Printed
+====================
+- 8x Bar clamp
+- 4x Belt clamp
+- 2x Coupling
+- 3x Endstop holder
+- 2x Frame vertex
+- 4x Frame vertex with foot
+- 8x Bushing
+- 8x Bushing
+- 2x Pulley
+- 2x Rod clamp
+- 1x X carriage
+- 1x X end idler
+- 1x X end motor
+- 1x Y motor bracket
+- 2x Z motor mount
+
+
+Nuts&bolts
+====================
+- 72x M8 nut
+- 68x M8 washer
+- 2x M8 spring
+- 19x M3 nut
+- 25x M3 washer
+- 17x M3 10mm screw
+- 3x M3 20mm screw
+- 6x M3 25mm screw
