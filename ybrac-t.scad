@@ -1,4 +1,22 @@
+// PRUSA Mendel  
+// Y motor bracket by Spacexula!!
+// GNU GPL v2
+// Josef Průša
+// josefprusa@me.com
+// prusadjs.cz
+// http://www.reprap.org/wiki/Prusa_Mendel
+// http://github.com/prusajr/PrusaMendel
+
 include <configuration.scad>
+
+/**
+ * @name Y motor bracket
+ * @link y-motor-bracket
+ * @category Printed
+ * @using 3 m3washer
+ * @using 3 m3x10
+ */ 
+
 module ybract(){
 difference(){
 translate([7,4.5])rotate([0,0,90])mirror()linear_extrude(file="ybrac-t.dxf",height=7);

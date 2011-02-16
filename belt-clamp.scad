@@ -8,6 +8,12 @@
 // http://github.com/prusajr/PrusaMendel
 
 include <configuration.scad>
+
+/**
+ * @name Belt clamp
+ * @category Printed
+ */ 
+
 module beltclamp(){
 difference(){
 cube([26,10,4]);
