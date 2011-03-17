@@ -26,9 +26,9 @@ translate([95,0,0]) rotate([0,45,0])cube([20,7.5,20]);
 translate([106,0,4]) rotate([0,0,0])cube([20,7.5,20]);
 translate([75,20,15]) rotate([90,0,0]) cylinder(h = 70, r=4/2, center=true);
 translate([75-25,2,15]) rotate([90,0,0]) cylinder(h = 10, r=m4_diameter/2, center=true);
-translate([75-25,5,15]) rotate([90,0,0]) cylinder(h = 2, r=m4_nut_diameter/2, center=true, $fn=6);
+translate([75-25,5.1,15]) rotate([90,0,0]) cylinder(h = 2, r=m4_nut_diameter/2, center=true, $fn=6);
 translate([75+25,2,15]) rotate([90,0,0]) cylinder(h = 10, r=m4_diameter/2, center=true);
-translate([75+25,5,15]) rotate([90,0,0]) cylinder(h = 2, r=m4_nut_diameter/2, center=true, $fn=6);
+translate([75+25,5.1,15]) rotate([90,0,0]) cylinder(h = 2, r=m4_nut_diameter/2, center=true, $fn=6);
 translate([70,18.5,8.5]) rotate([90,0,90])cylinder(h=40,r=(m4_diameter)/2, center=true);
 translate([70,18.5,21.5]) rotate([90,0,90])cylinder(h=40,r=(m4_diameter)/2, center=true);
 translate([70,44.5,8.5]) rotate([90,0,90])cylinder(h=40,r=(m4_diameter)/2, center=true);
@@ -47,10 +47,10 @@ translate([5+devx,14.5,-1]) cube([16-devx,3,50]);
 translate([-5,22]) rotate([0,0,0])cube([38,30,6]);
 translate([-5,-1]) rotate([0,0,0])cube([16,30,30]);
 translate([70,31.5,9]) cylinder(r=m8_diameter/2,h=30);
-translate([70,31.5,21]) b608();
-translate([70,31.5,-0]) b608();
-translate([83,31.5,11]) b608(9);
-if(bfb){
+translate([70,31.5,21.5]) b608();
+translate([70,31.5,-0.5]) b608();
+translate([83,31.5,11.5]) b608(9);
+//if(bfb){
 translate([56.5,5,-1]) cube([9,5,12]);
 translate([84.5,5,-1]) cube([9,5,12]);
 translate([75,0,15]) rotate([0,180,0]){
@@ -62,18 +62,28 @@ rotate([0,180-60,0]) translate([0,0,16.6]) rotate([90,0,0]) cylinder(r=4,h=6, ce
 rotate([0,60,0]) translate([0,0,16.6]) rotate([90,0,0]) cylinder(r=2.6,h=25, center=true);
 rotate([0,-60,0]) translate([0,0,16.6]) rotate([90,0,0]) cylinder(r=2.6,h=25, center=true);
 }
-}
-else{
-translate([75,-7,15]) rotate([90,0,0]) cylinder(h = 30, r=16/2, center=true);
-translate([79,5,14]) rotate([0,0,0]) cylinder(h = 30, r=3/2, center=true);
-translate([72,5,14]) rotate([0,0,0]) cylinder(h = 30, r=3/2, center=true);
+//}
+//else{
+ translate([75,-7,15]) rotate([90,0,0]) cylinder(h = 30, r=16/2, center=true);   // insulator
+translate([79,5,13.5]) rotate([0,0,0]) cylinder(h = 35, r=3/2, center=true);    // retaining screws
+translate([71,5,13.5]) rotate([0,0,0]) cylinder(h = 35, r=3/2, center=true);
+ 
 translate([75,-4,15]) rotate([0,-40,0])translate([-15,0,0])rotate([90,0,0]) cylinder(h = 30, r=2.4, center=true);
 translate([75,-4,15]) rotate([0,180-40,0])translate([-15,0,0])rotate([90,0,0]) cylinder(h = 30, r=2.4, center=true);
 translate([59.5,5,-1]) cube([9,5,12]);
 translate([81.5,5,20.5]) cube([9,7,12]);
-}
+//}
 
 }}
 bfbext=false;
 translate([6,-55,0]) rotate([0,0,70]) wadeblock(bfbext);
+translate([-30,30]) bfbplug();
+module bfbplug(){
+translate([0,0,4])difference(){
+cylinder(r=7.5,h=8,center=true);
+cylinder(r1=1.8,r2=2.4,h=8.5,center=true);
+translate([4,5,1]) rotate([90,0,0]) cylinder(h = 35, r=3.5/2, center=true);    // retaining screws
+translate([-4,5,1]) rotate([90,0,0]) cylinder(h = 35, r=3.5/2, center=true);
+}
+}
 %cube([85,98,0.01],center=true);
