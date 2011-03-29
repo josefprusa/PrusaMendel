@@ -1,0 +1,3 @@
+[submodule "thingdoc"]
+	path = thingdoc
+	url = git@github.com:prusajr/ThingDoc.git
