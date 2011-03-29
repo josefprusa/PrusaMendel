@@ -1,0 +1,24 @@
+\contentsline {section}{\numberline {1}Bill of materials}{3}
+\contentsline {subsection}{\numberline {1.1}Printed}{3}
+\contentsline {subsection}{\numberline {1.2}Nuts\&bolts}{3}
+\contentsline {section}{\numberline {2}Things overview}{4}
+\contentsline {subsection}{\numberline {2.1}Frame vertex}{4}
+\contentsline {subsection}{\numberline {2.2}Frame vertex}{4}
+\contentsline {subsection}{\numberline {2.3}Frame}{4}
+\contentsline {subsection}{\numberline {2.4}Y motor bracket}{4}
+\contentsline {subsection}{\numberline {2.5}Belt clamp}{4}
+\contentsline {subsection}{\numberline {2.6}Bar clamp}{5}
+\contentsline {subsection}{\numberline {2.7}Frame vertex with foot}{5}
+\contentsline {subsection}{\numberline {2.8}Frame vertex with foot}{5}
+\contentsline {subsection}{\numberline {2.9}Z motor mount}{5}
+\contentsline {subsection}{\numberline {2.10}X end idler}{5}
+\contentsline {subsection}{\numberline {2.11}Endstop holder}{6}
+\contentsline {subsection}{\numberline {2.12}Rod clamp}{6}
+\contentsline {subsection}{\numberline {2.13}Bushing}{6}
+\contentsline {subsection}{\numberline {2.14}Bushing}{6}
+\contentsline {subsection}{\numberline {2.15}X carriage}{6}
+\contentsline {subsection}{\numberline {2.16}Pulley}{6}
+\contentsline {subsection}{\numberline {2.17}Coupling}{7}
+\contentsline {subsection}{\numberline {2.18}X end motor}{7}
+\contentsline {section}{\numberline {3}Assembly Instructions}{8}
+\contentsline {subsection}{\numberline {3.1}Assemble Prusa Mendel}{8}

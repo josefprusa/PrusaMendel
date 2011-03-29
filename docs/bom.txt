@@ -10,6 +10,9 @@ Printed
 - 3x Endstop holder
 - 2x Frame vertex
 - 4x Frame vertex with foot
+- 2x Frame vertex
+- 4x Frame vertex with foot
+- 8x Bushing
 - 8x Bushing
 - 2x Pulley
 - 2x Rod clamp
@@ -30,3 +33,8 @@ Nuts&bolts
 - 17x M3 10mm screw
 - 3x M3 20mm screw
 - 6x M3 25mm screw
+
+Assembly
+++++++++++++++++++++
+Assemble 1x Prusa Mendel
+- Assembly info
