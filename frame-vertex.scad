@@ -11,8 +11,9 @@
 // Thank you guys for your great work
 
 include <configuration.scad>
+basefoot=true;
 
-vertex(with_foot=true);
+vertex(basefoot);
 
 %import_stl("frame-vertex.stl");
 
@@ -56,7 +57,7 @@ hole_flat_radius=8.5; // flat surface around holes.
 foot_depth=26.25;
 end_round_translation=vertex_horizontal_hole_offset-hole_flat_radius;
 
-module vertex(with_foot=true)
+module vertex(with_foot=basefoot)
 {
 	peg_r=12;
 	peg1=[hole_separation+vertex_end_major_d/2-peg_r,

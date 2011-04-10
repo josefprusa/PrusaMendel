@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.3.17)  29 MAR 2011 01:59
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.3.17)  9 APR 2011 13:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -173,8 +173,6 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 File: images/frame-vertex.jpg Graphic file (type jpg)
 
 <use images/frame-vertex.jpg>
-File: images/frame-vertex.jpg Graphic file (type jpg)
- <use images/frame-vertex.jpg>
 <images/y-motor-bracket.jpg, id=19, 1027.84pt x 913.4125pt>
 File: images/y-motor-bracket.jpg Graphic file (type jpg)
 
@@ -186,14 +184,12 @@ File: images/belt-clamp.jpg Graphic file (type jpg)
 <images/bar-clamp.jpg, id=21, 945.5325pt x 768.8725pt>
 File: images/bar-clamp.jpg Graphic file (type jpg)
 
-<use images/bar-clamp.jpg> [4 <./images/frame-vertex.jpg> <./images/y-motor-bra
-cket.jpg> <./images/belt-clamp.jpg>]
-<images/frame-vertex-foot.jpg, id=25, 1183.42125pt x 905.3825pt>
+<use images/bar-clamp.jpg>
+<images/frame-vertex-foot.jpg, id=22, 1183.42125pt x 905.3825pt>
 File: images/frame-vertex-foot.jpg Graphic file (type jpg)
 
-<use images/frame-vertex-foot.jpg>
-File: images/frame-vertex-foot.jpg Graphic file (type jpg)
- <use images/frame-vertex-foot.jpg>
+<use images/frame-vertex-foot.jpg> [4 <./images/frame-vertex.jpg> <./images/y-m
+otor-bracket.jpg> <./images/belt-clamp.jpg> <./images/bar-clamp.jpg>]
 <images/z-motor-mount.jpg, id=26, 1150.2975pt x 952.55875pt>
 File: images/z-motor-mount.jpg Graphic file (type jpg)
 
@@ -205,28 +201,28 @@ File: images/x-end-idler.jpg Graphic file (type jpg)
 <images/endstop-holder.jpg, id=28, 1082.0425pt x 851.18pt>
 File: images/endstop-holder.jpg Graphic file (type jpg)
 
-<use images/endstop-holder.jpg> [5 <./images/bar-clamp.jpg> <./images/frame-ver
-tex-foot.jpg> <./images/z-motor-mount.jpg> <./images/x-end-idler.jpg>]
-<images/rod-clamp.jpg, id=32, 970.62625pt x 737.75626pt>
+<use images/endstop-holder.jpg>
+<images/rod-clamp.jpg, id=29, 970.62625pt x 737.75626pt>
 File: images/rod-clamp.jpg Graphic file (type jpg)
 
 <use images/rod-clamp.jpg>
-<images/x-carriage.jpg, id=33, 1147.28625pt x 789.95125pt>
+<images/x-carriage.jpg, id=30, 1147.28625pt x 789.95125pt> [5 <./images/frame-v
+ertex-foot.jpg> <./images/z-motor-mount.jpg> <./images/x-end-idler.jpg> <./imag
+es/endstop-holder.jpg> <./images/rod-clamp.jpg>]
 File: images/x-carriage.jpg Graphic file (type jpg)
-
-<use images/x-carriage.jpg> <images/pulley.jpg, id=34, 875.27pt x 771.88374pt>
+ <use images/x-carriage.jpg>
+<images/pulley.jpg, id=34, 875.27pt x 771.88374pt>
 File: images/pulley.jpg Graphic file (type jpg)
-
-<use images/pulley.jpg> <images/coupling.jpg, id=35, 1063.975pt x 973.6375pt>
+ <use images/pulley.jpg>
+<images/coupling.jpg, id=35, 1063.975pt x 973.6375pt>
 File: images/coupling.jpg Graphic file (type jpg)
 
-<use images/coupling.jpg> [6 <./images/endstop-holder.jpg> <./images/rod-clamp.
-jpg> <./images/x-carriage.jpg> <./images/pulley.jpg>]
-<images/x-end-motor.jpg, id=39, 1145.27875pt x 846.16125pt>
+<use images/coupling.jpg>
+<images/x-end-motor.jpg, id=36, 1145.27875pt x 846.16125pt>
 File: images/x-end-motor.jpg Graphic file (type jpg)
 
-<use images/x-end-motor.jpg> [7 <./images/coupling.jpg> <./images/x-end-motor.j
-pg>] [8] (./doc.aux) ) 
+<use images/x-end-motor.jpg> [6 <./images/x-carriage.jpg> <./images/pulley.jpg>
+ <./images/coupling.jpg> <./images/x-end-motor.jpg>] [7] (./doc.aux) ) 
 Here is how much of TeX's memory you used:
  1434 strings out of 493747
  21417 string characters out of 3143546
@@ -235,17 +231,17 @@ Here is how much of TeX's memory you used:
  8811 words of font info for 31 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  37i,6n,23p,229b,189s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/local/texlive/2010/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmbx10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmbx12.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr12.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr17.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmsy10.pfb>
-Output written on doc.pdf (8 pages, 2626149 bytes).
+</usr/loc
+al/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/loca
+l/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local
+/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/t
+exlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/tex
+live/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texli
+ve/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on doc.pdf (7 pages, 2625573 bytes).
 PDF statistics:
- 68 PDF objects out of 1000 (max. 8388607)
- 38 compressed objects within 1 object stream
+ 65 PDF objects out of 1000 (max. 8388607)
+ 36 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  66 words of extra memory for PDF output out of 10000 (max. 10000000)
 
