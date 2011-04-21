@@ -12,7 +12,8 @@
 
 include <configuration.scad>
 
-vertex(with_foot=true);
+basefoot=true;
+vertex(with_foot=basefoot);
 
 %import_stl("frame-vertex.stl");
 
