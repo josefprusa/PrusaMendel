@@ -48,7 +48,7 @@ module pulley()
 	union()
 	{
 		//entrance
-		translate([0,-3,15]) cube([8.6,7,3],center=true);
+		translate([0,-3,15]) cube([7,5,3],center=true);
 		//nut
 		translate([0,0,13.6]) rotate([0,0,30])cylinder(r=4.22,h=2.8,$fn=6);
 		//grub hole

@@ -38,7 +38,7 @@ module coupling()
 		
 		// inside diameter
 		translate(v = [0, 0, -1])cylinder(h = 16, r=motor_shaft/2, $fn=16);
-		translate(v = [0, 0, 14.5])cylinder(h = 16, r=m8_diameter/2, $fn=16);
+		translate(v = [0, 0, 14.5])cylinder(h = 16, r=8.1/2, $fn=16);
 		
 		// screw holes
 		for (hole=[-1,1])
