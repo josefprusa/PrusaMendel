@@ -13,7 +13,9 @@
 include <configuration.scad>
 basefoot=true;
 
-vertex(basefoot);
+
+basefoot=true;
+vertex(with_foot=basefoot);
 
 %import_stl("frame-vertex.stl");
 
@@ -141,7 +143,7 @@ module barbell (x1,x2,r1,r2,r3,r4)
 {
 	x3=triangulate (x1,x2,r1+r3,r2+r3);
 	x4=triangulate (x2,x1,r2+r4,r1+r4);
-	render()
+	render()  
 	difference ()
 	{
 		union()
