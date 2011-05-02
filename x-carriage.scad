@@ -12,6 +12,9 @@ include <configuration.scad>
 
 /**
  * @name X carriage
+ * @category Printed
+ * @using 2 m4nut
+ * @using 2 m4x25
  */
 
 snap_in_mount = false;
@@ -23,12 +26,15 @@ module xcarriage(){
 			difference(){
 				union(){
 					//Base block
-						cube(size = [64,70,5], center = true);
+						cube(size = [65,70,5], center = true);
 					//Nut holder base - extruder
 
 					//Nut holder base - belt clamps
-						translate(v = [23-(7.5/2), -18, 0]) cube(size = [45-7.5,15,5], center = true);
-						translate(v = [(33+45/2-7.5)-10, -18, 0]) cylinder(h = 5, r=7.5, $fn=18, center=true);
+						translate(v = [23-(7.5/2)+5, -18, 0]) cube(size = [45-7.5+10,15,5], center = true);
+						translate(v = [(33+45/2-7.5), -18, 0]) cylinder(h = 5, r=7.5, $fn=18, center=true);
+					//Nut holder base - belt clamps
+						translate(v = [23-(7.5/2)+5, 18, 0]) cube(size = [45-7.5+10,15,5], center = true);
+						translate(v = [(33+45/2-7.5), 18, 0]) cylinder(h = 5, r=7.5, $fn=18, center=true);
 				}
 				// holes for connecting extruder
 				// SNAP IN MOUNT
@@ -73,16 +79,32 @@ module xcarriage(){
 					//NORMAL MOUNT END
 				}
 				//ZIPTIE holes for connecting belt
-				translate(v = [38, -18, 2]) cube(size = [5,3.5,30], center = true);
+				//translate(v = [38, -18, 2]) cube(size = [5,3.5,30], center = true);
+
+				//belt clamp holes
+					translate(v = [30, -18, 2]) cylinder(h = 10, r=m3_diameter/2, $fn=9, center=true);
+				translate(v = [30, -18, 5]) cylinder(h = 9, r=m3_nut_diameter/2, $fn=6, center=true);
+					translate(v = [48, -18, 2]) cylinder(h = 10, r=m3_diameter/2, $fn=9, center=true);		
+				translate(v = [48, -18, 5]) cylinder(h = 9, r=m3_nut_diameter/2, $fn=6, center=true);
+
+				translate(v = [30, 18, 2]) cylinder(h = 10, r=m3_diameter/2, $fn=9, center=true);
+				translate(v = [30, 18, 5]) cylinder(h = 9, r=m3_nut_diameter/2, $fn=6, center=true);
+				translate(v = [48, 18, 2]) cylinder(h = 10, r=m3_diameter/2, $fn=9, center=true);
+				translate(v = [48, 18, 5]) cylinder(h = 9, r=m3_nut_diameter/2, $fn=6, center=true);
 
 			}
+
 	}
 }
 	translate(v = [0,-35,2.5])rotate(a=[-90,0,0])union(){
 		translate(v = [25,-10.5,0]) rotate(a=[0,0,180]) bushing();
+		translate(v = [24,-4.4,15]) rotate(a=[0,0,180]) cube(size = [5,4,3], center = true);
 		translate(v = [-25,-10.5,0]) rotate(a=[0,0,180]) bushing();
+		translate(v = [-25,-4.4,15]) rotate(a=[0,0,180]) cube(size = [5,4,3], center = true);
 		translate(v = [25,-10.5,59]) rotate(a=[0,0,180]) bushing();
+		translate(v = [24,-4.4,55]) rotate(a=[0,0,180]) cube(size = [5,4,3], center = true);
 		translate(v = [-25,-10.5,59]) rotate(a=[0,0,180]) bushing();
+		translate(v = [-25,-4.4,55]) rotate(a=[0,0,180]) cube(size = [5,4,3], center = true);
 	}
 
 xcarriage();

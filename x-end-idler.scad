@@ -13,9 +13,11 @@ corection = 1.17;
 /**
  * @name X end idler
  * @category Printed
- * @using 2 bushing
  * @using 1 m8spring
- * @using 2 m8nut
+ * @using 3 m8nut
+ * @using 3 m8washer
+ * @using 3 m8washer-big
+ * @using 2 m8x30
  */ 
 use <x-end.scad>
 module xendidler(){

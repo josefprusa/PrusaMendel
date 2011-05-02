@@ -14,7 +14,7 @@ use <teardrop.scad>
 
 axis_diameter_real = 4;
 axis_diameter_larger = 4.5 ;
-pressure_pad_height = 0.9;
+pressure_pad_height = 1.4;
 module xend(){
 
 translate(v = [0, 9.5, 0])bushing(true,65);
@@ -52,13 +52,27 @@ translate(v = [-25, -23, -16.7]) rotate(a=[90,0,0]) {
 			translate(v = [0, -axis_diameter_larger, (-axis_diameter_larger-10)-(axis_diameter_real-pressure_pad_height)]) cube(size = [33,axis_diameter_larger*2,axis_diameter_larger+10]);
 		}
 		//smaller cut
-		translate(v = [0, axis_diameter_larger-1, -axis_diameter_larger]) cube(size = [34,1,axis_diameter_larger]);
+		translate(v = [0, axis_diameter_larger-1, -axis_diameter_larger]) #cube(size = [34,1,axis_diameter_larger]);
 		//cut thru	
 		translate(v = [0, -axis_diameter_larger, -axis_diameter_larger-10]) cube(size = [34,1,axis_diameter_larger+10]);
 		//bottom cut
 		translate(v = [0, -axis_diameter_larger, -axis_diameter_larger-10]) cube(size = [1,axis_diameter_larger*2,axis_diameter_larger+10]);
 		//top cut
 		translate(v = [33, -axis_diameter_larger, -axis_diameter_larger-10]) cube(size = [1,axis_diameter_larger*2,axis_diameter_larger+10]);
+		//strenght cuts
+		translate(v = [5, axis_diameter_larger-2, -axis_diameter_larger]) cylinder(h = 7, r=0.4, $fn=6, center=true);
+		translate(v = [10, axis_diameter_larger-2, -axis_diameter_larger]) cylinder(h = 7, r=0.4, $fn=6, center=true);
+		translate(v = [15, axis_diameter_larger-2, -axis_diameter_larger]) cylinder(h = 7, r=0.4, $fn=6, center=true);
+		translate(v = [20, axis_diameter_larger-2, -axis_diameter_larger]) cylinder(h = 7, r=0.4, $fn=6, center=true);
+		translate(v = [25, axis_diameter_larger-2, -axis_diameter_larger]) cylinder(h = 7, r=0.4, $fn=6, center=true);
+		translate(v = [30, axis_diameter_larger-2, -axis_diameter_larger]) cylinder(h = 7, r=0.4, $fn=6, center=true);
+		translate(v = [2.5, axis_diameter_larger+2, -axis_diameter_larger]) cylinder(h = 7, r=0.4, $fn=6, center=true);
+		translate(v = [5+2.5, axis_diameter_larger+2, -axis_diameter_larger]) cylinder(h = 7, r=0.4, $fn=6, center=true);
+		translate(v = [10+2.5, axis_diameter_larger+2, -axis_diameter_larger]) cylinder(h = 7, r=0.4, $fn=6, center=true);
+		translate(v = [15+2.5, axis_diameter_larger+2, -axis_diameter_larger]) cylinder(h = 7, r=0.4, $fn=6, center=true);
+		translate(v = [20+2.5, axis_diameter_larger+2, -axis_diameter_larger]) cylinder(h = 7, r=0.4, $fn=6, center=true);
+		translate(v = [25+2.5, axis_diameter_larger+2, -axis_diameter_larger]) cylinder(h = 7, r=0.4, $fn=6, center=true);
+
 		
 	}
 }
@@ -79,6 +93,19 @@ mirror([ 1, 0, 0 ])translate(v = [-25, -23, -16.7]) rotate(a=[90,0,0]) {
 		translate(v = [0, -axis_diameter_larger, -axis_diameter_larger-10]) cube(size = [1,axis_diameter_larger*2,axis_diameter_larger+10]);
 		//top cut
 		translate(v = [33, -axis_diameter_larger, -axis_diameter_larger-10]) cube(size = [1,axis_diameter_larger*2,axis_diameter_larger+10]);
+		//strenght cuts
+		translate(v = [5, axis_diameter_larger-2, -axis_diameter_larger]) cylinder(h = 7, r=0.4, $fn=6, center=true);
+		translate(v = [10, axis_diameter_larger-2, -axis_diameter_larger]) cylinder(h = 7, r=0.4, $fn=6, center=true);
+		translate(v = [15, axis_diameter_larger-2, -axis_diameter_larger]) cylinder(h = 7, r=0.4, $fn=6, center=true);
+		translate(v = [20, axis_diameter_larger-2, -axis_diameter_larger]) cylinder(h = 7, r=0.4, $fn=6, center=true);
+		translate(v = [25, axis_diameter_larger-2, -axis_diameter_larger]) cylinder(h = 7, r=0.4, $fn=6, center=true);
+		translate(v = [30, axis_diameter_larger-2, -axis_diameter_larger]) cylinder(h = 7, r=0.4, $fn=6, center=true);
+		translate(v = [2.5, axis_diameter_larger+2, -axis_diameter_larger]) cylinder(h = 7, r=0.4, $fn=6, center=true);
+		translate(v = [5+2.5, axis_diameter_larger+2, -axis_diameter_larger]) cylinder(h = 7, r=0.4, $fn=6, center=true);
+		translate(v = [10+2.5, axis_diameter_larger+2, -axis_diameter_larger]) cylinder(h = 7, r=0.4, $fn=6, center=true);
+		translate(v = [15+2.5, axis_diameter_larger+2, -axis_diameter_larger]) cylinder(h = 7, r=0.4, $fn=6, center=true);
+		translate(v = [20+2.5, axis_diameter_larger+2, -axis_diameter_larger]) cylinder(h = 7, r=0.4, $fn=6, center=true);
+		translate(v = [25+2.5, axis_diameter_larger+2, -axis_diameter_larger]) cylinder(h = 7, r=0.4, $fn=6, center=true);
 		
 	}
 }
@@ -99,7 +126,7 @@ translate(v = [0, -55, 15]) {
 translate(v = [0, -25, 15]) 
 	difference(){
 union(){
-	translate(v = [-(1+(thin_wall/2)-0.25), -3.5, -19.5]) cube(size = [15.5+thin_wall,17,40], center = true);
+	translate(v = [-(1+(thin_wall/2)-0.25), -3.5, -9.5]) cube(size = [15.5+thin_wall,17,60], center = true);
 
 	translate(v = [0, -3.5, -31.6]) cube(size = [33,17,15.8], center = true);
 }

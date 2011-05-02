@@ -24,8 +24,8 @@ type = bushing_type;
 module bushing(stiff, lenght=11){
 	difference(){
 		union(){
-			translate(v=[-7,-8,0])cube(size = [14,8,lenght]);
-			cylinder(h = lenght, r=7);
+			translate(v=[-7.5,-8,0])cube(size = [15,8,lenght]);
+			cylinder(h = lenght, r=7.5);
 		}
 	//cutout inside
 	//Opening
