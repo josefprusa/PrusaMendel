@@ -10,6 +10,7 @@
 include <configuration.scad>
 
 /**
+ * @id bushing
  * @name Bushing
  * @category Printed
  * @link bushing
