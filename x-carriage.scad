@@ -12,6 +12,7 @@ include <configuration.scad>
 
 /**
  * Slides on the x-axis with extruder.
+ * @id x-carriage
  * @name X carriage
  * @category Printed
  * @using 4 m3x10

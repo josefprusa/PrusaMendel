@@ -35,6 +35,7 @@ module teardrop (r=8,h=20)
 vfvertex_height=m8_diameter+4.5;
 
 /**
+ * @id frame-vertex
  * @name Frame vertex
  * @category Printed
  * @link frame-vertex
@@ -42,6 +43,7 @@ vfvertex_height=m8_diameter+4.5;
  * @using 8 m8washer
  */
 /**
+ * @id frame-vertex-foot
  * @name Frame vertex with foot
  * @category Printed
  * @link frame-vertex-foot

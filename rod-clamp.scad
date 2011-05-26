@@ -11,9 +11,10 @@
 include <configuration.scad>
 
 /**
+ * @id rod-clamp
  * @name Rod clamp
  * @category Printed
- */  
+ */
 
 module rodclamp(){ 
 translate([0,0,5]) difference(){
