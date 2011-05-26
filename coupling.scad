@@ -14,6 +14,7 @@
 include <configuration.scad>
 
 /**
+ * @id coupling
  * @name Coupling
  * @category Printed
  * @using 1 m3x25

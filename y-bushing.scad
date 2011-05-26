@@ -11,6 +11,7 @@
 include <configuration.scad>
 
 /**
+ * @id y-bushing
  * @name Y bushing
  * @category Printed
  * @using 4 m3washer

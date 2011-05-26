@@ -11,6 +11,7 @@
 include <configuration.scad>
 
 /**
+ * @id endstop-holder
  * @name Endstop holder
  * @category Printed
  * @using 1 m3x20
