@@ -11,6 +11,7 @@
 include <configuration.scad>
 
 /**
+ * @id x-carriage
  * @name X carriage
  * @category Printed
  * @using 2 m4nut

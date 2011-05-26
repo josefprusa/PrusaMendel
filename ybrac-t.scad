@@ -10,12 +10,13 @@
 include <configuration.scad>
 
 /**
+ * @id y-motor-bracket
  * @name Y motor bracket
  * @link y-motor-bracket
  * @category Printed
  * @using 3 m3washer
  * @using 3 m3x10
- */ 
+ */
 
 module ybract(){
 difference(){

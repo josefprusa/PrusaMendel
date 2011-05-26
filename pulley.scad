@@ -5,6 +5,7 @@ include <configuration.scad>
 
 
 /**
+ * @id pulley
  * @name Pulley
  * @category Printed
  * @using 1 m3nut
