@@ -39,14 +39,14 @@ vfvertex_height=m8_diameter+4.5;
 /**
  * @name Frame vertex
  * @category Printed
- * @link frame-vertex
+ * @id frame-vertex
  * @using 8 m8nut
  * @using 8 m8washer
  */
 /**
  * @name Frame vertex with foot
  * @category Printed
- * @link frame-vertex-foot
+ * @id frame-vertex-foot
  * @using 8 m8nut
  * @using 8 m8washer
  */

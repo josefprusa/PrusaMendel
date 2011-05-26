@@ -1,4 +1,4 @@
-python thingdoc/thingdoc.py;
+python thingdoc/thingdoc;
 cd docs;
 pdflatex doc.tex;
 cd ..;

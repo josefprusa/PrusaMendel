@@ -16,8 +16,8 @@ include <configuration.scad>
 /**
  * @name Coupling
  * @category Printed
- * @using 1 m3x25
- * @using 1 m3nut
+ * @using 2 m3x25xhex
+ * @using 2 m3nut
  * @using 2 m3washer
  */
 module coupling()
@@ -52,7 +52,7 @@ module coupling()
 		}
 				
 		//main cut
-		translate(v = [0, 10, 14]) cube(size = [2,20,35], center = true);
+		translate(v = [0, 10-3.5, 14]) #cube(size = [2,20,35], center = true); //-3.5 makes the hole more even, should produce less wobble
 		
 		translate(v = [0, -2, 20])  cube(size = [20,8,1], center = true);
 		translate(v = [0, -2, 10])  cube(size = [20,8,1], center = true);

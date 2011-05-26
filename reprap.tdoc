@@ -23,7 +23,7 @@
  * @using 4 frame-vertex-foot
  * @using 2 frame-vertex
  * @using 8 bar-clamp
- * @link frame
+ * @id frame
  */
   
 /**
@@ -32,54 +32,75 @@
  * @common
  * @name M8 nut
  * @category Nuts&bolts
- * @link m8nut
+ * @id m8nut
  */
  
 /**
  * @name M8 washer
  * @common
  * @category Nuts&bolts
- * @link m8washer
+ * @id m8washer
  */
 
 /**
  * @name M8 spring
  * @common
  * @category Nuts&bolts
- * @link m8spring
+ * @id m8spring
  */
 
 /**
  * @name M3 nut
  * @common
  * @category Nuts&bolts
- * @link m3nut
- */
+ * @id m3nut
+ 
  
 /**
+ * @name M4 nut
+ * @common
+ * @category Nuts&bolts
+ * @id m4nut
+ */
+ 
+ /**
  * @name M3 washer
  * @common
  * @category Nuts&bolts
- * @link m3washer
+ * @id m3washer
  */
 
-/**
+ /**
  * @name M3 10mm screw
  * @common
  * @category Nuts&bolts
- * @link m3x10
+ * @id m3x10
+ */
+ 
+/**
+ * @name M3 10mm screw with hex head
+ * @common
+ * @category Nuts&bolts
+ * @id m3x10xhex
+ */
+ 
+/**
+ * @name M3 10mm screw with flat head
+ * @common
+ * @category Nuts&bolts
+ * @id m3x10xflat
  */
  
 /**
  * @name M3 20mm screw
  * @common
  * @category Nuts&bolts
- * @link m3x20
+ * @id m3x20
  */
  
 /**
  * @name M3 25mm screw
  * @common
  * @category Nuts&bolts
- * @link m3x25
+ * @id m3x25
  */
