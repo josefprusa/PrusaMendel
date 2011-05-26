@@ -10,6 +10,7 @@
 include <configuration.scad>
 
 /**
+ * @id z-motor-mount
  * @name Z motor mount
  * @category Printed
  * @using 2 m3x25xhex

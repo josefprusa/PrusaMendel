@@ -10,6 +10,7 @@
 include <configuration.scad>
 
 /**
+ * @id y-motor-bracket
  * @name Y motor bracket
  * @id y-motor-bracket
  * @category Printed
@@ -18,7 +19,7 @@ include <configuration.scad>
  * @using 4 m8nut
  * @using 2 m3x10xhex
  * @using 1 m3x10xflat
- */ 
+ */
 
 module ybract(){
 difference(){

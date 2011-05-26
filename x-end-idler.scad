@@ -11,6 +11,7 @@ include <configuration.scad>
 corection = 1.17; 
 
 /**
+ * @id x-end-idler
  * @name X end idler
  * @category Printed
  * @using 1 m8spring
