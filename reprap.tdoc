@@ -3,19 +3,50 @@
  * @name Prusa Mendel
  * @root
  * @assembly Assembly info
- * @using 2 coupling
- * @using 3 endstop-holder
- * @using 1 x-carriage
- * @using 1 x-end-idler
- * @using 1 x-end-motor
- * @using 1 y-motor-bracket
- * @using 2 z-motor-mount
- * @using 4 belt-clamp
- * @using 2 rod-clamp
- * @using 2 pulley
- * @using 1 frame
+ * @using 1 frame-with-axes
+ * @using 1 carriage
  */
  
+/**
+ * Frame with all axes mounted
+ * @name Frame with axes
+ * @assembled
+ * @using 1 frame-with-y
+ * @using 2 frame-vertex
+ * @using 8 bar-clamp
+ * @id frame-with-axes
+ */
+ 
+/**
+ * Frame with Y axis mounted
+ * @name Frame with Y axis
+ * @assembled
+ * @using 1 frame
+ * @using 1 y-axis
+ * @using 1 y-motor-bracket
+ * @using 1 z-motor-mount
+ * @using 1 rod-clamp
+ * @id frame-with-y
+ */
+
+/**
+ * Assembled XZ axis
+ * @name XZ axis  
+ * @assembled
+ * @using 4 frame-vertex-foot
+ * @using 2 frame-vertex
+ * @using 8 bar-clamp
+ * @id xz-axis
+ */
+ 
+/**
+ * Assembled Y axis
+ * @name Y axis 
+ * @assembled
+ * @using 4 y-bushing
+ * @id y-axis
+ */
+
 /**
  * Frame for adding all of the other parts
  * @name Frame
@@ -25,82 +56,23 @@
  * @using 8 bar-clamp
  * @id frame
  */
+
+
+/**
+ * X-carriage with mounted extruder
+ * @name Carriage
+ * @assembled
+ * @using 2 belt-clamp
+ * @using 1 x-carriage
+ * @using 1 extruder
+ * @id carriage
+ */
+ 
+/**
+ * Extruder
+ * @name Extruder
+ * @assembled
+ * @id extruder
+ */
+
   
-/**
- * Simple M8 nut or 5/16 in imperial variant.
- * also can be used for other screwing things :-D
- * @common
- * @name M8 nut
- * @category Nuts&bolts
- * @id m8nut
- */
- 
-/**
- * @name M8 washer
- * @common
- * @category Nuts&bolts
- * @id m8washer
- */
-
-/**
- * @name M8 spring
- * @common
- * @category Nuts&bolts
- * @id m8spring
- */
-
-/**
- * @name M3 nut
- * @common
- * @category Nuts&bolts
- * @id m3nut
- */
- 
-/**
- * @name M4 nut
- * @common
- * @category Nuts&bolts
- * @id m4nut
- */
- 
- /**
- * @name M3 washer
- * @common
- * @category Nuts&bolts
- * @id m3washer
- */
-
- /**
- * @name M3 10mm screw
- * @common
- * @category Nuts&bolts
- * @id m3x10
- */
- 
-/**
- * @name M3 10mm screw with hex head
- * @common
- * @category Nuts&bolts
- * @id m3x10xhex
- */
- 
-/**
- * @name M3 10mm screw with flat head
- * @common
- * @category Nuts&bolts
- * @id m3x10xflat
- */
- 
-/**
- * @name M3 20mm screw
- * @common
- * @category Nuts&bolts
- * @id m3x20
- */
- 
-/**
- * @name M3 25mm screw
- * @common
- * @category Nuts&bolts
- * @id m3x25
- */
