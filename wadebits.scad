@@ -16,6 +16,9 @@ WadesS(); //this module call will make the small gear
  * @id large-gear
  * @name Large extruder gear
  * @category Printed
+ * @using 1 hobbed-bolt
+ * @step Insert hobbed bolt into main hole.
+ * @step Add some M8 washers from other side, later with their count you adjust position of hobbed part in filament path.
  */
 
 /**
@@ -23,7 +26,16 @@ WadesS(); //this module call will make the small gear
  * @name Small extruder gear
  * @category Printed
  * @using 1 m3nut
- * @using 1 m3x10
+ * @using 1 m3xgrubscrew
+ * @step Insert nut into cavity in printed gear.
+ * @step Tighten the grub screw a bit, just to hold in place.
+ */
+
+/**
+ * @name M8 hobbed bolt
+ * @category Nuts&bolts
+ * @id hobbed-bolt
+ * @step Use thread cutting bit in electric screwdriver ...
  */
 
 module WadesL(){

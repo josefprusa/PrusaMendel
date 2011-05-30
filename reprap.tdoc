@@ -68,15 +68,6 @@
  * @id carriage
  */
  
-/**
- * Extruder
- * @name Extruder
- * @assembled
- * @using 1 large-gear
- * @using 1 small-gear
- * @using 1 idler
- * @using 1 extruder-body
- * @id extruder
- */
+
 
   

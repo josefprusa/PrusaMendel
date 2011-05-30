@@ -1,0 +1,88 @@
+== Bill of Materials ==
+=== Rods and Bars ===
+{| class="wikitable sortable" border="1"
+|-
+! scope="col" | Quantity
+! scope="col" | Description
+! scope="col" | Type
+! scope="col" class="unsortable" | Comments
+! scope="col" class="unsortable" | Diagram
+|-
+| 1 || Idler ||  ||  ||
+|}
+=== Nuts&bolts ===
+{| class="wikitable sortable" border="1"
+|-
+! scope="col" | Quantity
+! scope="col" | Description
+! scope="col" | Type
+! scope="col" class="unsortable" | Comments
+! scope="col" class="unsortable" | Diagram
+|-
+| 3 || 608 skate bearing ||  ||  ||
+|-
+| 4 || M4 nut ||  ||  ||
+|-
+| 3 || M3 10mm screw ||  ||  ||
+|-
+| 2 || M4 25mm screw ||  ||  ||
+|-
+| 2 || M3 25mm screw with HEX head ||  ||  ||
+|-
+| 2 || M3 15mm screw with HEX head ||  ||  ||
+|-
+| 2 || M3 10mm screw with hex head ||  ||  ||
+|-
+| 1 || M3 25mm screw ||  ||  ||
+|-
+| 1 || M8 hobbed bolt ||  ||  ||
+|-
+| 1 || M3 grub screw ||  ||  ||
+|-
+| 17 || M3 washer ||  ||  ||
+|-
+| 37 || M8 washer ||  ||  ||
+|-
+| 38 || M8 nut ||  ||  ||
+|-
+| 6 || M3 nut ||  ||  ||
+|-
+| 1 || M3 10mm screw with flat head ||  ||  ||
+|-
+| 2 || M3 40mm screw ||  ||  ||
+|}
+=== Printed ===
+{| class="wikitable sortable" border="1"
+|-
+! scope="col" | Quantity
+! scope="col" | Description
+! scope="col" | Type
+! scope="col" class="unsortable" | Comments
+! scope="col" class="unsortable" | Diagram
+|-
+| 1 || Extruder body ||  ||  ||
+|-
+| 16 || Bar clamp ||  ||  ||
+|-
+| 4 || Y bushing ||  ||  ||
+|-
+| 4 || Frame vertex ||  ||  ||
+|-
+| 1 || Large extruder gear ||  ||  ||
+|-
+| 1 || Small extruder gear ||  ||  ||
+|-
+| 2 || Rod clamp ||  ||  ||
+|-
+| 4 || Frame vertex with foot ||  ||  ||
+|-
+| 1 || Y motor bracket ||  ||  ||
+|-
+| 2 || Belt clamp ||  ||  ||
+|-
+| 1 || X carriage ||  ||  ||
+|-
+| 1 || Z motor mount ||  ||  ||
+|-
+| 1 || Extruder Idler ||  ||  ||
+|}

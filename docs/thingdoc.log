@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.3.17)  30 MAY 2011 04:34
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.3.17)  30 MAY 2011 05:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**doc.tex
-(./doc.tex
+**thingdoc.tex
+(./thingdoc.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
 rman-x-2009-06-19, ngerman-x-2009-06-19, ancientgreek, ibycus, arabic, armenian
@@ -71,8 +71,8 @@ File: pdftex.def 2010/02/14 v0.04n Graphics/color for pdfTeX
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 )
-(./doc.aux)
-\openout1 = `doc.aux'.
+(./thingdoc.aux)
+\openout1 = `thingdoc.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
@@ -86,7 +86,8 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
- (/usr/local/texlive/2010/texmf-dist/tex/context/base/supp-pdf.mkii
+
+(/usr/local/texlive/2010/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count88
 \scratchdimen=\dimen105
@@ -154,94 +155,42 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 [1
 
 {/usr/local/texlive/2010/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-(./doc.toc
+(./thingdoc.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <10.95> on input line 2.
 )
 \tf@toc=\write3
-\openout3 = `doc.toc'.
+\openout3 = `thingdoc.toc'.
 
  [2]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 17.
- (/usr/local/texlive/2010/texmf-dist/tex/latex/base/omscmr.fd
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 17.
-
-[3] <images/frame-vertex.jpg, id=18, 1144.275pt x 924.45375pt>
-File: images/frame-vertex.jpg Graphic file (type jpg)
-
-<use images/frame-vertex.jpg>
-<images/y-motor-bracket.jpg, id=19, 1027.84pt x 913.4125pt>
-File: images/y-motor-bracket.jpg Graphic file (type jpg)
-
-<use images/y-motor-bracket.jpg>
-<images/belt-clamp.jpg, id=20, 1065.9825pt x 811.03pt>
-File: images/belt-clamp.jpg Graphic file (type jpg)
-
-<use images/belt-clamp.jpg>
-<images/bar-clamp.jpg, id=21, 945.5325pt x 768.8725pt>
-File: images/bar-clamp.jpg Graphic file (type jpg)
-
-<use images/bar-clamp.jpg>
-<images/frame-vertex-foot.jpg, id=22, 1183.42125pt x 905.3825pt>
-File: images/frame-vertex-foot.jpg Graphic file (type jpg)
-
-<use images/frame-vertex-foot.jpg> [4 <./images/frame-vertex.jpg> <./images/y-m
-otor-bracket.jpg> <./images/belt-clamp.jpg> <./images/bar-clamp.jpg>]
-<images/z-motor-mount.jpg, id=26, 1150.2975pt x 952.55875pt>
-File: images/z-motor-mount.jpg Graphic file (type jpg)
-
-<use images/z-motor-mount.jpg>
-<images/x-end-idler.jpg, id=27, 1147.28625pt x 944.52875pt>
-File: images/x-end-idler.jpg Graphic file (type jpg)
-
-<use images/x-end-idler.jpg>
-<images/endstop-holder.jpg, id=28, 1082.0425pt x 851.18pt>
-File: images/endstop-holder.jpg Graphic file (type jpg)
-
-<use images/endstop-holder.jpg>
-<images/rod-clamp.jpg, id=29, 970.62625pt x 737.75626pt>
-File: images/rod-clamp.jpg Graphic file (type jpg)
-
-<use images/rod-clamp.jpg>
-<images/x-carriage.jpg, id=30, 1147.28625pt x 789.95125pt>
-File: images/x-carriage.jpg Graphic file (type jpg)
-
-<use images/x-carriage.jpg> [5 <./images/frame-vertex-foot.jpg> <./images/z-mot
-or-mount.jpg> <./images/x-end-idler.jpg> <./images/endstop-holder.jpg> <./image
-s/rod-clamp.jpg>] <images/pulley.jpg, id=34, 875.27pt x 771.88374pt>
-File: images/pulley.jpg Graphic file (type jpg)
-
-<use images/pulley.jpg> <images/coupling.jpg, id=35, 1063.975pt x 973.6375pt>
-File: images/coupling.jpg Graphic file (type jpg)
-
-<use images/coupling.jpg>
-<images/x-end-motor.jpg, id=36, 1145.27875pt x 846.16125pt>
-File: images/x-end-motor.jpg Graphic file (type jpg)
-
-<use images/x-end-motor.jpg> [6 <./images/x-carriage.jpg> <./images/pulley.jpg>
- <./images/coupling.jpg> <./images/x-end-motor.jpg>] [7] (./doc.aux) ) 
+ [3] [4] [5]
+[6] [7] [8] (./thingdoc.aux) ) 
 Here is how much of TeX's memory you used:
- 1434 strings out of 493747
- 21417 string characters out of 3143546
- 74061 words of memory out of 3000000
- 4708 multiletter control sequences out of 15000+200000
+ 1367 strings out of 493747
+ 19865 string characters out of 3143546
+ 78078 words of memory out of 3000000
+ 4656 multiletter control sequences out of 15000+200000
  8811 words of font info for 31 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 37i,6n,23p,229b,189s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/loc
-al/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/loca
-l/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local
-/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/t
-exlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/tex
-live/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texli
-ve/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on doc.pdf (7 pages, 2625126 bytes).
+ 37i,6n,23p,234b,189s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/local/texlive/2010/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr12.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr17.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb>
+Output written on thingdoc.pdf (8 pages, 87883 bytes).
 PDF statistics:
- 65 PDF objects out of 1000 (max. 8388607)
- 36 compressed objects within 1 object stream
+ 55 PDF objects out of 1000 (max. 8388607)
+ 38 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

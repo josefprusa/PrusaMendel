@@ -70,6 +70,13 @@
  * @category Nuts&bolts
  * @id m3x10xhex
  */
+
+/**
+ * @name M3 grub screw
+ * @common
+ * @category Nuts&bolts
+ * @id m3xgrubscrew
+ */
  
 /**
  * @name M3 10mm screw with flat head
@@ -83,6 +90,13 @@
  * @common
  * @category Nuts&bolts
  * @id m3x20
+ */
+ 
+/**
+ * @name M3 40mm screw
+ * @common
+ * @category Nuts&bolts
+ * @id m3x40
  */
 
 /**
@@ -119,3 +133,17 @@
  * @category Nuts&bolts
  * @id m4x25
  */
+ 
+/**
+ * @name 608 skate bearing
+ * @common
+ * @category Nuts&bolts
+ * @id bearing-608
+ */
+ 
+/**
+ * @name NEMA17 stepper motor
+ * @common
+ * @id NEMA17
+ */
+ 

@@ -23,15 +23,17 @@ snap_in_mount = false;
 use <bushing.scad>
 
 module ybushing(){
-translate(v = [0,8.4,4.9]) rotate(a=[0,0,180]) cube(size = [5,3,4], center = true);difference(){
-union(){
-translate(v = [0,0,1.5]) cube(size = [33,11,3], center = true);
-translate(v = [0,0,1.5]) cube(size = [16,20,3], center = true);
+	translate(v = [0,8.4,4.9]) rotate(a=[0,0,180]) cube(size = [5,3,4], center = true);
+	translate(v = [0,-8.4,4.9]) rotate(a=[0,0,180]) cube(size = [5,3,4], center = true);
+	difference(){
+		union(){
+			translate(v = [0,0,1.5]) cube(size = [33,11,3], center = true);
+			translate(v = [0,0,1.5]) cube(size = [16,20,3], center = true);
+			translate(v = [0,5.5,11]) rotate(a=[90,0,0]) bushing();
+			}
+		translate(v = [12, 0, -2]) cylinder(h = 12, r=m3_diameter/2, $fn=9, center=true);
+		translate(v = [-12, 0, -2]) cylinder(h = 12, r=m3_diameter/2, $fn=9, center=true);
+	}	
+}
 
-translate(v = [0,5.5,11]) rotate(a=[90,0,0]) bushing();
-}
-translate(v = [12, 0, -2]) cylinder(h = 12, r=m3_diameter/2, $fn=9, center=true);
-translate(v = [-12, 0, -2]) cylinder(h = 12, r=m3_diameter/2, $fn=9, center=true);
-}	
-}
 ybushing();

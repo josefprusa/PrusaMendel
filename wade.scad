@@ -18,15 +18,77 @@ grrf_peek_mount_holes=32;
 //e.g. wade(hotend_mount=groovemount+peek_reprapsource_mount);
 
 /**
+ * Extruder
+ * @name Extruder
+ * @assembled
+ * @using 1 small-gear
+ * @id extruder
+ * @using 1 idler
+ * @using 1 extruder-body
+ * @using 1 m3nut
+ * @using 1 m3washer
+ * @using 1 m3x25
+ * @step Take idler and insert nut into small nut-trap inside the hinge.
+ * @step While holding the nut in place, preprare M3x25 bolt with washer and screw it into the hinge just enough to hold the nut.
+ * @step Now take the extruder body and idler. Place idler on the hinge counterpart and compleately screw the M3x25 bolt. This will create secured hinge.
+ *
+ * @using 2 m4nut
+ * @step Place M4 nuts into their nut traps, secure them with piece of tape. We need them in place, since later they would be harder to access.
+ * 
+ * @using 3 m3x10
+ * @using 3 m3washer
+ * @using 1 NEMA17
+ * @step Prepare your NEMA17 stepper motor and three M3x10 screws with washers.
+ * @step Hold motor on place and lightly tighten the screws. We need to adjust motor position later, no need to tighten it hard.
+ * 
+ * @using 1 large-gear
+ * @using 1 m8washer
+ * @using 2 m8nut
+ * @using 2 bearing-608
+ * @step Place two skate bearings on ther position, they should snuggly fit in.
+ * @step Insert prepared large gear into the body with mounted bearings.
+ * @step Check if the alignment of hobbed part with the filament path. Adjust it accordingly with adding or removing M8 washers.
+ * @step After adjusting, we need to fix the bolt in. So we place washer at the end of hobbed bolt and with two M8 nuts we will do locknut by tightening them against each other.
+ * @step Check if large gear turns freely.
+ *
+ * @using 2 m3x40
+ * @using 4 m3washer
+ * @using 2 extruder-spring
+ * @step Prepare two M3x40 screws with sandwitch of washer-spring-washer.
+ * @step Insert two M3 nuts into nut traps on top of drive mechanism.
+ * @step Insert prepared screws into the holes on idler. Close the idler and tighten the screws into the trapped nuts. More you tighten those screws, more pressure will be on fillament.
+ * @step Your extruder is done.
+ */
+
+/**
  * Extruder body
  * @name Extruder body
+ * @category Printed
  * @id extruder-body
  */
 
 /**
  * Extruder idler
- * @name Idler
+ * @name Extruder Idler
  * @id idler
+ * @category Printed
+ * @using 1 bearing-608
+ * @using 1 idler-m8-piece
+ * @step Insert piece of M8 rod into bearing.
+ * @step Insert 608 bearing with rod into printed idler part.
+ */
+
+/**
+ * Small M8 rod 
+ * @name Idler
+ * @id idler-m8-piece
+ * @category Rods and Bars
+ */
+
+/**
+ * Spring used for idler on extruder.
+ * @name Extruder spring
+ * @id extruder-spring
  */
 
 wade(hotend_mount=groovemount);

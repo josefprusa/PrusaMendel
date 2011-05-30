@@ -173,7 +173,7 @@ module motor_mount ()
 module motor_mount_holes ()
 {
 	// Motor mount holes. 
-	translate([0,0,-1])
+	translate([0,0,1])
 	rotate(motor_mount_rotation)
 	{
 		for (hole=[3:5])
