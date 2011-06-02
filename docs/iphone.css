@@ -1,0 +1,17 @@
+#logo{
+		display: none;
+		}
+		#main {
+  			width: 100% ; 
+  			padding-top: 20px;
+  			padding-left: 5px;
+  			padding-right: 5px;
+  			margin-left: 0px ;
+  			margin-right: 0px ;
+		}
+		#assemblybuttons{ }
+		.control {padding: .1em .1em .1em;}
+		.menu a{
+			margin-left: 2px;
+			margin-right: 2px;
+		}
