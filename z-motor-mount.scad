@@ -31,11 +31,13 @@ translate(v=[-25,-29.25,0]) rotate(a=[0,90,0]) cylinder(h = 55, r=8, $fn=30);
 translate(v=[-2.1,0,3.1]) cube(size = [46,43,10], center = true);
 
 // Nema 17
+translate(v=[-1,0,0]) {
 rotate ([0,0,45]) translate([20,0,0]) cube(size = [9,3.2,25], center = true);
 rotate ([0,0,-45]) translate([20,0,0]) cube(size = [9,3.2,25], center = true);
 rotate ([0,0,135]) translate([20,0,0]) cube(size = [9,3.2,25], center = true);
 rotate ([0,0,-135]) translate([20,0,0]) cube(size = [9,3.2,25], center = true);
 translate(v=[0,0,-10])cylinder(h = 20, r=13);
+}
 
 translate(v=[30,0,-10]) cylinder(h = 20, r=4.2);
 translate(v=[-26,29.25,0]) rotate(a=[0,90,0]) cylinder(h = 58, r=m8_diameter/2);
