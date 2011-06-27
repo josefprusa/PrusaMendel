@@ -22,12 +22,14 @@ snap_in_mount = false;
 use <bushing.scad>
 
 module xcarriage(){
+union(){
 	translate(v = [0,0,2.5]) 
 		union(){
 			difference(){
 				union(){
 					//Base block
 						cube(size = [65,70,5], center = true);
+						translate(v = [0, -31, 0]) cylinder(h = 5, r=m4_nut_diameter/2+2, $fn=6, center=true);	
 					//Nut holder base - extruder
 
 					//Nut holder base - belt clamps
@@ -96,17 +98,13 @@ module xcarriage(){
 			}
 
 	}
+translate(v = [25.01,-30.01,5.01])standart_bushing();
+translate(v = [-25.01,-30.01,5.01])standart_bushing();
+translate(v = [25.01,30.01,5.01])standart_bushing();
+translate(v = [-25.01,30.01,5.01])standart_bushing();
 }
-	translate(v = [0,-35,2.5])rotate(a=[-90,0,0])union(){
-		translate(v = [25,-10.5,0]) rotate(a=[0,0,180]) bushing();
-		translate(v = [24,-4.4,15]) rotate(a=[0,0,180]) cube(size = [5,4,3], center = true);
-		translate(v = [-25,-10.5,0]) rotate(a=[0,0,180]) bushing();
-		translate(v = [-25,-4.4,15]) rotate(a=[0,0,180]) cube(size = [5,4,3], center = true);
-		translate(v = [25,-10.5,59]) rotate(a=[0,0,180]) bushing();
-		translate(v = [24,-4.4,55]) rotate(a=[0,0,180]) cube(size = [5,4,3], center = true);
-		translate(v = [-25,-10.5,59]) rotate(a=[0,0,180]) bushing();
-		translate(v = [-25,-4.4,55]) rotate(a=[0,0,180]) cube(size = [5,4,3], center = true);
-	}
+}
+
 
 xcarriage();
 

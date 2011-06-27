@@ -31,7 +31,7 @@ grrf_peek_mount_holes=32;
  * @step Take idler and insert nut into small nut-trap inside the hinge.
  * @step While holding the nut in place, preprare M3x25 bolt with washer and screw it into the hinge just enough to hold the nut.
  * @step Now take the extruder body and idler. Place idler on the hinge counterpart and compleately screw the M3x25 bolt. This will create secured hinge.
- *
+ * 
  * @using 2 m4nut
  * @step Place M4 nuts into their nut traps, secure them with piece of tape. We need them in place, since later they would be harder to access.
  * 
@@ -50,14 +50,14 @@ grrf_peek_mount_holes=32;
  * @step Check if the alignment of hobbed part with the filament path. Adjust it accordingly with adding or removing M8 washers.
  * @step After adjusting, we need to fix the bolt in. So we place washer at the end of hobbed bolt and with two M8 nuts we will do locknut by tightening them against each other.
  * @step Check if large gear turns freely.
- *
+ * 
  * @using 2 m3x40
  * @using 4 m3washer
  * @using 2 extruder-spring
  * @step Prepare two M3x40 screws with sandwitch of washer-spring-washer.
- * @step Insert two M3 nuts into nut traps on top of drive mechanism.
+ * @step Insert two M3 nuts into nut traps on top of drive mechanism. [[extruder/top-nut-traps.png]]
  * @step Insert prepared screws into the holes on idler. Close the idler and tighten the screws into the trapped nuts. More you tighten those screws, more pressure will be on fillament.
- * @step Your extruder is done.
+ * @step Your extruder is done. [[extruder/assembled.jpg]]
  */
 
 /**

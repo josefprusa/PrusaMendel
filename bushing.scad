@@ -43,5 +43,30 @@ module bushing(stiff, lenght=11){
 	translate(v=[0,0,-1]) cylinder(h = lenght+2, r=5);
 	}
 }
-bushing(false, 11);
-translate(v=[-7,-11,0])cube(size = [14,3,11]);
+
+
+module standart_bushing(){
+
+difference(){translate(v=[0,5,8])rotate(a=[90,0,0]){
+bushing(false, 10);
+translate(v=[-7,-13,0])cube(size = [14,5,10]);
+translate(v=[-2,-13,-3])cube(size = [4,5,16]);
+translate(v=[-2,-11,-3])cube(size = [4,7.5,2]);
+translate(v=[-2,-11,11])cube(size = [4,7.5,2]);
+}
+translate(v=[-3,-1,-16])rotate(a=[45,0,0])cube(size = [6,5,16]);
+
+mirror([ 0, 1, 0 ]) translate(v=[-3,-1,-16])rotate(a=[45,0,0])cube(size = [6,5,16]);}
+}
+
+
+// Includes small cutouts for better prints
+module vertical_bushing(){
+difference(){
+bushing(false, 10);
+translate(v=[-5,0,-1]) cube(size = [10,2.5,lenght+2]);
+}
+}
+
+
+vertical_bushing();

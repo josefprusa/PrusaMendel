@@ -135,8 +135,10 @@
  */
  
 /**
+ * 608 Bearing. When you have troubles finding it, try your local skateshop, because its used in skateboards.
  * @name 608 skate bearing
  * @common
+ * @image common/608.jpg
  * @category Nuts&bolts
  * @id bearing-608
  */
