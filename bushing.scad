@@ -61,9 +61,9 @@ mirror([ 0, 1, 0 ]) translate(v=[-3,-1,-16])rotate(a=[45,0,0])cube(size = [6,5,1
 
 
 // Includes small cutouts for better prints
-module vertical_bushing(){
+module vertical_bushing(stiff, lenght){
 difference(){
-bushing(false, 10);
+bushing(stiff, lenght);
 translate(v=[-5,0,-1]) cube(size = [10,2.5,lenght+2]);
 }
 }
