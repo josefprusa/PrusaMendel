@@ -1,17 +1,51 @@
-#logo{
-		display: none;
-		}
-		#main {
-  			width: 100% ; 
-  			padding-top: 20px;
-  			padding-left: 5px;
-  			padding-right: 5px;
-  			margin-left: 0px ;
-  			margin-right: 0px ;
-		}
-		#assemblybuttons{ }
-		.control {padding: .1em .1em .1em;}
-		.menu a{
-			margin-left: 2px;
-			margin-right: 2px;
-		}
+#logo {
+	display: none;
+}
+body{
+padding-left: 2%;
+padding-right: 2%;
+}
+#main {
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-top: 20px;
+	width: 100%;
+}
+
+#assemblybuttons {
+}
+
+.control {
+	padding: .1em .1em .1em;
+}
+
+#menu a {
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+#facebox .content {
+  display:table;
+  width: 250px;
+  padding: 10px;
+  background: #fff;
+  -webkit-border-radius:4px;
+  -moz-border-radius:4px;
+  border-radius:4px;
+}
+#facebox .popup{
+  position:relative;
+  border:3px solid #000;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  border-radius:5px;
+  -webkit-box-shadow:0 0 18px rgba(0,0,0,0.4);
+  -moz-box-shadow:0 0 18px rgba(0,0,0,0.4);
+  box-shadow:0 0 18px rgba(0,0,0,0.4);
+}
+#facebox_overlay {
+  display:none;
+}
+.facebox_overlayBG {
+  display:none;
+}

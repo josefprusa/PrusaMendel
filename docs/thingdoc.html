@@ -1,265 +1,405 @@
 <html>
   <head>
     <title>ThingDoc: Prusa Mendel</title>
-   <link rel="stylesheet" type="text/css" href="thingdoc.css" />
+    <link rel="stylesheet" type="text/css" href="thingdoc.css" />
+   <link rel="stylesheet" type="text/css" href="facebox.css" />
    <link media="only screen and (max-device-width: 480px)" href="iphone.css" type="text/css" rel="stylesheet" />
    <meta name = "viewport" content = "width = device-width, initial-scale = 1, user-scalable = no">
-   <script type="text/javascript" src="jquery.js"></script> 
-   <script type="text/javascript">
-	 $(document).ready(function(){
-   $("#bombutton").click(function(){
-     $("#bom").animate({ height: 'show', opacity: 'show' }, 'fast');
-     $("#things").animate({ height: 'hide', opacity: 'hide' }, 'fast');
-     $("#assembly").animate({ height: 'hide', opacity: 'hide' }, 'fast');
-     $("#intro").animate({ height: 'hide', opacity: 'hide' }, 'fast');
-   });
-   $("#thingsbutton").click(function(){
-     $("#bom").animate({ height: 'hide', opacity: 'hide' }, 'fast');
-     $("#things").animate({ height: 'show', opacity: 'show' }, 'fast');
-     $("#assembly").animate({ height: 'hide', opacity: 'hide' }, 'fast');
-     $("#intro").animate({ height: 'hide', opacity: 'hide' }, 'fast');
-   });
-   $("#assemblybutton").click(function(){
-     $("#bom").animate({ height: 'hide', opacity: 'hide' }, 'fast');
-     $("#things").animate({ height: 'hide', opacity: 'hide' }, 'fast');
-     $("#assembly").animate({ height: 'show', opacity: 'show' }, 'fast');
-     $("#intro").animate({ height: 'hide', opacity: 'hide' }, 'fast');
-   });
- });
-	</script>
+   <meta name="apple-mobile-web-app-capable" content="yes" />
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="facebox.js"></script>
+   <script type="text/javascript" src="jquery.cookie.js"></script>
+   <script type="text/javascript" src="thingdoc.js"></script>
+   <script>var unique = "153431534841";
+   </script>
   </head>
   <body>
-  	
-  	<div class="menu">
-  	<a href="#" id="bombutton" class="button green">Bom</a>
-  	<a href="#" id="thingsbutton" class="button white">Things</a>
-  	<a href="#" id="assemblybutton" class="button white">Assembly</a>
-  	<span id="assemblybuttons">
-  	<a href="#" class="button white control"><</a>
-  	1/20
-  	<a href="#" class="button white control">></a>
-	</span></div>
-	
-	
-	
-	
-	<img src="logo.png" id="logo"/>
-	<div id="main">
-	<div id="intro">
-    <h1>ThingDoc: Prusa Mendel</h1>
- </div>
-	
-	<div id="bom">
-    <h2>Bill of Materials</h2>
 
-<p>Check all parts to get green <a href="#bom" class="button green smallbutton">bom</a> button in menu, then proceed to the assembly.</p>    <h3>Rods and Bars</h3>
-    <ul>
-      <li><input type="checkbox" name="skrtatko"> <strong>1x</strong> <a href="#thing_idler-m8-piece">Idler</a></li>
-    </ul>
+    <div id="menu">
+    
+    <a href="#" id="homebutton" class="button gray">Home</a>
+    <a href="#" id="bombutton" class="button">BOM</a>
+    <a href="#" id="thingsbutton" class="button white">Things</a>
+    <a href="#" id="assemblybutton" class="button white">Assembly</a>
+    <span id="assemblybuttons">
+    	<a href="#" class="button white control">&lt;</a>
+    		<span id="assemblyActual">0</span>/<span id="assemblyCount">0</span>
+    	<a href="#" class="button white control">&gt;</a>
+    </span></div>
 
-    <h3>Nuts&amp;bolts</h3>
-    <ul>
-      <li><input type="checkbox" name="skrtatko"> <strong>3x</strong> 608 skate bearing</li>
-      <li><input type="checkbox" name="skrtatko"> <strong>4x</strong> M4 nut</li>
-      <li><input type="checkbox" name="skrtatko"> <strong>3x</strong> M3 10mm screw</li>
-      <li><input type="checkbox" name="skrtatko"> <strong>2x</strong> M4 25mm screw</li>
-      <li><input type="checkbox" name="skrtatko"> <strong>1x</strong> <a href="#thing_hobbed-bolt">M8 hobbed bolt</a></li>
-      <li><input type="checkbox" name="skrtatko"> <strong>2x</strong> M3 15mm screw with HEX head</li>
-      <li><input type="checkbox" name="skrtatko"> <strong>2x</strong> M3 10mm screw with hex head</li>
-      <li><input type="checkbox" name="skrtatko"> <strong>1x</strong> M3 25mm screw</li>
-      <li><input type="checkbox" name="skrtatko"> <strong>1x</strong> M3 grub screw</li>
-      <li><input type="checkbox" name="skrtatko"> <strong>2x</strong> M3 25mm screw with HEX head</li>
-      <li><input type="checkbox" name="skrtatko"> <strong>6x</strong> M3 nut</li>
-      <li><input type="checkbox" name="skrtatko"> <strong>37x</strong> M8 washer</li>
-      <li><input type="checkbox" name="skrtatko"> <strong>38x</strong> M8 nut</li>
-      <li><input type="checkbox" name="skrtatko"> <strong>17x</strong> M3 washer</li>
-      <li><input type="checkbox" name="skrtatko"> <strong>1x</strong> M3 10mm screw with flat head</li>
-      <li><input type="checkbox" name="skrtatko"> <strong>2x</strong> M3 40mm screw</li>
-    </ul>
 
-    <h3>Printed</h3>
-    <ul>
-      <li><input type="checkbox" name="skrtatko"> <strong>1x</strong> <a href="#thing_extruder-body">Extruder body</a></li>
-      <li><input type="checkbox" name="skrtatko"> <strong>16x</strong> <a href="#thing_bar-clamp">Bar clamp</a></li>
-      <li><input type="checkbox" name="skrtatko"> <strong>4x</strong> <a href="#thing_y-bushing">Y bushing</a></li>
-      <li><input type="checkbox" name="skrtatko"> <strong>4x</strong> <a href="#thing_frame-vertex">Frame vertex</a></li>
-      <li><input type="checkbox" name="skrtatko"> <strong>1x</strong> <a href="#thing_y-motor-bracket">Y motor bracket</a></li>
-      <li><input type="checkbox" name="skrtatko"> <strong>1x</strong> <a href="#thing_small-gear">Small extruder gear</a></li>
-      <li><input type="checkbox" name="skrtatko"> <strong>2x</strong> <a href="#thing_rod-clamp">Rod clamp</a></li>
-      <li><input type="checkbox" name="skrtatko"> <strong>4x</strong> <a href="#thing_frame-vertex-foot">Frame vertex with foot</a></li>
-      <li><input type="checkbox" name="skrtatko"> <strong>1x</strong> <a href="#thing_large-gear">Large extruder gear</a></li>
-      <li><input type="checkbox" name="skrtatko"> <strong>2x</strong> <a href="#thing_belt-clamp">Belt clamp</a></li>
-      <li><input type="checkbox" name="skrtatko"> <strong>1x</strong> <a href="#thing_x-carriage">X carriage</a></li>
-      <li><input type="checkbox" name="skrtatko"> <strong>1x</strong> <a href="#thing_z-motor-mount">Z motor mount</a></li>
-      <li><input type="checkbox" name="skrtatko"> <strong>1x</strong> <a href="#thing_idler">Extruder Idler</a></li>
-    </ul>
+    <a href="http://thingdoc.org/"><img src="logo120.png" id="logo"/></a>
 
-    </div>    <div id="things"><h2>Things overview</h2>
-    <p>List of things and their descriptions</p>
+    <div id="main">
 
-    <h3 id="thing_y-axis">Y axis</h3>
-      <p>Assembled Y axis</p>
+    <div id="intro">
+      <h1>Prusa Mendel</h1>
+      <img src="logo.png" width="435" />
+      <p>Prusa Mendel is machine from RepRap project. RepRap is open source 3D printer.</p>
+    </div>
 
-    <h3 id="thing_frame-with-axes">Frame with axes</h3>
-      <p>Frame with all axes mounted</p>
+    <div id="bom">
+      <h2>Bill of Materials</h2>
+      <p>Check all parts to get green <a href="#bom" class="button green smallbutton">BOM</a> button in menu, then proceed to the assembly.</p><p>Don't worry, the status of your BOM remains even after refreshing the page!</p>
 
-    <h3 id="thing_frame-vertex">Frame vertex</h3>
-      <img src="images/frame-vertex.jpg" width="256" />
+      <h3>Rods and Bars</h3>
+      <table id="bomtable">
+        <tr><td><input type="checkbox" class="bom_checkbox" name="idler-m8-piece"></td><td class="right"><strong>1 x</strong></td>
 
-    <h3 id="thing_frame">Frame</h3>
-      <p>Frame for adding all of the other parts</p>
+<td><a href="#thing_idler-m8-piece" rel="facebox" >Idler</a></td></tr>
 
-    <h3 id="thing_loadtester">load tester</h3>
+      </table>
 
-    <h3 id="thing_y-motor-bracket">Y motor bracket</h3>
-      <img src="images/y-motor-bracket.jpg" width="256" />
+      <h3>Nuts&amp;bolts</h3>
+      <table id="bomtable">
+        <tr><td><input type="checkbox" class="bom_checkbox" name="bearing-608"></td><td class="right"><strong>3 x</strong></td>
 
-    <h3 id="thing_hobbed-bolt">M8 hobbed bolt</h3>
+<td><a href="#thing_bearing-608" rel="facebox" >608 skate bearing</a></td></tr>
 
-    <h3 id="thing_idler">Extruder Idler</h3>
-      <p>Extruder idler</p>
+        <tr><td><input type="checkbox" class="bom_checkbox" name="m4nut"></td><td class="right"><strong>4 x</strong></td>
 
-    <h3 id="thing_frame-with-y">Frame with Y axis</h3>
-      <p>Frame with Y axis mounted</p>
+<td><a href="#thing_m4nut" rel="facebox" >M4 nut</a></td></tr>
 
-    <h3 id="thing_y-bushing">Y bushing</h3>
+        <tr><td><input type="checkbox" class="bom_checkbox" name="m3x10"></td><td class="right"><strong>3 x</strong></td>
 
-    <h3 id="thing_bar-clamp">Bar clamp</h3>
-      <img src="images/bar-clamp.jpg" width="256" />
+<td><a href="#thing_m3x10" rel="facebox" >M3 10mm screw</a></td></tr>
 
-    <h3 id="thing_calibration">Configuration test</h3>
+        <tr><td><input type="checkbox" class="bom_checkbox" name="m4x25"></td><td class="right"><strong>2 x</strong></td>
 
-    <h3 id="thing_xz-axis">XZ axis</h3>
-      <p>Assembled XZ axis</p>
+<td><a href="#thing_m4x25" rel="facebox" >M4 25mm screw</a></td></tr>
 
-    <h3 id="thing_large-gear">Large extruder gear</h3>
+        <tr><td><input type="checkbox" class="bom_checkbox" name="hobbed-bolt"></td><td class="right"><strong>1 x</strong></td>
 
-    <h3 id="thing_frame-vertex-foot">Frame vertex with foot</h3>
-      <img src="images/frame-vertex-foot.jpg" width="256" />
+<td><a href="#thing_hobbed-bolt" rel="facebox" >M8 hobbed bolt</a></td></tr>
 
-    <h3 id="thing_x-end-motor">X end motor</h3>
+        <tr><td><input type="checkbox" class="bom_checkbox" name="m3x15xhex"></td><td class="right"><strong>8 x</strong></td>
 
-    <h3 id="thing_extruder-body">Extruder body</h3>
-      <p>Extruder body</p>
+<td><a href="#thing_m3x15xhex" rel="facebox" >M3 15mm screw with HEX head</a></td></tr>
 
-    <h3 id="thing_small-gear">Small extruder gear</h3>
+        <tr><td><input type="checkbox" class="bom_checkbox" name="m3x10xhex"></td><td class="right"><strong>2 x</strong></td>
 
-    <h3 id="thing_extruder-spring">Extruder spring</h3>
-      <p>Spring used for idler on extruder.</p>
+<td><a href="#thing_m3x10xhex" rel="facebox" >M3 10mm screw with hex head</a></td></tr>
 
-    <h3 id="thing_printable-bushing">Printable Bushing</h3>
+        <tr><td><input type="checkbox" class="bom_checkbox" name="m3x25"></td><td class="right"><strong>1 x</strong></td>
 
-    <h3 id="thing_x-carriage">X carriage</h3>
-      <img src="images/x-carriage.jpg" width="256" />
+<td><a href="#thing_m3x25" rel="facebox" >M3 25mm screw</a></td></tr>
 
-    <h3 id="thing_x-end-idler">X end idler</h3>
+        <tr><td><input type="checkbox" class="bom_checkbox" name="m3xgrubscrew"></td><td class="right"><strong>1 x</strong></td>
 
-    <h3 id="thing_rod-clamp">Rod clamp</h3>
-      <img src="images/rod-clamp.jpg" width="256" />
+<td><a href="#thing_m3xgrubscrew" rel="facebox" >M3 grub screw</a></td></tr>
 
-    <h3 id="thing_z-motor-mount">Z motor mount</h3>
-      <img src="images/z-motor-mount.jpg" width="256" />
+        <tr><td><input type="checkbox" class="bom_checkbox" name="m3x25xhex"></td><td class="right"><strong>2 x</strong></td>
 
-    <h3 id="thing_endstop-holder">Endstop holder</h3>
+<td><a href="#thing_m3x25xhex" rel="facebox" >M3 25mm screw with HEX head</a></td></tr>
 
-    <h3 id="thing_bushing">Bushing</h3>
+        <tr><td><input type="checkbox" class="bom_checkbox" name="m3nut"></td><td class="right"><strong>12 x</strong></td>
 
-    <h3 id="thing_idler-m8-piece">Idler</h3>
-      <p>Small M8 rod</p>
+<td><a href="#thing_m3nut" rel="facebox" >M3 nut</a></td></tr>
 
-    <h3 id="thing_pulley">Pulley</h3>
+        <tr><td><input type="checkbox" class="bom_checkbox" name="m8washer"></td><td class="right"><strong>105 x</strong></td>
 
-    <h3 id="thing_coupling">Coupling</h3>
+<td><a href="#thing_m8washer" rel="facebox" >M8 washer</a></td></tr>
 
-    <h3 id="thing_carriage">Carriage</h3>
-      <p>X-carriage with mounted extruder</p>
+        <tr><td><input type="checkbox" class="bom_checkbox" name="m8nut"></td><td class="right"><strong>106 x</strong></td>
 
-    <h3 id="thing_belt-clamp">Belt clamp</h3>
-      <img src="images/belt-clamp.jpg" width="256" />
+<td><a href="#thing_m8nut" rel="facebox" >M8 nut</a></td></tr>
 
-    <h3 id="thing_extruder">Extruder</h3>
-      <p>Extruder 
- 
- 
- 
- </p>
+        <tr><td><input type="checkbox" class="bom_checkbox" name="m3washer"></td><td class="right"><strong>29 x</strong></td>
 
-</div>
-    <div id="assembly"><h2>Assembly instructions</h2>
+<td><a href="#thing_m3washer" rel="facebox" >M3 washer</a></td></tr>
+
+        <tr><td><input type="checkbox" class="bom_checkbox" name="m3x10xflat"></td><td class="right"><strong>1 x</strong></td>
+
+<td><a href="#thing_m3x10xflat" rel="facebox" >M3 10mm screw with flat head</a></td></tr>
+
+        <tr><td><input type="checkbox" class="bom_checkbox" name="m3x40"></td><td class="right"><strong>2 x</strong></td>
+
+<td><a href="#thing_m3x40" rel="facebox" >M3 40mm screw</a></td></tr>
+
+      </table>
+
+      <h3>Printed</h3>
+      <table id="bomtable">
+        <tr><td><input type="checkbox" class="bom_checkbox" name="extruder-body"></td><td class="right"><strong>1 x</strong></td>
+
+<td><a href="#thing_extruder-body" rel="facebox" >Extruder body</a></td></tr>
+
+        <tr><td><input type="checkbox" class="bom_checkbox" name="bar-clamp"></td><td class="right"><strong>16 x</strong></td>
+
+<td><a href="#thing_bar-clamp" rel="facebox" >Bar clamp</a></td></tr>
+
+        <tr><td><input type="checkbox" class="bom_checkbox" name="y-bushing"></td><td class="right"><strong>4 x</strong></td>
+
+<td><a href="#thing_y-bushing" rel="facebox" >Y bushing</a></td></tr>
+
+        <tr><td><input type="checkbox" class="bom_checkbox" name="frame-vertex"></td><td class="right"><strong>4 x</strong></td>
+
+<td><a href="#thing_frame-vertex" rel="facebox" >Frame vertex</a></td></tr>
+
+        <tr><td><input type="checkbox" class="bom_checkbox" name="y-motor-bracket"></td><td class="right"><strong>1 x</strong></td>
+
+<td><a href="#thing_y-motor-bracket" rel="facebox" >Y motor bracket</a></td></tr>
+
+        <tr><td><input type="checkbox" class="bom_checkbox" name="small-gear"></td><td class="right"><strong>1 x</strong></td>
+
+<td><a href="#thing_small-gear" rel="facebox" >Small extruder gear</a></td></tr>
+
+        <tr><td><input type="checkbox" class="bom_checkbox" name="rod-clamp"></td><td class="right"><strong>2 x</strong></td>
+
+<td><a href="#thing_rod-clamp" rel="facebox" >Rod clamp</a></td></tr>
+
+        <tr><td><input type="checkbox" class="bom_checkbox" name="frame-vertex-foot"></td><td class="right"><strong>4 x</strong></td>
+
+<td><a href="#thing_frame-vertex-foot" rel="facebox" >Frame vertex with foot</a></td></tr>
+
+        <tr><td><input type="checkbox" class="bom_checkbox" name="large-gear"></td><td class="right"><strong>1 x</strong></td>
+
+<td><a href="#thing_large-gear" rel="facebox" >Large extruder gear</a></td></tr>
+
+        <tr><td><input type="checkbox" class="bom_checkbox" name="belt-clamp"></td><td class="right"><strong>2 x</strong></td>
+
+<td><a href="#thing_belt-clamp" rel="facebox" >Belt clamp</a></td></tr>
+
+        <tr><td><input type="checkbox" class="bom_checkbox" name="x-carriage"></td><td class="right"><strong>1 x</strong></td>
+
+<td><a href="#thing_x-carriage" rel="facebox" >X carriage</a></td></tr>
+
+        <tr><td><input type="checkbox" class="bom_checkbox" name="z-motor-mount"></td><td class="right"><strong>1 x</strong></td>
+
+<td><a href="#thing_z-motor-mount" rel="facebox" >Z motor mount</a></td></tr>
+
+        <tr><td><input type="checkbox" class="bom_checkbox" name="idler"></td><td class="right"><strong>1 x</strong></td>
+
+<td><a href="#thing_idler" rel="facebox" >Extruder Idler</a></td></tr>
+
+      </table>
+
+    </div>
+
+    <div id="things">
+      <h2>Things Overview</h2>
+      <p>List of things and their descriptions</p>
+
+      <h3 id="thing_y-axis">Y axis</h3>
+        <p>Assembled Y axis</p>
+
+      <h3 id="thing_frame-with-axes">Frame with axes</h3>
+        <p>Frame with all axes mounted</p>
+
+      <h3 id="thing_frame-vertex">Frame vertex</h3>
+        <img src="images/frame-vertex.jpg" width="256" />
+
+      <h3 id="thing_m4nut">M4 nut</h3>
+
+      <h3 id="thing_frame">Frame</h3>
+        <p>Frame for adding all of the other parts</p>
+
+      <h3 id="thing_loadtester">load tester</h3>
+
+      <h3 id="thing_y-motor-bracket">Y motor bracket</h3>
+        <img src="images/y-motor-bracket.jpg" width="256" />
+
+      <h3 id="thing_m8washer">M8 washer</h3>
+
+      <h3 id="thing_hobbed-bolt">M8 hobbed bolt</h3>
+
+      <h3 id="thing_idler">Extruder Idler</h3>
+        <p>Extruder idler</p>
+
+      <h3 id="thing_frame-with-y">Frame with Y axis</h3>
+        <p>Frame with Y axis mounted</p>
+
+      <h3 id="thing_y-bushing">Y bushing</h3>
+
+      <h3 id="thing_m3x10">M3 10mm screw</h3>
+
+      <h3 id="thing_bar-clamp">Bar clamp</h3>
+        <img src="images/bar-clamp.jpg" width="256" />
+
+      <h3 id="thing_calibration">Configuration test</h3>
+
+      <h3 id="thing_m3x10xhex">M3 10mm screw with hex head</h3>
+
+      <h3 id="thing_xz-axis">XZ axis</h3>
+        <p>Assembled XZ axis</p>
+
+      <h3 id="thing_large-gear">Large extruder gear</h3>
+
+      <h3 id="thing_frame-vertex-foot">Frame vertex with foot</h3>
+        <img src="images/frame-vertex-foot.jpg" width="256" />
+
+      <h3 id="thing_m3x25xhex">M3 25mm screw with HEX head</h3>
+
+      <h3 id="thing_x-end-motor">X end motor</h3>
+
+      <h3 id="thing_extruder-body">Extruder body</h3>
+        <p>Extruder body</p>
+
+      <h3 id="thing_small-gear">Small extruder gear</h3>
+
+      <h3 id="thing_extruder-spring">Extruder spring</h3>
+        <p>Spring used for idler on extruder.</p>
+
+      <h3 id="thing_m3x10xflat">M3 10mm screw with flat head</h3>
+
+      <h3 id="thing_bearing-608">608 skate bearing</h3>
+        <p>608 Bearing. When you have troubles finding it, try your local skateshop, because its used in skateboards.</p>
+        <img src="images/common/608.jpg" width="256" />
+
+      <h3 id="thing_m8x30">M8 30mm screw</h3>
+
+      <h3 id="thing_m4x25">M4 25mm screw</h3>
+
+      <h3 id="thing_m8spring">M8 spring</h3>
+
+      <h3 id="thing_printable-bushing">Printable Bushing</h3>
+
+      <h3 id="thing_x-carriage">X carriage</h3>
+        <img src="images/x-carriage.jpg" width="256" />
+
+      <h3 id="thing_x-end-idler">X end idler</h3>
+
+      <h3 id="thing_rod-clamp">Rod clamp</h3>
+        <img src="images/rod-clamp.jpg" width="256" />
+
+      <h3 id="thing_z-motor-mount">Z motor mount</h3>
+        <img src="images/z-motor-mount.jpg" width="256" />
+
+      <h3 id="thing_endstop-holder">Endstop holder</h3>
+
+      <h3 id="thing_m3xgrubscrew">M3 grub screw</h3>
+
+      <h3 id="thing_m3x40">M3 40mm screw</h3>
+
+      <h3 id="thing_bushing">Bushing</h3>
+
+      <h3 id="thing_m3x20xhex">M3 20mm screw with hex head</h3>
+
+      <h3 id="thing_idler-m8-piece">Idler</h3>
+        <p>Small M8 rod</p>
+
+      <h3 id="thing_m8nut">M8 nut</h3>
+        <p>Simple M8 nut or 5/16 in imperial variant. also can be used for other screwing things :-D</p>
+
+      <h3 id="thing_m3nut">M3 nut</h3>
+
+      <h3 id="thing_pulley">Pulley</h3>
+
+      <h3 id="thing_coupling">Coupling</h3>
+
+      <h3 id="thing_m3x15xhex">M3 15mm screw with HEX head</h3>
+
+      <h3 id="thing_m3x25">M3 25mm screw</h3>
+
+      <h3 id="thing_NEMA17">NEMA17 stepper motor</h3>
+
+      <h3 id="thing_m3x20">M3 20mm screw</h3>
+
+      <h3 id="thing_carriage">Carriage</h3>
+        <p>X-carriage with mounted extruder</p>
+
+      <h3 id="thing_belt-clamp">Belt clamp</h3>
+        <img src="images/belt-clamp.jpg" width="256" />
+
+      <h3 id="thing_m3washer">M3 washer</h3>
+
+      <h3 id="thing_m8washer-big">M8 washer mudguard</h3>
+
+      <h3 id="thing_extruder">Extruder</h3>
+        <p>Extruder</p>
+
+    </div>
+
+    <div id="assembly">
+      <h2>Assembly Instructions</h2>
+
       <h3>Assemble Small extruder gear</h3>
-      <p>Things needed:</p>
-      <ul>
-        <li>1x M3 nut</li>
-        <li>1x M3 grub screw</li>
-      </ul>
-      <p>Steps:</p>
-      <ol>
-        <li>Insert nut into cavity in printed gear.</li>
-        <li>Tighten the grub screw a bit, just to hold in place.</li>
-      </ol>
+        <p>Things needed:</p>
+        <ul>
+          <li>1x M3 nut</li>
+          <li>1x M3 grub screw</li>
+        </ul>
+
+        <p>Steps:</p>
+        <ol>
+          <li>Insert nut into cavity in printed gear.</li>
+          <li>Tighten the grub screw a bit, just to hold in place.</li>
+        </ol>
+
       <h3>Assemble M8 hobbed bolt</h3>
-      <p>Steps:</p>
-      <ol>
-        <li>Use thread cutting bit in electric screwdriver ...</li>
-      </ol>
+        <p>Steps:</p>
+        <ol>
+          <li>Use thread cutting bit in electric screwdriver ...</li>
+        </ol>
+
       <h3>Assemble Large extruder gear</h3>
-      <p>Things needed:</p>
-      <ul>
-        <li>1x <a href="#thing_hobbed-bolt">M8 hobbed bolt</a></li>
-      </ul>
-      <p>Steps:</p>
-      <ol>
-        <li>Insert hobbed bolt into main hole.</li>
-        <li>Add some M8 washers from other side, later with their count you adjust position of hobbed part in filament path.</li>
-      </ol>
+        <p>Things needed:</p>
+        <ul>
+          <li>1x <a href="#thing_hobbed-bolt">M8 hobbed bolt</a></li>
+        </ul>
+
+        <p>Steps:</p>
+        <ol>
+          <li>Insert hobbed bolt into main hole.</li>
+          <li>Add some M8 washers from other side, later with their count you adjust position of hobbed part in filament path.</li>
+        </ol>
+
       <h3>Assemble Extruder Idler</h3>
-      <p>Things needed:</p>
-      <ul>
-        <li>1x 608 skate bearing</li>
-        <li>1x <a href="#thing_idler-m8-piece">Idler</a></li>
-      </ul>
-      <p>Steps:</p>
-      <ol>
-        <li>Insert piece of M8 rod into bearing.</li>
-        <li>Insert 608 bearing with rod into printed idler part.</li>
-      </ol>
+        <p>Things needed:</p>
+        <ul>
+          <li>1x 608 skate bearing</li>
+          <li>1x <a href="#thing_idler-m8-piece">Idler</a></li>
+        </ul>
+
+        <p>Steps:</p>
+        <ol>
+          <li>Insert piece of M8 rod into bearing.</li>
+          <li>Insert 608 bearing with rod into printed idler part.</li>
+        </ol>
+
       <h3>Assemble Extruder</h3>
-      <p>Things needed:</p>
-      <ul>
-        <li>2x 608 skate bearing</li>
-        <li>1x <a href="#thing_extruder-body">Extruder body</a></li>
-        <li>3x M3 10mm screw</li>
-        <li>2x M4 nut</li>
-        <li>1x <a href="#thing_small-gear">Small extruder gear</a></li>
-        <li>1x M3 25mm screw</li>
-        <li>1x NEMA17 stepper motor</li>
-        <li>1x <a href="#thing_large-gear">Large extruder gear</a></li>
-        <li>8x M3 washer</li>
-        <li>1x M8 washer</li>
-        <li>1x <a href="#thing_idler">Extruder Idler</a></li>
-        <li>1x M3 nut</li>
-        <li>2x M3 40mm screw</li>
-        <li>2x <a href="#thing_extruder-spring">Extruder spring</a></li>
-        <li>2x M8 nut</li>
-      </ul>
-      <p>Steps:</p>
-      <ol>
-        <li>Take idler and insert nut into small nut-trap inside the hinge.</li>
-        <li>While holding the nut in place, preprare M3x25 bolt with washer and screw it into the hinge just enough to hold the nut.</li>
-        <li>Now take the extruder body and idler. Place idler on the hinge counterpart and compleately screw the M3x25 bolt. This will create secured hinge.</li>
-        <li>Place M4 nuts into their nut traps, secure them with piece of tape. We need them in place, since later they would be harder to access.</li>
-        <li>Prepare your NEMA17 stepper motor and three M3x10 screws with washers.</li>
-        <li>Hold motor on place and lightly tighten the screws. We need to adjust motor position later, no need to tighten it hard.</li>
-        <li>Place two skate bearings on ther position, they should snuggly fit in.</li>
-        <li>Insert prepared large gear into the body with mounted bearings.</li>
-        <li>Check if the alignment of hobbed part with the filament path. Adjust it accordingly with adding or removing M8 washers.</li>
-        <li>After adjusting, we need to fix the bolt in. So we place washer at the end of hobbed bolt and with two M8 nuts we will do locknut by tightening them against each other.</li>
-        <li>Check if large gear turns freely.</li>
-        <li>Prepare two M3x40 screws with sandwitch of washer-spring-washer.</li>
-        <li>Insert two M3 nuts into nut traps on top of drive mechanism.<br/><img src="images/extruder/top-nut-traps.png" width="256" /></li>
-        <li>Insert prepared screws into the holes on idler. Close the idler and tighten the screws into the trapped nuts. More you tighten those screws, more pressure will be on fillament.</li>
-        <li>Your extruder is done.<br/><img src="images/extruder/assembled.jpg" width="256" /></li>
-      </ol>
-    </div><p class="footer">Generated on 2011/06/02 17:23:13 by ThingDoc - <a href="http://thingdoc.org/">http://thingdoc.org/</a></p></div>
+        <p>Things needed:</p>
+        <ul>
+          <li>2x 608 skate bearing</li>
+          <li>1x <a href="#thing_extruder-body">Extruder body</a></li>
+          <li>3x M3 10mm screw</li>
+          <li>2x M4 nut</li>
+          <li>1x <a href="#thing_small-gear">Small extruder gear</a></li>
+          <li>1x M3 25mm screw</li>
+          <li>1x NEMA17 stepper motor</li>
+          <li>1x <a href="#thing_large-gear">Large extruder gear</a></li>
+          <li>8x M3 washer</li>
+          <li>1x M8 washer</li>
+          <li>1x <a href="#thing_idler">Extruder Idler</a></li>
+          <li>1x M3 nut</li>
+          <li>2x M3 40mm screw</li>
+          <li>2x <a href="#thing_extruder-spring">Extruder spring</a></li>
+          <li>2x M8 nut</li>
+        </ul>
+
+        <p>Steps:</p>
+        <ol>
+          <li>Take idler and insert nut into small nut-trap inside the hinge.</li>
+          <li>While holding the nut in place, preprare M3x25 bolt with washer and screw it into the hinge just enough to hold the nut.</li>
+          <li>Now take the extruder body and idler. Place idler on the hinge counterpart and compleately screw the M3x25 bolt. This will create secured hinge.</li>
+          <li>Place M4 nuts into their nut traps, secure them with piece of tape. We need them in place, since later they would be harder to access.</li>
+          <li>Prepare your NEMA17 stepper motor and three M3x10 screws with washers.</li>
+          <li>Hold motor on place and lightly tighten the screws. We need to adjust motor position later, no need to tighten it hard.</li>
+          <li>Place two skate bearings on ther position, they should snuggly fit in.</li>
+          <li>Insert prepared large gear into the body with mounted bearings.</li>
+          <li>Check if the alignment of hobbed part with the filament path. Adjust it accordingly with adding or removing M8 washers.</li>
+          <li>After adjusting, we need to fix the bolt in. So we place washer at the end of hobbed bolt and with two M8 nuts we will do locknut by tightening them against each other.</li>
+          <li>Check if large gear turns freely.</li>
+          <li>Prepare two M3x40 screws with sandwitch of washer-spring-washer.</li>
+          <li>Insert two M3 nuts into nut traps on top of drive mechanism.<br/><img src="images/extruder/top-nut-traps.png" width="256" /></li>
+          <li>Insert prepared screws into the holes on idler. Close the idler and tighten the screws into the trapped nuts. More you tighten those screws, more pressure will be on fillament.</li>
+          <li>Your extruder is done.<br/><img src="images/extruder/assembled.jpg" width="256" /></li>
+        </ol>
+
+    </div>
+
+    </div>
+<script type="text/javascript" src="thingdoc-end.js"></script>   
   </body>
 </html>
+<!-- Generated on 2011/06/14 21:15:56 by ThingDoc -->

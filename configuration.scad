@@ -13,7 +13,7 @@
 // Uncomment for metric settings
 // METRIC METRIC METRIC METRIC METRIC METRIC METRIC METRIC 
 
-include metric.scad;
+include <metric.scad>
 
 // Uncomment for imperial settings
 // IMPERIAL IMPERIAL IMPERIAL IMPERIAL IMPERIAL IMPERIAL IMPERIAL 
@@ -22,6 +22,10 @@ include metric.scad;
 
 
 // CUSTOM CUSTOM CUSTOM CUSTOM CUSTOM CUSTOM CUSTOM CUSTOM CUSTOM
+
+thin_wall = 3;
+
+
 // CHANGE ONLY THE STUFF YOU KNOW
 // IT WILL REPLACE DEFAULT SETTING
 

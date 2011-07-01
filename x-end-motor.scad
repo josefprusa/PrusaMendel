@@ -24,9 +24,9 @@ corection = 1.17;
 
 
 
-use <x-end.scad>
+include <x-end.scad>
 module xendmotor(){
-mirror() xend();
+mirror() xend(true);
 
 
 //nema17 connector
@@ -65,7 +65,7 @@ difference ()
 	{
 		union ()
 		{
-			mirror() xend(shroud_height=56.5);
+			mirror() xend(true);
 		
 			//translate(v = [0, 35, 12.5]) 
 			//xend_nema17();
