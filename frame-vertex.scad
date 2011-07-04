@@ -19,12 +19,14 @@ vertex(with_foot=basefoot);
 
 //teardrop();
 
-module teardrop (r=8,h=20){
-	rotate([-270,0,90]){
-		linear_extrude(height=h){
-			circle(r=r);
-			polygon(points=[[0,0],[r*cos(30),r*sin(30)],[0.5*r,r],[-0.5*r,r],[-r*cos(30),r*sin(30)]],paths=[[0,1,2,3,4]]);
-		}
+module teardrop (r=8,h=20)
+{
+	rotate([-270,0,90])
+	linear_extrude(height=h)
+	{
+		circle(r=r);
+		polygon(points=[[0,0],[r*cos(30),r*sin(30)],[0.5*r,r],[-0.5*r,r],[-r*cos(30),r*sin(30)]],
+				paths=[[0,1,2,3,4]]);
 	}
 }
 
@@ -32,7 +34,7 @@ module teardrop (r=8,h=20){
 
 vfvertex_height=m8_diameter+4.5;
 
-/*
+/**
  * @id frame-vertex
  * @name Frame vertex
  * @category Printed
@@ -40,7 +42,7 @@ vfvertex_height=m8_diameter+4.5;
  * @using 8 m8nut
  * @using 8 m8washer
  */
-/*
+/**
  * @id frame-vertex-foot
  * @name Frame vertex with foot
  * @category Printed
@@ -57,7 +59,8 @@ hole_flat_radius=8.5; // flat surface around holes.
 foot_depth=26.25;
 end_round_translation=vertex_horizontal_hole_offset-hole_flat_radius;
 
-module vertex(with_foot=true){
+module vertex(with_foot=true)
+{
 	peg_r=12;
 	peg1=[hole_separation+vertex_end_major_d/2-peg_r,
 		vertex_horizontal_hole_offset+hole_flat_radius];
@@ -83,19 +86,17 @@ module vertex(with_foot=true){
 	a4=[hole_separation+vertex_end_major_d/2-a2_r,-foot_depth+a4_r];
 
 //	translate([-hole_separation-vertex_end_major_d/2,-vertex_horizontal_hole_offset,-vfvertex_height/2])
+	translate([-18.5,9,0])
+	difference ()
+	{
+		union ()
+		{
+			for (hole=[(with_foot?1:0):1])
+			rotate(hole*60)
+			translate([hole_separation,end_round_translation-hole*2*end_round_translation,0])
+			scale([1,(vertex_end_minor_d+2*end_round_translation)/vertex_end_major_d,1])
+			cylinder(r=vertex_end_major_d/2,h=vfvertex_height); 
 
-	translate([-18.5,9,0]){
-		difference (){
-			union (){
-				for (hole=[(with_foot?1:0):1]){
-					rotate(hole*60){
-						translate([hole_separation,end_round_translation-hole*2*end_round_translation,0]){
-							scale([1,(vertex_end_minor_d+2*end_round_translation)/vertex_end_major_d,1]){
-								cylinder(r=vertex_end_major_d/2,h=vfvertex_height); 
-							}
-						}
-					}
-				}
 			for (block=[0:1])
 			rotate(block*60)
 			translate([hole_separation,
@@ -174,4 +175,3 @@ function angle(a,b,c) = acos((a*a+b*b-c*c)/(2*a*b));
 
 function rotated(a)=[cos(a),sin(a),0];
 function rotate_vec(v,a)=[cos(a)*v[0]-sin(a)*v[1],sin(a)*v[0]+cos(a)*v[1]];
-}
