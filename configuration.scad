@@ -64,20 +64,15 @@ x_axis_global_width = 70; // min = 57.5
 x_axis_global_height = 65; // min = 52
 x_axis_rod_position = 25;
 x_axis_rod_size = bushing_rodsize;
-z_axis_rod_size = m8_diameter;
-z_axis_rod_nut = m8_nut_diameter;
 
 
 // MINI-HUXLEY VERSION (TODO, just place holder)
 // include <configuration-huxley.scad>
-//bushing_outerDiameter = 14;
-//bushing_rodsize = 6.35;
-//x_axis_global_width = 45; 
-//x_axis_global_height = 52; 
-//x_axis_rod_position = 12;
-//x_axis_rod_size = bushing_rodsize;
-//z_axis_rod_size = m8_diameter;
-//z_axis_rod_nut = m8_nut_diameter;
+bushing_rodsize = 6.35;
+x_axis_global_width = 57.5; // min = 57.5
+x_axis_global_height = 52; // min = 52
+x_axis_rod_position = 17;
+x_axis_rod_size = bushing_rodsize;
 
 
 // MEGA VERSION (TODO, just place holder)
