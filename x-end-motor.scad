@@ -81,5 +81,6 @@ module xendmotor(){
     }
 }
 xendmotor();
-
+//nutTrap( z_axis_rod_size, z_axis_rod_nut, rod_position, rod_radius, corection );
+//slider( bushing_outerDiameter, max_height, rod_position, rod_radius );
 

@@ -12,7 +12,6 @@ include <utilities.scad>
 corection = 1.17; 
 
 
-
 rod_position =  x_axis_rod_position ;
 rod_size =  x_axis_rod_size;
 
@@ -66,6 +65,7 @@ module xendidler(){
 				   }
 				   slider( bushing_outerDiameter, x_axis_global_height, rod_position, rod_radius, 1 );
 				   nutTrap( z_axis_rod_size, z_axis_rod_nut, rod_position, rod_radius, corection, 1 );
+				   axisHoles(rod_position, rod_radius);
 				}
 
 			}
@@ -74,6 +74,7 @@ module xendidler(){
 		//two more rounded corners
 		translate(v = [-35.1-motor_size,-25.1,-5]) rotate(a=[0,0,0]) roundcorner(5);
 		translate(v = [-35.1-motor_size, +15.1, -5]) rotate(a=[0,0,-90]) roundcorner(5);
+		
 
 	}
 }

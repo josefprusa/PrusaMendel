@@ -53,41 +53,52 @@ m4_diameter = vars[variant][2];
 m4_nut_diameter = vars[variant][3];
 m3_diameter = vars[variant][4];
 m3_nut_diameter = vars[variant][5];
-bushing_diameter = vars[variant][6];
 motor_shaft=vars[variant][7];
+bushing_diameter = vars[variant][6];
 bushing_rodsize = vars[variant][8];
 bushing_outerDiameter = vars[variant][9];
 bushing_lenght = vars[variant][10];
 
-// X axis parts
+
+
+// bushing_type Can generate three versions
+// 1 - regular old ones
+// 2 - helical ones
+// 3 - holders for brass or any other bought bushings
+bushing_type = 2; // 1=straight, 2=helical, 3=holder
+
+
+// X axis setup
 x_axis_global_width = 70; // min = 57.5
 x_axis_global_height = 65; // min = 52
 x_axis_rod_position = 25;
 x_axis_rod_size = bushing_rodsize;
+x_axis_parts_with_bushings = 1; // 0 = No Bushings / 1 = Bushings printed in place
+
+// Z axis setup
 z_axis_rod_size = m8_diameter;
 z_axis_rod_nut = m8_nut_diameter;
 
-
 // MINI-HUXLEY VERSION (TODO, just place holder)
 // include <configuration-huxley.scad>
-//bushing_outerDiameter = 14;
-//bushing_rodsize = 6.35;
-//x_axis_global_width = 45; 
-//x_axis_global_height = 52; 
-//x_axis_rod_position = 12;
-//x_axis_rod_size = bushing_rodsize;
-//z_axis_rod_size = m8_diameter;
-//z_axis_rod_nut = m8_nut_diameter;
+x_axis_global_height = 40; 
+x_axis_global_width = 50; 
+x_axis_rod_position = 16; // a little wider, but better since the rod is 1/4 inch (6.35mm)
+x_axis_rod_size = 6.35;
+bushing_outerDiameter = 14;
+bushing_rodsize = 6.35;
+m8_diameter     = 6.35;
+m8_nut_diameter = 12.4;
+z_axis_rod_size = 6.35;
+z_axis_rod_nut = 12.4;
 
 
 // MEGA VERSION (TODO, just place holder)
 // include <configuration-mega.scad>
 
 
-// Some basic functions, probably should be somewhere else
-module roundcorner(diameter){
-	difference(){
-		cube(size = [diameter,diameter,99], center = false);
-		translate(v = [diameter, diameter, 0]) cylinder(h = 100, r=diameter, center=true);
-	}
-}
+
+
+
+
+

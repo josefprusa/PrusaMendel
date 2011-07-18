@@ -22,16 +22,6 @@ module roundcorner(diameter)
 }
 
 
-module sliderCutOut(bushing_outerDiameter, axis_global_height)
-{
-    cube(size = [bushing_outerDiameter,17,axis_global_height*2], center = true);
-}
-
-module nutTrapCutOut(height, axis_rod_nut)
-{
-    cylinder(h = height, r=axis_rod_nut/2+2*thin_wall, $fn=6, center=true);
-}
-
 
 module axisBase(rod_position, axis_global_width,  RoundCorner1=0, RoundCorner2=1, RoundCorner3=1, RoundCorner4=1 )
 {
@@ -91,37 +81,151 @@ module nutTraps( nut_pos )
 
 
 //slider
+module sliderCutOut(bushing_outerDiameter, axis_global_height)
+{
+    cube(size = [bushing_outerDiameter,17,axis_global_height*2], center = true);
+}
 module slider( bushing_outerDiameter, axis_global_height, rod_position, rod_radius, cutOut=0 )
 {
-    difference(){
-        translate(v = [0, -25, 15]) difference(){
-            if(cutOut<1) union(){
-                translate(v = [0, -3.5, -7-(65-axis_global_height)*0.5]) cube(size = [bushing_outerDiameter+2*thin_wall,17,axis_global_height], center = true);
+    union(){
+        union(){
+            translate(v = [0, -25, 0]) union(){
+                if( x_axis_parts_with_bushings > 0 ){
+                    translate([0, 0.5, -24.5]) bushing(2.5);
+                    difference(){
+                        translate([0, 0.5, (axis_global_height-41.5)]) bushing(2.5,6);
+                        translate([0, -1.5, (axis_global_height-40)]) cylinder(h=12, r1=bushing_outerDiameter*1.2, r2=1, $fn=20, center=true);
+                    }
+                }
             }
-            translate(v = [0, -0, -7]) sliderCutOut(bushing_outerDiameter, axis_global_height);
+        }
+        translate(v = [0, -25, 15]) difference(){
+            difference(){
+                if(cutOut<1) union(){
+                    translate(v = [0, -3.5, -7-(65-axis_global_height)*0.5]) cube(size = [bushing_outerDiameter+2*thin_wall,17,axis_global_height], center = true);
+                }
+                translate(v = [0, -0, -7]) sliderCutOut(bushing_outerDiameter, axis_global_height);
 
+            }
+            if(cutOut<1) axisHoles(rod_position, rod_radius);
+         }
+    }
+}
+
+//nut trap
+module nutTrapCutOut(height, axis_rod_nut)
+{
+    cylinder(h = height, r=axis_rod_nut/2+2*thin_wall, $fn=6, center=true);
+}
+module nutTrap( axis_rod_size, axis_rod_nut, rod_position, rod_radius, corection, cutOut=0 )
+{
+    difference(){
+        translate(v = [0, -55, 15]) union(){
+            if(cutOut<1) translate(v = [0, 0, -35.5]) cylinder(h = 8, r=axis_rod_size/2, $fn=9, center=true);
+
+            difference(){
+                union(){
+                    difference(){
+                        if(cutOut<1) union(){
+                            translate(v = [0, -0, -19.5])cylinder(h = 40, r=axis_rod_nut/2+thin_wall*corection, $fn=6, center=true);
+    //                        translate(v = [0, 0, -31.6]) cube(size = [30,10,15.8], center = true);
+                        }
+                        cylinder(h = 90, r=axis_rod_nut/2, $fn=6, center=true);
+                    }
+                    if(cutOut<1) translate(v = [0, 0, -30]) nutTrapCutOut(4, axis_rod_size);
+                }
+                if(cutOut<1) translate(v = [0, 0, 12.5]) cylinder(h = 90, r=axis_rod_size/2, $fn=9, center=true);
+            }	
         }
         if(cutOut<1) axisHoles(rod_position, rod_radius);
     }
 }
 
-//nut trap
-module nutTrap( axis_rod_size, axis_rod_nut, rod_position, rod_radius, corection, cutOut=0 )
-{
-    difference(){
-        translate(v = [0, -55, 15]) difference(){
+
+
+// bushings 
+module bushing_core_straight( rodsize, outerDiameter, lenght ){
+    union(){
+        rotate(a=[0,0,45])
+        difference(){
             union(){
+                //outer ring
                 difference(){
-                    if(cutOut<1) union(){
-                        translate(v = [0, -0, -19.5])cylinder(h = 40, r=axis_rod_nut/2+thin_wall*corection, $fn=6, center=true);
-                        //translate(v = [0, 0, -31.6]) cube(size = [30,10,15.8], center = true);
+                    union(){
+                        cylinder(h = lenght, r=outerDiameter/2); //1mm lemování
+                        //cylinder(h = 1, r=outerDiameter/2+2);
                     }
-                    cylinder(h = 90, r=axis_rod_nut/2, $fn=6, center=true);
+                    translate(v=[0,0,-1]) cylinder(h = lenght+2, r=(outerDiameter/2)-2);
                 }
-                if(cutOut<1) translate(v = [0, 0, -31]) nutTrapCutOut(4, axis_rod_size);
+
+                //nipples inside touching the rod
+                difference(){
+                    union(){
+                        translate(v=[0,0,lenght/2]) cube(size = [outerDiameter-1,2,lenght], center = true);
+                        translate(v=[0,0,lenght/2]) cube(size = [2,outerDiameter-1,lenght], center = true);
+                    }
+                    translate(v=[0,0,-1]) cylinder(h = lenght+2, r=rodsize/2, $fn=20);
+                }
             }
-            if(cutOut<1) translate(v = [0, 0, 12.5]) cylinder(h = 90, r=axis_rod_size/2, $fn=9, center=true);
-        }	
-        if(cutOut<1) axisHoles(rod_position, rod_radius);
+            //opening cutout
+            translate(v=[(outerDiameter/2)+1,(outerDiameter/2)+1,(lenght)/2]) cube(size = [outerDiameter,outerDiameter,lenght+2], center = true);
+            
+            }
+        }
+}
+module bushing_core_holder( rodsize, outerDiameter, lenght ){
+    union(){
+        rotate(a=[0,0,45])
+        difference(){
+            union(){
+                //outer ring
+                difference(){
+                    union(){
+                        cylinder(h = lenght, r=outerDiameter/2); //1mm lemování
+                        //cylinder(h = 1, r=outerDiameter/2+2);
+                    }
+                    translate(v=[0,0,-1]) cylinder(h = lenght+2, r=(rodsize/2));
+                }
+            }
+            //opening cutout
+            translate(v=[(outerDiameter/2)+1,(outerDiameter/2)+1,(lenght)/2]) cube(size = [outerDiameter,outerDiameter,lenght+2], center = true);
+            
+            }
+        }
+}
+
+module bushing_core_helical( rodsize, outerDiameter, lenght ){
+	union(){
+        difference(){
+            rotate(a=[0,0,44]) translate(v=[0,0,(lenght)/2]) linear_extrude(center = true, height = lenght, twist = 90,convexity = 20) projection(cut = true) bushing_core_straight(rodsize, outerDiameter, lenght );
+            translate(v=[0,-2.3,0]) rotate(a=[0,0,45]) translate(v=[(outerDiameter/2)+1,(outerDiameter/2)+1,(lenght)/2]) cube(size = [outerDiameter,outerDiameter,lenght+2], center = true);
+            // hack for easier cleanup
+//            translate(v=[0,0,-0.5]) cylinder(h = 1, r=rodsize/2+1, $fn=20);
+        }
     }
 }
+
+module bushing(extra_outerDiameter=0, extra_lenght=0){
+    length = bushing_lenght+extra_lenght;
+    union(){
+        difference(){
+            translate(v=[0,-(bushing_outerDiameter+extra_outerDiameter)/10,length/2]) cube(size = [bushing_outerDiameter+extra_outerDiameter, (bushing_outerDiameter+extra_outerDiameter),length], center = true);
+            translate(v=[0,0,-1]) cylinder(h = length+2, r=((bushing_outerDiameter)/2)-2);
+            translate(v=[0,-2.3,0]) rotate(a=[0,0,45]) translate(v=[((bushing_outerDiameter+extra_outerDiameter)/2)+1,((bushing_outerDiameter+extra_outerDiameter)/2)+1,(length)/2]) cube(size = [(bushing_outerDiameter+extra_outerDiameter),(bushing_outerDiameter+extra_outerDiameter),length+2], center = true);
+            difference(){
+                translate(v=[0,((bushing_outerDiameter+extra_outerDiameter)/2)+1,(length)/2]) cube(size = [(bushing_outerDiameter+extra_outerDiameter)+1,(bushing_outerDiameter+extra_outerDiameter)+1,length+2], center = true);
+                translate(v=[0,0,-1]) cylinder(h = length+1, r=(bushing_outerDiameter+extra_outerDiameter)/2, $fn=100);
+            }
+        }
+        if(bushing_type == 1){
+            bushing_core_straight( bushing_rodsize, bushing_outerDiameter+extra_outerDiameter, length );
+        }
+        if(bushing_type == 2){
+            bushing_core_helical( bushing_rodsize, bushing_outerDiameter+extra_outerDiameter, length );
+        }
+        if(bushing_type == 3){
+            bushing_core_holder( bushing_rodsize, bushing_outerDiameter+extra_outerDiameter, length );
+        }
+    }
+}
+
