@@ -83,17 +83,7 @@ $(document).ready(function(){
 
 	});
 	
-	// active button from cookie
-	var button = $.cookie(unique + "_button");
-	if(button == "home"){
-	homebutton();
-	}else if(button == "bom"){
-	bombutton();
-	}else if(button == "things"){
-	thingsbutton();
-	}else if(button == "assembly"){
-	assemblybutton();
-	}
+	
 	
 	
 	//find out assembly counts
@@ -144,7 +134,18 @@ $(document).ready(function(){
 
 
 jQuery(document).ready(function() {
- jQuery('a[rel*=facebox]').facebox()
+ jQuery('a[rel*=facebox]').facebox();
+ // active button from cookie
+	var button = $.cookie(unique + "_button");
+	if(button == "home"){
+	homebutton();
+	}else if(button == "bom"){
+	bombutton();
+	}else if(button == "things"){
+	thingsbutton();
+	}else if(button == "assembly"){
+	assemblybutton();
+	}
  });
 
 	

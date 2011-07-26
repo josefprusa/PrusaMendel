@@ -18,8 +18,8 @@ Nuts&bolts
 - 1x M3 grub screw
 - 2x M3 25mm screw with HEX head
 - 12x M3 nut
-- 105x M8 washer
-- 106x M8 nut
+- 73x M8 washer
+- 74x M8 nut
 - 29x M3 washer
 - 1x M3 10mm screw with flat head
 - 2x M3 40mm screw
@@ -27,18 +27,18 @@ Nuts&bolts
 Printed
 =======
 - 1x Extruder body
-- 16x Bar clamp
+- 8x Bar clamp
 - 4x Y bushing
-- 4x Frame vertex
+- 2x Frame vertex
 - 1x Y motor bracket
 - 1x Small extruder gear
 - 2x Rod clamp
 - 4x Frame vertex with foot
 - 1x Large extruder gear
 - 2x Belt clamp
-- 1x X carriage
-- 1x Z motor mount
 - 1x Extruder Idler
+- 1x Z motor mount
+- 1x X carriage
 
 ----
-Generated on 2011/06/14 21:15:56 by ThingDoc - http://thingdoc.org/
+Generated on 2011/07/01 21:28:07 by ThingDoc - http://thingdoc.org/

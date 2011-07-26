@@ -42,8 +42,8 @@ List of things you need to build the machine divided by categories.
 \item 1x M3 grub screw
 \item 2x M3 25mm screw with HEX head
 \item 12x M3 nut
-\item 105x M8 washer
-\item 106x M8 nut
+\item 73x M8 washer
+\item 74x M8 nut
 \item 29x M3 washer
 \item 1x M3 10mm screw with flat head
 \item 2x M3 40mm screw
@@ -52,24 +52,27 @@ List of things you need to build the machine divided by categories.
 \subsection{Printed}
 \begin{itemize}
 \item 1x \hyperlink{thing_extruder-body}{Extruder body}
-\item 16x \hyperlink{thing_bar-clamp}{Bar clamp}
+\item 8x \hyperlink{thing_bar-clamp}{Bar clamp}
 \item 4x \hyperlink{thing_y-bushing}{Y bushing}
-\item 4x \hyperlink{thing_frame-vertex}{Frame vertex}
+\item 2x \hyperlink{thing_frame-vertex}{Frame vertex}
 \item 1x \hyperlink{thing_y-motor-bracket}{Y motor bracket}
 \item 1x \hyperlink{thing_small-gear}{Small extruder gear}
 \item 2x \hyperlink{thing_rod-clamp}{Rod clamp}
 \item 4x \hyperlink{thing_frame-vertex-foot}{Frame vertex with foot}
 \item 1x \hyperlink{thing_large-gear}{Large extruder gear}
 \item 2x \hyperlink{thing_belt-clamp}{Belt clamp}
-\item 1x \hyperlink{thing_x-carriage}{X carriage}
-\item 1x \hyperlink{thing_z-motor-mount}{Z motor mount}
 \item 1x \hyperlink{thing_idler}{Extruder Idler}
+\item 1x \hyperlink{thing_z-motor-mount}{Z motor mount}
+\item 1x \hyperlink{thing_x-carriage}{X carriage}
 \end{itemize}
 
 \newpage
 
 \section{Things Overview}
 List of things and their descriptions.
+
+\hypertarget{thing_frame-triangle}{\subsection{Frame triangle}}
+Two triangle parts which will later form a frame.
 
 \hypertarget{thing_y-axis}{\subsection{Y axis}}
 Assembled Y axis
@@ -82,6 +85,7 @@ Frame with all axes mounted
 
 \hypertarget{thing_frame}{\subsection{Frame}}
 Frame for adding all of the other parts
+There is a triangle on each side of the Prusa RepRap. You will need to make two of these and then connect them together (in the next steps) to form the Prusa frame. Each side is an equilateral triangle with a frame vertex on each corner. You can use either footed or non-footed vertices to build this. (The footed ones look better, but are not critical.) The instructions assume you are using footed vertices.
 
 \hypertarget{thing_loadtester}{\subsection{load tester}}
 
@@ -234,6 +238,44 @@ Steps:
 \item Insert two M3 nuts into nut traps on top of drive mechanism.\\ \includegraphics[width=4cm]{images/extruder/top-nut-traps.png}
 \item Insert prepared screws into the holes on idler. Close the idler and tighten the screws into the trapped nuts. More you tighten those screws, more pressure will be on fillament.
 \item Your extruder is done.\\ \includegraphics[width=4cm]{images/extruder/assembled.jpg}
+\end{enumerate}
+
+\subsection{Assemble Frame triangle}
+Things needed:
+\begin{itemize}
+\item 1x \hyperlink{thing_bar-clamp}{Bar clamp}
+\item 1x \hyperlink{thing_frame-vertex}{Frame vertex}
+\item 2x \hyperlink{thing_frame-vertex-foot}{Frame vertex with foot}
+\end{itemize}
+Steps:
+\begin{enumerate}
+\item Take one of the 370mm threaded rods, and slip an M8 washer onto the middle of it.
+\item Take the RP bar clamp (the U-shaped bit with the two holes) and slide the threaded rod through the two holes until the clamp sits next to the washer.
+\item Slide another washer onto the rod from the other side.
+\item Thread two M8 nuts onto either side of the clamp, until they are next to the washer, but do not tighten them yet.
+\item Thread another two nuts on each side of the rod, followed by washers. See the picture for what it should look like.\\ \includegraphics[width=4cm]{images/frame/threaded-rod-with-bar-clamp.jpg}
+\item The bar clamp on the threaded rod.
+\item Slide the rod through the wider bottom (footed) side of two vertices. Make sure the feet point in the same direction, and the bulge on the non-footed sides of the vertices point outwards.
+\item Measure the distance. The distance between the two vertices should be 290mm (along the rod, equivalent is 11-13/32"). Get it approximately right now, we will check this again later. If you have a frame jig, place it between the two vertices and adjust the nuts until you can just barely fit the jig J1 between them.
+\item Place another washer and nut on the other side of the vertex. Tighten, but not too much. We'll need a bit of flexibility here still.
+\item Take another 370mm M8 threaded rod and place a nut followed by a washer at each end.
+\item Place one end of the threaded rod into the one of the two footed frame vertices. It should be in the same plane as the first threaded rod. Fix it in place with a washer and nut. You should now have two sides of the equilateral triangle.
+\item Take the third piece of threaded rod and put a nut and washer on each end. Place it in the other footed vertex and fix it in place with a washer and nut. You should now have a triangle of threaded rods with two footed vertices on two of the corners, nothing in the third corner, and a bar clamp between the two vertices.
+\item Take the third vertex (non-footed) and slide it onto the threaded rods in the final corner of the triangle. Measure the lengths of the three sides to make sure they are all 290mm long (along the rod from plastic part to plastic part, equivalent is 11-13/32"). Adjust the nuts to make sure this is so. Use the frame jig J1 if you have one. Once done, place a washer and nut on each of the two rods at the top of the vertex. Tighten all the outer nuts.
+\item The finished frame triangle
+\item You should now have a sturdy triangle with equal-length sides, two feet on the bottom, and a bar clamp between the feet. Adjust the nuts around the bar clamp (but do not crush the bar clamp together yet) until it's approximately in the middle of the rod. Leave the nuts there loose. See the photo for what you should have at this point.
+\item That's it, that's one of the triangles done. Repeat the entire procedure for the second triangle. It is identical to the first.\\ \includegraphics[width=4cm]{images/frame/finished-triangle.jpg}
+\end{enumerate}
+
+\subsection{Assemble Prusa Mendel}
+Things needed:
+\begin{itemize}
+\item 1x \hyperlink{thing_carriage}{Carriage}
+\item 1x \hyperlink{thing_frame-with-axes}{Frame with axes}
+\end{itemize}
+Steps:
+\begin{enumerate}
+\item Assembly info
 \end{enumerate}
 
 \newpage
