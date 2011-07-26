@@ -69,4 +69,71 @@ translate(v=[-5,0,-1]) cube(size = [10,2.5,lenght+2]);
 }
 
 
-vertical_bushing();
+//vertical_bushing(true, 11);
+
+module z_bushings(){
+// STUFF FOR X-ENDS
+difference(){
+// Slider.
+translate([0,6.5,30]) 
+cube([23,17,60],center=true);
+// Slider cutout.
+translate([0,10,32.5]) 
+cube([17,17,70],center=true);
+}
+union(){translate([0,9.5,0])vertical_bushing(true,13);
+	translate([0,4,0.5])cube(size = [8,2,1], center = true);
+	translate([0,4,12.5])cube(size = [8,2,1], center = true);
+	translate([0,9.5,48])vertical_bushing(true,13);
+	translate([0,4,48+0.5])cube(size = [8,2,1], center = true);
+	translate([0,4,48+12.5])cube(size = [8,2,1], center = true);
+	translate([0,9.5,32])
+	{
+		difference()
+		{
+			bushing(true,16);
+			translate([0,3,2]) 
+			rotate([45,0,0])
+			cube([16,30,16], center=true);
+		}
+	}
+}
+}
+
+//z_bushings();
+z_linear_bearings();
+
+
+module z_linear_bearings(){
+translate(v=[0,9.5,0]) rotate(a=[0,0,90]){
+difference(){
+union(){
+//main block
+translate(v=[-5,0,32.5]) cube(size = [10,20,65], center = true);
+//holder for main block in x-end
+translate(v=[-5,0,15.8/2]) cube(size = [12,23,15.8], center = true);
+translate(v=[0,0,0]) cylinder(h = 65, r=10, $fn=60);
+}
+//main axis
+translate(v=[0,0,-2]) cylinder(h = 70, r=7.7, $fn=50);
+//main cut
+translate(v=[10,0,32.5]) cube(size = [20,12,70], center = true);
+//smooth entry cut
+translate(v=[14,0,32.5]) rotate(a=[0,0,45]) cube(size = [20,20,70], center = true);
+translate(v=[0,0,14.5+2]) ziptie();
+translate(v=[0,0,65-(12+2)-5]) ziptie();
+}
+translate(v=[-(10-5.5)/2-5.5,0,0+1]) cube(size = [10-5.5,20,2], center = true);
+translate(v=[-(10-5.5)/2-5.5,0,24.5+2+1]) cube(size = [10-5.5,20,2], center = true);
+
+translate(v=[-(10-5.5)/2-5.5,0,65-1]) cube(size = [10-5.5,20,2], center = true);
+translate(v=[-(10-5.5)/2-5.5,0,65-24.5-2-1]) cube(size = [10-5.5,20,2], center = true);
+}
+}
+
+module ziptie(){
+difference(){
+translate(v=[0,0,0]) cylinder(h = 3.9, r=10.3);
+translate(v=[0,0,0]) cylinder(h = 5, r=10-1, $fn=50);
+translate(v=[0,0,3]) cylinder(h = 1, r1=10-1, r2=10.2, $fn=50);
+}}

@@ -21,13 +21,17 @@ smooth_bar_diameter_horizontal = 8.5;
 m8_diameter = 9;
 m8_nut_diameter = 16.4;
 
-m4_diameter = 5;
+m4_diameter = 4.5;
 m4_nut_diameter = 9;
 
-m3_diameter = 4.4;
-m3_nut_diameter = 7;
+m3_diameter = 3.6;
+m3_nut_diameter = 6.1;
 
 // Bushing holder
 
 bushing_core_diameter = smooth_bar_diameter;
 bushing_material_thickness = 1;
+
+// Motors
+
+motor_shaft = 5.5;

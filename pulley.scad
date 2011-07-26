@@ -41,7 +41,7 @@ module pulley()
    }
    
    //shaft hole
-    translate([0,0,-1])cylinder(r=motor_shaft/2+0.1,h=22,$fn=15);
+    translate([0,0,-1])polyhole(motor_shaft+0.1,22);
     		
  //captive nut and grub holes
     for(j=[1:1]) rotate([0,0,j*(360/3)])
@@ -49,11 +49,11 @@ module pulley()
 	union()
 	{
 		//entrance
-		translate([0,-3,15]) cube([7,5,3],center=true);
+		translate([0,-3,15]) cube([m3_nut_diameter+0.5,5,3],center=true);
 		//nut
-		translate([0,0,13.6]) rotate([0,0,30])cylinder(r=4.22,h=2.8,$fn=6);
+		translate([0,0,13.6]) rotate([0,0,30]) nut(m3_nut_diameter+0.5, 3, false);
 		//grub hole
-		translate([0,0,9]) cylinder(r=1.9,h=10);
+		translate([0,0,9]) cylinder(r=m3_diameter/2,h=10, $fn=15);
 	}
 
  }

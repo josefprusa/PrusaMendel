@@ -17,10 +17,10 @@ include <configuration.scad>
 
 module beltclamp(){
 difference(){
-cube([26,10,4]);
+cube([26,10,5]);
 translate(v = [4, 5, 0]){
-	cylinder(h=10, r=m3_diameter/2, $fn=9, center=true);
-	translate(v = [18, 0, 0]) cylinder(h=10, r=m3_diameter/2, $fn=9, center=true);
+	translate(v = [0, 0, -1])polyhole(m3_diameter, 12);
+	translate(v = [18, 0, -1]) polyhole(m3_diameter, 12);polyhole(m3_diameter, 12);
 }}
 }
 beltclamp();

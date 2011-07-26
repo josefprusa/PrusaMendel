@@ -1,73 +1,67 @@
 // PRUSA Mendel  
-// motor/leadscrew coupling
-// Used for connecting motor to leadscrew
+// X-carriage
+// Used for sliding on X axis
 // GNU GPL v2
-// Josef PrÅ¯Å¡a
+// Josef Průša
 // josefprusa@me.com
 // prusadjs.cz
 // http://www.reprap.org/wiki/Prusa_Mendel
 // http://github.com/prusajr/PrusaMendel
-// Some modifications from GregFrost and Auzee! Thanks guys!
-
-
 
 include <configuration.scad>
 
-/**
- * @id coupling
- * @name Coupling
- * @category Printed
- * @using 2 m3x25xhex
- * @using 2 m3nut
- * @using 2 m3washer
- */
-module coupling()
-{
-	difference()
-	{
-		render()
-		intersection ()
-		{
-			union()
-			{
-				cylinder(h = 30, r=7);
-				translate(v = [0, 6, 15]) cube(size = [14,12,30], center = true);
-			}
-			translate([0,0,-1])
-			cylinder(r=12.3,h=32);
-		}
-		
-		// inside diameter
-		translate(v = [0, 0, -1])cylinder(h = 16, r=motor_shaft/2, $fn=16);
-		translate(v = [0, 0, 14.5])cylinder(h = 16, r=8.1/2, $fn=16);
-		
-		// screw holes
-		for (hole=[-1,1])
-		{
-		rotate ([0,0,90]) translate(v = [6.5, 15, 15+7.5*hole]) rotate ([90,0,0]) 
-		cylinder(h = 30, r=m3_diameter/2, $fn=16);
-		rotate ([0,0,90]) translate(v = [6.5, 12-2, 15+7.5*hole]) rotate ([90,0,0]) 
-		cylinder(h = 5, r=m3_nut_diameter/2, $fn=6);
-		rotate ([0,0,90]) translate(v = [6.5, 12-14-5+2, 15+7.5*hole]) rotate ([90,0,0]) 
-		cylinder(h = 5, r=m3_nut_diameter/2+0.1, $fn=16);
-		}
-				
-		//main cut
-		translate(v = [0, 10-3.5, 14]) #cube(size = [2,20,35], center = true); //-3.5 makes the hole more even, should produce less wobble
-		
-		translate(v = [0, -2, 20])  cube(size = [20,8,1], center = true);
-		translate(v = [0, -2, 10])  cube(size = [20,8,1], center = true);
-		//difference cut
-		intersection ()
-		{
-		translate(v = [0, 7, 15])  cube(size = [20,8,1], center = true);
-		translate([0,0,14])
-		cylinder(r=11.5,h=3);
-		}
-	}
+holeX = 7.5;
+holeY = 6.5;
+
+holeR = 3.4;
+nutR = 3.25;
+nutH = 3;
+corner_cut = 26;
+
+studding_dia = 8.0;
+shaft_dia = 7.0;
+
+module coupling(c){
+    union(){
+        difference(){
+            cube(size = [30,25,8], center = true);
+
+            if(c==1){
+                //slot
+            	*cube(size = [2,40,30], center = true);
+                
+                //nut holes
+            	translate([ holeX,  holeY, nutH/2 - 4.01-3/2]) nut(m3_nut_diameter,3);
+            	translate([ holeX, -holeY, nutH/2 - 4.01-3/2]) nut(m3_nut_diameter,3);
+            	translate([-holeX,  holeY, nutH/2 - 4.01-3/2]) nut(m3_nut_diameter,3);
+            	translate([-holeX, -holeY, nutH/2 - 4.01-3/2]) nut(m3_nut_diameter,3);
+            }
+
+            //shaft groves
+            translate([ -16, 0, 4.5]) rotate([0,90,0]) cylinder(h = 16, r=studding_dia / 2, $fn=16);
+            translate([-0.5, 0, 4.5]) rotate([0,90,0]) cylinder(h = 16, r=shaft_dia / 2,    $fn=16);
+
+            //screw holes
+            translate([ holeX,  holeY, -10]) polyhole(m3_diameter,20);
+            translate([ holeX, -holeY, -10]) polyhole(m3_diameter,20);
+            translate([-holeX,  holeY, -10]) polyhole(m3_diameter,20);
+            translate([-holeX, -holeY, -10]) polyhole(m3_diameter,20);
+
+            //corners
+            rotate([0,0,30])   translate([corner_cut, 0, 0]) cube(size = [20,40,20], center = true);
+            rotate([0,0,-30])  translate([corner_cut, 0, 0]) cube(size = [20,40,20], center = true);
+            rotate([0,0,150])  translate([corner_cut, 0, 0]) cube(size = [20,40,20], center = true);
+            rotate([0,0,-150]) translate([corner_cut, 0, 0]) cube(size = [20,40,20], center = true);
+        }
+        if(c==1){
+            // bridge
+        	translate([ holeX,  holeY, nutH-3.9]) cylinder(h = 0.4, r=nutR+0.1, $fn=6, center=true);
+        	translate([ holeX, -holeY, nutH-3.9]) cylinder(h = 0.4, r=nutR+0.1, $fn=6, center=true);
+        	translate([-holeX,  holeY, nutH-3.9]) cylinder(h = 0.4, r=nutR+0.1, $fn=6, center=true);
+        	translate([-holeX, -holeY, nutH-3.9]) cylinder(h = 0.4, r=nutR+0.1, $fn=6, center=true);
+        }
+    }
 }
 
-intersection()
-{
-	coupling();
-}
+translate([0, 14, 0]) coupling(c=0);
+translate([0, -14, 0]) rotate([0,0,180]) coupling(c=1);

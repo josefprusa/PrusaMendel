@@ -10,7 +10,7 @@ use <inc/parametric_involute_gear_v5.0.scad>
 translate([55,40,0]) 
 WadesL(); //this module call will make the large gear
 translate([15,60,0]) 
-WadesS(); //this module call will make the small gear
+//WadesS(); //this module call will make the small gear
 
 /**
  * @id large-gear

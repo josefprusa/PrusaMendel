@@ -70,12 +70,12 @@ difference ()
 			//translate(v = [0, 35, 12.5]) 
 			//xend_nema17();
 		
-			positioned_motor_mount();
+			translate(v = [0, 0, 0]) positioned_motor_mount();
 		}
 		positioned_motor_mount_holes();
 	}
 }
-xendcorners(5,0,5,5,0);
+//xendcorners(5,0,5,5,0);
 }
 
 

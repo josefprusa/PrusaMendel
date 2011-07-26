@@ -53,14 +53,9 @@ thin_wall = 3;
 // bushing_material_thickness = 0;
 
 
+///counted stuff
+m3_nut_diameter_bigger = ((m3_nut_diameter  / 2) / cos (180 / 6))*2;
 
+// functions 
+include <functions.scad>
 
-
-
-// Some basic functions, probably should be somewhere else
-module roundcorner(diameter){
-	difference(){
-		cube(size = [diameter,diameter,99], center = false);
-		translate(v = [diameter, diameter, 0]) cylinder(h = 100, r=diameter, center=true);
-	}
-}

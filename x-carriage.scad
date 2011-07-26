@@ -21,6 +21,13 @@ include <configuration.scad>
 snap_in_mount = false;
 use <bushing.scad>
 
+module mountingholes(){
+					translate(v = [0, -25, -5]) polyhole(m4_diameter,10);
+					translate(v = [0, -25, 5]) cylinder(h = 9, r=m4_nut_diameter/2, $fn=6, center=true);		
+					translate(v = [0, 25, -5]) polyhole(m4_diameter,10);
+					translate(v = [0, 25, 5]) cylinder(h = 9, r=4.5, $fn=6, center=true);
+}
+
 module xcarriage(){
 union(){
 	translate(v = [0,0,2.5]) 
@@ -70,14 +77,19 @@ union(){
 					//SNAP IN MOUNT END
 				}else{
 					//NORMAL MOUNT
-		
-					translate(v = [0, -31, 2]) cylinder(h = 10, r=m4_diameter/2, $fn=9, center=true);		
-					translate(v = [0, -31, 5]) cylinder(h = 9, r=m4_nut_diameter/2, $fn=6, center=true);		
-					translate(v = [0, 19, ]) cylinder(h = 20, r=m4_diameter/2, $fn=9, center=true);
-					translate(v = [0, 19, 5]) cylinder(h = 9, r=4.5, $fn=6, center=true);	
+					
+
+					translate(v = [0, -6, 0]){
+					rotate(a=[0,0,26]) mountingholes();
+					rotate(a=[0,0,-26]) mountingholes();
+					rotate(a=[0,0,0]) mountingholes();
+					}
+
+					//removing some mass	
+					translate(v = [0, 40, 0]) cylinder(h = 9, r=14, $fn=6, center=true);	
 		
 					// Hotend hole
-					translate(v = [0, -6, 0]) cylinder(h = 20, r=21, $fn=20, center=true);
+					translate(v = [0, -6, 0]) cylinder(h = 20, r=20, $fn=20, center=true);
 		
 					//NORMAL MOUNT END
 				}
@@ -85,15 +97,17 @@ union(){
 				//translate(v = [38, -18, 2]) cube(size = [5,3.5,30], center = true);
 
 				//belt clamp holes
-					translate(v = [30, -18, 2]) cylinder(h = 10, r=m3_diameter/2, $fn=9, center=true);
-				translate(v = [30, -18, 5]) cylinder(h = 9, r=m3_nut_diameter/2, $fn=6, center=true);
-					translate(v = [48, -18, 2]) cylinder(h = 10, r=m3_diameter/2, $fn=9, center=true);		
-				translate(v = [48, -18, 5]) cylinder(h = 9, r=m3_nut_diameter/2, $fn=6, center=true);
+				translate(v = [0,-36,0]){
+				translate(v = [30, 18, -5]) polyhole(m3_diameter,10);
+				translate(v = [30, 18, 0.55]) nut(m3_nut_diameter,9);
+				translate(v = [48, 18, -5]) polyhole(m3_diameter,10);
+				translate(v = [48, 18, 0.55]) nut(m3_nut_diameter,9);
+				}
 
-				translate(v = [30, 18, 2]) cylinder(h = 10, r=m3_diameter/2, $fn=9, center=true);
-				translate(v = [30, 18, 5]) cylinder(h = 9, r=m3_nut_diameter/2, $fn=6, center=true);
-				translate(v = [48, 18, 2]) cylinder(h = 10, r=m3_diameter/2, $fn=9, center=true);
-				translate(v = [48, 18, 5]) cylinder(h = 9, r=m3_nut_diameter/2, $fn=6, center=true);
+				translate(v = [30, 18, -5]) polyhole(m3_diameter,10);
+				translate(v = [30, 18, 0.55]) nut(m3_nut_diameter,9);
+				translate(v = [48, 18, -5]) polyhole(m3_diameter,10);
+				translate(v = [48, 18, 0.55]) nut(m3_nut_diameter,9);
 
 			}
 
