@@ -36,8 +36,5 @@ module xendidler(){
 		}
 	}
 }
-difference(){
 xendidler();
-xendcorners(5,5,0,0,0);
-}
 

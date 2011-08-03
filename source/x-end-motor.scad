@@ -65,7 +65,7 @@ difference ()
 	{
 		union ()
 		{
-			mirror() xend(true);
+			mirror() xend(false,true,false);
 		
 			//translate(v = [0, 35, 12.5]) 
 			//xend_nema17();
