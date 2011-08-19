@@ -10,6 +10,24 @@
 
 include <configuration.scad>
 
+/**
+ * @id coupling
+ * @name Coupling
+ * @category Printed
+ * @using 4 m3x20
+ * @using 4 m3washer
+ * @using 4 m3nut
+ * @step Place M3 nuts in all nut traps.
+ * @step Insert screws with washers on them and tighet it just a bit.
+ */
+
+/**
+ * 20mm long piece of PVC tube. 5mm inside diameter, 8mm outside diameter.
+ * @id coupling-tube
+ * @name Coupling tube
+ * @category Nuts&bolts
+ */
+
 holeX = 7.5;
 holeY = 6.5;
 

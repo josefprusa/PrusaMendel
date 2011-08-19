@@ -7,7 +7,7 @@ target sae: OPENSCAD:=$(shell which openscad) -D variant=1 -D linear=0
 target sae-lm8uu: TARGET=./sae-prusa-linear
 target sae-lm8uu: OPENSCAD:=$(shell which openscad) -D variant=1 -D linear=1
 
-PARTS=$(TARGET)/bar-clamp.stl $(TARGET)/belt-clamp.stl $(TARGET)/coupling.stl $(TARGET)/endstop-holder.stl $(TARGET)/frame-vertex-with-foot.stl $(TARGET)/frame-vertex-without-foot.stl $(TARGET)/pulley.stl $(TARGET)/rod-clamp.stl $(TARGET)/x-carriage.stl $(TARGET)/x-end-motor.stl $(TARGET)/x-end-idler.stl $(TARGET)/y-motor-bracket.stl $(TARGET)/z-motor-mount.stl
+PARTS= $(TARGET)/x-end-motor.stl $(TARGET)/x-end-idler.stl $(TARGET)/bar-clamp.stl
 
 TARGETS=$(PARTS)
 help: 

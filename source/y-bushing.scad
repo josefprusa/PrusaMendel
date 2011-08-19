@@ -31,7 +31,9 @@ module ybushing(){
 			}
 		translate(v = [12, 0, -2]) polyhole(m3_diameter, 12);
 		translate(v = [-12, 0, -2]) polyhole(m3_diameter, 12);
-	}	
+
+	translate(v = [0,0,2.0/2]) cube(size = [34,120,2.05], center = true);
 }
+	}	
 
 ybushing();

@@ -26,7 +26,7 @@ corection = 1.17;
 
 use <x-end.scad>
 module xendmotor(){
-mirror() xend(false,true,false);
+mirror() xend(true,true,false);
 
 
 //nema17 connector
@@ -58,14 +58,14 @@ translate(v = [0, 35, 12.5]) difference(){
 
 }
 
-difference(){
+/*color([ R/0, G/255, B/00 ]) */difference(){
 union(){
 //xendmotor();
 difference ()
 	{
 		union ()
 		{
-			mirror() xend(false,true,false);
+			mirror() xend(true,true,false);
 		
 			//translate(v = [0, 35, 12.5]) 
 			//xend_nema17();
@@ -188,6 +188,7 @@ module motor_mount_holes ()
 		translate([0,0,-24])
 		cylinder(h=25,r=7/2);
 	}
+translate([2.5,-25,0]) #cube([10,20,10]);
 }
 
 module barbell (r1,r2,r3,r4,separation) 

@@ -51,8 +51,8 @@ difference(){translate(v=[0,5,8])rotate(a=[90,0,0]){
 bushing(false, 10);
 translate(v=[-7,-13,0])cube(size = [14,5,10]);
 translate(v=[-2,-13,-3])cube(size = [4,5,16]);
-translate(v=[-2,-11,-3])cube(size = [4,7.5,2]);
-translate(v=[-2,-11,11])cube(size = [4,7.5,2]);
+translate(v=[-2,-12,-3])cube(size = [4,7.5,2]);
+translate(v=[-2,-12,11])cube(size = [4,7.5,2]);
 }
 translate(v=[-3,-1,-16])rotate(a=[45,0,0])cube(size = [6,5,16]);
 
@@ -82,11 +82,11 @@ translate([0,10,32.5])
 cube([17,17,70],center=true);
 }
 union(){translate([0,9.5,0])vertical_bushing(true,13);
-	translate([0,4,0.5])cube(size = [8,2,1], center = true);
-	translate([0,4,12.5])cube(size = [8,2,1], center = true);
+	//translate([0,4,0.5])cube(size = [8,2,1], center = true);
+	//translate([0,4,12.5])cube(size = [8,2,1], center = true);
 	translate([0,9.5,48])vertical_bushing(true,13);
-	translate([0,4,48+0.5])cube(size = [8,2,1], center = true);
-	translate([0,4,48+12.5])cube(size = [8,2,1], center = true);
+	//translate([0,4,48+0.5])cube(size = [8,2,1], center = true);
+	//translate([0,4,48+12.5])cube(size = [8,2,1], center = true);
 	translate([0,9.5,32])
 	{
 		difference()
@@ -100,8 +100,8 @@ union(){translate([0,9.5,0])vertical_bushing(true,13);
 }
 }
 
-//z_bushings();
-z_linear_bearings();
+z_bushings();
+//z_linear_bearings();
 
 
 module z_linear_bearings(){

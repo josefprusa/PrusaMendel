@@ -127,14 +127,8 @@ $(document).ready(function(){
     }
   }
   checkCompleteBOM();
-
-
-});
-
-
-
-jQuery(document).ready(function() {
- jQuery('a[rel*=facebox]').facebox();
+  
+  jQuery('a[rel*=facebox]').facebox();
  // active button from cookie
 	var button = $.cookie(unique + "_button");
 	if(button == "home"){
@@ -146,7 +140,9 @@ jQuery(document).ready(function() {
 	}else if(button == "assembly"){
 	assemblybutton();
 	}
- });
+
+
+});
 
 	
      

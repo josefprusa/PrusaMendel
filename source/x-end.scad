@@ -119,19 +119,19 @@ module xend_side(closed_end=true,curved_sides=false)
 		}
 
 		for (i=[0:5])
-		translate([-axis_diameter_larger+2,5+2.5+5*i,-axis_diameter_larger]) 
-		cylinder(h=7,r=0.4,$fn=6,center=true);
+		translate([-axis_diameter_larger+2,5+2.5+5*i,-7+0.6]) 
+		cylinder(h=2,r=0.4,$fn=6,center=true);
 		for (i=[0:6])
-		translate([-axis_diameter_larger-2,5+5*i,-axis_diameter_larger])
-		cylinder(h=7,r=0.4,$fn=6,center=true);
+		translate([-axis_diameter_larger-2,5+5*i,-7+0.6])
+		cylinder(h=2,r=0.4,$fn=6,center=true);
 	}
 }
-
+//xend_side();
 module xend(closed_end=true)
 {
 	
-	z_linear_bearings();
-	//z_bushings();	
+	if(linear==1) z_linear_bearings();
+	if(linear==0) z_bushings();	
 difference()
 	{
 		union ()

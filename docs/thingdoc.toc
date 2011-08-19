@@ -1,43 +1,44 @@
-\contentsline {section}{\numberline {1}Bill of materials}{3}{section.1}
-\contentsline {subsection}{\numberline {1.1}Rods and Bars}{3}{subsection.1.1}
-\contentsline {subsection}{\numberline {1.2}Nuts\&bolts}{3}{subsection.1.2}
-\contentsline {subsection}{\numberline {1.3}Printed}{3}{subsection.1.3}
-\contentsline {section}{\numberline {2}Things overview}{5}{section.2}
-\contentsline {subsection}{\numberline {2.1}Y axis}{5}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Frame with axes}{5}{subsection.2.2}
-\contentsline {subsection}{\numberline {2.3}Frame vertex}{5}{subsection.2.3}
-\contentsline {subsection}{\numberline {2.4}Frame}{5}{subsection.2.4}
-\contentsline {subsection}{\numberline {2.5}load tester}{5}{subsection.2.5}
-\contentsline {subsection}{\numberline {2.6}Y motor bracket}{5}{subsection.2.6}
-\contentsline {subsection}{\numberline {2.7}M8 hobbed bolt}{5}{subsection.2.7}
-\contentsline {subsection}{\numberline {2.8}Extruder Idler}{5}{subsection.2.8}
-\contentsline {subsection}{\numberline {2.9}Frame with Y axis}{5}{subsection.2.9}
-\contentsline {subsection}{\numberline {2.10}Y bushing}{6}{subsection.2.10}
-\contentsline {subsection}{\numberline {2.11}Bar clamp}{6}{subsection.2.11}
-\contentsline {subsection}{\numberline {2.12}Configuration test}{6}{subsection.2.12}
-\contentsline {subsection}{\numberline {2.13}XZ axis}{6}{subsection.2.13}
-\contentsline {subsection}{\numberline {2.14}Large extruder gear}{6}{subsection.2.14}
-\contentsline {subsection}{\numberline {2.15}Frame vertex with foot}{6}{subsection.2.15}
-\contentsline {subsection}{\numberline {2.16}X end motor}{6}{subsection.2.16}
-\contentsline {subsection}{\numberline {2.17}Extruder body}{6}{subsection.2.17}
-\contentsline {subsection}{\numberline {2.18}Small extruder gear}{6}{subsection.2.18}
-\contentsline {subsection}{\numberline {2.19}Extruder spring}{6}{subsection.2.19}
-\contentsline {subsection}{\numberline {2.20}Printable Bushing}{6}{subsection.2.20}
-\contentsline {subsection}{\numberline {2.21}X carriage}{6}{subsection.2.21}
-\contentsline {subsection}{\numberline {2.22}X end idler}{7}{subsection.2.22}
-\contentsline {subsection}{\numberline {2.23}Rod clamp}{7}{subsection.2.23}
-\contentsline {subsection}{\numberline {2.24}Z motor mount}{7}{subsection.2.24}
-\contentsline {subsection}{\numberline {2.25}Endstop holder}{7}{subsection.2.25}
-\contentsline {subsection}{\numberline {2.26}Bushing}{7}{subsection.2.26}
-\contentsline {subsection}{\numberline {2.27}Idler}{7}{subsection.2.27}
-\contentsline {subsection}{\numberline {2.28}Pulley}{7}{subsection.2.28}
-\contentsline {subsection}{\numberline {2.29}Coupling}{7}{subsection.2.29}
-\contentsline {subsection}{\numberline {2.30}Carriage}{7}{subsection.2.30}
-\contentsline {subsection}{\numberline {2.31}Belt clamp}{7}{subsection.2.31}
-\contentsline {subsection}{\numberline {2.32}Extruder}{7}{subsection.2.32}
-\contentsline {section}{\numberline {3}Assembly instructions}{8}{section.3}
-\contentsline {subsection}{\numberline {3.1}Assemble Small extruder gear}{8}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Assemble M8 hobbed bolt}{8}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}Assemble Large extruder gear}{8}{subsection.3.3}
-\contentsline {subsection}{\numberline {3.4}Assemble Extruder Idler}{8}{subsection.3.4}
-\contentsline {subsection}{\numberline {3.5}Assemble Extruder}{9}{subsection.3.5}
+\contentsline {section}{\numberline {1}Bill of Materials}{4}{section.1}
+\contentsline {subsection}{\numberline {1.1}Rods and Bars}{4}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Nuts\&bolts}{4}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Printed}{4}{subsection.1.3}
+\contentsline {section}{\numberline {2}Things Overview}{6}{section.2}
+\contentsline {subsection}{\numberline {2.1}Frame triangle}{6}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Y axis}{6}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Frame with axes}{6}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Frame vertex}{6}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.5}Frame}{6}{subsection.2.5}
+\contentsline {subsection}{\numberline {2.6}Y motor bracket}{6}{subsection.2.6}
+\contentsline {subsection}{\numberline {2.7}M8 hobbed bolt}{6}{subsection.2.7}
+\contentsline {subsection}{\numberline {2.8}Extruder Idler}{6}{subsection.2.8}
+\contentsline {subsection}{\numberline {2.9}Frame with Y axis}{7}{subsection.2.9}
+\contentsline {subsection}{\numberline {2.10}Y bushing}{7}{subsection.2.10}
+\contentsline {subsection}{\numberline {2.11}Bar clamp}{7}{subsection.2.11}
+\contentsline {subsection}{\numberline {2.12}Configuration test}{7}{subsection.2.12}
+\contentsline {subsection}{\numberline {2.13}XZ axis}{7}{subsection.2.13}
+\contentsline {subsection}{\numberline {2.14}Large extruder gear}{7}{subsection.2.14}
+\contentsline {subsection}{\numberline {2.15}Frame vertex with foot}{7}{subsection.2.15}
+\contentsline {subsection}{\numberline {2.16}X end motor}{7}{subsection.2.16}
+\contentsline {subsection}{\numberline {2.17}Extruder body}{7}{subsection.2.17}
+\contentsline {subsection}{\numberline {2.18}Small extruder gear}{7}{subsection.2.18}
+\contentsline {subsection}{\numberline {2.19}Extruder spring}{7}{subsection.2.19}
+\contentsline {subsection}{\numberline {2.20}Printable Bushing}{8}{subsection.2.20}
+\contentsline {subsection}{\numberline {2.21}X carriage}{8}{subsection.2.21}
+\contentsline {subsection}{\numberline {2.22}X end idler}{8}{subsection.2.22}
+\contentsline {subsection}{\numberline {2.23}Rod clamp}{8}{subsection.2.23}
+\contentsline {subsection}{\numberline {2.24}Z motor mount}{8}{subsection.2.24}
+\contentsline {subsection}{\numberline {2.25}Endstop holder}{8}{subsection.2.25}
+\contentsline {subsection}{\numberline {2.26}Bushing}{8}{subsection.2.26}
+\contentsline {subsection}{\numberline {2.27}Idler}{8}{subsection.2.27}
+\contentsline {subsection}{\numberline {2.28}Pulley}{8}{subsection.2.28}
+\contentsline {subsection}{\numberline {2.29}Carriage}{8}{subsection.2.29}
+\contentsline {subsection}{\numberline {2.30}Belt clamp}{9}{subsection.2.30}
+\contentsline {subsection}{\numberline {2.31}Extruder}{9}{subsection.2.31}
+\contentsline {section}{\numberline {3}Assembly Instructions}{10}{section.3}
+\contentsline {subsection}{\numberline {3.1}Assemble Small extruder gear}{10}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Assemble M8 hobbed bolt}{10}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Assemble Large extruder gear}{10}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Assemble Extruder Idler}{10}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.5}Assemble Extruder}{11}{subsection.3.5}
+\contentsline {subsection}{\numberline {3.6}Assemble Frame triangle}{12}{subsection.3.6}
+\contentsline {subsection}{\numberline {3.7}Assemble Prusa Mendel}{14}{subsection.3.7}
