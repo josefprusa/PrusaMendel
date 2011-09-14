@@ -11,6 +11,7 @@
 // Thank you guys for your great work
 
 include <configuration.scad>
+use <teardrop.scad>
 basefoot=true;
 
 
@@ -18,21 +19,6 @@ basefoot=true;
 vertex(with_foot=basefoot);
 
 %import_stl("frame-vertex.stl");
-
-//teardrop();
-
-module teardrop (r=8,h=20)
-{
-	rotate([-270,0,90])
-	linear_extrude(height=h)
-	{
-		circle(r=r);
-		polygon(points=[[0,0],[r*cos(30),r*sin(30)],[0.5*r,r],[-0.5*r,r],[-r*cos(30),r*sin(30)]],
-				paths=[[0,1,2,3,4]]);
-	}
-}
-
-
 
 vfvertex_height=m8_diameter+4.5;
 
@@ -137,7 +123,8 @@ module vertex(with_foot=basefoot)
 		translate([hole_separation-vertex_end_major_d/2-1,
 			vertex_horizontal_hole_offset-2*block*vertex_horizontal_hole_offset,
 			vfvertex_height/2])
-		teardrop(r=m8_diameter/2,h=vertex_end_major_d+2);
+		rotate([-270,0,90])
+			teardrop(r=m8_diameter/2,h=vertex_end_major_d+2);
 	}
 }
 

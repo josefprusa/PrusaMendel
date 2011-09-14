@@ -82,48 +82,20 @@ module xend_side(closed_end=true,curved_sides=false)
 		{
 			union ()
 			{
-			translate([0,-1,0])
-			rotate(90)
-			teardropcentering(
-				axis_diameter_larger,
-				closed_end?xend_length-1:xend_length+2);
+			translate([0,xend_length-3,0])
+			rotate(-90,0, 0)
+//			teardropcentering(
+			padded_teardrop(
+				r=axis_diameter_real,
+				h=xend_length-6,
+				internal_offset=closed_end?0:10
+				);
 
-			translate([axis_diameter_larger,0,0])
-			rotate([0,8,0])
-			translate([-axis_diameter_larger,solid_end_width,-xend_height/2-1])
-			cube([axis_diameter_larger,
-				xend_length-2*solid_end_width,
-				xend_height/2+1]);
-
-			translate([-axis_diameter_larger,0,0])
-			rotate([0,-8,0])
-			translate([0,solid_end_width,-xend_height/2-1])
-			cube([axis_diameter_larger,
-				xend_length-2*solid_end_width,
-				xend_height/2+1]);
 			}
 
-			translate([-axis_diameter_larger-1,solid_end_width+slot_width,-xend_height/2])
-			cube([axis_diameter_larger,xend_length-2*solid_end_width-2*slot_width,pad_connector_height]);
 
-			difference()
-			{
-			translate([-pad_width/2,solid_end_width+slot_width,-xend_height/2])
-			cube([pad_width,xend_length-2*solid_end_width-2*slot_width,pad_height]);
-
-			translate([axis_diameter_larger,0,0])
-			rotate([0,8,0])
-			translate([-slot_width,solid_end_width,-xend_height/2-1])
-			cube([slot_width,xend_length-2*solid_end_width,xend_height/2+1]);
-			}
 		}
 
-		for (i=[0:5])
-		translate([-axis_diameter_larger+2,5+2.5+5*i,-7+0.6]) 
-		cylinder(h=2,r=0.4,$fn=6,center=true);
-		for (i=[0:6])
-		translate([-axis_diameter_larger-2,5+5*i,-7+0.6])
-		cylinder(h=2,r=0.4,$fn=6,center=true);
 	}
 }
 //xend_side();
