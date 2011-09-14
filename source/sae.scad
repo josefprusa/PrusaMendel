@@ -13,8 +13,8 @@
 
 threaded_rod_diameter = 9;
 threaded_rod_diameter_horizontal =9;
-smooth_bar_díameter = 9;
-smooth_bar_díameter_horizontal = 9;
+smooth_bar_diameter = 9;
+smooth_bar_diameter_horizontal = 9;
 
 // Nuts and bolts
 
@@ -29,5 +29,5 @@ m3_nut_diameter = 10.6;
 
 // Bushing holder
 
-bushing_core_diameter = smooth_bar_díameter;
+bushing_core_diameter = smooth_bar_diameter;
 bushing_material_thickness = 1;
