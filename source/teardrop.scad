@@ -59,7 +59,7 @@ module padded_teardrop(r = 4, h = 15, diameter_adjust = 0.5, internal_offset = 0
 
 	difference(){
 		//axe hole
-        translate([-internal_offset,0,0])
+        translate([0, 0, -internal_offset])
 		  teardropcentering((r+diameter_adjust), h+magic+internal_offset);
 		//pressure pad
 		rotate([0,-90,90])
