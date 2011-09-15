@@ -83,9 +83,7 @@ module xend_side(closed_end=true,curved_sides=false)
 			union ()
 			{
 			translate([0,xend_length-3,0])
-			rotate(-90,0, 0)
-//			teardropcentering(
-			padded_teardrop(
+			rotate([90,180,0]) mirror([1,0,0]) padded_teardrop(
 				r=axis_diameter_real,
 				h=xend_length-6,
 				internal_offset=closed_end?0:10

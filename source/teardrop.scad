@@ -1,4 +1,5 @@
 teardropcentering2();
+padded_teardrop();
 
 module teardrop (r=4.5,h=20, r_mult=1)
 {
@@ -19,7 +20,6 @@ module teardrop_poly (r=4.5,h=20, r_mult=1.2)
 
 module teardropcentering (r=4.5,h=20)
 {
-	rotate([-270,0,90])
     {
 		teardrop(r=r, h=h, r_mult=1.2);
 	}
@@ -33,7 +33,7 @@ module teardropcentering2 (r=4.5,h=20)
 	}
 }
 
-module padded_teardrop(r = 4, h = 15, diameter_adjust = 0.5, internal_offset = 0, pressure_pad_height_ratio=0.325, add_strenght = 0, cut_spacing = 5, cut_h=5.5, magic = 10, cut_width=1)
+module padded_teardrop(r = 4, h = 15, diameter_adjust = 0.5, internal_offset = 0, pressure_pad_height_ratio=0.325, add_strenght = 1, cut_spacing = 5, cut_h=5.5, magic = 10, cut_width=1)
 {
 
 	//r is real radius, as measured on steel.
@@ -62,42 +62,47 @@ module padded_teardrop(r = 4, h = 15, diameter_adjust = 0.5, internal_offset = 0
         translate([-internal_offset,0,0])
 		  teardropcentering((r+diameter_adjust), h+magic+internal_offset);
 		//pressure pad
+		rotate([0,-90,90])
 		translate([
 			0,
 			-(r+diameter_adjust),
 			(-(r+diameter_adjust))-(r-(r*pressure_pad_height_ratio))-magic
 			])
-			cube(size = [h,(r+diameter_adjust)*2,(r+diameter_adjust)+magic]);
+			cube(size = [
+				h,
+				(r+diameter_adjust)*2,(r+diameter_adjust)+magic]);
 	}
-	//cutting along the axis
-	//this one goes thru
-	translate(v = [0, -(r+diameter_adjust), -(r+diameter_adjust)-magic])
-		cube(size = [h,cut_width,(r+diameter_adjust)+magic]);
-	//this one does not
-	translate(v = [0, (r+diameter_adjust)-cut_width, -(r+diameter_adjust)])
-		cube(size = [h,cut_width,(r+diameter_adjust)]);
-	//cuts across axis, both go thru
-	translate(v = [0, -(r+diameter_adjust), -(r+diameter_adjust)-magic])
-		cube(size = [cut_width,(r+diameter_adjust)*2,(r+diameter_adjust)+magic]);
-	translate(v = [h-cut_width, -(r+diameter_adjust), -(r+diameter_adjust)-magic])
-		cube(size = [cut_width,(r+diameter_adjust)*2,(r+diameter_adjust)+magic]);
+	rotate([0,-90,90]) {
+		//cutting along the axis
+		//this one goes thru
+		translate(v = [0, -(r+diameter_adjust), -(r+diameter_adjust)-magic])
+			cube(size = [h,cut_width,(r+diameter_adjust)+magic]);
+		//this one does not
+		translate(v = [0, (r+diameter_adjust)-cut_width, -(r+diameter_adjust)])
+			cube(size = [h,cut_width,(r+diameter_adjust)]);
+		//cuts across axis, both go thru
+		translate(v = [0, -(r+diameter_adjust), -(r+diameter_adjust)-magic])
+			cube(size = [cut_width,(r+diameter_adjust)*2,(r+diameter_adjust)+magic]);
+		translate(v = [h-cut_width, -(r+diameter_adjust), -(r+diameter_adjust)-magic])
+			cube(size = [cut_width,(r+diameter_adjust)*2,(r+diameter_adjust)+magic]);
 
-	if(add_strenght==1){
-		//cylinder cut
-		translate([cut_spacing,0,0]) {
-			for (i=[1:h/cut_spacing]){
-				translate(v = [(i-1)*cut_spacing, (r+diameter_adjust)-r/2, -(r+diameter_adjust)])
-					cylinder(h = cut_h, r=0.4, $fn=6, center=true);
-				translate(v = [(i-1)*cut_spacing- (cut_spacing/2) , (r+diameter_adjust)+r/2, -(r+diameter_adjust)])
-					cylinder(h = cut_h, r=0.4, $fn=6, center=true);
+		if(add_strenght==1){
+			//cylinder cut
+			translate([cut_spacing,0,0]) {
+				for (i=[1:h/cut_spacing]){
+					translate(v = [(i-1)*cut_spacing, (r+diameter_adjust)-r/2, -(r+diameter_adjust)])
+						cylinder(h = cut_h, r=0.4, $fn=6, center=true);
+					translate(v = [(i-1)*cut_spacing- (cut_spacing/2) , (r+diameter_adjust)+r/2, -(r+diameter_adjust)])
+						cylinder(h = cut_h, r=0.4, $fn=6, center=true);
+				}
 			}
-		}
-	} 
-	if (add_strenght == 2){
-		//slot cut
-		for (i=[1:h/cut_spacing]){
-			translate(v = [i*cut_spacing, (r+diameter_adjust)-r/2, -(r+diameter_adjust)-cut_h/2])
-				cube([0.4,r,cut_h]); 
+		} 
+		if (add_strenght == 2){
+			//slot cut
+			for (i=[1:h/cut_spacing]){
+				translate(v = [i*cut_spacing, (r+diameter_adjust)-r/2, -(r+diameter_adjust)-cut_h/2])
+					cube([0.4,r,cut_h]); 
+			}
 		}
 	}
 }
