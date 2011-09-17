@@ -12,9 +12,11 @@ body {
 #main {
 	margin-left: auto;
 	margin-right: auto;
+	top: 20px;
 	width: 500px;
-	padding-top: 10px;
 	padding-bottom: 30px;
+	overflow:auto;
+	position: absolute;
 }
 
 a {
@@ -31,7 +33,7 @@ a:hover {
 	border-bottom: 1px solid #ddd;
 	height: 37px;
 	padding-top: 9px;
-	position: fixed;
+	position: absolute;
 	top:0; left:0;
 	text-align: center;
 	width: 100%;
@@ -171,6 +173,10 @@ a:hover {
 	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#77777', endColorstr='#575757');
 }
 
+.control {
+	padding: .5em .7em .5em;
+}
+
 .smallbutton {
 	padding: .2em .2em .2em;
 }
@@ -256,7 +262,4 @@ background-color: #f5f5f5;
 	-moz-border-radius: 5px;
 border-radius: 5px;
 }
-#assemblymenu{
-	padding:0px;
-	margin:0px;
-}
+

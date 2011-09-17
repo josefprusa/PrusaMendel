@@ -1,10 +1,13 @@
-//PRUSAMendel
-//GNUGPLv2
-//GregFrost
+// PRUSAMendel
+// GNUGPLv2
+// GregFrost
 
 /**
-*@categoryPrinted
-*/
+ * Helps to hold belt aligned on the bearing.
+ * @id bearing-guide
+ * @name Bearing guide
+ * @category Printed
+ */
 
 single_layer_width=0.6;
 bearing_inner=22.3;
