@@ -144,8 +144,8 @@ difference()
 
 
 			//Nut Trap
-			translate([0,-20,0]) //
-			cylinder(h=40,r=m8_nut_diameter/2+thin_wall*corection,$fn=6);
+			if (acme==0) translate([0,-20,0]) cylinder(h=40,r=m8_nut_diameter/2+thin_wall*corection,$fn=6);
+			if (acme==1) translate([0,-20,0]) cylinder(h=40,r=acme_nut_diameter/2+thin_wall*corection,$fn=6);
 		}
 
 		// Slider cutout.
@@ -155,13 +155,13 @@ difference()
 		//Rod hole.
 		difference()
 		{
-			translate([0,-20,39.5]) 
-			cylinder(h=90,r=m8_nut_diameter/2,$fn=6,center=true);
-			translate([0,-20,8.5]) 
-			cylinder(h=4,r=m8_nut_diameter/2+thin_wall,$fn=6,center=true);
+			if (acme==0) translate([0,-20,39.5]) cylinder(h=90,r=m8_nut_diameter/2,$fn=6,center=true); 
+			if (acme==1) translate([0,-20,39.5]) cylinder(h=90,r=acme_nut_diameter/2,$fn=6,center=true);
+			if (acme==0) translate([0,-20,8.5]) cylinder(h=4,r=m8_nut_diameter/2+thin_wall,$fn=6,center=true);
+			if (acme==1) translate([0,-20,8.5]) cylinder(h=4,r=acme_nut_diameter/2+thin_wall,$fn=6,center=true);
 		}
-		translate([0,-20,52]) 
-		cylinder(h=90,r=m8_diameter/2,$fn=9,center=true);
+		if (acme==0) translate([0,-20,52]) cylinder(h=90,r=m8_diameter/2,$fn=9,center=true);
+		if (acme==1) translate([0,-20,52]) cylinder(h=90,r=acme_diameter/2,$fn=9,center=true);
 	}
 }
 
