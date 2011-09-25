@@ -27,7 +27,8 @@ module xendidler(){
 		mirror(){
 			difference(){
 				union(){
-					translate(v = [21, -21.5, 25.3]) cube(size = [25.5,7,4.4], center = true);
+					if (acme==0) translate(v = [21, -21.5, 25.3]) cube(size = [25.5,7,4.4], center = true);
+					if (acme==1) translate(v = [21, -21.5, 25.3]) cube(size = [20.5,7,4.4], center = true);
 					translate(v = [21, 12.5, 25.3]) #cube(size = [24,5,4.4], center = true);
 					translate(v = [32.5, -5, 7.5]) cube(size = [5,40,40], center = true);
 				}
