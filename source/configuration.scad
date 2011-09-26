@@ -27,6 +27,8 @@ thin_wall = 3;
 
 // LM8UU
 linear =0;
+// ACME leadscrew
+acme =0;
 
 
 // CHANGE ONLY THE STUFF YOU KNOW
