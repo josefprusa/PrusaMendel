@@ -58,14 +58,11 @@ translate(v = [0, 35, 12.5]) difference(){
 
 }
 
-/*color([ R/0, G/255, B/00 ]) */difference(){
-union(){
-//xendmotor();
-difference ()
-	{
+
+difference (){
 		union ()
 		{
-			mirror() xend(true,true,false);
+			mirror() xend(true,linear);
 		
 			//translate(v = [0, 35, 12.5]) 
 			//xend_nema17();
@@ -73,10 +70,9 @@ difference ()
 			translate(v = [0, 0, 0]) positioned_motor_mount();
 		}
 		positioned_motor_mount_holes();
-	}
 }
-//xendcorners(5,0,5,5,0);
-}
+translate([-5,-30,2])scale([2,1,2]) rotate(a=[90,0,0]) linear_extrude(file = "this-way-up.dxf", layer = "l",
+  height = 2, center = true, convexity = 10, twist = -fanrot);
 
 
 // GregFrosts stuff

@@ -21,8 +21,8 @@ corection = 1.17;
  * @using 2 m8x30
  */ 
 use <x-end.scad>
-module xendidler(){
-	xend(closed_end=true);
+module xendidler(linear){
+	xend(true,linear);
 	translate(v = [0, 0, 12.5]){
 		mirror(){
 			difference(){
@@ -35,6 +35,8 @@ module xendidler(){
 			}
 		}
 	}
+	translate([-5,-30,0])scale([2,1,2]) rotate(a=[90,0,0]) linear_extrude(file = "this-way-up.dxf", layer = "r",
+  height = 2, center = true, convexity = 10, twist = -fanrot);
 }
-xendidler();
+xendidler(linear);
 

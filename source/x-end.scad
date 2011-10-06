@@ -127,11 +127,11 @@ module xend_side(closed_end=true,curved_sides=false)
 	}
 }
 //xend_side();
-module xend(closed_end=true)
+module xend(closed_end=true, linear_bearing=false)
 {
 	
-	if(linear==1) z_linear_bearings();
-	if(linear==0) z_bushings();	
+	if(linear_bearing==true) z_linear_bearings();
+	if(linear_bearing==false) z_bushings();	
 difference()
 	{
 		union ()

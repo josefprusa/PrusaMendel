@@ -1,0 +1,1 @@
+openscad -s metric-prusa/x-end-idler.stl -D 'linear=true' source/x-end-idler.scad

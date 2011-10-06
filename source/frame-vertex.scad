@@ -13,8 +13,6 @@
 include <configuration.scad>
 basefoot=true;
 
-
-basefoot=true;
 vertex(with_foot=basefoot);
 
 %import_stl("frame-vertex.stl");
@@ -60,6 +58,9 @@ vertex_horizontal_hole_offset=11.75;
 hole_flat_radius=8.5; // flat surface around holes.
 foot_depth=26.25;
 end_round_translation=vertex_horizontal_hole_offset-hole_flat_radius;
+
+
+
 
 module vertex(with_foot=basefoot)
 {
@@ -138,6 +139,10 @@ module vertex(with_foot=basefoot)
 			vertex_horizontal_hole_offset-2*block*vertex_horizontal_hole_offset,
 			vfvertex_height/2])
 		teardrop(r=m8_diameter/2,h=vertex_end_major_d+2);
+		translate([31+18.5,20-9,vfvertex_height]) linear_extrude(file = "this-way-up.dxf", layer = "0",
+  height = 2, center = true, convexity = 10, twist = -fanrot);
+		translate([31+18.5,20-9,0]) linear_extrude(file = "this-way-up.dxf", layer = "0",
+  height = 2, center = true, convexity = 10, twist = -fanrot);
 	}
 }
 

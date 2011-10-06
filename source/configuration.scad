@@ -20,13 +20,12 @@ include <metric.scad>;
 
 //include <sae.scad>;
 
-
 // CUSTOM CUSTOM CUSTOM CUSTOM CUSTOM CUSTOM CUSTOM CUSTOM CUSTOM
 
 thin_wall = 3;
 
 // LM8UU
-linear =0;
+linear = false;
 
 
 // CHANGE ONLY THE STUFF YOU KNOW
