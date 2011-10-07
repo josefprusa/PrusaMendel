@@ -15,108 +15,76 @@ use <teardrop.scad>
 
 axis_diameter_real=4;
 axis_diameter_larger=4.5;
-pressure_pad_height=1.4;
+pressure_pad_height=1.8;
 add_strenght=1;
 xend_height=15.8;
 xend_length=40;
 solid_end_width=3;
 slot_width=1;
 
-pad_height=5.2;
+pad_height=5.8;
 pad_width=7;
 pad_connector_height=3.3;
 bushing_support_width=17;
 rod_support_width=10;
 
-module xend_side(closed_end=true,curved_sides=false)
+module xend_side(closed_end=true)
 {
 	translate([25,0,0])
-	difference ()
-	{
-		union()
-		{
-			if (curved_sides)
-			{
+	difference (){
+		union(){
+			// Base with cutted sides
+			difference (){
+				// Base
+				translate([0,xend_length/2,0]) cube([xend_height,xend_length,xend_height],center=true);
+				
+				// Cutting sides
 				for (i=[0:1])
-				rotate(90) 
-				rotate([180*i,0,0])
-				teardrop(r=xend_height/2,h=xend_length);
-			}
-			else
-			{
-				difference ()
-				{
-					translate([0,xend_length/2,0])
-					cube([xend_height,xend_length,xend_height],center=true);
-	
-					for (i=[0:1])
-					translate([0,xend_length/2,0])
-					rotate(i*180)
-					{
-					translate([-12,0,2]) 
-					rotate([0,25,0]) 
-					cube([10,xend_length+2,20],center=true);
-
-					translate([-13,0,0]) rotate(a=[0,-10,0]) 
-					cube([10,xend_length+2,20],center=true);
-					}
-
-//					mirror() translate(v = [-12,0,2]) rotate(a=[0,25,0]) translate(v = [0,-3.5,0]) 
-//					cube(size = [10,13,20], center = true);
-
-
-//					mirror() translate(v = [-13,0,]) rotate(a=[0,-10,0]) 
-//					translate(v = [0,-3.5,0]) 
-//					cube(size = [10,13,20], center = true);
+					translate([0,xend_length/2,0]) rotate(i*180){
+						translate([-12.5,0,2]) rotate([0,25,0]) cube([10,xend_length+2,20],center=true);
+						translate([-13,0,0]) rotate(a=[0,-10,0]) cube([10,xend_length+2,20],center=true);
 				}
 			}
-
-			translate([-26,xend_length-bushing_support_width,-xend_height/2])
-			cube([26,bushing_support_width,xend_height]);
-
-			translate([-26,0,-xend_height/2])
-			cube([26,rod_support_width,xend_height]);
+			
+			// Support beams from side to center of x-end
+			translate([-26,xend_length-bushing_support_width,-xend_height/2]) cube([26,bushing_support_width,xend_height]);
+			translate([-26,0,-xend_height/2]) cube([26,rod_support_width,xend_height]);
+			
 		}
 
-		difference ()
-		{
-			union ()
-			{
-			translate([0,-1,0])
-			rotate(90)
-			teardropcentering(
-				axis_diameter_larger,
-				closed_end?xend_length-1:xend_length+2);
-
-			translate([axis_diameter_larger,0,0])
-			rotate([0,8,0])
-			translate([-axis_diameter_larger,solid_end_width,-xend_height/2-1])
-			cube([axis_diameter_larger,
-				xend_length-2*solid_end_width,
-				xend_height/2+1]);
-
-			translate([-axis_diameter_larger,0,0])
-			rotate([0,-8,0])
-			translate([0,solid_end_width,-xend_height/2-1])
-			cube([axis_diameter_larger,
-				xend_length-2*solid_end_width,
-				xend_height/2+1]);
+		difference (){
+			// Base of the stuff to cut pres fit mechanism (need some cutouts)
+			union (){
+				// Basic teardrop cutout
+				translate([0,-1,0]) rotate(90) teardropcentering(axis_diameter_larger,closed_end?xend_length-1:xend_length+2);
+			
+				// Main holes thru the bottom
+				translate([axis_diameter_larger,0,0]) rotate([0,8,0]) translate([-axis_diameter_larger,solid_end_width,-xend_height/2-1]) cube([axis_diameter_larger,xend_length-2*solid_end_width,xend_height/2+1]);
+				translate([-axis_diameter_larger,0,0]) rotate([0,-8,0]) translate([0,solid_end_width,-xend_height/2-1]) cube([axis_diameter_larger,xend_length-2*solid_end_width,xend_height/2+1]);
+			
 			}
-
+			
+			// Pad connector
 			translate([-axis_diameter_larger-1,solid_end_width+slot_width,-xend_height/2])
 			cube([axis_diameter_larger,xend_length-2*solid_end_width-2*slot_width,pad_connector_height]);
 
-			difference()
-			{
-			translate([-pad_width/2,solid_end_width+slot_width,-xend_height/2])
-			cube([pad_width,xend_length-2*solid_end_width-2*slot_width,pad_height]);
-
-			translate([axis_diameter_larger,0,0])
-			rotate([0,8,0])
-			translate([-slot_width,solid_end_width,-xend_height/2-1])
-			cube([slot_width,xend_length-2*solid_end_width,xend_height/2+1]);
+			difference(){
+				translate([-pad_width/2,solid_end_width+slot_width,-xend_height/2])
+				cube([pad_width,xend_length-2*solid_end_width-2*slot_width,pad_height]);
+			
+				//cutout groove in pressure pad	
+				translate([0,0,0.7]) rotate([-90,0,0])cylinder(r=4,h=closed_end?xend_length-1:xend_length+2, $fn=30);
+			
+				translate([axis_diameter_larger,0,0])
+				rotate([0,8,0])
+				translate([-slot_width,solid_end_width,-xend_height/2-1])
+				cube([slot_width,xend_length-2*solid_end_width,xend_height/2+1]);
 			}
 		}
+		
+		
+
+		
 
 		for (i=[0:5])
 		translate([-axis_diameter_larger+2,5+2.5+5*i,-7+0.6]) 
@@ -186,4 +154,5 @@ xend(true);
 
 //translate(v = [-50, -45, 0]) cube(size = [100,40,100]);
 //}
+
 //xend_side();

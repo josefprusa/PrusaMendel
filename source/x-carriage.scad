@@ -28,7 +28,7 @@ module mountingholes(){
 					translate(v = [0, 25, 5]) cylinder(h = 9, r=4.5, $fn=6, center=true);
 }
 
-module xcarriage(){
+module xcarriage(linear_bearings){
 union(){
 	translate(v = [0,0,2.5]) 
 		union(){
@@ -38,13 +38,30 @@ union(){
 						cube(size = [65,70,5], center = true);
 						translate(v = [0, -31, 0]) cylinder(h = 5, r=m4_nut_diameter/2+2, $fn=6, center=true);	
 					//Nut holder base - extruder
-
-					//Nut holder base - belt clamps
-						translate(v = [23-(7.5/2)+5, -18, 0]) cube(size = [45-7.5+10,15,5], center = true);
-						translate(v = [(33+45/2-7.5), -18, 0]) cylinder(h = 5, r=7.5, $fn=18, center=true);
-					//Nut holder base - belt clamps
-						translate(v = [23-(7.5/2)+5, 18, 0]) cube(size = [45-7.5+10,15,5], center = true);
-						translate(v = [(33+45/2-7.5), 18, 0]) cylinder(h = 5, r=7.5, $fn=18, center=true);
+					
+					if(linear_bearings){
+						//Nut holder base - belt clamps
+							translate(v = [23-(7.5/2)+5, -11, 0]) cube(size = [45-7.5+10,15,5], center = true);
+							translate(v = [(33+45/2-7.5), -11, 0]) cylinder(h = 5, r=7.5, $fn=18, center=true);
+						//Nut holder base - belt clamps
+							translate(v = [23-(7.5/2)+5, 11, 0]) cube(size = [45-7.5+10,15,5], center = true);
+							translate(v = [(33+45/2-7.5), 11, 0]) cylinder(h = 5, r=7.5, $fn=18, center=true);
+						
+					}else{
+						//Nut holder base - belt clamps
+							translate(v = [23-(7.5/2)+5, -18, 0]) cube(size = [45-7.5+10,15,5], center = true);
+							translate(v = [(33+45/2-7.5), -18, 0]) cylinder(h = 5, r=7.5, $fn=18, center=true);
+						//Nut holder base - belt clamps
+							translate(v = [23-(7.5/2)+5, 18, 0]) cube(size = [45-7.5+10,15,5], center = true);
+							translate(v = [(33+45/2-7.5), 18, 0]) cylinder(h = 5, r=7.5, $fn=18, center=true);}
+				}
+				
+				//holes for linear bearings
+				if(linear_bearings){
+					translate(v = [25.01,-30.01,5.01])lm8uu_bearing_cut();
+					translate(v = [25.01,30.01,5.01])lm8uu_bearing_cut();	
+					translate(v = [-25.01,30.01,5.01])lm8uu_bearing_cut();
+					translate(v = [-35,-30,0]) rotate(a=[0,0,20]) cube(size = [30,70,10], center = true);
 				}
 				// holes for connecting extruder
 				// SNAP IN MOUNT
@@ -78,13 +95,19 @@ union(){
 				}else{
 					//NORMAL MOUNT
 					
-
+					if(linear_bearings){
 					translate(v = [0, -6, 0]){
-					rotate(a=[0,0,26]) mountingholes();
-					rotate(a=[0,0,-26]) mountingholes();
+					rotate(a=[0,0,23]) mountingholes();
+					rotate(a=[0,0,-23]) mountingholes();
 					rotate(a=[0,0,0]) mountingholes();
 					}
-
+					}else{
+						translate(v = [0, -6, 0]){
+						rotate(a=[0,0,26]) mountingholes();
+						rotate(a=[0,0,-26]) mountingholes();
+						rotate(a=[0,0,0]) mountingholes();
+						}	
+					}
 					//removing some mass	
 					translate(v = [0, 40, 0]) cylinder(h = 9, r=14, $fn=6, center=true);	
 		
@@ -96,7 +119,20 @@ union(){
 				//ZIPTIE holes for connecting belt
 				//translate(v = [38, -18, 2]) cube(size = [5,3.5,30], center = true);
 
+				if(linear_bearings){
 				//belt clamp holes
+				translate(v = [0,-22,0]){
+				translate(v = [30, 11, -5]) polyhole(m3_diameter,10);
+				translate(v = [30, 11, 0.55]) nut(m3_nut_diameter,9);
+				translate(v = [48, 11, -5]) polyhole(m3_diameter,10);
+				translate(v = [48, 11, 0.55]) nut(m3_nut_diameter,9);
+				}
+
+				translate(v = [30, 11, -5]) polyhole(m3_diameter,10);
+				translate(v = [30, 11, 0.55]) nut(m3_nut_diameter,9);
+				translate(v = [48, 11, -5]) polyhole(m3_diameter,10);
+				translate(v = [48, 11, 0.55]) nut(m3_nut_diameter,9);
+				}else{//belt clamp holes
 				translate(v = [0,-36,0]){
 				translate(v = [30, 18, -5]) polyhole(m3_diameter,10);
 				translate(v = [30, 18, 0.55]) nut(m3_nut_diameter,9);
@@ -107,19 +143,28 @@ union(){
 				translate(v = [30, 18, -5]) polyhole(m3_diameter,10);
 				translate(v = [30, 18, 0.55]) nut(m3_nut_diameter,9);
 				translate(v = [48, 18, -5]) polyhole(m3_diameter,10);
-				translate(v = [48, 18, 0.55]) nut(m3_nut_diameter,9);
+				translate(v = [48, 18, 0.55]) nut(m3_nut_diameter,9);}
 
 			}
 
 	}
+if(linear_bearings){
+	difference(){
+		translate(v = [25.01,-30.01,5.01])lm8uu_bearing_holder();
+		translate(v = [0, -6, 0]) cylinder(h = 60, r=20, $fn=20, center=true);
+	}
+	translate(v = [25.01,30.01,5.01])lm8uu_bearing_holder();	
+	translate(v = [-25.01,30.01,5.01])lm8uu_bearing_holder();
+}else{
 translate(v = [25.01,-30.01,5.01])standart_bushing();
 translate(v = [-25.01,-30.01,5.01])standart_bushing();
 translate(v = [25.01,30.01,5.01])standart_bushing();
 translate(v = [-25.01,30.01,5.01])standart_bushing();
 }
 }
+}
 
 
-xcarriage();
+xcarriage(linear);
 
 
