@@ -73,7 +73,7 @@ module xend_side(closed_end=true)
 				cube([pad_width,xend_length-2*solid_end_width-2*slot_width,pad_height]);
 			
 				//cutout groove in pressure pad	
-				translate([0,0,0.7]) rotate([-90,0,0])cylinder(r=4,h=closed_end?xend_length-1:xend_length+2, $fn=30);
+				translate([0,0,1]) rotate([-90,0,0])cylinder(r=4,h=closed_end?xend_length-1:xend_length+2, $fn=30);
 			
 				translate([axis_diameter_larger,0,0])
 				rotate([0,8,0])
