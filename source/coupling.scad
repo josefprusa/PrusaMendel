@@ -1,6 +1,5 @@
 // PRUSA Mendel  
-// X-carriage
-// Used for sliding on X axis
+// Coupling from nophead
 // GNU GPL v2
 // Josef Průša
 // josefprusa@me.com
@@ -81,5 +80,5 @@ module coupling(c){
     }
 }
 
-translate([0, 14, 0]) coupling(c=0);
-translate([0, -14, 0]) rotate([0,0,180]) coupling(c=1);
+translate([0, 14, 4]) coupling(c=0);
+translate([0, -14, 4]) rotate([0,0,180]) coupling(c=1);

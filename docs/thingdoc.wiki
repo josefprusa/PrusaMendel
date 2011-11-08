@@ -65,27 +65,27 @@
 |-
 | 1 || Extruder body ||  ||  ||
 |-
-| 8 || Bar clamp ||  ||  || [[File:bar-clamp.jpg|50px]]
+| 8 || Bar clamp ||  ||  || [[File:bar-clamp.png|50px]]
 |-
 | 4 || Y bushing ||  ||  ||
 |-
-| 2 || Frame vertex ||  ||  || [[File:frame-vertex.jpg|50px]]
+| 2 || Frame vertex ||  ||  || [[File:frame-vertex.png|50px]]
 |-
-| 1 || Y motor bracket ||  ||  || [[File:y-motor-bracket.jpg|50px]]
+| 1 || Y motor bracket ||  ||  || [[File:y-motor-bracket.png|50px]]
 |-
 | 1 || Small extruder gear ||  ||  ||
 |-
-| 2 || Rod clamp ||  ||  || [[File:rod-clamp.jpg|50px]]
+| 2 || Rod clamp ||  ||  || [[File:rod-clamp.png|50px]]
 |-
-| 4 || Frame vertex with foot ||  ||  || [[File:frame-vertex-foot.jpg|50px]]
+| 4 || Frame vertex with foot ||  ||  ||
 |-
 | 1 || Large extruder gear ||  ||  ||
 |-
-| 2 || Belt clamp ||  ||  || [[File:belt-clamp.jpg|50px]]
+| 2 || Belt clamp ||  ||  || [[File:belt-clamp.png|50px]]
 |-
 | 1 || Extruder Idler ||  ||  ||
 |-
-| 1 || Z motor mount ||  ||  || [[File:z-motor-mount.jpg|50px]]
+| 1 || Z motor mount ||  ||  || [[File:z-motor-mount.png|50px]]
 |-
-| 1 || X carriage ||  ||  || [[File:x-carriage.jpg|50px]]
+| 1 || X carriage ||  ||  || [[File:x-carriage.png|50px]]
 |}

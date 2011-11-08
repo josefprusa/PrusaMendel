@@ -1,6 +1,6 @@
 /**
- * Prusa Mendel is machine from RepRap project. RepRap is open source 3D printer.
- * @name Prusa Mendel
+ * Prusa Mendel is simplified version of Mendel form RepRap project. RepRap is open source 3D printer.
+ * @name Prusa Mendel generation 2
  * @root
  * @step Assembly info
  * @using 1 frame-with-axes

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.3.17)  7 AUG 2011 05:54
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.3.17)  31 OCT 2011 04:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -290,7 +290,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 13.
 
-<logo.png, id=188, 436.63126pt x 143.53625pt>
+<logo.png, id=192, 436.63126pt x 143.53625pt>
 File: logo.png Graphic file (type png)
  <use logo.png> [1
 
@@ -312,61 +312,57 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 29.
  [4] [5]
-<images/frame-vertex.jpg, id=296, 1144.275pt x 924.45375pt>
-File: images/frame-vertex.jpg Graphic file (type jpg)
+<images/frame-vertex.png, id=301, 887.315pt x 502.87875pt>
+File: images/frame-vertex.png Graphic file (type png)
 
-<use images/frame-vertex.jpg>
-<images/y-motor-bracket.jpg, id=297, 1027.84pt x 913.4125pt>
-File: images/y-motor-bracket.jpg Graphic file (type jpg)
+<use images/frame-vertex.png>
+<images/y-motor-bracket.png, id=302, 735.74875pt x 548.0475pt>
+File: images/y-motor-bracket.png Graphic file (type png)
 
-<use images/y-motor-bracket.jpg> [6 <./images/frame-vertex.jpg> <./images/y-mot
-or-bracket.jpg>] <images/bar-clamp.jpg, id=307, 945.5325pt x 768.8725pt>
-File: images/bar-clamp.jpg Graphic file (type jpg)
+<use images/y-motor-bracket.png>
+<images/belt-clamp.png, id=303, 556.0775pt x 458.71375pt>
+File: images/belt-clamp.png Graphic file (type png)
 
-<use images/bar-clamp.jpg>
-<images/frame-vertex-foot.jpg, id=308, 1183.42125pt x 905.3825pt>
-File: images/frame-vertex-foot.jpg Graphic file (type jpg)
+<use images/belt-clamp.png> [6 <./images/frame-vertex.png> <./images/y-motor-br
+acket.png>] <images/bar-clamp.png, id=315, 419.5675pt x 435.6275pt>
+File: images/bar-clamp.png Graphic file (type png)
 
-<use images/frame-vertex-foot.jpg>
-<images/x-carriage.jpg, id=309, 1147.28625pt x 789.95125pt>
-File: images/x-carriage.jpg Graphic file (type jpg)
+<use images/bar-clamp.png> [7 <./images/belt-clamp.png> <./images/bar-clamp.png
+>] <images/x-carriage.png, id=328, 774.895pt x 642.4pt>
+File: images/x-carriage.png Graphic file (type png)
 
-<use images/x-carriage.jpg> [7 <./images/bar-clamp.jpg> <./images/frame-vertex-
-foot.jpg>] <images/rod-clamp.jpg, id=321, 970.62625pt x 737.75626pt>
-File: images/rod-clamp.jpg Graphic file (type jpg)
+<use images/x-carriage.png>
+<images/rod-clamp.png, id=329, 410.53375pt x 375.4025pt>
+File: images/rod-clamp.png Graphic file (type png)
 
-<use images/rod-clamp.jpg>
-<images/z-motor-mount.jpg, id=322, 1150.2975pt x 952.55875pt>
-File: images/z-motor-mount.jpg Graphic file (type jpg)
+<use images/rod-clamp.png>
+<images/z-motor-mount.png, id=330, 851.18pt x 640.3925pt>
+File: images/z-motor-mount.png Graphic file (type png)
 
-<use images/z-motor-mount.jpg>
-<images/belt-clamp.jpg, id=323, 1065.9825pt x 811.03pt>
-File: images/belt-clamp.jpg Graphic file (type jpg)
-
-<use images/belt-clamp.jpg> [8 <./images/x-carriage.jpg> <./images/rod-clamp.jp
-g> <./images/z-motor-mount.jpg>] [9 <./images/belt-clamp.jpg>] [10] [11]
-<images/extruder/top-nut-traps.png, id=368, 728.7225pt x 509.905pt>
+<use images/z-motor-mount.png> [8 <./images/x-carriage.png> <./images/rod-clamp
+.png> <./images/z-motor-mount.png>] [9] [10] [11]
+<images/extruder/top-nut-traps.png, id=382, 728.7225pt x 509.905pt>
 File: images/extruder/top-nut-traps.png Graphic file (type png)
 
 <use images/extruder/top-nut-traps.png>
-<images/extruder/assembled.jpg, id=369, 803.0pt x 602.25pt>
+<images/extruder/assembled.jpg, id=383, 803.0pt x 602.25pt>
 File: images/extruder/assembled.jpg Graphic file (type jpg)
 
 <use images/extruder/assembled.jpg>
-<images/frame/threaded-rod-with-bar-clamp.jpg, id=373, 642.4pt x 479.7925pt>
+<images/frame/threaded-rod-with-bar-clamp.jpg, id=387, 642.4pt x 479.7925pt>
 File: images/frame/threaded-rod-with-bar-clamp.jpg Graphic file (type jpg)
 
 <use images/frame/threaded-rod-with-bar-clamp.jpg> [12 <./images/extruder/top-n
 ut-traps.png> <./images/extruder/assembled.jpg>]
-<images/frame/finished-triangle.jpg, id=391, 642.4pt x 479.7925pt>
+<images/frame/finished-triangle.jpg, id=405, 642.4pt x 479.7925pt>
 File: images/frame/finished-triangle.jpg Graphic file (type jpg)
 
 <use images/frame/finished-triangle.jpg> [13 <./images/frame/threaded-rod-with-
 bar-clamp.jpg>] [14 <./images/frame/finished-triangle.jpg>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 279.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 279.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 286.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 286.
  (./thingdoc.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 279.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 286.
 
 
 Package rerunfilecheck Warning: File `thingdoc.out' has changed.
@@ -374,33 +370,27 @@ Package rerunfilecheck Warning: File `thingdoc.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `thingdoc.out':
-(rerunfilecheck)             Before: 107FA7AE0258D2CB1C7F80CE0379912F;2913
-(rerunfilecheck)             After:  483C52C07DF3A3D931CF03EF72CC51C1;2792.
+(rerunfilecheck)             Before: 589F6A0B5342A0501A50863403C70D86;2979
+(rerunfilecheck)             After:  406DCD42F6EB0DFEAAE7ADC8FE6E1893;2992.
  ) 
 Here is how much of TeX's memory you used:
  5019 strings out of 493747
- 76928 string characters out of 3143546
- 156758 words of memory out of 3000000
- 8082 multiletter control sequences out of 15000+200000
+ 76860 string characters out of 3143546
+ 155771 words of memory out of 3000000
+ 8079 multiletter control sequences out of 15000+200000
  8811 words of font info for 31 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  31i,6n,30p,480b,399s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{subsection.2.33} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.2.32} has been referenced but does not e
-xist, replaced by a fixed one
-
-</usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><
-/usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></
-usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
-r/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
-local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/lo
-cal/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on thingdoc.pdf (14 pages, 2474200 bytes).
+</usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
+usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
+r/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
+local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on thingdoc.pdf (14 pages, 965073 bytes).
 PDF statistics:
- 467 PDF objects out of 1000 (max. 8388607)
- 425 compressed objects within 5 object streams
- 132 named destinations out of 1000 (max. 500000)
- 434 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 482 PDF objects out of 1000 (max. 8388607)
+ 434 compressed objects within 5 object streams
+ 136 named destinations out of 1000 (max. 500000)
+ 437 words of extra memory for PDF output out of 10000 (max. 10000000)
 
