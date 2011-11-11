@@ -1,7 +1,6 @@
 // PRUSA Mendel  
-// Endstop holder
-// Used to attach endstops to 8mm rods
-// GNU GPL v2
+// Holder for Sanguinololu
+// GNU GPL v3
 // Josef Průša
 // josefprusa@me.com
 // prusadjs.cz

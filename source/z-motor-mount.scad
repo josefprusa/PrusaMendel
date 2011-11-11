@@ -56,4 +56,4 @@ translate(v=[0,-7,0]) rotate(a=[0,90,0]) rotate(a=[0,0,30]) nut(m3_nut_diameter,
 
 }
 }
-zmotormount();
+translate(v=[0,0,30]) rotate ([0,90,0]) zmotormount();

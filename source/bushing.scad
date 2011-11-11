@@ -1,6 +1,6 @@
 // PRUSA Mendel  
 // Bushings
-// GNU GPL v2
+// GNU GPL v3
 // Josef Průša
 // josefprusa@me.com
 // prusadjs.cz
@@ -100,8 +100,8 @@ union(){translate([0,9.5,0])vertical_bushing(true,13);
 }
 }
 
-z_bushings();
-//z_linear_bearings();
+//z_bushings();
+z_linear_bearings();
 
 
 module z_linear_bearings(){
@@ -117,9 +117,9 @@ translate(v=[0,0,0]) cylinder(h = 65, r=10, $fn=60);
 //main axis
 translate(v=[0,0,-2]) cylinder(h = 70, r=7.7, $fn=50);
 //main cut
-translate(v=[10,0,32.5]) cube(size = [20,12,70], center = true);
+translate(v=[10,0,32.5]) cube(size = [20,14,70], center = true);
 //smooth entry cut
-translate(v=[14,0,32.5]) rotate(a=[0,0,45]) cube(size = [20,20,70], center = true);
+translate(v=[12,0,32.5]) rotate(a=[0,0,45]) cube(size = [20,20,70], center = true);
 translate(v=[0,0,14.5+2]) ziptie();
 translate(v=[0,0,65-(12+2)-5]) ziptie();
 }

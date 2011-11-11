@@ -1,6 +1,6 @@
 // PRUSA Mendel  
 // Y motor bracket by Spacexula!!
-// GNU GPL v2
+// GNU GPL v3
 // Josef Průša
 // josefprusa@me.com
 // prusadjs.cz

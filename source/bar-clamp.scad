@@ -1,7 +1,7 @@
 // PRUSA Mendel  
 // Bar clamp
 // Used for joining 8mm rods
-// GNU GPL v2
+// GNU GPL v3
 // Josef Průša
 // josefprusa@me.com
 // prusadjs.cz

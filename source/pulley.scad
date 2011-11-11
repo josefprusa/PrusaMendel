@@ -1,5 +1,14 @@
 // Belt pulley is http://www.thingiverse.com/thing:3104 by GilesBathgate
-// GPLV3
+
+// PRUSA Mendel  
+// Bushings
+// GNU GPL v3
+// Josef Průša
+// josefprusa@me.com
+// prusadjs.cz
+// http://www.reprap.org/wiki/Prusa_Mendel
+// http://github.com/prusajr/PrusaMendel
+
 
 include <configuration.scad>
 

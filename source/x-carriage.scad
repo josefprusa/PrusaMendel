@@ -1,7 +1,7 @@
 // PRUSA Mendel  
 // X-carriage
 // Used for sliding on X axis
-// GNU GPL v2
+// GNU GPL v3
 // Josef Průša
 // josefprusa@me.com
 // prusadjs.cz
@@ -22,10 +22,10 @@ snap_in_mount = false;
 use <bushing.scad>
 
 module mountingholes(){
-					translate(v = [0, -25, -5]) polyhole(m4_diameter,10);
-					translate(v = [0, -25, 5]) cylinder(h = 9, r=m4_nut_diameter/2, $fn=6, center=true);		
-					translate(v = [0, 25, -5]) polyhole(m4_diameter,10);
-					translate(v = [0, 25, 5]) cylinder(h = 9, r=4.5, $fn=6, center=true);
+					translate(v = [0, -25, -5]) polyhole(m3_diameter,10);
+					//translate(v = [0, -25, 5]) cylinder(h = 9, r=m4_nut_diameter/2, $fn=6, center=true);		
+					translate(v = [0, 25, -5]) polyhole(m3_diameter,10);
+					//translate(v = [0, 25, 5]) cylinder(h = 9, r=4.5, $fn=6, center=true);
 }
 
 module xcarriage(linear_bearings){

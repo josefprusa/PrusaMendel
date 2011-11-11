@@ -1,6 +1,6 @@
 // PRUSA Mendel  
 // Default metric sizes
-// GNU GPL v2
+// GNU GPL v3
 // Josef Průša
 // josefprusa@me.com
 // prusadjs.cz
@@ -19,13 +19,14 @@ smooth_bar_diameter_horizontal = 8.5;
 // Nuts and bolts
 
 m8_diameter = 9;
-m8_nut_diameter = 16.4;
+m8_nut_diameter = 14.1;
 
 m4_diameter = 4.5;
 m4_nut_diameter = 9;
 
 m3_diameter = 3.6;
-m3_nut_diameter = 6.1;
+m3_nut_diameter = 5.3;
+m3_nut_diameter_horizontal = 6.1;
 
 // Bushing holder
 

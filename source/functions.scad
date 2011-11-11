@@ -1,11 +1,12 @@
 // PRUSA Mendel  
 // Functions used in many files
-// GNU GPL v2
+// GNU GPL v3
 // Josef Průša
 // josefprusa@me.com
 // prusadjs.cz
 // http://www.reprap.org/wiki/Prusa_Mendel
 // http://github.com/prusajr/PrusaMendel
+
 
 module nut(d,h,horizontal=true){
 cornerdiameter =  (d / 2) / cos (180 / 6);
@@ -16,7 +17,7 @@ for(i = [1:6]){
 }}
 }
 
-// By nophead
+// Based on nophead research
 module polyhole(d,h) {
     n = max(round(2 * d),3);
     rotate([0,0,180])

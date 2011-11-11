@@ -1,6 +1,14 @@
-// PRUSAMendel
-// GNUGPLv2
-// GregFrost
+// This one is AWESOME design by Greg Frost!!
+
+// PRUSA Mendel  
+// Bearing guide
+// GNU GPL v3
+// Josef Průša
+// josefprusa@me.com
+// prusadjs.cz
+// http://www.reprap.org/wiki/Prusa_Mendel
+// http://github.com/prusajr/PrusaMendel
+
 
 /**
  * Helps to hold belt aligned on the bearing.

@@ -1,3 +1,12 @@
+// PRUSA Mendel  
+// Bushings
+// GNU GPL v3
+// Josef Průša
+// josefprusa@me.com
+// prusadjs.cz
+// http://www.reprap.org/wiki/Prusa_Mendel
+// http://github.com/prusajr/PrusaMendel
+
 teardropcentering2();
 
 module teardrop (r=4.5,h=20)

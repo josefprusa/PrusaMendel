@@ -1,6 +1,6 @@
 // PRUSA Mendel  
 // X-end prototype for
-// GNU GPL v2
+// GNU GPL v3
 // Josef Prusa
 // josefprusa@me.com
 // prusadjs.cz
@@ -27,6 +27,8 @@ pad_width=7;
 pad_connector_height=3.3;
 bushing_support_width=17;
 rod_support_width=10;
+
+m8cornerdiameter = (m8_nut_diameter / 2) / cos (180 / 6);
 
 module xend_side(closed_end=true)
 {
@@ -112,24 +114,31 @@ difference()
 
 
 			//Nut Trap
-			translate([0,-20,0]) //
-			cylinder(h=40,r=m8_nut_diameter/2+thin_wall*corection,$fn=6);
+			
+			translate([0,-20,0])
+			cylinder(h=40,r=m8cornerdiameter+thin_wall,$fn=6);
 		}
 
 		// Slider cutout.
 		translate([0,10,32.5]) 
 		cube([22.5,22.5,70],center=true);
 
+		translate([0,-10,5+29]) #cube([2,8,10],center=true);
+			translate([0,-10,5+29-11]) #cube([2,8,10],center=true);
+			translate([0,-10,3.25]) #cube([2,8,6.5],center=true);
+
 		//Rod hole.
 		difference()
 		{
-			translate([0,-20,39.5]) 
-			cylinder(h=90,r=m8_nut_diameter/2,$fn=6,center=true);
+			
+			translate([0,-20,39.5-45]) nut(m8_nut_diameter,90);
+			
+			//translate([0,-20,39.5]) cylinder(h=90,r=m8_nut_diameter/2,$fn=6,center=true);
 			translate([0,-20,8.5]) 
 			cylinder(h=4,r=m8_nut_diameter/2+thin_wall,$fn=6,center=true);
 		}
-		translate([0,-20,52]) 
-		cylinder(h=90,r=m8_diameter/2,$fn=9,center=true);
+		translate([0,-20,52-45]) 
+		polyhole(9,90);
 	}
 }
 

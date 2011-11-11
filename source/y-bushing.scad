@@ -1,7 +1,7 @@
 // PRUSA Mendel  
-// X-carriage
+// Y bushing holder
 // Used for sliding on X axis
-// GNU GPL v2
+// GNU GPL v3
 // Josef Průša
 // josefprusa@me.com
 // prusadjs.cz
@@ -22,7 +22,8 @@ include <configuration.scad>
 snap_in_mount = false;
 use <bushing.scad>
 
-module ybushing(){
+module ybushing(linear_bearing=true){
+if(linear_bearing==false){
 	difference(){
 		union(){
 			translate(v = [0,0,5.05/2]) cube(size = [33,10,5.05], center = true);
@@ -34,6 +35,31 @@ module ybushing(){
 
 	translate(v = [0,0,2.0/2]) cube(size = [34,120,2.05], center = true);
 }
+}else{
+// Greg Frosts
+
+difference()
+	{
+		union(){render()
+		lm8uu_bearing_holder();
+
+translate(v = [0,0,1.5-5]) cube(size = [37,10,3], center = true);
+}
+		for (hole=[-1,1])
+		{
+			translate([lm8uu_holder_width/2,
+				lm8uu_holder_length/2+
+				hole*(lm8uu_support_thickness+lm8uu_holder_gap/2),0])
+			{
+				
+			}
+		}
+translate(v = [15, 0, -7]) polyhole(m3_diameter, 12);
+		translate(v = [-15, 0, -7]) polyhole(m3_diameter, 12);
+	}
+
+
+}
 	}	
 
-ybushing();
+ybushing(linear);

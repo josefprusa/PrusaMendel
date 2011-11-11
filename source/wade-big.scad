@@ -1,8 +1,12 @@
-// Greg's Wade Gears.
-// It is licensed under the Creative Commons - GNU GPL license. 
-//  2010 by GregFrost
-// Parametric extruder gears based on prusa git repo.
-// http://www.thingiverse.com/thing:6713
+// Greg's Wade Gears
+
+// PRUSA Mendel 
+// GNU GPL v3
+// Josef Průša
+// josefprusa@me.com
+// prusadjs.cz
+// http://www.reprap.org/wiki/Prusa_Mendel
+// http://github.com/prusajr/PrusaMendel
 
 include <configuration.scad>
 use <inc/parametric_involute_gear_v5.0.scad>

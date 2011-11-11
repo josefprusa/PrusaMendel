@@ -1,8 +1,12 @@
-// Greg's Wade Extruder. 
-// It is licensed under the Creative Commons - GNU GPL license. 
-//  2010 by GregFrost
-// Extruder based on prusa git repo.
-// http://www.thingiverse.com/thing:6713
+// Greg's Wade Extruder
+
+// PRUSA Mendel 
+// GNU GPL v3
+// Josef Průša
+// josefprusa@me.com
+// prusadjs.cz
+// http://www.reprap.org/wiki/Prusa_Mendel
+// http://github.com/prusajr/PrusaMendel
 
 include<configuration.scad>
 
@@ -119,7 +123,7 @@ nema17_hole_spacing=1.2*25.4;
 nema17_width=1.7*25.4;
 nema17_support_d=nema17_width-nema17_hole_spacing;
 
-screw_head_recess_diameter=7.2;
+screw_head_recess_diameter=m3_nut_diameter_horizontal;
 screw_head_recess_depth=3;
 
 motor_mount_rotation=25;
@@ -373,7 +377,7 @@ module block_holes()
 			b608(h=wade_block_depth);
 		
 			translate([0,0,8+layer_height])
-			cylinder(r=m8_clearance_hole/2,h=wade_block_depth-(8+layer_height)+2);	
+			cylinder(r=m8_clearance_hole/2,h=50);	
 
 			// Filament feed.
 			translate([-filament_feed_hole_offset,0,wade_block_depth/2])

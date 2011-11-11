@@ -1,6 +1,6 @@
 // PRUSA Mendel  
-// Belt clamp
-// GNU GPL v2
+// Belt clamp nut holder
+// GNU GPL v3
 // Josef Průša
 // josefprusa@me.com
 // prusadjs.cz

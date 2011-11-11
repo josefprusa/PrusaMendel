@@ -1,6 +1,6 @@
 // PRUSA Mendel  
 // X-end with idler mount
-// GNU GPL v2
+// GNU GPL v3
 // Josef Průša
 // josefprusa@me.com
 // prusadjs.cz

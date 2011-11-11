@@ -1,6 +1,8 @@
+// This one is AWESOME design by NOPHEAD
+
 // PRUSA Mendel  
 // Coupling from nophead
-// GNU GPL v2
+// GNU GPL v3
 // Josef Průša
 // josefprusa@me.com
 // prusadjs.cz

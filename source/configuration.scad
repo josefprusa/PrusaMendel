@@ -1,6 +1,6 @@
 // PRUSA Mendel  
 // Configuration file
-// GNU GPL v2
+// GNU GPL v3
 // Josef Průša
 // josefprusa@me.com
 // prusadjs.cz
@@ -15,17 +15,12 @@
 
 include <metric.scad>;
 
-// Uncomment for imperial settings
-// IMPERIAL IMPERIAL IMPERIAL IMPERIAL IMPERIAL IMPERIAL IMPERIAL 
-
-//include <sae.scad>;
-
 // CUSTOM CUSTOM CUSTOM CUSTOM CUSTOM CUSTOM CUSTOM CUSTOM CUSTOM
 
 thin_wall = 3;
 
 // LM8UU
-linear = false;
+linear = true;
 
 
 // CHANGE ONLY THE STUFF YOU KNOW

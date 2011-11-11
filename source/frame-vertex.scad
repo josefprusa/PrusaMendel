@@ -1,14 +1,12 @@
+// Thanks for awesome Greg Frosts curves :-)
+
 // PRUSA Mendel  
 // Frame vertex
-// GNU GPL v2
+// GNU GPL v3
 // Greg Frost
 // http://www.reprap.org/wiki/Prusa_Mendel
 // http://github.com/prusajr/PrusaMendel
 
-// Based on http://www.thingiverse.com/thing:2003 aka Viks footed 
-// frame vertex, which is based on http://www.thingiverse.com/thing:1780 
-// aka Tonokps parametric frame vertex
-// Thank you guys for your great work
 
 include <configuration.scad>
 basefoot=true;
@@ -32,7 +30,7 @@ module teardrop (r=8,h=20)
 
 
 
-vfvertex_height=m8_diameter+4.5;
+vfvertex_height=threaded_rod_diameter+4.5;
 
 /**
  * @id frame-vertex
@@ -131,18 +129,25 @@ module vertex(with_foot=basefoot)
 		for (hole=[0:1])
 		rotate(hole*60)
 		translate([hole_separation,0,-1])
-		cylinder(h=vfvertex_height+2,r=(m8_diameter/2)); 
+		cylinder(h=vfvertex_height+2,r=(threaded_rod_diameter/2)); 
 
 		for (block=[0:1])
 		rotate(block*60)
 		translate([hole_separation-vertex_end_major_d/2-1,
 			vertex_horizontal_hole_offset-2*block*vertex_horizontal_hole_offset,
 			vfvertex_height/2])
-		teardrop(r=m8_diameter/2,h=vertex_end_major_d+2);
+		teardrop(r=threaded_rod_diameter/2,h=vertex_end_major_d+2);
+		if (with_foot){
 		translate([31+18.5,20-9,vfvertex_height]) linear_extrude(file = "this-way-up.dxf", layer = "0",
   height = 2, center = true, convexity = 10, twist = -fanrot);
 		translate([31+18.5,20-9,0]) linear_extrude(file = "this-way-up.dxf", layer = "0",
   height = 2, center = true, convexity = 10, twist = -fanrot);
+		}else{
+			translate([31+18.5+15,20-9+16.5,vfvertex_height]) rotate([0,0,30+90]) linear_extrude(file = "this-way-up.dxf", layer = "0",
+  height = 2, center = true, convexity = 10, twist = -fanrot);
+		translate([31+18.5+15,20-9+16.5,0]) rotate([0,0,30+90]) linear_extrude(file = "this-way-up.dxf", layer = "0",
+  height = 2, center = true, convexity = 10, twist = -fanrot);
+		}
 	}
 }
 
