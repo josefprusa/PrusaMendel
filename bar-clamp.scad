@@ -11,6 +11,7 @@
 include <configuration.scad>
 
 /**
+ * @id bar-clamp
  * @name Bar clamp
  * @category Printed
  * @using 2 m8nut
