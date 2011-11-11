@@ -1,10 +1,12 @@
-Prusa Mendel
+Prusa Mendel iteration 2
+
+This is second big change, formerly known as felt branch.
+Released 11.11.11 :-)
 
 Please read http://reprap.org/wiki/Prusa_Mendel before attempting to build this. There is also PDF (manual-wiki) with backup documentation from reprap.org.  
 
 Imported stuff:
-Frame vertices are based on Viks and Tonokips ones
-Extruder by Wade
+Extruder by Greg Frost
 Parametric Involute Bevel and Spur Gears by GregFrost
 Belt pulley is http://www.thingiverse.com/thing:3104 by GilesBathgate
 
