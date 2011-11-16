@@ -1,5 +1,9 @@
-python thingdoc/thingdoc --graph | dot -Tpng > docs/graph.png
+python thingdoc/thingdoc --graph | dot -Tpng > docs/assembly-graph.png
 python thingdoc/thingdoc;
 cd docs;
-pdflatex thingdoc.tex;
+pdflatex documentation.tex;
+rm documentation.aux;
+rm documentation.log;
+rm documentation.out;
+rm documentation.toc;
 cd ..;

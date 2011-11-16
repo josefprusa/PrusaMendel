@@ -11,38 +11,20 @@ var iPhone = false;
     }else if ((uagent.search("ipod") > -1)){
        iPhone = true;
     }
+    
+var ua = navigator.userAgent.toLowerCase();
+var android = ua.indexOf("android") > -1
 
-/*if(iPhone){
-window.onscroll = function() {
-  checkMenu();};
+/*
+alert(ua);
+alert("iPhone"+iPhone);
+alert("android "+android);
+*/
 
-}*/
-  
-var myScroll;
 $(document).ready(function(){
-	if(iPhone){
-		
-		myScroll = new iScroll('main', {
-			useTransform: false,
-			onBeforeScrollStart: function (e) {
-				var target = e.target;
-				while (target.nodeType != 1) target = target.parentNode;
-
-				if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA')
-					e.preventDefault();
-			}
-		});
-	$('#assemblymenu').toggle();
-	
+	if(iPhone || android){
+		$('#assemblymenu').toggle();
 	}
-	function onCompletion () {
-	// Here modify the DOM in any way, eg: by adding LIs to the scroller UL
-		if(iPhone){
-		setTimeout(function () {
-			myScroll.refresh();
-		}, 0);
-		}
-	};
 	
 	function homebutton(){
 		$("#bom").css('display', 'none');
@@ -86,7 +68,7 @@ $(document).ready(function(){
 		$('#assemblybutton').removeClass("white").addClass("gray");
     	$('#homebutton').removeClass("gray").addClass("white");
     	$('#thingsbutton').removeClass("gray").addClass("white");
-    	if(iPhone){
+    	if(iPhone || android){
     		$('#genericmenu').toggle();
     		$('#assemblymenu').toggle();
     	}

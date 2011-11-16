@@ -63,7 +63,6 @@ body {
 	position:absolute; z-index:1;
 	top:45px; bottom:0;left:0;
 	width:100%;
-	overflow:auto;
 }
 
 #scroller {
@@ -77,7 +76,7 @@ body {
 
 
 #menu {
-	position:absolute; z-index:2;
+ 	z-index:2;
 	top:0; left:0;
 	width:100%;
 }
