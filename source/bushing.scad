@@ -16,10 +16,6 @@ include <configuration.scad>
  * @id bushing
  */ 
 
-rodsize = bushing_rodsize;
-outerDiameter = bushing_outerDiameter;
-lenght = bushing_lenght;
-type = bushing_type;
 
 
 module bushing(stiff, lenght=11){

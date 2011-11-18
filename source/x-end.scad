@@ -14,7 +14,7 @@ use <bushing.scad>
 use <teardrop.scad>
 
 axis_diameter_real=4;
-axis_diameter_larger=4.5;
+axis_diameter_larger=4.25;
 pressure_pad_height=1.8;
 add_strenght=1;
 xend_height=15.8;

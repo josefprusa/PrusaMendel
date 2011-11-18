@@ -20,7 +20,7 @@ include <metric.scad>;
 thin_wall = 3;
 
 // LM8UU
-linear = true;
+linear = false;
 
 
 // CHANGE ONLY THE STUFF YOU KNOW

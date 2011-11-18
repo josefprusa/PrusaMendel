@@ -78,28 +78,20 @@ $(document).ready(function(){
 
 	$("#homebutton").click(function(){
 		homebutton();
-		onCompletion();
-
 	});
 	
 	$("#bombutton").click(function(){
 		bombutton();
-		onCompletion();
-
 	});
 	
 	
 	$("#thingsbutton").click(function(){
 		thingsbutton();
-		onCompletion();
 
 	});
 
 	$("#assemblybutton").click(function(){
 		assemblybutton();
-		onCompletion();
-
-
 	});
 	
 	
@@ -110,6 +102,11 @@ $(document).ready(function(){
 	$("#assemblyCount").html(n);
 	
 	var actualAssembly = 1;
+	if ($.cookie(unique + "_assemblyStep") > 1){
+		actualAssembly = $.cookie(unique + "_assemblyStep");
+	}
+	$("#assemblyActual").html(actualAssembly);
+	$(".subassembly:eq("+ (actualAssembly-1) +")").css('display', 'block');
 	
 	
 	function increaseActualAssembly(){
@@ -121,6 +118,7 @@ $(document).ready(function(){
 		}
 		$(".subassembly:eq("+ (actualAssembly-1) +")").css('display', 'block');
 		$("#assemblyActual").html(actualAssembly);
+		$.cookie(unique + "_assemblyStep", actualAssembly);
 		
 	}
 	
@@ -134,15 +132,24 @@ $(document).ready(function(){
 		}
 		$(".subassembly:eq("+ (actualAssembly-1) +")").css('display', 'block');
 		$("#assemblyActual").html(actualAssembly);
+		$.cookie(unique + "_assemblyStep", actualAssembly);
 	}
 	
 	$("#increaseAssembly").click(function(){
-		increaseActualAssembly();
-		onCompletion();
+		
+		if($.cookie(unique + "_button") != "assembly"){
+			assemblybutton();
+		}else{
+			increaseActualAssembly();
+		}
 	});
 	$("#decreaseAssembly").click(function(){
-		decreaseActualAssembly();
-		onCompletion();
+		
+		if($.cookie(unique + "_button") != "assembly"){
+			assemblybutton();
+		}else{
+			decreaseActualAssembly();
+		}
 
 	});
 	

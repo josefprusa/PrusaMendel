@@ -11,8 +11,8 @@
 
 // RODS
 
-threaded_rod_diameter = 8.2;
-threaded_rod_diameter_horizontal = 8.2;
+threaded_rod_diameter = 8.7;
+threaded_rod_diameter_horizontal = 8.7;
 smooth_bar_diameter = 8;
 smooth_bar_diameter_horizontal = 8.5;
 
