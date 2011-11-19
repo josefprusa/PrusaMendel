@@ -1,0 +1,12 @@
+translate([50,58,0]) rotate([0,0,135]) import_stl("bar-clamp.stl");
+translate([166,65,0]) rotate([0,0,90]) import_stl("bar-clamp.stl");
+translate([43,127,0]) rotate([0,0,-20]) import_stl("coupling.stl");
+translate([167,37,0]) rotate([0,0,90]) import_stl("bar-clamp.stl");
+translate([61,62,0]) rotate([0,0,5]) import_stl("ybrac-t.stl");
+translate([74,114,0]) rotate([0,0,0]) import_stl("z-motor-mount.stl");
+translate([149,37,0]) rotate([0,0,90]) import_stl("bar-clamp.stl");
+translate([147,65,0]) rotate([0,0,90]) import_stl("bar-clamp.stl");
+translate([92,114,0]) rotate([0,0,0]) import_stl("z-motor-mount.stl");
+translate([94,73,0]) rotate([0,0,-180]) import_stl("bar-clamp.stl");
+translate([136,127,0]) rotate([0,0,0]) import_stl("wade-big.stl");
+translate([116,66,0]) rotate([0,0,0]) import_stl("coupling.stl");

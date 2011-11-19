@@ -24,7 +24,7 @@ use <bushing.scad>
 
 module ybushing(linear_bearing=true){
 if(linear_bearing==false){
-	difference(){
+	translate(v = [0,0,-2.05]) difference(){
 		union(){
 			translate(v = [0,0,5.05/2]) cube(size = [33,10,5.05], center = true);
 			//translate(v = [0,0,1.5]) cube(size = [16,20,3], center = true);
@@ -38,7 +38,7 @@ if(linear_bearing==false){
 }else{
 // Greg Frosts
 
-difference()
+translate(v = [0,0,5]) difference()
 	{
 		union(){render()
 		lm8uu_bearing_holder();
