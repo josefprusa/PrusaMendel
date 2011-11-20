@@ -58,9 +58,9 @@ union(){
 				
 				//holes for linear bearings
 				if(linear_bearings){
-					translate(v = [25.01,-30.01,5.01])lm8uu_bearing_cut();
-					translate(v = [25.01,30.01,5.01])lm8uu_bearing_cut();	
-					translate(v = [-25.01,30.01,5.01])lm8uu_bearing_cut();
+					translate(v = [25.01,-30.01,0])lm8uu_bearing_cut();
+					translate(v = [25.01,30.01,0])lm8uu_bearing_cut();	
+					translate(v = [-25.01,30.01,0])lm8uu_bearing_cut();
 					translate(v = [-35,-30,0]) rotate(a=[0,0,20]) cube(size = [30,70,10], center = true);
 				}
 				// holes for connecting extruder
@@ -70,7 +70,7 @@ union(){
 					translate(v = [0, -6, 0]) cylinder(h = 20, r=6, $fn=20, center=true);
 					translate(v = [0, -6, 3]) cylinder(h = 2, r=8, $fn=20, center=true);
 					translate(v = [0, 0, 3]) cube(size = [16,12,2], center = true);
-					//translate(v = [0, -6, -5]) %cylinder(h = 2, r=8, $fn=20, center=true);
+					//translate(v = [0, -6, -5]) cylinder(h = 2, r=8, $fn=20, center=true);
 
 					translate(v = [0, 0, 0]) cube(size = [12,12,15], center = true);
 					translate(v = [0, 8, 0]) cube(size = [16,16,15], center = true);
@@ -148,19 +148,19 @@ union(){
 			}
 
 	}
-if(linear_bearings){
-	difference(){
-		translate(v = [25.01,-30.01,5.01])lm8uu_bearing_holder();
-		translate(v = [0, -6, 0]) cylinder(h = 60, r=20, $fn=20, center=true);
+	if(linear_bearings){
+		difference(){
+			translate(v = [25.01,-30.01,5.01])lm8uu_bearing_holder();
+			translate(v = [0, -6, 0]) cylinder(h = 60, r=20, $fn=20, center=true);
+		}
+		translate(v = [25.01,30.01,5.01])lm8uu_bearing_holder();	
+		translate(v = [-25.01,30.01,5.01])lm8uu_bearing_holder();
+	}else{
+		translate(v = [25.01,-30.01,5.01])standart_bushing();
+		translate(v = [-25.01,-30.01,5.01])standart_bushing();
+		translate(v = [25.01,30.01,5.01])standart_bushing();
+		translate(v = [-25.01,30.01,5.01])standart_bushing();
 	}
-	translate(v = [25.01,30.01,5.01])lm8uu_bearing_holder();	
-	translate(v = [-25.01,30.01,5.01])lm8uu_bearing_holder();
-}else{
-translate(v = [25.01,-30.01,5.01])standart_bushing();
-translate(v = [-25.01,-30.01,5.01])standart_bushing();
-translate(v = [25.01,30.01,5.01])standart_bushing();
-translate(v = [-25.01,30.01,5.01])standart_bushing();
-}
 }
 }
 
