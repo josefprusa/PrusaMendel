@@ -1,0 +1,91 @@
+== Bill of Materials ==
+
+=== Rods and Bars ===
+{| class="wikitable sortable" border="1"
+|-
+! scope="col" | Quantity
+! scope="col" | Description
+! scope="col" | Type
+! scope="col" class="unsortable" | Comments
+! scope="col" class="unsortable" | Diagram
+|-
+| 1 || Idler ||  ||  ||
+|}
+
+=== Nuts&bolts ===
+{| class="wikitable sortable" border="1"
+|-
+! scope="col" | Quantity
+! scope="col" | Description
+! scope="col" | Type
+! scope="col" class="unsortable" | Comments
+! scope="col" class="unsortable" | Diagram
+|-
+| 3 || 608 skate bearing ||  ||  || [[File:common/608.jpg|50px]]
+|-
+| 4 || M4 nut ||  ||  ||
+|-
+| 3 || M3 10mm screw ||  ||  ||
+|-
+| 2 || M4 25mm screw ||  ||  ||
+|-
+| 1 || M8 hobbed bolt ||  ||  ||
+|-
+| 8 || M3 15mm screw with HEX head ||  ||  ||
+|-
+| 2 || M3 10mm screw with hex head ||  ||  ||
+|-
+| 1 || M3 25mm screw ||  ||  ||
+|-
+| 1 || M3 grub screw ||  ||  ||
+|-
+| 2 || M3 25mm screw with HEX head ||  ||  ||
+|-
+| 12 || M3 nut ||  ||  ||
+|-
+| 73 || M8 washer ||  ||  ||
+|-
+| 74 || M8 nut ||  ||  ||
+|-
+| 29 || M3 washer ||  ||  ||
+|-
+| 1 || M3 10mm screw with flat head ||  ||  ||
+|-
+| 2 || M3 40mm screw ||  ||  ||
+|}
+
+=== Printed ===
+{| class="wikitable sortable" border="1"
+|-
+! scope="col" | Quantity
+! scope="col" | Description
+! scope="col" | Type
+! scope="col" class="unsortable" | Comments
+! scope="col" class="unsortable" | Diagram
+|-
+| 1 || Extruder body ||  ||  ||
+|-
+| 8 || Bar clamp ||  ||  || [[File:bar-clamp.png|50px]]
+|-
+| 4 || Y bushing ||  ||  ||
+|-
+| 2 || Frame vertex ||  ||  || [[File:frame-vertex.png|50px]]
+|-
+| 1 || Y motor bracket ||  ||  || [[File:y-motor-bracket.png|50px]]
+|-
+| 1 || Small extruder gear ||  ||  ||
+|-
+| 2 || Rod clamp ||  ||  || [[File:rod-clamp.png|50px]]
+|-
+| 4 || Frame vertex with foot ||  ||  || [[File:frame-vertex-foot.png|50px]]
+|-
+| 1 || Large extruder gear ||  ||  ||
+|-
+| 2 || Belt clamp ||  ||  || [[File:belt-clamp.png|50px]]
+|-
+| 1 || Extruder Idler ||  ||  ||
+|-
+| 1 || Z motor mount ||  ||  || [[File:z-motor-mount.png|50px]]
+|-
+| 1 || X carriage ||  ||  || [[File:x-carriage.png|50px]]
+|}

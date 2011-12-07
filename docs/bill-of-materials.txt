@@ -1,0 +1,44 @@
+Bill of Materials: Prusa Mendel iteration 2
++++++++++++++++++++++++++++++++++++++++++++
+
+Rods and Bars
+=============
+- 1x Idler
+
+Nuts&bolts
+==========
+- 3x 608 skate bearing
+- 4x M4 nut
+- 3x M3 10mm screw
+- 2x M4 25mm screw
+- 1x M8 hobbed bolt
+- 8x M3 15mm screw with HEX head
+- 2x M3 10mm screw with hex head
+- 1x M3 25mm screw
+- 1x M3 grub screw
+- 2x M3 25mm screw with HEX head
+- 12x M3 nut
+- 73x M8 washer
+- 74x M8 nut
+- 29x M3 washer
+- 1x M3 10mm screw with flat head
+- 2x M3 40mm screw
+
+Printed
+=======
+- 1x Extruder body
+- 8x Bar clamp
+- 4x Y bushing
+- 2x Frame vertex
+- 1x Y motor bracket
+- 1x Small extruder gear
+- 2x Rod clamp
+- 4x Frame vertex with foot
+- 1x Large extruder gear
+- 2x Belt clamp
+- 1x Extruder Idler
+- 1x Z motor mount
+- 1x X carriage
+
+----
+Generated on 2011/11/16 01:48:57 by ThingDoc - http://thingdoc.org/
