@@ -19,8 +19,10 @@ include <metric.scad>;
 
 thin_wall = 3;
 
-// LM8UU
-linear = false;
+// Linear bearing version
+linear = true;
+// set false for LM-8UU, true for LM-E-8UU (ignore if linear is set to false)
+lme8uu = true;
 
 
 // CHANGE ONLY THE STUFF YOU KNOW

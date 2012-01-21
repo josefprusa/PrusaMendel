@@ -96,6 +96,17 @@ union(){translate([0,9.5,0])vertical_bushing(true,13);
 }
 }
 
+
+// Linear bushing options
+
+
+lm8uu_diameter=(lme8uu==true)?16:15;
+lm8uu_length=(lme8uu==true)?25:24;
+lm8uu_radius = lm8uu_diameter / 2;
+block_height = 2*lm8uu_length+17;
+
+
+
 //z_bushings();
 z_linear_bearings();
 
@@ -105,41 +116,37 @@ translate(v=[0,9.5,0]) rotate(a=[0,0,90]){
 difference(){
 union(){
 //main block
-translate(v=[-5,0,32.5]) cube(size = [10,20,65], center = true);
+translate(v=[-(lm8uu_radius+2.5)/2,0,block_height/2]) cube(size = [lm8uu_radius+2.5,lm8uu_diameter+5,block_height], center = true);
 //holder for main block in x-end
 translate(v=[-5,0,15.8/2]) cube(size = [12,23,15.8], center = true);
-translate(v=[0,0,0]) cylinder(h = 65, r=10, $fn=60);
+translate(v=[0,0,0]) cylinder(h = block_height, r=lm8uu_radius+2.5, $fn=60);
 }
 //main axis
-translate(v=[0,0,-2]) cylinder(h = 70, r=7.7, $fn=50);
+translate(v=[0,0,-2]) cylinder(h = 70, r=lm8uu_radius+0.2, $fn=50);
 //main cut
-translate(v=[10,0,32.5]) cube(size = [20,14,70], center = true);
+translate(v=[10,0,32.5]) cube(size = [20,lm8uu_diameter-1,70], center = true);
 //smooth entry cut
-translate(v=[12,0,32.5]) rotate(a=[0,0,45]) cube(size = [20,20,70], center = true);
+translate(v=[12,0,32.5]) rotate(a=[0,0,45]) cube(size = [lm8uu_radius+12.5,lm8uu_radius+12.5,70], center = true);
 translate(v=[0,0,14.5+2]) ziptie();
-translate(v=[0,0,65-(12+2)-5]) ziptie();
+translate(v=[0,0,block_height-(12+2)-5]) ziptie();
 }
-translate(v=[-(10-5.5)/2-5.5,0,0+1]) cube(size = [10-5.5,20,2], center = true);
-translate(v=[-(10-5.5)/2-5.5,0,24.5+2+1]) cube(size = [10-5.5,20,2], center = true);
+translate(v=[-(10-5.5)/2-lm8uu_radius+2,0,0+1]) cube(size = [10-5.5,20,2], center = true);
+translate(v=[-(10-5.5)/2-lm8uu_radius+2,0,lm8uu_length+0.5+2+1]) cube(size = [10-5.5,20,2], center = true);
 
-translate(v=[-(10-5.5)/2-5.5,0,65-1]) cube(size = [10-5.5,20,2], center = true);
-translate(v=[-(10-5.5)/2-5.5,0,65-24.5-2-1]) cube(size = [10-5.5,20,2], center = true);
+translate(v=[-(10-5.5)/2-lm8uu_radius+2,0,block_height-1]) cube(size = [10-5.5,20,2], center = true);
+translate(v=[-(10-5.5)/2-lm8uu_radius+2,0,block_height-lm8uu_length+0.5-2-1]) cube(size = [10-5.5,20,2], center = true);
 }
 }
 
 module ziptie(){
 difference(){
-translate(v=[0,0,0]) cylinder(h = 3.9, r=10.3);
-translate(v=[0,0,0]) cylinder(h = 5, r=10-1, $fn=50);
-translate(v=[0,0,3]) cylinder(h = 1, r1=10-1, r2=10.2, $fn=50);
+translate(v=[0,0,0]) cylinder(h = 3.9, r=lm8uu_radius+2.8);
+translate(v=[0,0,0]) cylinder(h = 5, r=lm8uu_radius+2.5-1, $fn=50);
+translate(v=[0,0,3]) cylinder(h = 1, r1=lm8uu_radius+2.5-1, r2=lm8uu_radius+2.7, $fn=50);
 }}
-
 
 // Gregs
 clearance=0.7;
-
-lm8uu_diameter=15+clearance;
-lm8uu_length=24+clearance;
 lm8uu_support_thickness=3.2; 
 lm8uu_end_diameter=m8_diameter+1.5;
 
