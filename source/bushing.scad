@@ -146,7 +146,7 @@ translate(v=[0,0,3]) cylinder(h = 1, r1=lm8uu_radius+2.5-1, r2=lm8uu_radius+2.7,
 }}
 
 // Gregs
-clearance=0.8;
+clearance=0.5;
 lm8uu_support_thickness=3.2; 
 lm8uu_end_diameter=m8_diameter+1.5;
 
@@ -160,10 +160,10 @@ module lm8uu_bearing_holder()
 	translate([-lm8uu_holder_width/2,-lm8uu_holder_length/2,-5])difference()
 	{
 		cube([lm8uu_holder_width,lm8uu_holder_length,lm8uu_holder_height]);
-		translate([lm8uu_holder_width/2,0,lm8uu_holder_width/2])
+		translate([lm8uu_holder_width/2,-2,lm8uu_holder_width/2])
 		rotate([-90,0,0])
 		translate([0,0,5])
-		cylinder(r=lm8uu_diameter/2,h=lm8uu_length,$fn=40);
+		cylinder(r=(lm8uu_diameter+clearance)/2,h=(lm8uu_length+clearance),$fn=40);
 
 		translate([lm8uu_holder_width/2,0,lm8uu_holder_width/2])
 		rotate([-90,0,0])
