@@ -216,6 +216,7 @@ td, th {
 	padding-top:0px;
 	padding-bottom:10px;
 	margin-bottom: 15px;
+	clear:both;
 }
 .subassembly table{
 	font-size: 90%;
@@ -256,7 +257,29 @@ background-color: #f5f5f5;
 	-moz-border-radius: 5px;
 border-radius: 5px;
 }
-#assemblymenu{
+.assemblyMenu{
 	padding:0px;
 	margin:0px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.assemblyMenu span{
+	font-weight: bold;
+}
+
+.decreaseAssembly{
+width: 30%;
+float: left;
+}
+.increaseAssembly{
+width: 30%;
+float: right;
+}
+.generated{
+margin-top: 20px;
+font-weight: bold;
+	text-align: center;
+	font: 12px/100% Arial, Helvetica, sans-serif;
+	clear:both;
+	margin-bottom: 25px;
 }

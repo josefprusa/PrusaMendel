@@ -22,13 +22,25 @@ grrf_peek_mount_holes=32;
 //e.g. wade(hotend_mount=groovemount+peek_reprapsource_mount);
 
 /**
- * Extruder
- * @name Extruder
+ * Assembled groove mount hotend
+ * @name Groove mount hot-end
+ * @id groove-mount-hotend
+ */
+
+/**
+ * Parts which prevents the 
+ * @name Groove mount hot-end
+ * @id groove-mount-hotend
+ */
+
+/**
+ * Extruder drive
+ * @name Extruder drive
  * @assembled
  * @using 1 small-gear
- * @id extruder
+ * @id extruder drive
  * @using 1 idler
- * @using 1 extruder-body
+ * @using 1 cleaned-extruder-body
  * @using 1 m3nut
  * @using 1 m3washer
  * @using 1 m3x25
@@ -45,7 +57,7 @@ grrf_peek_mount_holes=32;
  * @step Prepare your NEMA17 stepper motor and three M3x10 screws with washers.
  * @step Hold motor on place and lightly tighten the screws. We need to adjust motor position later, no need to tighten it hard.
  * 
- * @using 1 large-gear
+ * @using 1 large-gear-assembly
  * @using 1 m8washer
  * @using 2 m8nut
  * @using 2 bearing-608
@@ -69,6 +81,15 @@ grrf_peek_mount_holes=32;
  * @name Extruder body
  * @category Printed
  * @id extruder-body
+ */
+
+/**
+ * Cleaned extruder body
+ * @name Clenaed xtruder body
+ * @id cleaned-extruder-body
+ * @using 1 extruder-body
+ * @step Clean all the supports from the part.
+ * @step One blocks the hole in the middle of the axis and one supports the part later making hinge for idler.
  */
 
 /**
@@ -131,7 +152,7 @@ motor_mount_translation=[50.5,34,0];
 motor_mount_thickness=9;
 
 m8_clearance_hole=8.8;
-hole_for_608=22.6;
+hole_for_608=22.3;
 608_diameter=22;
 
 block_top_right=[wade_block_width,wade_block_height];
@@ -148,6 +169,8 @@ gear_separation=7.4444+32.0111 +0.25;
 function motor_hole(hole)=
 [motor_mount_translation[0],motor_mount_translation[1]]+
 rotated(45+motor_mount_rotation+hole*90)*nema17_hole_spacing/sqrt(2);
+
+layer_height = 0.4;
 
 // Parameters defining the idler.
 
@@ -392,13 +415,14 @@ module block_holes()
 					-motor_mount_translation[1]-1,wade_block_depth/2])
 				rotate([-90,0,0])
 				rotate(360/16)
-				cylinder(r=m4_diameter/2,h=base_thickness+2,$fn=8);	
+				cylinder(r=m3_diameter/2,h=base_thickness+2,$fn=8);	
 	
 				translate([-filament_feed_hole_offset+25*((mount<1)?1:-1),
 					-motor_mount_translation[1]+base_thickness/2,
 					wade_block_depth/2])
 				rotate([-90,0,0])
-				cylinder(r=m4_nut_diameter/2,h=base_thickness,$fn=6);	
+				//cylinder(r=m3_nut_diameter/2,h=base_thickness,$fn=6);
+				nut(m3_nut_diameter, base_thickness, false);	
 			}
 
 		}
@@ -419,10 +443,10 @@ module block_holes()
 				translate([0,0,-1])
 				cylinder(r=m3_diameter/2,h=wade_block_depth+6,$fn=6);	
 				translate([0,0,wade_block_width-idler_nut_trap_depth])
-				cylinder(r=m3_nut_diameter/2,h=idler_nut_thickness,$fn=6);	
+				cylinder(r=6.4/2,h=idler_nut_thickness,$fn=6);	
 			}
 			translate([0,10/2,wade_block_width-idler_nut_trap_depth+idler_nut_thickness/2])
-			cube([m3_nut_diameter*cos(30),10,idler_nut_thickness],center=true);
+			cube([5.6,10,idler_nut_thickness],center=true);
 		}
 	}
 }
@@ -449,9 +473,9 @@ module motor_mount_holes()
 		for (hole=[0:2])
 		{
 			translate([motor_hole(hole)[0]-slot_left,motor_hole(hole)[1],0])
-			cylinder(h=motor_mount_thickness-screw_head_recess_depth,r=radius,$fn=16);
+			#cylinder(h=motor_mount_thickness-screw_head_recess_depth,r=radius,$fn=8);
 			translate([motor_hole(hole)[0]+slot_right,motor_hole(hole)[1],0])
-			cylinder(h=motor_mount_thickness-screw_head_recess_depth,r=radius,$fn=16);
+			cylinder(h=motor_mount_thickness-screw_head_recess_depth,r=radius,$fn=8);
 
 			translate([motor_hole(hole)[0]-slot_left,motor_hole(hole)[1]-radius,0])
 			cube([slot_left+slot_right,radius*2,motor_mount_thickness-screw_head_recess_depth]);

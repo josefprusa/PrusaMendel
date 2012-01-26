@@ -39,9 +39,9 @@ translate([0,0,18]) mirror([ 0, 0, 1 ]) gear (number_of_teeth=10,
 	union()
 	{
 		//entrance
-		translate([0,-3,15]) cube([m3_nut_diameter+0.6,5,3],center=true);
+		translate([0,-3,15]) cube([5.5,5,3],center=true);
 		//nut
-		translate([0,0,13.6]) rotate([0,0,30]) nut(m3_nut_diameter+0.6, 3, false);
+		translate([0,0,13.6]) rotate([0,0,30]) nut(5.5, 3, false);
 		//grub hole
 		translate([0,0,9]) cylinder(r=m3_diameter/2,h=10, $fn=15);
 	}

@@ -15,14 +15,14 @@ use <teardrop.scad>
 
 axis_diameter_real=4;
 axis_diameter_larger=4.25;
-pressure_pad_height=1.8;
+pressure_pad_height=2.5;
 add_strenght=1;
 xend_height=15.8;
 xend_length=40;
 solid_end_width=3;
 slot_width=1;
 
-pad_height=5.8;
+pad_height=6.5;
 pad_width=7;
 pad_connector_height=3.3;
 bushing_support_width=17;
@@ -75,7 +75,7 @@ module xend_side(closed_end=true)
 				cube([pad_width,xend_length-2*solid_end_width-2*slot_width,pad_height]);
 			
 				//cutout groove in pressure pad	
-				translate([0,0,1]) rotate([-90,0,0])cylinder(r=4,h=closed_end?xend_length-1:xend_length+2, $fn=30);
+				translate([0,0,1.3]) rotate([-90,0,0])cylinder(r=4,h=closed_end?xend_length-1:xend_length+2, $fn=30);
 			
 				translate([axis_diameter_larger,0,0])
 				rotate([0,8,0])

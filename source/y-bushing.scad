@@ -38,27 +38,7 @@ if(linear_bearing==false){
 }else{
 // Greg Frosts
 
-translate(v = [0,0,5]) difference()
-	{
-		union(){render()
-		lm8uu_bearing_holder();
-
-translate(v = [0,0,1.5-5]) cube(size = [37,10,3], center = true);
-}
-		for (hole=[-1,1])
-		{
-			translate([lm8uu_holder_width/2,
-				lm8uu_holder_length/2+
-				hole*(lm8uu_support_thickness+lm8uu_holder_gap/2),0])
-			{
-				
-			}
-		}
-translate(v = [15, 0, -7]) polyhole(m3_diameter, 12);
-		translate(v = [-15, 0, -7]) polyhole(m3_diameter, 12);
-	}
-
-
+y_linear_bearings();
 }
 	}	
 

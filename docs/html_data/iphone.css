@@ -85,7 +85,15 @@ body {
 	min-height: 500px;
 	
 }
-.decreaseAssembly{
-	width:15px;
-	height:20px;
+
+.subassembly img{
+	max-width: 100%;
 }
+.decreaseAssembly{
+font-size: 12px;
+}
+.increaseAssembly{
+
+font-size: 12px;
+}
+h2{margin-top: 0px;}

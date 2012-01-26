@@ -35,7 +35,9 @@ union(){
 			difference(){
 				union(){
 					//Base block
-						cube(size = [65,70,5], center = true);
+						translate(v = [15, 0, 0])cube(size = [35,50,5], center = true);
+						translate(v = [0, 18.5, 0]) cube(size = [35,20,5], center = true);
+						translate(v = [-2.4, -6, 0]) rotate(a=[0,0,15]) cylinder(h = 5, r=35, $fn=5, center=true);
 						translate(v = [0, -31, 0]) cylinder(h = 5, r=m4_nut_diameter/2+2, $fn=6, center=true);	
 					//Nut holder base - extruder
 					
@@ -61,7 +63,7 @@ union(){
 					translate(v = [25.01,-30.01,5.01])lm8uu_bearing_cut();
 					translate(v = [25.01,30.01,5.01])lm8uu_bearing_cut();	
 					translate(v = [-25.01,30.01,5.01])lm8uu_bearing_cut();
-					translate(v = [-35,-30,0]) rotate(a=[0,0,20]) cube(size = [30,70,10], center = true);
+					//translate(v = [-35,-30,0]) rotate(a=[0,0,20]) cube(size = [30,70,10], center = true);
 				}
 				// holes for connecting extruder
 				// SNAP IN MOUNT
@@ -109,7 +111,7 @@ union(){
 						}	
 					}
 					//removing some mass	
-					translate(v = [0, 40, 0]) cylinder(h = 9, r=14, $fn=6, center=true);	
+					translate(v = [0, 36, 0]) cylinder(h = 9, r=14, $fn=6, center=true);	
 		
 					// Hotend hole
 					translate(v = [0, -6, 0]) cylinder(h = 20, r=20, $fn=20, center=true);
@@ -150,11 +152,11 @@ union(){
 	}
 if(linear_bearings){
 	difference(){
-		translate(v = [25.01,-30.01,5.01])lm8uu_bearing_holder();
+		translate(v = [25.01,-29.81,0]) cut_corners(true,true,false,false);
 		translate(v = [0, -6, 0]) cylinder(h = 60, r=20, $fn=20, center=true);
 	}
-	translate(v = [25.01,30.01,5.01])lm8uu_bearing_holder();	
-	translate(v = [-25.01,30.01,5.01])lm8uu_bearing_holder();
+	translate(v = [25.01,28.01,0])cut_corners(false,false,true, true);
+	translate(v = [-25.01,20.51,0])cut_corners(false,false,true, true);
 }else{
 translate(v = [25.01,-30.01,5.01])standart_bushing();
 translate(v = [-25.01,-30.01,5.01])standart_bushing();

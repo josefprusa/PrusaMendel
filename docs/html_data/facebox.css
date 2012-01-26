@@ -78,3 +78,6 @@
   background-color: #000;
   z-index: 99;
 }
+.facebox .content img{
+size: 80%;
+}

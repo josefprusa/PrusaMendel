@@ -71,7 +71,7 @@
 |-
 | 2 || Frame vertex ||  ||  || [[File:frame-vertex.png|50px]]
 |-
-| 1 || Y motor bracket ||  ||  || [[File:y-motor-bracket.png|50px]]
+| 1 || Large extruder gear ||  ||  ||
 |-
 | 1 || Small extruder gear ||  ||  ||
 |-
@@ -79,13 +79,13 @@
 |-
 | 4 || Frame vertex with foot ||  ||  || [[File:frame-vertex-foot.png|50px]]
 |-
-| 1 || Large extruder gear ||  ||  ||
+| 1 || Y motor bracket ||  ||  || [[File:y-motor-bracket.png|50px]]
 |-
 | 2 || Belt clamp ||  ||  || [[File:belt-clamp.png|50px]]
 |-
-| 1 || Extruder Idler ||  ||  ||
+| 1 || X carriage ||  ||  || [[File:x-carriage.png|50px]]
 |-
 | 1 || Z motor mount ||  ||  || [[File:z-motor-mount.png|50px]]
 |-
-| 1 || X carriage ||  ||  || [[File:x-carriage.png|50px]]
+| 1 || Extruder Idler ||  ||  ||
 |}
