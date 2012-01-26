@@ -30,15 +30,15 @@ Printed
 - 8x Bar clamp
 - 4x Y bushing
 - 2x Frame vertex
-- 1x Y motor bracket
+- 1x Large extruder gear
 - 1x Small extruder gear
 - 2x Rod clamp
 - 4x Frame vertex with foot
-- 1x Large extruder gear
+- 1x Y motor bracket
 - 2x Belt clamp
-- 1x Extruder Idler
-- 1x Z motor mount
 - 1x X carriage
+- 1x Z motor mount
+- 1x Extruder Idler
 
 ----
-Generated on 2011/11/16 01:48:57 by ThingDoc - http://thingdoc.org/
+Generated on 2011/12/03 00:41:02 by ThingDoc - http://thingdoc.org/

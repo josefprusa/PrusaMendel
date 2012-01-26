@@ -16,21 +16,17 @@
   </head>
   <body>
 
-    <div id="menu">
-    
-    <span id="genericmenu">
-    	<a href="#" id="homebutton" class="button gray">Home</a>
-    	<a href="#" id="bombutton" class="button">BOM</a>
-    	<a href="#" id="thingsbutton" class="button white">Things</a>
-    </span>
-    <a href="#" id="assemblybutton" class="button white">Assembly</a>
-    <span id="assemblymenu">
-    	<a href="#" id="decreaseAssembly" class="button white">&lt;</a>
-    		<span id="assemblyActual">0</span>/<span id="assemblyCount">0</span>
-    	<a href="#" id="increaseAssembly" class="button white">&gt;</a>
-    </span>
-	<a href="http://thingdoc.org/"><img src="html_data/logo120.png" id="logo"/></a>
-	</div>
+     <div id="menu">
+
+	    <span id="genericmenu">
+	    	<a href="#" id="homebutton" class="button gray">Home</a>
+	    	<a href="#" id="bombutton" class="button">BOM</a>
+	    	<a href="#" id="thingsbutton" class="button white">Things</a>
+	    	<a href="#" id="assemblybutton" class="button white">Assembly</a>
+	    </span>
+
+		<a href="http://thingdoc.org/"><img src="html_data/logo120.png" id="logo"/></a>
+		</div>
 
 
     
@@ -310,13 +306,13 @@
 			
 				<tr>
 					<td>
-						<input type="checkbox" class="bom_checkbox" name="y-motor-bracket">
+						<input type="checkbox" class="bom_checkbox" name="large-gear">
 					</td>
 					<td class="right">
 						<strong>1 x</strong>
 					</td>
 					<td>
-						<a href="#thing_y-motor-bracket" rel="facebox" >Y motor bracket</a>
+						<a href="#thing_large-gear" rel="facebox" >Large extruder gear</a>
 					</td>
 				</tr>
 			
@@ -358,13 +354,13 @@
 			
 				<tr>
 					<td>
-						<input type="checkbox" class="bom_checkbox" name="large-gear">
+						<input type="checkbox" class="bom_checkbox" name="y-motor-bracket">
 					</td>
 					<td class="right">
 						<strong>1 x</strong>
 					</td>
 					<td>
-						<a href="#thing_large-gear" rel="facebox" >Large extruder gear</a>
+						<a href="#thing_y-motor-bracket" rel="facebox" >Y motor bracket</a>
 					</td>
 				</tr>
 			
@@ -382,13 +378,13 @@
 			
 				<tr>
 					<td>
-						<input type="checkbox" class="bom_checkbox" name="idler">
+						<input type="checkbox" class="bom_checkbox" name="x-carriage">
 					</td>
 					<td class="right">
 						<strong>1 x</strong>
 					</td>
 					<td>
-						<a href="#thing_idler" rel="facebox" >Extruder Idler</a>
+						<a href="#thing_x-carriage" rel="facebox" >X carriage</a>
 					</td>
 				</tr>
 			
@@ -406,13 +402,13 @@
 			
 				<tr>
 					<td>
-						<input type="checkbox" class="bom_checkbox" name="x-carriage">
+						<input type="checkbox" class="bom_checkbox" name="idler">
 					</td>
 					<td class="right">
 						<strong>1 x</strong>
 					</td>
 					<td>
-						<a href="#thing_x-carriage" rel="facebox" >X carriage</a>
+						<a href="#thing_idler" rel="facebox" >Extruder Idler</a>
 					</td>
 				</tr>
 			
@@ -507,6 +503,12 @@
 		
 			<div id="thing_m3x10" class="thing_overview" >
 					<h3>M3 10mm screw</h3>
+					<div class="stuff">
+					</div>
+				</div>
+		
+			<div id="thing_large-gear-assembly" class="thing_overview" >
+					<h3>Large extruder gear assembly</h3>
 					<div class="stuff">
 					</div>
 				</div>
@@ -743,6 +745,13 @@
 					</div>
 				</div>
 		
+			<div id="thing_cleaned-extruder-body" class="thing_overview" >
+					<h3>Clenaed xtruder body</h3>
+					<div class="stuff">
+						        <p>Cleaned extruder body</p>
+					</div>
+				</div>
+		
 			<div id="thing_carriage" class="thing_overview" >
 					<h3>Carriage</h3>
 					<div class="stuff">
@@ -778,10 +787,79 @@
 	</div>
 
 	<div id="assembly">
-		<h2>Assembly Instructions</h2>
 		
 			<div class="subassembly">
-				<h3>Assemble Small extruder gear</h3>
+				<h2>Assemble M8 hobbed bolt</h2>
+				<div class="assemblyMenu">
+			<a href="#" class="decreaseAssembly button white">&lt; Previous step</a>
+    		<span class="assemblyActual">0</span>/<span class="assemblyCount">0</span>
+    	<a href="#" class="increaseAssembly button white">Next step &gt;</a>
+			</div>
+				<div class="stuff">
+					<p>Steps:</p>
+					<ol>
+							<li>
+								Use thread cutting bit in electric screwdriver ...
+							</li>
+					</ol>
+				</div>
+				<div class="assemblyMenu">
+			<a href="#" class="decreaseAssembly button white">&lt; Previous step</a>
+    		<span class="assemblyActual">0</span>/<span class="assemblyCount">0</span>
+    	<a href="#" class="increaseAssembly button white">Next step &gt;</a>
+			</div></div>
+		
+			<div class="subassembly">
+				<h2>Assemble Large extruder gear assembly</h2>
+				<div class="assemblyMenu">
+			<a href="#" class="decreaseAssembly button white">&lt; Previous step</a>
+    		<span class="assemblyActual">0</span>/<span class="assemblyCount">0</span>
+    	<a href="#" class="increaseAssembly button white">Next step &gt;</a>
+			</div>
+				<div class="stuff">
+						<p>Things needed:</p>
+						<table id="bomtable">
+							<tr>
+								<td class="right">
+									<strong>1 x</strong>
+								</td>
+								<td>
+									<a href="#thing_large-gear" rel="facebox" >Large extruder gear</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="right">
+									<strong>1 x</strong>
+								</td>
+								<td>
+									<a href="#thing_hobbed-bolt" rel="facebox" >M8 hobbed bolt</a>
+								</td>
+							</tr>
+						</table>
+					
+					<p>Steps:</p>
+					<ol>
+							<li>
+								Insert hobbed bolt into main hole.
+							</li>
+							<li>
+								Add some M8 washers from other side, later with their count you adjust position of hobbed part in filament path.
+							</li>
+					</ol>
+				</div>
+				<div class="assemblyMenu">
+			<a href="#" class="decreaseAssembly button white">&lt; Previous step</a>
+    		<span class="assemblyActual">0</span>/<span class="assemblyCount">0</span>
+    	<a href="#" class="increaseAssembly button white">Next step &gt;</a>
+			</div></div>
+		
+			<div class="subassembly">
+				<h2>Assemble Small extruder gear</h2>
+				<div class="assemblyMenu">
+			<a href="#" class="decreaseAssembly button white">&lt; Previous step</a>
+    		<span class="assemblyActual">0</span>/<span class="assemblyCount">0</span>
+    	<a href="#" class="increaseAssembly button white">Next step &gt;</a>
+			</div>
 				<div class="stuff">
 						<p>Things needed:</p>
 						<table id="bomtable">
@@ -813,22 +891,19 @@
 							</li>
 					</ol>
 				</div>
-			</div>
+				<div class="assemblyMenu">
+			<a href="#" class="decreaseAssembly button white">&lt; Previous step</a>
+    		<span class="assemblyActual">0</span>/<span class="assemblyCount">0</span>
+    	<a href="#" class="increaseAssembly button white">Next step &gt;</a>
+			</div></div>
 		
 			<div class="subassembly">
-				<h3>Assemble M8 hobbed bolt</h3>
-				<div class="stuff">
-					<p>Steps:</p>
-					<ol>
-							<li>
-								Use thread cutting bit in electric screwdriver ...
-							</li>
-					</ol>
-				</div>
+				<h2>Assemble Clenaed xtruder body</h2>
+				<div class="assemblyMenu">
+			<a href="#" class="decreaseAssembly button white">&lt; Previous step</a>
+    		<span class="assemblyActual">0</span>/<span class="assemblyCount">0</span>
+    	<a href="#" class="increaseAssembly button white">Next step &gt;</a>
 			</div>
-		
-			<div class="subassembly">
-				<h3>Assemble Large extruder gear</h3>
 				<div class="stuff">
 						<p>Things needed:</p>
 						<table id="bomtable">
@@ -837,7 +912,7 @@
 									<strong>1 x</strong>
 								</td>
 								<td>
-									<a href="#thing_hobbed-bolt" rel="facebox" >M8 hobbed bolt</a>
+									<a href="#thing_extruder-body" rel="facebox" >Extruder body</a>
 								</td>
 							</tr>
 						</table>
@@ -845,17 +920,26 @@
 					<p>Steps:</p>
 					<ol>
 							<li>
-								Insert hobbed bolt into main hole.
+								Clean all the supports from the part.
 							</li>
 							<li>
-								Add some M8 washers from other side, later with their count you adjust position of hobbed part in filament path.
+								One blocks the hole in the middle of the axis and one supports the part later making hinge for idler.
 							</li>
 					</ol>
 				</div>
-			</div>
+				<div class="assemblyMenu">
+			<a href="#" class="decreaseAssembly button white">&lt; Previous step</a>
+    		<span class="assemblyActual">0</span>/<span class="assemblyCount">0</span>
+    	<a href="#" class="increaseAssembly button white">Next step &gt;</a>
+			</div></div>
 		
 			<div class="subassembly">
-				<h3>Assemble Extruder Idler</h3>
+				<h2>Assemble Extruder Idler</h2>
+				<div class="assemblyMenu">
+			<a href="#" class="decreaseAssembly button white">&lt; Previous step</a>
+    		<span class="assemblyActual">0</span>/<span class="assemblyCount">0</span>
+    	<a href="#" class="increaseAssembly button white">Next step &gt;</a>
+			</div>
 				<div class="stuff">
 						<p>Things needed:</p>
 						<table id="bomtable">
@@ -887,10 +971,19 @@
 							</li>
 					</ol>
 				</div>
-			</div>
+				<div class="assemblyMenu">
+			<a href="#" class="decreaseAssembly button white">&lt; Previous step</a>
+    		<span class="assemblyActual">0</span>/<span class="assemblyCount">0</span>
+    	<a href="#" class="increaseAssembly button white">Next step &gt;</a>
+			</div></div>
 		
 			<div class="subassembly">
-				<h3>Assemble Extruder</h3>
+				<h2>Assemble Extruder</h2>
+				<div class="assemblyMenu">
+			<a href="#" class="decreaseAssembly button white">&lt; Previous step</a>
+    		<span class="assemblyActual">0</span>/<span class="assemblyCount">0</span>
+    	<a href="#" class="increaseAssembly button white">Next step &gt;</a>
+			</div>
 				<div class="stuff">
 						<p>Things needed:</p>
 						<table id="bomtable">
@@ -904,10 +997,10 @@
 							</tr>
 							<tr>
 								<td class="right">
-									<strong>1 x</strong>
+									<strong>2 x</strong>
 								</td>
 								<td>
-									<a href="#thing_extruder-body" rel="facebox" >Extruder body</a>
+									<a href="#thing_m4nut" rel="facebox" >M4 nut</a>
 								</td>
 							</tr>
 							<tr>
@@ -920,26 +1013,10 @@
 							</tr>
 							<tr>
 								<td class="right">
-									<strong>2 x</strong>
-								</td>
-								<td>
-									<a href="#thing_m4nut" rel="facebox" >M4 nut</a>
-								</td>
-							</tr>
-							<tr>
-								<td class="right">
 									<strong>1 x</strong>
 								</td>
 								<td>
-									<a href="#thing_small-gear" rel="facebox" >Small extruder gear</a>
-								</td>
-							</tr>
-							<tr>
-								<td class="right">
-									<strong>1 x</strong>
-								</td>
-								<td>
-									<a href="#thing_m3x25" rel="facebox" >M3 25mm screw</a>
+									<a href="#thing_large-gear-assembly" rel="facebox" >Large extruder gear assembly</a>
 								</td>
 							</tr>
 							<tr>
@@ -955,7 +1032,23 @@
 									<strong>1 x</strong>
 								</td>
 								<td>
-									<a href="#thing_large-gear" rel="facebox" >Large extruder gear</a>
+									<a href="#thing_small-gear" rel="facebox" >Small extruder gear</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="right">
+									<strong>1 x</strong>
+								</td>
+								<td>
+									<a href="#thing_cleaned-extruder-body" rel="facebox" >Clenaed xtruder body</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="right">
+									<strong>2 x</strong>
+								</td>
+								<td>
+									<a href="#thing_m3x40" rel="facebox" >M3 40mm screw</a>
 								</td>
 							</tr>
 							<tr>
@@ -992,10 +1085,10 @@
 							</tr>
 							<tr>
 								<td class="right">
-									<strong>2 x</strong>
+									<strong>1 x</strong>
 								</td>
 								<td>
-									<a href="#thing_m3x40" rel="facebox" >M3 40mm screw</a>
+									<a href="#thing_m3x25" rel="facebox" >M3 25mm screw</a>
 								</td>
 							</tr>
 							<tr>
@@ -1069,10 +1162,19 @@
 							</li>
 					</ol>
 				</div>
-			</div>
+				<div class="assemblyMenu">
+			<a href="#" class="decreaseAssembly button white">&lt; Previous step</a>
+    		<span class="assemblyActual">0</span>/<span class="assemblyCount">0</span>
+    	<a href="#" class="increaseAssembly button white">Next step &gt;</a>
+			</div></div>
 		
 			<div class="subassembly">
-				<h3>Assemble Frame triangle</h3>
+				<h2>Assemble Frame triangle</h2>
+				<div class="assemblyMenu">
+			<a href="#" class="decreaseAssembly button white">&lt; Previous step</a>
+    		<span class="assemblyActual">0</span>/<span class="assemblyCount">0</span>
+    	<a href="#" class="increaseAssembly button white">Next step &gt;</a>
+			</div>
 				<div class="stuff">
 						<p>Things needed:</p>
 						<table id="bomtable">
@@ -1128,9 +1230,6 @@
 								Slide the rod through the wider bottom (footed) side of two vertices. Make sure the feet point in the same direction, and the bulge on the non-footed sides of the vertices point outwards.
 							</li>
 							<li>
-								Measure the distance. The distance between the two vertices should be 290mm (along the rod, equivalent is 11-13/32&#34;). Get it approximately right now, we will check this again later. If you have a frame jig, place it between the two vertices and adjust the nuts until you can just barely fit the jig J1 between them.
-							</li>
-							<li>
 								Place another washer and nut on the other side of the vertex. Tighten, but not too much. We&#39;ll need a bit of flexibility here still.
 							</li>
 							<li>
@@ -1143,10 +1242,10 @@
 								Take the third piece of threaded rod and put a nut and washer on each end. Place it in the other footed vertex and fix it in place with a washer and nut. You should now have a triangle of threaded rods with two footed vertices on two of the corners, nothing in the third corner, and a bar clamp between the two vertices.
 							</li>
 							<li>
-								Take the third vertex (non-footed) and slide it onto the threaded rods in the final corner of the triangle. Measure the lengths of the three sides to make sure they are all 290mm long (along the rod from plastic part to plastic part, equivalent is 11-13/32&#34;). Adjust the nuts to make sure this is so. Use the frame jig J1 if you have one. Once done, place a washer and nut on each of the two rods at the top of the vertex. Tighten all the outer nuts.
+								Take the third vertex (non-footed) and slide it onto the threaded rods in the final corner of the triangle.
 							</li>
 							<li>
-								The finished frame triangle
+								Move all the nuts on the end of the rods to the exact end of the rod. Tighten all the inner nuts. This way, no measurement is needed.
 							</li>
 							<li>
 								You should now have a sturdy triangle with equal-length sides, two feet on the bottom, and a bar clamp between the feet. Adjust the nuts around the bar clamp (but do not crush the bar clamp together yet) until it&#39;s approximately in the middle of the rod. Leave the nuts there loose. See the photo for what you should have at this point.
@@ -1158,10 +1257,19 @@
 							</li>
 					</ol>
 				</div>
-			</div>
+				<div class="assemblyMenu">
+			<a href="#" class="decreaseAssembly button white">&lt; Previous step</a>
+    		<span class="assemblyActual">0</span>/<span class="assemblyCount">0</span>
+    	<a href="#" class="increaseAssembly button white">Next step &gt;</a>
+			</div></div>
 		
 			<div class="subassembly">
-				<h3>Assemble Prusa Mendel iteration 2</h3>
+				<h2>Assemble Prusa Mendel iteration 2</h2>
+				<div class="assemblyMenu">
+			<a href="#" class="decreaseAssembly button white">&lt; Previous step</a>
+    		<span class="assemblyActual">0</span>/<span class="assemblyCount">0</span>
+    	<a href="#" class="increaseAssembly button white">Next step &gt;</a>
+			</div>
 				<div class="stuff">
 						<p>Things needed:</p>
 						<table id="bomtable">
@@ -1190,7 +1298,11 @@
 							</li>
 					</ol>
 				</div>
-			</div>
+				<div class="assemblyMenu">
+			<a href="#" class="decreaseAssembly button white">&lt; Previous step</a>
+    		<span class="assemblyActual">0</span>/<span class="assemblyCount">0</span>
+    	<a href="#" class="increaseAssembly button white">Next step &gt;</a>
+			</div></div>
 		
 	</div>
 
@@ -1199,4 +1311,4 @@
     </div>
   </body>
 </html>
-<!-- Generated on 2011/11/16 01:48:57 by ThingDoc -->
+<!-- Generated on 2011/12/03 00:41:02 by ThingDoc -->

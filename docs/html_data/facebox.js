@@ -91,9 +91,9 @@
       faceboxHtml  : '\
     <div id="facebox" style="display:none;"> \
       <div class="popup"> \
-        <div class="content"> \
+        <div class="content" class="close"> \
         </div> \
-        <a href="#" class="close"><img src="/facebox/closelabel.png" title="close" class="close_image" /></a> \
+        <a href="#" class="close"><img src="../html_data/facebox/closelabel.png" title="close" class="close_image" /></a> \
       </div> \
     </div>'
     },
@@ -120,7 +120,7 @@
     },
 
     reveal: function(data, klass) {
-      $(document).trigger('beforeReveal.facebox')
+      //$(document).trigger('beforeReveal.facebox')
       if (klass) $('#facebox .content').addClass(klass)
       $('#facebox .content').append(data)
       $('#facebox .loading').remove()
@@ -187,6 +187,7 @@
     })
 
     $('#facebox .close').click($.facebox.close)
+    $('#facebox .close2').click($.facebox.close)
     $('#facebox .close_image').attr('src', $.facebox.settings.closeImage)
   }
 
@@ -254,7 +255,9 @@
   function fillFaceboxFromImage(href, klass) {
     var image = new Image()
     image.onload = function() {
-      $.facebox.reveal('<div class="image"><img src="' + image.src + '" /></div>', klass)
+      $.facebox.reveal('<div class="image"><a href="#" class="close2"><img src="' + image.src + '"  /></a></div>', klass)
+      
+    $('#facebox .close2').click($.facebox.close)
     }
     image.src = href
   }
@@ -298,7 +301,7 @@
 
   $(document).bind('close.facebox', function() {
     $(document).unbind('keydown.facebox')
-    $('#facebox').fadeOut(function() {
+    $('#facebox').fadeOut(0,function() {
       $('#facebox .content').removeClass().addClass('content')
       $('#facebox .loading').remove()
       $(document).trigger('afterClose.facebox')

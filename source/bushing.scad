@@ -97,28 +97,104 @@ union(){translate([0,9.5,0])vertical_bushing(true,13);
 }
 
 //z_bushings();
-z_linear_bearings();
+//
+//linear_holder_base(60);
+//cut_corners(true, false, true, false); 
+
+module cut_corners(lf,lb,rf,rb){
+	difference(){
+	lm8uu_bearing_holder();
+	if(lf) translate(v=[(10)-3,(-28.5/2)+3,0]) rotate(a=[0,0,45]) rotate(a=[35,0,0]) translate(v=[0,-5,0]) cube(size = [20,10,20], center = true);
+	if(lb)translate(v=[(-10)+3,(-28.5/2)+3,0]) rotate(a=[0,0,-45]) rotate(a=[35,0,0]) translate(v=[0,-5,0]) cube(size = [20,10,20], center = true);
+	mirror([ 0, 1, 0 ]){
+	if(rf)translate(v=[(10)-3,(-28.5/2)+3,0]) rotate(a=[0,0,45]) rotate(a=[35,0,0]) translate(v=[0,-5,0]) cube(size = [20,10,20], center = true);
+	if(rb)translate(v=[(-10)+3,(-28.5/2)+3,0]) rotate(a=[0,0,-45]) rotate(a=[35,0,0]) translate(v=[0,-5,0]) cube(size = [20,10,20], center = true);
+	}
+}
+//lm8uu_bearing_holder();
+}
+
+module linear_holder_base(length){
+	
+difference(){
+union(){
+translate(v=[-5,0,length/2]) cube(size = [10,20,length], center = true);
+//holder for main block in x-end
+//
+translate(v=[0,0,0]) cylinder(h = length, r=10, $fn=60);
+}
+//main axis
+translate(v=[0,0,-2]) cylinder(h = length+4, r=7.7, $fn=50);
+//main cut
+translate(v=[10,0,length/2]) cube(size = [20,14,length+4], center = true);
+//smooth entry cut
+translate(v=[12,0,length/2]) rotate(a=[0,0,45]) cube(size = [20,20,length+4], center = true);
+}
+}
+
+
+module y_linear_bearings(){
+	difference(){
+		union(){
+translate(v=[0,0,1.5]) cube(size = [26,14,3], center = true);
+translate(v=[-13,0,0])rotate(a=[0,0,30])cylinder(h = 3, r=7, $fn=6);
+translate(v=[13,0,0])rotate(a=[0,0,30])cylinder(h = 3, r=7, $fn=6); 
+}
+
+
+translate(v=[-14,0,0])polyhole(m3_diameter, 10);
+translate(v=[14,0,0])polyhole(m3_diameter, 10);
+//hack
+translate(v=[0,14.25,4.5])rotate(a=[90,0,0])translate(v=[0,9.5,0]) rotate(a=[0,0,90]){translate(v=[0,0,12.5]) ziptie();}
+}
+
+cut_corners(true, true, true, true); 
+
+
+ 
+}
+
+module lm8uu_bearing_holder(){
+translate(v=[0,14.25,4.5])rotate(a=[90,0,0])translate(v=[0,9.5,0]) rotate(a=[0,0,90]){
+
+difference(){
+	union(){
+linear_holder_base(28.5);
+translate(v=[-10-2,0,28.5/2]) cube(size = [4,20,28.5], center = true);
+}
+
+translate(v=[0,0,12.5]) ziptie();
+}
+
+
+translate(v=[-(10-5.5)/2-5.5,0,0+1]) cube(size = [10-5.5,20,2], center = true);
+translate(v=[-(10-5.5)/2-5.5,0,24.5+2+1]) cube(size = [10-5.5,20,2], center = true);
+
+}
+}
+
+module lm8uu_bearing_cut()
+	{
+		translate([-lm8uu_holder_width/2,-lm8uu_holder_length/2,-5])cube([20,28.5,20]);
+	}
 
 
 module z_linear_bearings(){
 translate(v=[0,9.5,0]) rotate(a=[0,0,90]){
+
 difference(){
-union(){
-//main block
-translate(v=[-5,0,32.5]) cube(size = [10,20,65], center = true);
-//holder for main block in x-end
-translate(v=[-5,0,15.8/2]) cube(size = [12,23,15.8], center = true);
-translate(v=[0,0,0]) cylinder(h = 65, r=10, $fn=60);
-}
-//main axis
-translate(v=[0,0,-2]) cylinder(h = 70, r=7.7, $fn=50);
-//main cut
-translate(v=[10,0,32.5]) cube(size = [20,14,70], center = true);
-//smooth entry cut
-translate(v=[12,0,32.5]) rotate(a=[0,0,45]) cube(size = [20,20,70], center = true);
+linear_holder_base(65);
+
 translate(v=[0,0,14.5+2]) ziptie();
 translate(v=[0,0,65-(12+2)-5]) ziptie();
 }
+//x-end adapter
+difference(){
+translate(v=[-6,0,15.8/2]) cube(size = [10,23,15.8], center = true);
+translate(v=[0,0,-2]) cylinder(h = 20, r=7.9, $fn=50);
+}
+
+
 translate(v=[-(10-5.5)/2-5.5,0,0+1]) cube(size = [10-5.5,20,2], center = true);
 translate(v=[-(10-5.5)/2-5.5,0,24.5+2+1]) cube(size = [10-5.5,20,2], center = true);
 
@@ -129,56 +205,11 @@ translate(v=[-(10-5.5)/2-5.5,0,65-24.5-2-1]) cube(size = [10-5.5,20,2], center =
 
 module ziptie(){
 difference(){
-translate(v=[0,0,0]) cylinder(h = 3.9, r=10.3);
-translate(v=[0,0,0]) cylinder(h = 5, r=10-1, $fn=50);
-translate(v=[0,0,3]) cylinder(h = 1, r1=10-1, r2=10.2, $fn=50);
+translate(v=[0,0,0]) cylinder(h = 3.9, r=15);
+translate(v=[0,0,0]) cylinder(h = 5, r=12, $fn=50);
+translate(v=[0,0,3]) cylinder(h = 1, r1=12, r2=15, $fn=50);
 }}
 
 
-// Gregs
-clearance=0.7;
 
-lm8uu_diameter=15+clearance;
-lm8uu_length=24+clearance;
-lm8uu_support_thickness=3.2; 
-lm8uu_end_diameter=m8_diameter+1.5;
 
-lm8uu_holder_width=lm8uu_diameter+2*lm8uu_support_thickness;
-lm8uu_holder_length=lm8uu_length+2*lm8uu_support_thickness;
-lm8uu_holder_height=lm8uu_diameter*0.75+lm8uu_support_thickness;
-lm8uu_holder_gap=(lm8uu_holder_length-6*lm8uu_support_thickness)/2;
-
-module lm8uu_bearing_holder()
-{
-	translate([-lm8uu_holder_width/2,-lm8uu_holder_length/2,-5])difference()
-	{
-		cube([lm8uu_holder_width,lm8uu_holder_length,lm8uu_holder_height]);
-		translate([lm8uu_holder_width/2,0,lm8uu_holder_width/2])
-		rotate([-90,0,0])
-		translate([0,0,5])
-		cylinder(r=lm8uu_diameter/2,h=lm8uu_length,$fn=40);
-
-		translate([lm8uu_holder_width/2,0,lm8uu_holder_width/2])
-		rotate([-90,0,0])
-		translate([0,0,-1])
-		{
-			cylinder(r=lm8uu_end_diameter/2,h=lm8uu_holder_length+2,$fn=40);
-			translate([-lm8uu_end_diameter/2,-lm8uu_end_diameter,0])
-			cube([lm8uu_end_diameter,lm8uu_end_diameter,lm8uu_holder_length+2]);
-		}
-
-		translate([-1,2*lm8uu_support_thickness,lm8uu_support_thickness])
-		cube([lm8uu_holder_width+2,lm8uu_holder_gap,
-			lm8uu_holder_height-lm8uu_support_thickness+1]);
-
-		translate([-1,4*lm8uu_support_thickness+lm8uu_holder_gap,
-			lm8uu_support_thickness])
-		cube([lm8uu_holder_width+2,lm8uu_holder_gap,
-			lm8uu_holder_height-lm8uu_support_thickness+1]);
-	}
-}	
-
-module lm8uu_bearing_cut()
-	{
-		translate([-lm8uu_holder_width/2,-lm8uu_holder_length/2,-5])cube([lm8uu_holder_width,lm8uu_holder_length,lm8uu_holder_height]);
-	}
