@@ -99,6 +99,7 @@ union(){translate([0,9.5,0])vertical_bushing(true,13);
 
 // Linear bushing options
 
+
 lm8uu_diameter=(lme8uu==true) ? 16 : 15;
 lm8uu_length=(lme8uu==true) ? 25 : 24;
 lm8uu_radius = lm8uu_diameter / 2;
@@ -140,20 +141,12 @@ translate(v=[-5,0,length/2]) cube(size = [10,20,length], center = true);
 //translate(v=[0,0,0]) cylinder(h = block_height, r=lm8uu_radius+2.5, $fn=60);
 }
 //main axis
-translate(v=[0,0,-2]) cylinder(h = length+4, r=(lm8uu_diameter+1.2)/2, $fn=50);
+translate(v=[0,0,-2]) cylinder(h = length+4, r=(lm8uu_diameter+0.8)/2, $fn=50);
+// not needed for zip tie
 //main cut
-translate(v=[10,0,length/2]) cube(size = [20,14,length+4], center = true);
+//translate(v=[10,0,length/2]) cube(size = [20,14,length+4], center = true);
 //smooth entry cut
-translate(v=[12,0,length/2]) rotate(a=[0,0,45]) cube(size = [20,20,length+4], center = true);
-/*
-//main axis
-translate(v=[0,0,-2]) cylinder(h = 70, r=lm8uu_radius+0.2, $fn=50);
-//main cut
-translate(v=[10,0,32.5]) cube(size = [20,lm8uu_diameter-1,70], center = true);
-//smooth entry cut
-translate(v=[12,0,32.5]) rotate(a=[0,0,45]) cube(size = [lm8uu_radius+12.5,lm8uu_radius+12.5,70], center = true);
-
-*/
+//translate(v=[12,0,length/2]) rotate(a=[0,0,45]) cube(size = [20,20,length+4], center = true);
 }
 }
 
@@ -196,8 +189,8 @@ difference(){
 }
 
 
-translate(v=[-(10-5.5)/2-5.5,0,0+1]) cube(size = [10-5.5,20,2], center = true);
-translate(v=[-(10-5.5)/2-5.5,0,24.5+2+1]) cube(size = [10-5.5,20,2], center = true);
+translate(v=[-(10-5.5)/2-5.5,0,0.75]) cube(size = [10-5.5,20,1.5], center = true);
+#translate(v=[-(10-5.5)/2-5.5,0,lm8uu_length+3.75]) cube(size = [10-5.5,20,1.5], center = true);
 
 }
 }
