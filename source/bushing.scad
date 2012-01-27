@@ -133,7 +133,9 @@ union(){
 translate(v=[-5,0,length/2]) cube(size = [10,20,length], center = true);
 
 //holder for main block in x-end
-translate(v=[0,0,0]) cylinder(h = length, r=10, $fn=60);
+// leaving it out now
+//translate(v=[0,0,0]) cylinder(h = length, r=10, $fn=60);
+
 //translate(v=[-5,0,15.8/2]) cube(size = [12,23,15.8], center = true);
 //translate(v=[0,0,0]) cylinder(h = block_height, r=lm8uu_radius+2.5, $fn=60);
 }
