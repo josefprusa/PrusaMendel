@@ -202,26 +202,24 @@ module lm8uu_bearing_cut()
 
 
 module z_linear_bearings(){
-translate(v=[0,9.5,0]) rotate(a=[0,0,90]){
-difference(){
-linear_holder_base(65);
 
-translate(v=[0,0,14.5+2]) ziptie();
-translate(v=[0,0,block_height-(12+2)-5]) ziptie();
-}
+	translate(v=[0,9.5,0]) rotate(a=[0,0,90]){
+		difference(){
+			linear_holder_base(65);
+			translate(v=[0,0,14.5+2]) ziptie();
+			translate(v=[0,0,block_height-(12+2)-5]) ziptie();
+		}
 
-//x-end adapter
-difference(){
-translate(v=[-6,0,15.8/2]) cube(size = [10,23,15.8], center = true);
-translate(v=[0,0,-2]) cylinder(h = 20, r=7.9, $fn=50);
-}
-
-
-translate(v=[-(10-5.5)/2-lm8uu_radius+2,0,0+1]) cube(size = [10-5.5,20,2], center = true);
-translate(v=[-(10-5.5)/2-lm8uu_radius+2,0,lm8uu_length+4.0]) cube(size = [10-5.5,20,2], center = true);
-translate(v=[-(10-5.5)/2-lm8uu_radius+2,0,64-lm8uu_length-3]) cube(size = [10-5.5,20,2], center = true);
-translate(v=[-(10-5.5)/2-lm8uu_radius+2,0,64]) cube(size = [10-5.5,20,2], center = true);
-}
+		//x-end adapter
+		difference(){	
+			translate(v=[-6,0,15.8/2]) cube(size = [10,23,15.8], center = true);
+			translate(v=[0,0,-2]) cylinder(h = 20, r=7.9, $fn=50);
+		}
+		translate(v=[-(10-5.5)/2-lm8uu_radius+2,0,0+1]) cube(size = [10-5.5,20,2], center = true);
+		translate(v=[-(10-5.5)/2-lm8uu_radius+2,0,lm8uu_length+4.0]) cube(size = [10-5.5,20,2], center = true);
+		translate(v=[-(10-5.5)/2-lm8uu_radius+2,0,64-lm8uu_length-3]) cube(size = [10-5.5,20,2], center = true);
+		translate(v=[-(10-5.5)/2-lm8uu_radius+2,0,64]) cube(size = [10-5.5,20,2], center = true);
+	}
 }
 
 module ziptie(){
