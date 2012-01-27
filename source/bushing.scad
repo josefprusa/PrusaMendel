@@ -133,12 +133,12 @@ union(){
 translate(v=[-5,0,length/2]) cube(size = [10,20,length], center = true);
 
 //holder for main block in x-end
-translate(v=[0,0,0]) cylinder(h = length, r=11, $fn=60);
+translate(v=[0,0,0]) cylinder(h = length, r=10, $fn=60);
 //translate(v=[-5,0,15.8/2]) cube(size = [12,23,15.8], center = true);
 //translate(v=[0,0,0]) cylinder(h = block_height, r=lm8uu_radius+2.5, $fn=60);
 }
 //main axis
-translate(v=[0,0,-2]) cylinder(h = length+4, r=(lm8uu_diameter+0.8)/2, $fn=50);
+translate(v=[0,0,-2]) cylinder(h = length+4, r=(lm8uu_diameter+1.2)/2, $fn=50);
 //main cut
 translate(v=[10,0,length/2]) cube(size = [20,14,length+4], center = true);
 //smooth entry cut
@@ -223,8 +223,8 @@ translate(v=[0,0,-2]) cylinder(h = 20, r=7.9, $fn=50);
 
 
 translate(v=[-(10-5.5)/2-lm8uu_radius+2,0,0+1]) cube(size = [10-5.5,20,2], center = true);
-translate(v=[-(10-5.5)/2-lm8uu_radius+2,0,lm8uu_length+0.5+2+1]) cube(size = [10-5.5,20,2], center = true);
-translate(v=[-(10-5.5)/2-lm8uu_radius+2,0,64-lm8uu_length-2]) cube(size = [10-5.5,20,2], center = true);
+translate(v=[-(10-5.5)/2-lm8uu_radius+2,0,lm8uu_length+4.0]) cube(size = [10-5.5,20,2], center = true);
+translate(v=[-(10-5.5)/2-lm8uu_radius+2,0,64-lm8uu_length-2.5]) cube(size = [10-5.5,20,2], center = true);
 translate(v=[-(10-5.5)/2-lm8uu_radius+2,0,64]) cube(size = [10-5.5,20,2], center = true);
 }
 }
