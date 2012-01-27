@@ -224,7 +224,7 @@ translate(v=[0,0,-2]) cylinder(h = 20, r=7.9, $fn=50);
 
 translate(v=[-(10-5.5)/2-lm8uu_radius+2,0,0+1]) cube(size = [10-5.5,20,2], center = true);
 translate(v=[-(10-5.5)/2-lm8uu_radius+2,0,lm8uu_length+4.0]) cube(size = [10-5.5,20,2], center = true);
-translate(v=[-(10-5.5)/2-lm8uu_radius+2,0,64-lm8uu_length-2.5]) cube(size = [10-5.5,20,2], center = true);
+translate(v=[-(10-5.5)/2-lm8uu_radius+2,0,64-lm8uu_length-3]) cube(size = [10-5.5,20,2], center = true);
 translate(v=[-(10-5.5)/2-lm8uu_radius+2,0,64]) cube(size = [10-5.5,20,2], center = true);
 }
 }
