@@ -66,11 +66,18 @@ module positioned_motor_mount()
 			
 			translate(-motor_mount_translation)
 			{
-				translate(top_corner+
-				[-bridge_length,-nema17_support_d-bridge_shear*bridge_length,-2.5])
-				multmatrix([[1,0,0],[bridge_shear,1,0],[0,0,1]])
-				cube([bridge_length,nema17_support_d,6]);
-				#
+				difference(){				
+					translate(top_corner+[-bridge_length,-nema17_support_d-bridge_shear*bridge_length,-2.5])
+						multmatrix([[1,0,0],[bridge_shear,1,0],[0,0,1]])
+							cube([bridge_length,nema17_support_d,6]);
+					// quick hack
+					if(linear==true){
+						translate(top_corner+[-bridge_length,-nema17_support_d-bridge_shear*bridge_length+8.5,-2.5])
+							multmatrix([[1,0,0],[bridge_shear+0.16,1,0],[0,0,1]])
+								#cube([bridge_length,nema17_support_d,6]);
+					}
+				}
+
 				render()
 				translate(top_corner+[-thickness,-nema17_support_d,-nema17_support_d/2])
 				intersection()
