@@ -21,7 +21,7 @@ thin_wall = 3;
 
 
 // Linear bearing version
-linear = true;
+linear = false;
 // set false for LM-8UU, true for LM-E-8UU (ignore if linear is set to false)
 lme8uu = false;
 
