@@ -12,11 +12,11 @@ Belt pulley is http://www.thingiverse.com/thing:3104 by GilesBathgate
 
 Prusa Mendel part list:
 
-To print:
+To print (not including the extruder drive):
 
-6x frame-vertex-without-foot or 2x -without-foot and 4x -with-foot
+4x frame-vertex-with-foot
+2x frame-vertex-without-foot
 2x coupling
-3x endstop-holder
 1x x-carriage
 1x x-end-idler
 1x x-end-motor
@@ -25,8 +25,8 @@ To print:
 8x bar-clamp
 2x rod-clamp
 1x y-motor-bracket
-2x pulley
+3x endstop-holder
 
-12x pla-bushing 
+
 
 The Mendel build plate contains all the parts except the pla bushings
