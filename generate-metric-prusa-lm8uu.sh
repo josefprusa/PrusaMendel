@@ -17,7 +17,7 @@ cp metric-prusa/wade-small.stl metric-prusa-lm8uu/wade-small.stl
 cp metric-prusa/ybrac-t.stl metric-prusa-lm8uu/ybrac-t.stl 
 cp metric-prusa/z-motor-mount.stl metric-prusa-lm8uu/z-motor-mount.stl 
 
-openscad -s metric-prusa-lm8uu/x-end-idler.stl -D 'linear=true' source/x-end-idler.scad
-openscad -s metric-prusa-lm8uu/x-end-motor.stl -D 'linear=true' source/x-end-motor.scad
-openscad -s metric-prusa-lm8uu/x-carriage.stl -D 'linear=true' source/x-carriage.scad
-openscad -s metric-prusa-lm8uu/y-bushing.stl -D 'linear=true' source/y-bushing.scad
+openscad -s metric-prusa-lm8uu/x-end-idler.stl -D 'linear=true;lme8uu=false' source/x-end-idler.scad
+openscad -s metric-prusa-lm8uu/x-end-motor.stl -D 'linear=true;lme8uu=false' source/x-end-motor.scad
+openscad -s metric-prusa-lm8uu/x-carriage.stl -D 'linear=true;lme8uu=false' source/x-carriage.scad
+openscad -s metric-prusa-lm8uu/y-bushing.stl -D 'linear=true;lme8uu=false' source/y-bushing.scad
