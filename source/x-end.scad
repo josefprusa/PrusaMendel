@@ -14,7 +14,7 @@ use <bushing.scad>
 use <teardrop.scad>
 
 axis_diameter_real=4;
-axis_diameter_larger=4.25;
+axis_diameter_larger=4.35;
 pressure_pad_height=2.5;
 add_strenght=1;
 xend_height=15.8;
@@ -58,7 +58,7 @@ module xend_side(closed_end=true)
 			// Base of the stuff to cut pres fit mechanism (need some cutouts)
 			union (){
 				// Basic teardrop cutout
-				translate([0,-1,0]) rotate(90) teardropcentering(axis_diameter_larger,closed_end?xend_length-1:xend_length+2);
+				#translate([0,-1,0]) rotate(90) teardropcentering(axis_diameter_larger,closed_end?xend_length-1:xend_length+2);
 			
 				// Main holes thru the bottom
 				translate([axis_diameter_larger,0,0]) rotate([0,8,0]) translate([-axis_diameter_larger,solid_end_width,-xend_height/2-1]) cube([axis_diameter_larger,xend_length-2*solid_end_width,xend_height/2+1]);
@@ -75,12 +75,14 @@ module xend_side(closed_end=true)
 				cube([pad_width,xend_length-2*solid_end_width-2*slot_width,pad_height]);
 			
 				//cutout groove in pressure pad	
-				translate([0,0,1.3]) rotate([-90,0,0])cylinder(r=4,h=closed_end?xend_length-1:xend_length+2, $fn=30);
+				translate([0,0,1.1]) rotate([-90,0,0])cylinder(r=axis_diameter_larger,h=closed_end?xend_length-1:xend_length+2, $fn=30);
 			
 				translate([axis_diameter_larger,0,0])
 				rotate([0,8,0])
 				translate([-slot_width,solid_end_width,-xend_height/2-1])
 				cube([slot_width,xend_length-2*solid_end_width,xend_height/2+1]);
+				// hack for a taper opening
+				#translate(v=[0,15,1.1]) rotate(a=90,v=[1,0,0]) cylinder(r1=axis_diameter_larger, r2=axis_diameter_larger+1.5,h=15, $fn=30);
 			}
 		}
 		
