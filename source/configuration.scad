@@ -34,8 +34,8 @@ lme8uu = false;
 
 // threaded_rod_diameter = 0;
 // threaded_rod_diameter_horizontal = 0;
-// smooth_bar_díameter = 0;
-// smooth_bar_díameter_horizontal = 0;
+// smooth_bar_diameter = 0;
+// smooth_bar_diameter_horizontal = 0;
 
 // Nuts and bolts
 
@@ -50,7 +50,7 @@ lme8uu = false;
 
 // Bushing holder
 
-// bushing_core_diameter = smooth_bar_díameter;
+// bushing_core_diameter = smooth_bar_diameter;
 // bushing_material_thickness = 0;
 
 
