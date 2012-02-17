@@ -1,6 +1,0 @@
-M8 nut trap on the wade big gear is toooooo big
--> caused by the M8 nut set toooo big because of the compatibility with 5/16
---> but the wade bolts are all M8 so I need to introduce new variable in the settings
-
-M3 nut traps in gregstruder are tooo small
--> introduce the M3 nut size for not melting in
