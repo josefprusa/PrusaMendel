@@ -1,8 +1,8 @@
 Why this proposal:
 - clean up the repository, remove duplicate STL files
 - make it easier to adapt changes to parts like bearings, electronics, endstops, ... and encourage people to release their changes or addons to prusamendel under the same license.
+- let people make their own "distribution" with parts on github while remaining to have a standard distribution.
 
-While doing it, the documentation HOW to print a prusa mendel and it's variations need to be updated.
 
 
 Distribution includes
