@@ -15,6 +15,6 @@ cp COPYING build/
 
 for part in ${parts[@]}
 do
-	openscad -s build/stl/$part.stl parts/$part.stl
+	openscad -s build/stl/$part.stl parts/$part.scad
 done
 
