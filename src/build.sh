@@ -42,8 +42,21 @@ cp COPYING build/
 # copy confiuration to build
 cp $config_file build/
 
+declare thingdoc_parts 
 for part in ${parts[@]}
 do
 	openscad -s build/stl/$part.stl parts/$part.scad
+	thingdoc_parts="$thingdoc_parts $part"
 done
-	
+#echo $thingdoc_parts	
+thingdoc/thingdoc -o build/ -i parts/ --parse-only common.tdoc reprap.tdoc $thingdoc_parts
+
+
+
+
+
+
+
+
+
+
