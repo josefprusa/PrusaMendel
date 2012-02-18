@@ -14,15 +14,22 @@ if [ ! -e "thingdoc" ] ; then
 	fi
 fi
 
+# If the first argument is supplied, it will use this file as config file
+# otherwise, it will load config.cfg by default
 
+if [ -n "$1" ]; then
+	config_file="$1"
+else
+	config_file="config.cfg"
+fi
 
-# load config.cfg by default
-# TODO make it possible to load from command line arguments
-config_file="config.cfg"
-
+# now we know what config file we should load, so we check if it exists.
+if [ ! -e $config_file ]; then
+	echo "FATAL: Config file $1 does not exist."	
+	exit
+fi
 
 echo "Using config file $config_file"
-	
 source $config_file
 
 # make base directory structure
