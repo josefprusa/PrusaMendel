@@ -4,7 +4,6 @@ Why this proposal:
 - let people make their own "distribution" with parts on github while remaining to have a standard distribution.
 
 
-
 Distribution includes
 - configuration manifest
 - BOM
