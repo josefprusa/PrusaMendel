@@ -10,7 +10,7 @@
 // http://github.com/prusajr/PrusaMendel
 
 
-include <configuration.scad>
+include <../configuration.scad>
 
 
 /**

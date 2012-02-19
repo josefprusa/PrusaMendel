@@ -48,7 +48,9 @@ do
 	# check if we have a scad file to be compiled to STL 	
 	if [ -e parts/$part.scad ]; then	
 		echo "Processing $part.scad"
-		openscad -s build/stl/$part.stl parts/$part.scad
+		# find subdir'd stuff to put it into the stl folder, not a subfolder below that.		
+		b=`expr index $part /`
+		openscad -s build/stl/${part:$b}.stl parts/$part.scad
 		thingdoc_parts="$thingdoc_parts $part.scad"
 	else
 		if [ -e parts/$part.tdoc ]; then

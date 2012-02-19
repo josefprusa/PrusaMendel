@@ -19,7 +19,6 @@ include <metric.scad>;
 
 thin_wall = 3;
 
-fanrot=0;
 
 // Linear bearing version
 //linear = false;

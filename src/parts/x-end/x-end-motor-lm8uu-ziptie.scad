@@ -7,9 +7,10 @@
 // http://www.reprap.org/wiki/Prusa_Mendel
 // http://github.com/prusajr/PrusaMendel
 
-include <configuration.scad>
+include <../configuration.scad>
 corection = 1.17; 
 linear=true;
+lme8uu=false;
 
 /**
  * @id x-end-motor
@@ -39,7 +40,7 @@ difference (){
 		}
 		positioned_motor_mount_holes();
 }
-translate([-5,-30,2])scale([2,1,2]) rotate(a=[90,0,0]) linear_extrude(file = "this-way-up.dxf", layer = "l",
+translate([-5,-30,2])scale([2,1,2]) rotate(a=[90,0,0]) linear_extrude(file = "../this-way-up.dxf", layer = "l",
   height = 2, center = true, convexity = 10, twist = -fanrot);
 
 

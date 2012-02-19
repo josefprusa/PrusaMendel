@@ -8,7 +8,9 @@
 // http://www.reprap.org/wiki/Prusa_Mendel
 // http://github.com/prusajr/PrusaMendel
 
-include <configuration.scad>
+include <../configuration.scad>
+linear=true;
+lme8uu=false;
 
 /**
  * @id x-carriage
@@ -19,7 +21,7 @@ include <configuration.scad>
  */
 
 snap_in_mount = false;
-use <bushing.scad>
+use <../lib-bushing.scad>
 
 module mountingholes(){
 					translate(v = [0, -25, -5]) polyhole(m3_diameter,10);

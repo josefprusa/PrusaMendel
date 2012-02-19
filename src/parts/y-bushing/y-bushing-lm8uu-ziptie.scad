@@ -8,7 +8,7 @@
 // http://www.reprap.org/wiki/Prusa_Mendel
 // http://github.com/prusajr/PrusaMendel
 
-include <configuration.scad>
+include <../configuration.scad>
 
 /**
  * @id y-bushing
@@ -20,7 +20,7 @@ include <configuration.scad>
  */
 
 snap_in_mount = false;
-use <bushing.scad>
+use <../lib-bushing.scad>
 
 module ybushing(linear_bearing=true){
 if(linear_bearing==false){
