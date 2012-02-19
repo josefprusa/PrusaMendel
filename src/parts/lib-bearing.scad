@@ -12,10 +12,10 @@ include <configuration.scad>
 // Linear bushing options
 
 
-lm8uu_diameter=(lme8uu==true) ? 16 : 15;
-lm8uu_length=(lme8uu==true) ? 25 : 24;
-lm8uu_radius = lm8uu_diameter / 2;
-block_height = 2*lm8uu_length+17;
+//lm8uu_diameter=(lme8uu==true) ? 16 : 15;
+//lm8uu_length=(lme8uu==true) ? 25 : 24;
+//lm8uu_radius = lm8uu_diameter / 2;
+//block_height = 2*lm8uu_length+17;
 
 //linear_holder_base(20);
 // Generates base profile for other holders and stuff
@@ -99,7 +99,7 @@ module vertical_bearing(bearing_length, bearing_diameter, bearing_count){
 		}
 		// Slide preventing block
 		for ( i = [0:bearing_count] ) {
-			translate(v=[0,0,(2+bearing_length)*i]) translate(v=[-(10-5.5)/2-lm8uu_radius+2,0,1]) cube(size = [10-5.5,20,2], center = true);
+			translate(v=[0,0,(2+bearing_length)*i]) translate(v=[-(10-5.5)/2-bearing_diameter/2+2,0,1]) cube(size = [10-5.5,20,2], center = true);
 		 }
 	}
 }

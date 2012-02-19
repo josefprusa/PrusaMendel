@@ -47,12 +47,12 @@ module x_carriage(){
 						translate(v = [23-(7.5/2)+5, 11, 0]) cube(size = [45-7.5+10,15,5], center = true);
 						translate(v = [(33+45/2-7.5), 11, 0]) cylinder(h = 5, r=7.5, $fn=18, center=true);
 					// Bearing holders
-						translate(v = [25,-30,-2.5]) rotate(a=[0,0,90]) horizontal_bearing(26, 15, true, tru,false,false);
+						translate(v = [25,-30,-2.5]) rotate(a=[0,0,90]) horizontal_bearing(26, 15, true, true,false,false);
 						translate(v = [25,30,-2.5]) rotate(a=[0,0,90]) horizontal_bearing(26, 15, false,false,true, true);
 						translate(v = [-25,21.7,-2.5]) rotate(a=[0,0,90]) horizontal_bearing(26, 15, false,false,true, true);
 				}
 					// Bearing zipties
-						translate(v = [25,-30,-2.5]) rotate(a=[0,0,90]) horizontal_bearing_ziptie_cutter(26, 15, true, tru,false,false);
+						translate(v = [25,-30,-2.5]) rotate(a=[0,0,90]) horizontal_bearing_ziptie_cutter(26, 15, true, true,false,false);
 						translate(v = [25,30,-2.5]) rotate(a=[0,0,90]) horizontal_bearing_ziptie_cutter(26, 15, false,false,true, true);
 						translate(v = [-25,21.7,-2.5]) rotate(a=[0,0,90]) horizontal_bearing_ziptie_cutter(26, 15, false,false,true, true);
 					// holes for connecting extruder
