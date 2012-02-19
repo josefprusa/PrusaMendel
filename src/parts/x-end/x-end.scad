@@ -10,7 +10,7 @@
 
 include <../configuration.scad>
 corection = 1.17; 
-use <../lib-bushing.scad>
+use <../lib-bearing.scad>
 use <../lib-teardrop.scad>
 
 axis_diameter_real=4;
@@ -99,11 +99,8 @@ module xend_side(closed_end=true)
 	}
 }
 //xend_side();
-module xend(closed_end=true, linear_bearing=false)
-{
-	
-	if(linear_bearing==true) z_linear_bearings();
-	if(linear_bearing==false) z_bushings();	
+module xend(closed_end=true, lme8uu=false){
+translate([0,10,0]) vertical_bearing(25,15,2);
 difference()
 	{
 		union ()
@@ -119,11 +116,16 @@ difference()
 			
 			translate([0,-20,0])
 			cylinder(h=40,r=m8cornerdiameter+thin_wall,$fn=6);
+			
 		}
 
 		// Slider cutout.
-		translate([0,10,32.5]) 
+		translate([0,16,32.5]) 
 		cube([22.5,22.5,70],center=true);
+		
+		
+		translate([0,12,32.5]) 
+		cube([15,22.5,70],center=true);
 
 		translate([0,-10,5+29]) #cube([2,8,10],center=true);
 			translate([0,-10,5+29-11]) #cube([2,8,10],center=true);

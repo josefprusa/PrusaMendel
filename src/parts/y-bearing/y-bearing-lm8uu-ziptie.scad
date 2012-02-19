@@ -1,5 +1,5 @@
 // PRUSA Mendel  
-// Y bushing holder
+// Y bearing holder
 // Used for sliding on X axis
 // GNU GPL v3
 // Josef Průša
@@ -11,35 +11,29 @@
 include <../configuration.scad>
 
 /**
- * @id y-bushing
- * @name Y bushing
+ * @id y-bearing
+ * @name Y bearing
  * @category Printed
  * @using 4 m3washer
  * @using 2 m3x15xhex
  * @using 2 m3nut
  */
 
-snap_in_mount = false;
-use <../lib-bushing.scad>
+use <../lib-bearing.scad>
 
-module ybushing(linear_bearing=true){
-if(linear_bearing==false){
-	translate(v = [0,0,-2.05]) difference(){
+module y_bearing(){
+	difference(){
 		union(){
-			translate(v = [0,0,5.05/2]) cube(size = [33,10,5.05], center = true);
-			//translate(v = [0,0,1.5]) cube(size = [16,20,3], center = true);
-			translate(v = [0,0,5]) rotate(a=[0,0,0]) standart_bushing();
-			}
-		translate(v = [12, 0, -2]) polyhole(m3_diameter, 12);
-		translate(v = [-12, 0, -2]) polyhole(m3_diameter, 12);
-
-	translate(v = [0,0,2.0/2]) cube(size = [34,120,2.05], center = true);
+			horizontal_bearing(26, 15, true, true, true, true);
+			// Nut holders
+			translate(v=[0,0,1.5]) cube(size = [14,26,3], center = true);
+			translate(v=[0,-13,0]) cylinder(h = 3, r=7, $fn=6);
+			translate(v=[0,13,0]) cylinder(h = 3, r=7, $fn=6); 
+		}
+		translate(v=[0,-14,0]) polyhole(m3_diameter, 10);
+		translate(v=[0,14,0]) polyhole(m3_diameter, 10);
+		horizontal_bearing_ziptie_cutter();
+	}
 }
-}else{
-// Greg Frosts
 
-y_linear_bearings();
-}
-	}	
-
-ybushing(linear);
+y_bearing();

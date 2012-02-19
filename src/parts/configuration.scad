@@ -17,6 +17,8 @@ include <metric.scad>;
 
 // CUSTOM CUSTOM CUSTOM CUSTOM CUSTOM CUSTOM CUSTOM CUSTOM CUSTOM
 
+snap_in_bearings = false;
+
 thin_wall = 3;
 
 fanrot=0;

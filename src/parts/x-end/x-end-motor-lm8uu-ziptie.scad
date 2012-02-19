@@ -9,7 +9,6 @@
 
 include <../configuration.scad>
 corection = 1.17; 
-linear=true;
 lme8uu=false;
 
 /**
