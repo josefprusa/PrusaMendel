@@ -9,7 +9,7 @@
 
 
 include <configuration.scad>
-basefoot=true;
+basefoot=false;
 
 vertex(with_foot=basefoot);
 
