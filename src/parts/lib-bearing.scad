@@ -40,7 +40,7 @@ module linear_holder_base(length, bearing_diameter){
 	}
 }
 
-//horizontal_bearing(26, 15, true, true, true, true);
+horizontal_bearing(26, 15, true, true, true, true);
 
 module horizontal_bearing(bearing_length, bearing_diameter, lf, lb, rf, rb){
 	// Lenght with added sliding preventing boxes
@@ -53,7 +53,7 @@ module horizontal_bearing(bearing_length, bearing_diameter, lf, lb, rf, rb){
 			// Bearing holder base positioned 3 mm in the Z
 			translate(v=[actual_length/2,0,10+3]) rotate(a=[0,-90,0]) linear_holder_base(actual_length, bearing_diameter);
 			// Same base below 
-			translate(v=[0,0,3/2]) cube(size = [actual_length,20,3], center = true);
+			translate(v=[0,0,3/2]) cube(size = [actual_length,20,3.01], center = true);
 		}
 		// Cutted corners
 		if(lf) translate(v=[(-actual_length/2)+cutting_offset,(10)-cutting_offset,0]) rotate(a=[0,0,-135]) rotate(a=[35,0,0]) translate(v=[0,-5,0]) cube(size = [20,10,20], center = true);
@@ -85,7 +85,7 @@ module horizontal_bearing_ziptie_cutter(){
 }
 
 // Generates vertical bearing holders
-// vertical_bearing(25,15,3);
+ //vertical_bearing(25,15,3);
 module vertical_bearing(bearing_length, bearing_diameter, bearing_count){
 	
 	// Actual length of the holder including sliding preventing blockg
@@ -105,10 +105,10 @@ module vertical_bearing(bearing_length, bearing_diameter, bearing_count){
 }
 
 // Used for cutting ziptie grooves on vertical bearing holder.
-difference(){
-	vertical_bearing(25,15,3);
-	vertical_bearing_ziptie_cutter(25,15,3);
-}
+//difference(){
+//	vertical_bearing(25,15,3);
+//	vertical_bearing_ziptie_cutter(25,15,3);
+//}
 module vertical_bearing_ziptie_cutter(bearing_length, bearing_diameter, bearing_count){
 	// Slide preventing block
 	for ( i = [0:bearing_count] ) {
