@@ -45,8 +45,19 @@ cp $config_file build/
 declare thingdoc_parts 
 for part in ${parts[@]}
 do
-	openscad -s build/stl/$part.stl parts/$part.scad
-	thingdoc_parts="$thingdoc_parts $part"
+	# check if we have a scad file to be compiled to STL 	
+	if [ -e parts/$part.scad ]; then	
+		openscad -s build/stl/$part.stl parts/$part.scad
+		thingdoc_parts="$thingdoc_parts $part.scad"
+	else
+		if [ -e parts/$part.tdoc ]; then
+			# if we just got an tdoc file, add it to the thingdoc_parts
+			thingdoc_parts="$thingdoc_parts $part.tdoc"	
+		else
+			echo "Warning: Neither $part.scad or $part.tdoc was found"		
+		fi	
+	fi	
+	
 done
 #echo $thingdoc_parts	
 thingdoc/thingdoc -o build/ -i parts/ --parse-only common.tdoc reprap.tdoc $thingdoc_parts
