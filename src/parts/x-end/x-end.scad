@@ -10,8 +10,8 @@
 
 include <configuration.scad>
 corection = 1.17; 
-use <bushing.scad>
-use <teardrop.scad>
+use <lib-bushing.scad>
+use <lib-teardrop.scad>
 
 axis_diameter_real=4;
 axis_diameter_larger=4.35;

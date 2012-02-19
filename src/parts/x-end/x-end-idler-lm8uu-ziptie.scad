@@ -9,6 +9,7 @@
 
 include <configuration.scad>
 corection = 1.17; 
+linear=true;
 
 /**
  * @id x-end-idler

@@ -47,6 +47,7 @@ for part in ${parts[@]}
 do
 	# check if we have a scad file to be compiled to STL 	
 	if [ -e parts/$part.scad ]; then	
+		echo "Processing $part.scad"
 		openscad -s build/stl/$part.stl parts/$part.scad
 		thingdoc_parts="$thingdoc_parts $part.scad"
 	else
@@ -59,10 +60,11 @@ do
 	fi	
 	
 done
+echo "Generating Documentation..."
 #echo $thingdoc_parts	
 thingdoc/thingdoc -o build/ -i parts/ --parse-only common.tdoc reprap.tdoc $thingdoc_parts
 
-
+echo "Your build is complete."
 
 
 
