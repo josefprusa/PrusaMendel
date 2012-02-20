@@ -50,12 +50,12 @@ do
 		echo "Processing $part.scad"
 		# find subdir'd stuff to put it into the stl folder, not a subfolder below that.		
 		b=`expr index $part /`
-		openscad -s build/stl/${part:$b}.stl parts/$part.scad
-		thingdoc_parts="$thingdoc_parts $part.scad"
+		#openscad -s build/stl/${part:$b}.stl parts/$part.scad
+		thingdoc_parts="$thingdoc_parts,$part.scad"
 	else
 		if [ -e parts/$part.tdoc ]; then
 			# if we just got an tdoc file, add it to the thingdoc_parts
-			thingdoc_parts="$thingdoc_parts $part.tdoc"	
+			thingdoc_parts="$thingdoc_parts,$part.tdoc"	
 		else
 			echo "Warning: Neither $part.scad or $part.tdoc was found"		
 		fi	
@@ -63,8 +63,8 @@ do
 	
 done
 echo "Generating Documentation..."
-#echo $thingdoc_parts	
-thingdoc/thingdoc -o build/ -i parts/ --parse-only common.tdoc reprap.tdoc $thingdoc_parts
+echo $thingdoc_parts	
+thingdoc/thingdoc -o build/ -i parts/ --parse-only common.tdoc,reprap.tdoc,$thingdoc_parts
 
 echo "Your build is complete."
 
