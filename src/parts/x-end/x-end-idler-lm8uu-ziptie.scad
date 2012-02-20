@@ -27,7 +27,7 @@ support_beam_offset=(linear==true) ? 6:0;
 
 module xendidler(linear){
 
-	xend(true,linear);
+	xend(true,true);
 	translate(v = [0, 0, 12.5]){
 		mirror(){
 			difference(){
