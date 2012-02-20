@@ -16,6 +16,7 @@ lme8uu=false;
  * @id x-end-idler
  * @name X end idler
  * @category Printed
+ * @using 2 lm8uu
  * @using 1 m8spring
  * @using 3 m8nut
  * @using 3 m8washer

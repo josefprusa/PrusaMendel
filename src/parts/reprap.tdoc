@@ -6,6 +6,7 @@
  * @step Assembly info
  * @using 1 frame-with-axes
  * @using 1 carriage
+ * @using 1 x-stage
  */
  
 /**
@@ -88,10 +89,17 @@
  * @assembled
  * @using 2 belt-clamp
  * @using 1 x-carriage
- * @using 1 extruder
  * @id carriage
  */
- 
-
-
   
+
+/**
+ * X-stage
+ * @name X-Stage
+ * @id x-stage
+ * @assembled
+ * @using 1 x-end-idler
+ * @using 1 x-end-motor
+ * @using 1 carriage
+ */
+

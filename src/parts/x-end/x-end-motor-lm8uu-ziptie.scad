@@ -15,7 +15,7 @@ lme8uu=false;
  * @id x-end-motor
  * @name X end motor
  * @category Printed
- * @using 2 bushing
+ * @using 2 lm8uu
  * @using 4 m3x10xhex
  * @using 4 m3washer
  * @using 1 m8spring

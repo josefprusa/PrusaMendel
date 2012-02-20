@@ -36,6 +36,7 @@ source $config_file
 mkdir build
 cd build
 mkdir stl
+mkdir documentation
 cd ..
 # copy GPL license to build
 cp COPYING build/
@@ -64,7 +65,9 @@ do
 done
 echo "Generating Documentation..."
 echo $thingdoc_parts	
-thingdoc/thingdoc -o build/ -i parts/ --parse-only common.tdoc,reprap.tdoc,$thingdoc_parts
+
+thingdoc/thingdoc -o build/documentation -i parts/ --parse-only common.tdoc,reprap.tdoc,$thingdoc_parts
+#thingdoc/thingdoc --graph -o build/documentation -i parts/ --parse-only common.tdoc,reprap.tdoc,$thingdoc_parts > graph.dot
 
 echo "Your build is complete."
 
