@@ -10,8 +10,8 @@
 include <configuration.scad>
 
 /**
- * @id belt-clamp
- * @name Belt clamp
+ * @id belt-clamp-nut-holder
+ * @name Belt clamp nut Holder
  * @category Printed
  */ 
 

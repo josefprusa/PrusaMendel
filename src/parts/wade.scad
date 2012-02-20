@@ -21,11 +21,6 @@ grrf_peek_mount_holes=32;
 //Set the hotend_mount to the sum of the hotends that you want the extruder to support:
 //e.g. wade(hotend_mount=groovemount+peek_reprapsource_mount);
 
-/**
- * Assembled groove mount hotend
- * @name Groove mount hot-end
- * @id groove-mount-hotend
- */
 
 /**
  * Parts which prevents the 
