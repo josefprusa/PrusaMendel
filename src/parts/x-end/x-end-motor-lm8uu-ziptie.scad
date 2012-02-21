@@ -16,8 +16,7 @@ lme8uu=false;
  * @name X end motor
  * @category Printed
  * @using 2 lm8uu
- * @using 4 m3x10xhex
- * @using 4 m3washer
+ * @using 3 m3x10
  * @using 1 m8spring
  * @using 2 m8nut
  */

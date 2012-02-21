@@ -19,11 +19,14 @@ include <configuration.scad>
  * @using 4 m3washer
  * @using 4 m3nut
  * @step Place M3 nuts in all nut traps.
- * @step Insert screws with washers on them and tighet it just a bit.
+ * @step Insert screws with washers on them and tighten them just a bit prior to installation.
  */
 
 /**
- * 20mm long piece of PVC tube. 5mm inside diameter, 8mm outside diameter.
+ * 20mm long piece of PVC tube. 
+ * 5mm inside diameter, 8mm outside diameter
+ * or from more flexible material 4mm inside diameter, 7mm outer diameter
+ * This can be usually found in aquarium shops.
  * @id coupling-tube
  * @name Coupling tube
  * @category Nuts&bolts

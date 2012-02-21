@@ -42,6 +42,8 @@ cd ..
 cp COPYING build/
 # copy confiuration to build
 cp $config_file build/
+# README.dist file
+cp README.dist build/
 
 declare thingdoc_parts 
 for part in ${parts[@]}
@@ -51,7 +53,7 @@ do
 		echo "Processing $part.scad"
 		# find subdir'd stuff to put it into the stl folder, not a subfolder below that.		
 		b=`expr index $part /`
-		#openscad -s build/stl/${part:$b}.stl parts/$part.scad
+		openscad -s build/stl/${part:$b}.stl parts/$part.scad
 		thingdoc_parts="$thingdoc_parts,$part.scad"
 	else
 		if [ -e parts/$part.tdoc ]; then

@@ -1,0 +1,20 @@
+Prusa Mendel
+================================
+
+This is a Prusa Mendel distribution.
+
+If you want to grab the newest official sources go to:
+https://github.com/prusajr/PrusaMendel/
+
+For Users:
+--------------------------------
+
+
+For Kit sellers:
+--------------------------------
+Please follow these steps:
+- If you compile your own STLs and sell these, please pack the complete build directory and make it accessable to your customer
+- If you add a variation of a part (i.e. bushing size), please fork the prusa mendel repository on Github. Copy the file with your modification, document it and push it to Github and issue a pull request. 
+- Please do not replace any STL file directly into the build/stl directory. If there is no source file, make a vendor/ directory and place the STL ther.e 
+- Please check that all the parts that you add to your build are GPLv3 or compatible!
+

@@ -19,9 +19,10 @@ lme8uu=false;
  * @using 2 lm8uu
  * @using 1 m8spring
  * @using 3 m8nut
- * @using 3 m8washer
- * @using 3 m8washer-big
- * @using 2 m8x30
+ * @using 1 m8washer
+ * @using 2 m8x25xhex
+ * @using 1 bearing-guide
+ * @using 1 bearing-608
  */ 
 use <x-end.scad>
 support_beam_offset=(linear==true) ? 6:0;

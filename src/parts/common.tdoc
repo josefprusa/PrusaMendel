@@ -1,6 +1,5 @@
 /**
  * Simple M8 nut or 5/16 in imperial variant.
- * also can be used for other screwing things :-D
  * @common
  * @name M8 nut
  * @category Nuts&bolts
@@ -34,7 +33,13 @@
  * @category Nuts&bolts
  * @id m8x30
  */
- 
+
+/**
+ * @name M8 25mm hex head screw
+ * @common
+ * @category Nuts&bolts
+ * @id m8x25xhex
+ */
  
 /**
  * @name M3 nut
