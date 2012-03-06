@@ -37,16 +37,16 @@ translate([4.5,-10,12])cylinder(h=10,r=7.5/2, center=true);
 translate([15,19.2,12])cylinder(h=10,r=7.5/2, center=true);
 }
 translate([-13,-27,10])scale([0.7,0.7,1]) linear_extrude(file = "this-way-up.dxf", layer = "0",
-  height = 2, center = true, convexity = 10, twist = -fanrot);
+  height = 2, center = true, convexity = 10);
 
 translate([15,-26,10])scale([2,2,1]) mirror() linear_extrude(file = "this-way-up.dxf", layer = "f",
-  height = 2, center = true, convexity = 10, twist = -fanrot);
+  height = 2, center = true, convexity = 10);
 
 translate([10,-26,0])scale([2,2,1]) linear_extrude(file = "this-way-up.dxf", layer = "f",
-  height = 2, center = true, convexity = 10, twist = -fanrot);
+  height = 2, center = true, convexity = 10);
 
 translate([-13,-27,0])scale([0.7,0.7,1]) linear_extrude(file = "this-way-up.dxf", layer = "0",
-  height = 2, center = true, convexity = 10, twist = -fanrot);
+  height = 2, center = true, convexity = 10);
 }
 }
 mirror()ybract();

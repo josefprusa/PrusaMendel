@@ -40,7 +40,7 @@ module xendidler(linear){
 		}
 	}
 	translate([-5,-30,0])scale([2,1,2]) rotate(a=[90,0,0]) linear_extrude(file = "this-way-up.dxf", layer = "r",
-  height = 2, center = true, convexity = 10, twist = -fanrot);
+  height = 2, center = true, convexity = 10);
 }
 xendidler(linear);
 
