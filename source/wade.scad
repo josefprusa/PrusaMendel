@@ -117,7 +117,7 @@ grrf_peek_mount_holes=32;
  */
 
 wade(hotend_mount=groovemount);
-//%import_stl("extruder-body.stl");
+//%import("extruder-body.stl");
 
 //Place for printing
 translate([78,-10,15.25])
@@ -126,7 +126,7 @@ rotate([0,-90,0])
 //Place for assembly.
 wadeidler(); 
 
-//import_stl("idler.stl");
+//import("idler.stl");
 
 //===================================================
 // Parameters defining the wade body:
@@ -382,7 +382,7 @@ module block_holes()
 		{
 %			rotate([0,180,0])
 			translate([0,0,1])
-			import_stl("wade-large.stl");
+			import("wade-large.stl");
 
 			// Open the top to remove overhangs and to provide access to the hobbing.
 			translate([-wade_block_width+2,0,9.5])
@@ -427,7 +427,7 @@ module block_holes()
 
 		}
 %		translate([0,0,-8])
-		import_stl("wade-small.stl");
+		import("wade-small.stl");
 	}
 
 	// Idler mounting holes and nut traps.

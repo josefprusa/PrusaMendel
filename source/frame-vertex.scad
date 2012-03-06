@@ -13,7 +13,7 @@ basefoot=true;
 
 vertex(with_foot=basefoot);
 
-%import_stl("frame-vertex.stl");
+%import("frame-vertex.stl");
 
 //teardrop();
 
