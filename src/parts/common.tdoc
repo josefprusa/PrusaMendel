@@ -89,6 +89,15 @@
  * @category Nuts&bolts
  * @id m3x10xflat
  */
+
+/**
+ * @name M3 16mm screw
+ * @common
+ * @category Nuts&bolts
+ * @id m3x16
+ */
+ 
+
  
 /**
  * @name M3 20mm screw
