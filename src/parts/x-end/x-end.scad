@@ -99,8 +99,8 @@ module xend_side(closed_end=true)
 	}
 }
 //xend_side();
-module xend(closed_end=true, lme8uu=false){
-translate([0,10,0]) vertical_bearing(25,15,2);
+module xend(closed_end=true, bearing_length, bearing_dia){
+translate([0,10,0]) vertical_bearing(bearing_length,bearing_dia,2);
 difference()
 	{
 		union ()

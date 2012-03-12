@@ -29,7 +29,7 @@ use <x-end.scad>
 difference (){
 		union ()
 		{
-			mirror() xend(true,linear);
+			mirror() xend(true,25,15);
 		
 			//translate(v = [0, 35, 12.5]) 
 			//xend_nema17();
