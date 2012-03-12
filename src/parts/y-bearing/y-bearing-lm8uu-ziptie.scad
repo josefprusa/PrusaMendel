@@ -15,7 +15,7 @@ include <../configuration.scad>
  * @name Y bearing
  * @category Printed
  * @using 4 m3washer
- * @using 2 m3x15xhex
+ * @using 2 m3x16
  * @using 2 m3nut
  */
 
