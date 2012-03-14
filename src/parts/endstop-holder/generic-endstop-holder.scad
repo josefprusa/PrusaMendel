@@ -8,7 +8,7 @@
 // http://www.reprap.org/wiki/Prusa_Mendel
 // http://github.com/prusajr/PrusaMendel
 
-include <configuration.scad>
+include <../configuration.scad>
 
 /**
  * @id endstop-holder
@@ -21,6 +21,7 @@ include <configuration.scad>
 module endstop(){
 outer_diameter = m8_diameter/2+3.3;
 screw_hole_spacing = 20;
+screw_hole_spacing2 = 10;
 opening_size = m8_diameter-1.5; //openingsize
 
 difference(){
@@ -29,7 +30,7 @@ difference(){
 
 		translate([outer_diameter, outer_diameter, 0]) cylinder(h =10, r = outer_diameter, $fn = 20);
 		translate([outer_diameter, 0, 0]) cube([15.5,outer_diameter*2,10]);
-		translate([-27, 0, 0]) cube([35, 4, 10]);
+		translate([-30, 0, 0]) cube([40, 4, 10]);
 		translate([17, 17.5, 5]) rotate([90, 0, 0]) #cylinder(h =5, r = 5.77, $fn = 6);
 	}
 
@@ -44,8 +45,11 @@ difference(){
 	translate([17, 19.5, 5]) rotate([90, 0, 0]) #cylinder(h =5, r = m3_nut_diameter_horizontal/2, $fn = 6);
 
 	translate([17, 17, 5]) rotate([90, 0, 0]) #cylinder(h =20, r = m3_diameter/2, $fn = 10);
-	translate([-4, 17, 5]) rotate([90, 0, 0]) cylinder(h =20, r = m3_diameter/2, $fn = 10);
-	translate([-(4+screw_hole_spacing), 17, 5]) rotate([90, 0, 0]) cylinder(h =20, r = m3_diameter/2, $fn = 10);
+	// Endstop holders
+	translate([-5, 17, 5]) rotate([90, 0, 0]) cylinder(h =20, r = m3_diameter/2, $fn = 10);
+	translate([-(5+screw_hole_spacing), 17, 5]) rotate([90, 0, 0]) cylinder(h =20, r = m3_diameter/2, $fn = 10);
+	translate([-(5+screw_hole_spacing2), 17, 5]) rotate([90, 0, 0]) cylinder(h =20, r = m3_diameter/2, $fn = 10);
+	
 }
 }
 endstop();
