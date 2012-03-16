@@ -1,30 +1,19 @@
-is second big change, formerly known as felt branch.
-Released 11.11.11 :-)
+Prusa restructure branch
+---------------------------------
 
-Please read http://reprap.org/wiki/Prusa_Mendel before attempting to build this. There is also PDF (manual-wiki) with backup documentation from reprap.org.  
-
-Imported stuff:
-Extruder by Greg Frost
-Parametric Involute Bevel and Spur Gears by GregFrost
-Belt pulley is http://www.thingiverse.com/thing:3104 by GilesBathgate
-
-Prusa Mendel part list:
-
-To print (not including the extruder drive):
-
-4x frame-vertex-with-foot
-2x frame-vertex-without-foot
-2x coupling
-1x x-carriage
-1x x-end-idler
-1x x-end-motor
-2x z-motor-mount
-4x belt-clamp
-8x bar-clamp
-2x rod-clamp
-1x y-motor-bracket
-3x endstop-holder
+Todo: 
+- make the kit complete
+- make the BOM complete
+- make documentation 
 
 
-
-The Mendel build plate contains all the parts except the pla bushings
+Fastener list from Kliment:
+1 box of 50 M3x20s, 
+1 box of 50 M3 nuts, 
+9pcs M3x10 bolts, 
+1 box of 100 m8 nuts, 
+1 box of 100 m8 washers, 
+3pcs M3x8 grub screws, 
+3pcs M3x40 bolts, 
+1pc M8x50 bolt, 
+1pc M8x20 grub screw
