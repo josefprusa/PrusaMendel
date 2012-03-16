@@ -8,8 +8,8 @@
 // http://www.reprap.org/wiki/Prusa_Mendel
 // http://github.com/prusajr/PrusaMendel
 
-include <configuration.scad>
-use <inc/parametric_involute_gear_v5.0.scad>
+include <../configuration.scad>
+use <../inc/parametric_involute_gear_v5.0.scad>
 
 translate([15,60,0]) 
 WadesS(); //this module call will make the small gear

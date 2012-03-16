@@ -8,8 +8,8 @@
 // http://www.reprap.org/wiki/Prusa_Mendel
 // http://github.com/prusajr/PrusaMendel
 
-include <configuration.scad>
-use <inc/parametric_involute_gear_v5.0.scad>
+include <../configuration.scad>
+use <../inc/parametric_involute_gear_v5.0.scad>
 
 WadesL(); //this module call will make the large gear
 
@@ -41,7 +41,7 @@ module WadesL(){
 	hole_size=7.3;
 	hole_offset=18.5;
 	gear_thickness=5;
-	nut_trap_depth=3;
+	nut_trap_depth=5;
 	nut_trap_thickness=6;
 
 	difference(){
@@ -58,7 +58,7 @@ module WadesL(){
 		translate([0,0,nut_trap_thickness])
 		rotate(30)
 		//cylinder($fn=6,r=m8_nut_diameter/2-0.5,h=nut_trap_depth+1);
-		nut(13.3, nut_trap_depth+1);
+		nut(13, nut_trap_depth+1);
 
 color([0,0,1])
 		for (hole=[0:num_holes-1])
