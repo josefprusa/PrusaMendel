@@ -17,9 +17,11 @@ include <configuration.scad>
  * @id coupling
  * @name Coupling
  * @category Printed
- * @using 4 m3x20
- * @using 4 m3washer
- * @using 4 m3nut
+ * @using 2 m3x20
+ * @using 2 m3washer
+ * @using 2 m3nut
+ * @step Make sure the M3 bolts can move freely inside the round holes. If not, ream them out. 
+ * @step Clean out the bridges from the couplings
  * @step Place M3 nuts in all nut traps.
  * @step Insert screws with washers on them and tighten them just a bit prior to installation.
  */

@@ -1,4 +1,12 @@
 /**
+ * These parts complete the printed part BOM
+ * @name Temporary entry
+ * @assembled
+ * @using 4 coupling
+ * @id temp
+ */
+
+/**
  * Prusa Mendel is simplified version of Mendel form RepRap project. RepRap is open source 3D printer.
  * @name Prusa Mendel iteration 2
  * @id prusa-mendel-i2
