@@ -75,7 +75,7 @@ module coupling(c){
             rotate([0,0,150])  translate([corner_cut, 0, 0]) cube(size = [20,40,20], center = true);
             rotate([0,0,-150]) translate([corner_cut, 0, 0]) cube(size = [20,40,20], center = true);
 	
-			#translate(v=[4,-4,-4]) rotate(a=90,v=[0,0,1]) scale([0.5,0.5,1]) linear_extrude(file = "this-way-up.dxf", layer = "0", height = 2, center = true, convexity = 10);
+			#translate(v=[-5,4,-4]) rotate(a=-90,v=[0,0,1]) scale([0.5,0.6,1]) linear_extrude(file = "this-way-up.dxf", layer = "0", height = 2, center = true, convexity = 10);
         }
         // bridge
     	translate([ holeX,  holeY, nutH-3.9]) cylinder(h = 0.4, r=nutR+0.1, $fn=6, center=true);
