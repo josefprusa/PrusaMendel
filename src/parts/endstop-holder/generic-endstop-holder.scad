@@ -11,6 +11,7 @@
 include <../configuration.scad>
 
 /**
+ * This endstop holder has 3 holes for endstops with either 10mm or 20mm spacing
  * @id endstop-holder
  * @name Endstop holder
  * @category Printed
