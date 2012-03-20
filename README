@@ -22,11 +22,11 @@ To print (not including the extruder drive):
 1x x-end-motor
 2x z-motor-mount
 4x belt-clamp
+2x belt-clamp-nut-holder
 8x bar-clamp
 2x rod-clamp
 1x y-motor-bracket
+3x y-bushing
 3x endstop-holder
 
 
-
-The Mendel build plate contains all the parts except the pla bushings
