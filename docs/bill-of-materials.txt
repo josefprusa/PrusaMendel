@@ -3,7 +3,7 @@ Bill of Materials: Prusa Mendel iteration 2
 
 Rods and Bars
 =============
-- 1x Idler
+- 1x Idler 
 
 Nuts&bolts
 ==========
@@ -35,10 +35,14 @@ Printed
 - 2x Rod clamp
 - 4x Frame vertex with foot
 - 1x Y motor bracket
-- 2x Belt clamp
+- 4x Belt clamp
+- 2x Belt clamp nut holder
 - 1x X carriage
-- 1x Z motor mount
+- 2x Z motor mount
 - 1x Extruder Idler
+- 2x Coupling
+- 3x Endstop holder
+- 2x Pulley
 
 ----
 Generated on 2011/12/03 00:41:02 by ThingDoc - http://thingdoc.org/
