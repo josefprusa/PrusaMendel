@@ -3,7 +3,15 @@ Bill of Materials: Prusa Mendel iteration 2
 
 Rods and Bars
 =============
-- 1x Idler 
+- 1x M8x30 threaded rod (Idler)
+- 1x M8x20 threaded rod (Extruder Idler)
+- 6x M8×370mm threaded rod (Sides)
+- 4x M8×294mm threaded rod (Front / Rear)
+- 3x M8×440mm threaded rod (Top / Bottom)
+- 2x M8×210mm	threaded rod (Z-leadscrew)
+- 2x 8mm×400mm or 420mm smooth rods (X axis)	
+- 2x 8mm×406mm smooth rods (Y axis)	
+- 2x 8mm×350mm smooth rods (Z axis)
 
 Nuts&bolts
 ==========
