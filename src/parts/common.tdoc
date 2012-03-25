@@ -169,5 +169,51 @@
  * @common
  */
 
+/**
+ * @name M8 370mm Threaded Rod
+ * @common
+ * @category Rods and Bars
+ * @id m8x370-threaded-rod
+ */
 
+/**
+ * @name M8 294mm Threaded Rod
+ * @common
+ * @category Rods and Bars
+ * @id m8x294-threaded-rod
+ */
 
+/**
+ * @name M8 440mm Threaded Rod
+ * @common
+ * @category Rods and Bars
+ * @id m8x440-threaded-rod
+ */
+
+/**
+ * @name M8 210mm Threaded Rod
+ * @common
+ * @category Rods and Bars
+ * @id m8x210-threaded-rod
+ */
+
+/**
+ * @name M8 406mm Smooth Rod
+ * @common
+ * @category Rods and Bars
+ * @id m8x406-smooth-rod
+ */
+
+/**
+ * @name M8 350mm Smooth Rod
+ * @common
+ * @category Rods and Bars
+ * @id m8x350-smooth-rod
+ */
+
+/**
+ * @name M8 400mm or 420mm Smooth Rod
+ * @common
+ * @category Rods and Bars
+ * @id m8x400-or-420-smooth-rod
+ */
