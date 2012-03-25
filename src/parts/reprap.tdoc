@@ -2,7 +2,9 @@
  * These parts complete the printed part BOM
  * @name Temporary entry
  * @assembled
- * @using 4 coupling
+ * @using 2 coupling
+ * @using 3 endstop-holder
+ * @using 2 pulley
  * @id temp
  */
 
@@ -32,7 +34,7 @@
  * @using 1 frame
  * @using 1 y-axis
  * @using 1 y-motor-bracket
- * @using 1 z-motor-mount
+ * @using 2 z-motor-mount
  * @using 1 rod-clamp
  * @id frame-with-y
  */
@@ -51,6 +53,8 @@
  * Assembled Y axis
  * @name Y axis 
  * @assembled
+ * @using 2 belt-clamp
+ * @using 2 belt-clamp-nut-holder
  * @using 3 y-bearing
  * @id y-axis
  */
