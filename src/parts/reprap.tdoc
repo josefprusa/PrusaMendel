@@ -1,14 +1,4 @@
 /**
- * These parts complete the printed part BOM
- * @name Temporary entry
- * @assembled
- * @using 2 coupling 
- * @using 3 endstop-holder
- * @using 2 pulley
- * @id temp
- */
-
-/**
  * Prusa Mendel is simplified version of Mendel form RepRap project. RepRap is open source 3D printer.
  * @name Prusa Mendel iteration 2
  * @id prusa-mendel-i2
@@ -34,8 +24,6 @@
  * @using 1 frame
  * @using 1 y-axis
  * @using 1 y-motor-bracket
- * @using 2 z-motor-mount
- * @using 1 rod-clamp
  * @id frame-with-y
  */
 
@@ -43,9 +31,9 @@
  * Assembled XZ axis
  * @name XZ axis  
  * @assembled
- * @using 4 frame-vertex-foot
- * @using 2 frame-vertex
- * @using 8 bar-clamp
+ * @using 2 rod-clamp
+ * @using 2 bar-clamp
+ * @using 2 z-motor-mount
  * @id xz-axis
  */
  
@@ -55,6 +43,7 @@
  * @assembled
  * @using 2 belt-clamp-nut-holder
  * @using 2 belt-clamp
+ * @using y-belt
  * @using 3 y-bearing
  * @id y-axis
  */
@@ -65,17 +54,18 @@
  * @name Frame
  * @assembled
  * @using 2 frame-triangle
- * @using 6 bar-clamp
+ * @using 2 bar-clamp
  * @id frame
  */
  
 /**
- * Two triangle parts which will later form a frame.
+ * Assembling the two triangle parts which will later form the frame.
  * @name Frame triangle
  * @assembled
- * @using 2 frame-vertex-foot
- * @using 1 frame-vertex
- * @using 1 bar-clamp
+ * @using 4 frame-vertex-foot
+ * @using 6 side-threaded-rod
+ * @using 2 frame-vertex
+ * @using 2 bar-clamp
  * @id frame-triangle 
  * @step Take one of the 370mm threaded rods, and slip an M8 washer onto the middle of it.
  * @step Take the RP bar clamp (the U-shaped bit with the two holes) and slide the threaded rod through the two holes until the clamp sits next to the washer.
@@ -100,6 +90,7 @@
  * @name Carriage
  * @assembled
  * @using 2 belt-clamp
+ * @using x-belt
  * @using 1 x-carriage
  * @id carriage
  */
@@ -112,6 +103,7 @@
  * @assembled
  * @using 1 x-end-idler
  * @using 1 x-end-motor
+ * @using x-smooth-rod
  * @using 1 carriage
  */
 
