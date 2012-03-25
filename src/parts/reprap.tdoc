@@ -33,6 +33,9 @@
  * @assembled
  * @using 2 rod-clamp
  * @using 2 bar-clamp
+ * @using 2 leadscrews
+ * @using 4 coupling
+ * @using 2 z-smooth-rod
  * @using 2 z-motor-mount
  * @id xz-axis
  */
@@ -55,6 +58,7 @@
  * @assembled
  * @using 2 frame-triangle
  * @using 2 bar-clamp
+ * @using 2 y-smooth-rod
  * @id frame
  */
  
