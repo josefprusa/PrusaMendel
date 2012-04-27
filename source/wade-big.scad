@@ -57,7 +57,7 @@ module WadesL(){
 
 		translate([0,0,nut_trap_thickness])
 		rotate(30)
-		//cylinder($fn=6,r=m8_nut_diameter/2-0.5,h=nut_trap_depth+1);
+		//cylinder($fn=6,r=7.67876,h=nut_trap_depth+1);
 		nut(13.3, nut_trap_depth+1);
 
 color([0,0,1])
