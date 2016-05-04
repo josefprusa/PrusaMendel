@@ -136,7 +136,7 @@ hole_for_608=22.6;
 
 block_top_right=[wade_block_width,wade_block_height];
 
-layer_thickness=0.4;
+layer_height=0.4;
 filament_feed_hole_d=4;
 filament_diameter=3;
 filament_feed_hole_offset=filament_diameter+0.5;
@@ -248,13 +248,13 @@ module wade (hotend_mount=0)
 					wade_block_depth/2-
 					idler_short_side/2+
 					idler_hinge_width+0.25+
-					layer_thickness]);
+					layer_height]);
 				rotate(-15)
 				translate([-(idler_hinge_r+3),-idler_hinge_r-2,
 					-idler_short_side/2+idler_hinge_width+0.25])
 				cube([idler_hinge_r+3+15,
 					idler_hinge_r*2+4,
-					layer_thickness]);
+					layer_height]);
 			}
 
 			//The base.
